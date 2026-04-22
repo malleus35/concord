@@ -23,6 +23,16 @@ export async function runCli(argv: string[]): Promise<number> {
       exitCode = await validateCommand(manifest);
     });
 
+  program
+    .command("lint <manifest>")
+    .description(
+      "Lint manifest (Reserved Registry + interpolation allowlist only)",
+    )
+    .action(async (manifest: string) => {
+      const { lintCommand } = await import("./commands/lint.js");
+      exitCode = await lintCommand(manifest);
+    });
+
   await program.parseAsync(argv, { from: "user" });
   return exitCode;
 }
