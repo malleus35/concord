@@ -509,7 +509,8 @@ export function verifyPreservation(
     origCursor = region.endOffset;
     // 수정본에서 이 region 에 해당하는 조각은 길이가 달라질 수 있음.
     // 가장 단순한 매핑: outside 동일 구간을 먼저 지나가고, 나머지 modified 끝까지를 tail 로 본다.
-    modCursor += outsideOrig.length;
+    // 다중 regions 대응: outside 길이 + 원본 region 길이 (동일 길이 가정) 만큼 수정본 cursor 전진.
+    modCursor += outsideOrig.length + (region.endOffset - region.startOffset);
   }
 
   // 마지막 region 뒤의 tail 비교
