@@ -180,6 +180,29 @@ describe("runSync", () => {
     expect(result.errors).toEqual([]);
   });
 
+  it("prune actually removes target file (previously install-only)", async () => {
+    const tgt = join(tmpDir, "orphan");
+    await writeFile(tgt, "orphan content");
+    const lock = {
+      nodes: {
+        "skills:orphan": {
+          target_path: tgt,
+          source_digest: "x",
+          target_digest: "y",
+        },
+      },
+    };
+    const manifest = {}; // empty → prune orphan
+    const plan = computeSyncPlan(manifest, lock);
+    const result = await runSync(plan, {
+      fetchContext: { concordHome: join(tmpDir, "home"), cacheDir: join(tmpDir, "cache") },
+      projectRoot: tmpDir,
+      env: {},
+    });
+    expect(result.pruned).toContain("skills:orphan");
+    await expect(access(tgt)).rejects.toThrow();
+  });
+
   it("propagates missing env var error (E-4 fail-closed)", async () => {
     const manifest = {
       skills: [{

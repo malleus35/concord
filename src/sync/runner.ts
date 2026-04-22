@@ -3,6 +3,7 @@ import { createSymlinkInstaller } from "../install/symlink.js";
 import { createCopyInstaller } from "../install/copy.js";
 import { effectiveMode } from "../install/routing.js";
 import { resolveEntry } from "../secret/resolve-entry.js";
+import { uninstall } from "../install/uninstall.js";
 import type { SyncAction, SyncPlan } from "./plan.js";
 import type { FetchContext } from "../fetch/types.js";
 
@@ -56,7 +57,14 @@ export async function runSync(plan: SyncPlan, opts: RunSyncOptions): Promise<Run
         await installer.install({ ...req, requestedMode: mode });
         if (action.kind === "install") result.installed.push(action.nodeId);
         else result.updated.push(action.nodeId);
-      } else if (action.kind === "prune") result.pruned.push(action.nodeId);
+      } else if (action.kind === "prune") {
+        const existingNode = action.existingNode as { target_path?: unknown };
+        const targetPath = existingNode?.target_path;
+        if (typeof targetPath === "string") {
+          await uninstall(targetPath);
+        }
+        result.pruned.push(action.nodeId);
+      }
       else if (action.kind === "skip") result.skipped.push(action.nodeId);
       opts.onProgress?.(action, "done");
     } catch (err) {
