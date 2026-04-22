@@ -1,0 +1,4 @@
+skills:
+  - id: claude-code:skills:user-only
+    source: { type: file, path: ./user-only }
+    install: auto
