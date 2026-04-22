@@ -1728,8 +1728,9 @@ export function checkSkillsPlacement(skills: AssetBase[]): void {
   for (const s of skills) {
     const provider = s.id.split(":")[0];
     if (provider === "claude-code" && s.target === "shared-agents") {
+      // Message 첫 줄: test regex /shared-agents.*claude-code/i 매칭을 위해 이 순서 유지
       throw new Error(
-        `claude-code skills cannot use target: shared-agents (A1/A4, issue #31005 OPEN)\n` +
+        `target: shared-agents is not allowed for claude-code skills (A1/A4, issue #31005 OPEN)\n` +
           `  id: ${s.id}\n` +
           `  remediation: Remove 'target: shared-agents' or use codex/opencode provider.`,
       );
