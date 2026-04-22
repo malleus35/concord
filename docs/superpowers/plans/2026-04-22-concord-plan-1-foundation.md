@@ -349,22 +349,30 @@ git commit -m "feat(schema): shared enums ConfigScope / AssetType / Provider + S
 
 - [ ] **Step 1: Write failing test `tests/discovery/concord-home.test.ts`**
 
+**주의**: `os.homedir()` 를 `vi.spyOn` 으로 mock 해 개발 머신에 실재하는 `~/.concord/` 에 의해 test 가 shadow 되지 않도록 한다. 각 test 마다 **tmp home** 을 사용 (`.concord/` 미생성 상태에서 discovery step 탐색).
+
 ```typescript
-import { describe, expect, it, beforeEach, afterEach } from "vitest";
+import { describe, expect, it, beforeEach, afterEach, vi } from "vitest";
 import * as os from "node:os";
 import * as path from "node:path";
 import * as fs from "node:fs";
 import { findConcordHome } from "../../src/discovery/concord-home.js";
 
 const savedEnv = { ...process.env };
+let tmpHome: string;
 
 beforeEach(() => {
   delete process.env.CONCORD_HOME;
   delete process.env.XDG_CONFIG_HOME;
   delete process.env.APPDATA;
+  // fake home without pre-existing .concord/
+  tmpHome = fs.mkdtempSync(path.join(os.tmpdir(), "concord-test-home-"));
+  vi.spyOn(os, "homedir").mockReturnValue(tmpHome);
 });
 
 afterEach(() => {
+  vi.restoreAllMocks();
+  fs.rmSync(tmpHome, { recursive: true, force: true });
   process.env = { ...savedEnv };
 });
 
@@ -374,12 +382,12 @@ describe("findConcordHome", () => {
     expect(findConcordHome()).toBe("/tmp/my-concord-override");
   });
 
-  it("falls back to default ~/.concord when no env var and no existing config", () => {
-    const expected = path.join(os.homedir(), ".concord");
-    expect(findConcordHome()).toBe(expected);
+  it("falls back to default <home>/.concord when no env var and no existing config", () => {
+    expect(findConcordHome()).toBe(path.join(tmpHome, ".concord"));
   });
 
   it("prefers existing $XDG_CONFIG_HOME/concord over ~/.config/concord", () => {
+    // tmpHome/.concord is intentionally absent — so step 2 fall-through to step 3
     const tmp = fs.mkdtempSync(path.join(os.tmpdir(), "concord-xdg-"));
     process.env.XDG_CONFIG_HOME = tmp;
     fs.mkdirSync(path.join(tmp, "concord"), { recursive: true });
