@@ -10,6 +10,7 @@ import { registerImportCommand } from "./commands/import.js";
 import { registerReplaceCommand } from "./commands/replace.js";
 import { registerUpdateCommand } from "./commands/update.js";
 import { registerWhyCommand } from "./commands/why.js";
+import { registerSecretDebugCommand } from "./commands/secret-debug.js";
 
 /**
  * Programmatic CLI entry (testable). Parses `argv` as user-supplied arguments
@@ -92,6 +93,10 @@ export async function runCli(argv: string[]): Promise<number> {
   });
 
   registerWhyCommand(program, (code) => {
+    exitCode = code;
+  });
+
+  registerSecretDebugCommand(program, (code) => {
     exitCode = code;
   });
 
