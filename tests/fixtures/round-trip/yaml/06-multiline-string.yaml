@@ -1,0 +1,12 @@
+version: 1
+assets:
+  instructions:
+    - id: long-doc
+      source:
+        type: file
+        path: ./CLAUDE.md
+      content_snippet: |
+        Multi-line
+        content
+        preservation
+        check

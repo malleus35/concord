@@ -1,0 +1,2 @@
+# File A
+sample content

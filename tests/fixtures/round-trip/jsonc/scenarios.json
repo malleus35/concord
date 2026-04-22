@@ -1,0 +1,44 @@
+{
+  "scenarios": [
+    {
+      "fixture": "01-comments.jsonc",
+      "description": "주석 3종 (line/block/inline) 보존",
+      "edits": [{ "op": "set", "path": ["permissions", "allow"], "value": ["read", "write", "execute"] }]
+    },
+    {
+      "fixture": "02-trailing-comma.jsonc",
+      "description": "trailing comma 유지 — value 수정",
+      "edits": [{ "op": "set", "path": ["mcpServers", "airtable", "args"], "value": ["-y", "airtable-mcp-server@2.0"] }]
+    },
+    {
+      "fixture": "03-add-key.jsonc",
+      "description": "새 key 추가 — 기존 주석 유지",
+      "edits": [{ "op": "set", "path": ["mcpServers", "slack"], "value": { "command": "node", "args": ["slack.js"] } }]
+    },
+    {
+      "fixture": "04-modify-value.jsonc",
+      "description": "value 수정 — inline 주석 유지",
+      "edits": [{ "op": "set", "path": ["mcpServers", "airtable", "args"], "value": ["-y", "airtable-mcp-server@0.2.0"] }]
+    },
+    {
+      "fixture": "05-delete-key.jsonc",
+      "description": "key 삭제 — 인접 주석 + 다른 key 보존",
+      "edits": [{ "op": "delete", "path": ["mcpServers", "obsolete"] }]
+    },
+    {
+      "fixture": "06-marker-block.jsonc",
+      "description": "marker 블록 내부만 수정 — 외부 user-manual, other-manual 보존",
+      "edits": [{ "op": "set", "path": ["mcpServers", "airtable", "args"], "value": ["-y", "airtable-mcp-server@2.0"] }]
+    },
+    {
+      "fixture": "07-pure-json.json",
+      "description": "순수 JSON — json-key-owned 방식 대비, key 추가",
+      "edits": [{ "op": "set", "path": ["mcpServers", "slack"], "value": { "command": "node" } }]
+    },
+    {
+      "fixture": "08-large.jsonc",
+      "description": "대용량 JSONC 편집 성능",
+      "edits": [{ "op": "set", "path": ["mcpServers", "srv_250", "command"], "value": "node" }]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+# Concord project manifest
+version: 1
+
+# MCP servers block
+assets:
+  mcp_servers:
+    # Airtable server
+    - id: airtable  # unique id
+      source: { type: npm, name: airtable-mcp-server }
+      install: copy
+
+    # Slack server
+    - id: slack
+      source: { type: npm, name: slack-mcp-server }

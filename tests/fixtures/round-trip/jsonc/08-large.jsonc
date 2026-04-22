@@ -1,0 +1,3505 @@
+{
+  // Large JSONC fixture
+  "mcpServers": {
+    "srv_0": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-0-mcp-server"
+      ]
+    },
+    "srv_1": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-1-mcp-server"
+      ]
+    },
+    "srv_2": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-2-mcp-server"
+      ]
+    },
+    "srv_3": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-3-mcp-server"
+      ]
+    },
+    "srv_4": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-4-mcp-server"
+      ]
+    },
+    "srv_5": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-5-mcp-server"
+      ]
+    },
+    "srv_6": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-6-mcp-server"
+      ]
+    },
+    "srv_7": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-7-mcp-server"
+      ]
+    },
+    "srv_8": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-8-mcp-server"
+      ]
+    },
+    "srv_9": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-9-mcp-server"
+      ]
+    },
+    "srv_10": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-10-mcp-server"
+      ]
+    },
+    "srv_11": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-11-mcp-server"
+      ]
+    },
+    "srv_12": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-12-mcp-server"
+      ]
+    },
+    "srv_13": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-13-mcp-server"
+      ]
+    },
+    "srv_14": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-14-mcp-server"
+      ]
+    },
+    "srv_15": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-15-mcp-server"
+      ]
+    },
+    "srv_16": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-16-mcp-server"
+      ]
+    },
+    "srv_17": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-17-mcp-server"
+      ]
+    },
+    "srv_18": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-18-mcp-server"
+      ]
+    },
+    "srv_19": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-19-mcp-server"
+      ]
+    },
+    "srv_20": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-20-mcp-server"
+      ]
+    },
+    "srv_21": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-21-mcp-server"
+      ]
+    },
+    "srv_22": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-22-mcp-server"
+      ]
+    },
+    "srv_23": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-23-mcp-server"
+      ]
+    },
+    "srv_24": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-24-mcp-server"
+      ]
+    },
+    "srv_25": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-25-mcp-server"
+      ]
+    },
+    "srv_26": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-26-mcp-server"
+      ]
+    },
+    "srv_27": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-27-mcp-server"
+      ]
+    },
+    "srv_28": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-28-mcp-server"
+      ]
+    },
+    "srv_29": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-29-mcp-server"
+      ]
+    },
+    "srv_30": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-30-mcp-server"
+      ]
+    },
+    "srv_31": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-31-mcp-server"
+      ]
+    },
+    "srv_32": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-32-mcp-server"
+      ]
+    },
+    "srv_33": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-33-mcp-server"
+      ]
+    },
+    "srv_34": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-34-mcp-server"
+      ]
+    },
+    "srv_35": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-35-mcp-server"
+      ]
+    },
+    "srv_36": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-36-mcp-server"
+      ]
+    },
+    "srv_37": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-37-mcp-server"
+      ]
+    },
+    "srv_38": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-38-mcp-server"
+      ]
+    },
+    "srv_39": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-39-mcp-server"
+      ]
+    },
+    "srv_40": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-40-mcp-server"
+      ]
+    },
+    "srv_41": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-41-mcp-server"
+      ]
+    },
+    "srv_42": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-42-mcp-server"
+      ]
+    },
+    "srv_43": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-43-mcp-server"
+      ]
+    },
+    "srv_44": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-44-mcp-server"
+      ]
+    },
+    "srv_45": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-45-mcp-server"
+      ]
+    },
+    "srv_46": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-46-mcp-server"
+      ]
+    },
+    "srv_47": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-47-mcp-server"
+      ]
+    },
+    "srv_48": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-48-mcp-server"
+      ]
+    },
+    "srv_49": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-49-mcp-server"
+      ]
+    },
+    "srv_50": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-50-mcp-server"
+      ]
+    },
+    "srv_51": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-51-mcp-server"
+      ]
+    },
+    "srv_52": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-52-mcp-server"
+      ]
+    },
+    "srv_53": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-53-mcp-server"
+      ]
+    },
+    "srv_54": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-54-mcp-server"
+      ]
+    },
+    "srv_55": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-55-mcp-server"
+      ]
+    },
+    "srv_56": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-56-mcp-server"
+      ]
+    },
+    "srv_57": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-57-mcp-server"
+      ]
+    },
+    "srv_58": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-58-mcp-server"
+      ]
+    },
+    "srv_59": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-59-mcp-server"
+      ]
+    },
+    "srv_60": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-60-mcp-server"
+      ]
+    },
+    "srv_61": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-61-mcp-server"
+      ]
+    },
+    "srv_62": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-62-mcp-server"
+      ]
+    },
+    "srv_63": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-63-mcp-server"
+      ]
+    },
+    "srv_64": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-64-mcp-server"
+      ]
+    },
+    "srv_65": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-65-mcp-server"
+      ]
+    },
+    "srv_66": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-66-mcp-server"
+      ]
+    },
+    "srv_67": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-67-mcp-server"
+      ]
+    },
+    "srv_68": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-68-mcp-server"
+      ]
+    },
+    "srv_69": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-69-mcp-server"
+      ]
+    },
+    "srv_70": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-70-mcp-server"
+      ]
+    },
+    "srv_71": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-71-mcp-server"
+      ]
+    },
+    "srv_72": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-72-mcp-server"
+      ]
+    },
+    "srv_73": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-73-mcp-server"
+      ]
+    },
+    "srv_74": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-74-mcp-server"
+      ]
+    },
+    "srv_75": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-75-mcp-server"
+      ]
+    },
+    "srv_76": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-76-mcp-server"
+      ]
+    },
+    "srv_77": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-77-mcp-server"
+      ]
+    },
+    "srv_78": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-78-mcp-server"
+      ]
+    },
+    "srv_79": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-79-mcp-server"
+      ]
+    },
+    "srv_80": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-80-mcp-server"
+      ]
+    },
+    "srv_81": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-81-mcp-server"
+      ]
+    },
+    "srv_82": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-82-mcp-server"
+      ]
+    },
+    "srv_83": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-83-mcp-server"
+      ]
+    },
+    "srv_84": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-84-mcp-server"
+      ]
+    },
+    "srv_85": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-85-mcp-server"
+      ]
+    },
+    "srv_86": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-86-mcp-server"
+      ]
+    },
+    "srv_87": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-87-mcp-server"
+      ]
+    },
+    "srv_88": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-88-mcp-server"
+      ]
+    },
+    "srv_89": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-89-mcp-server"
+      ]
+    },
+    "srv_90": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-90-mcp-server"
+      ]
+    },
+    "srv_91": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-91-mcp-server"
+      ]
+    },
+    "srv_92": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-92-mcp-server"
+      ]
+    },
+    "srv_93": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-93-mcp-server"
+      ]
+    },
+    "srv_94": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-94-mcp-server"
+      ]
+    },
+    "srv_95": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-95-mcp-server"
+      ]
+    },
+    "srv_96": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-96-mcp-server"
+      ]
+    },
+    "srv_97": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-97-mcp-server"
+      ]
+    },
+    "srv_98": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-98-mcp-server"
+      ]
+    },
+    "srv_99": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-99-mcp-server"
+      ]
+    },
+    "srv_100": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-100-mcp-server"
+      ]
+    },
+    "srv_101": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-101-mcp-server"
+      ]
+    },
+    "srv_102": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-102-mcp-server"
+      ]
+    },
+    "srv_103": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-103-mcp-server"
+      ]
+    },
+    "srv_104": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-104-mcp-server"
+      ]
+    },
+    "srv_105": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-105-mcp-server"
+      ]
+    },
+    "srv_106": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-106-mcp-server"
+      ]
+    },
+    "srv_107": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-107-mcp-server"
+      ]
+    },
+    "srv_108": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-108-mcp-server"
+      ]
+    },
+    "srv_109": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-109-mcp-server"
+      ]
+    },
+    "srv_110": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-110-mcp-server"
+      ]
+    },
+    "srv_111": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-111-mcp-server"
+      ]
+    },
+    "srv_112": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-112-mcp-server"
+      ]
+    },
+    "srv_113": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-113-mcp-server"
+      ]
+    },
+    "srv_114": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-114-mcp-server"
+      ]
+    },
+    "srv_115": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-115-mcp-server"
+      ]
+    },
+    "srv_116": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-116-mcp-server"
+      ]
+    },
+    "srv_117": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-117-mcp-server"
+      ]
+    },
+    "srv_118": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-118-mcp-server"
+      ]
+    },
+    "srv_119": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-119-mcp-server"
+      ]
+    },
+    "srv_120": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-120-mcp-server"
+      ]
+    },
+    "srv_121": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-121-mcp-server"
+      ]
+    },
+    "srv_122": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-122-mcp-server"
+      ]
+    },
+    "srv_123": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-123-mcp-server"
+      ]
+    },
+    "srv_124": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-124-mcp-server"
+      ]
+    },
+    "srv_125": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-125-mcp-server"
+      ]
+    },
+    "srv_126": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-126-mcp-server"
+      ]
+    },
+    "srv_127": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-127-mcp-server"
+      ]
+    },
+    "srv_128": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-128-mcp-server"
+      ]
+    },
+    "srv_129": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-129-mcp-server"
+      ]
+    },
+    "srv_130": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-130-mcp-server"
+      ]
+    },
+    "srv_131": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-131-mcp-server"
+      ]
+    },
+    "srv_132": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-132-mcp-server"
+      ]
+    },
+    "srv_133": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-133-mcp-server"
+      ]
+    },
+    "srv_134": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-134-mcp-server"
+      ]
+    },
+    "srv_135": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-135-mcp-server"
+      ]
+    },
+    "srv_136": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-136-mcp-server"
+      ]
+    },
+    "srv_137": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-137-mcp-server"
+      ]
+    },
+    "srv_138": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-138-mcp-server"
+      ]
+    },
+    "srv_139": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-139-mcp-server"
+      ]
+    },
+    "srv_140": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-140-mcp-server"
+      ]
+    },
+    "srv_141": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-141-mcp-server"
+      ]
+    },
+    "srv_142": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-142-mcp-server"
+      ]
+    },
+    "srv_143": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-143-mcp-server"
+      ]
+    },
+    "srv_144": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-144-mcp-server"
+      ]
+    },
+    "srv_145": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-145-mcp-server"
+      ]
+    },
+    "srv_146": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-146-mcp-server"
+      ]
+    },
+    "srv_147": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-147-mcp-server"
+      ]
+    },
+    "srv_148": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-148-mcp-server"
+      ]
+    },
+    "srv_149": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-149-mcp-server"
+      ]
+    },
+    "srv_150": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-150-mcp-server"
+      ]
+    },
+    "srv_151": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-151-mcp-server"
+      ]
+    },
+    "srv_152": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-152-mcp-server"
+      ]
+    },
+    "srv_153": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-153-mcp-server"
+      ]
+    },
+    "srv_154": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-154-mcp-server"
+      ]
+    },
+    "srv_155": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-155-mcp-server"
+      ]
+    },
+    "srv_156": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-156-mcp-server"
+      ]
+    },
+    "srv_157": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-157-mcp-server"
+      ]
+    },
+    "srv_158": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-158-mcp-server"
+      ]
+    },
+    "srv_159": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-159-mcp-server"
+      ]
+    },
+    "srv_160": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-160-mcp-server"
+      ]
+    },
+    "srv_161": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-161-mcp-server"
+      ]
+    },
+    "srv_162": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-162-mcp-server"
+      ]
+    },
+    "srv_163": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-163-mcp-server"
+      ]
+    },
+    "srv_164": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-164-mcp-server"
+      ]
+    },
+    "srv_165": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-165-mcp-server"
+      ]
+    },
+    "srv_166": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-166-mcp-server"
+      ]
+    },
+    "srv_167": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-167-mcp-server"
+      ]
+    },
+    "srv_168": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-168-mcp-server"
+      ]
+    },
+    "srv_169": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-169-mcp-server"
+      ]
+    },
+    "srv_170": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-170-mcp-server"
+      ]
+    },
+    "srv_171": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-171-mcp-server"
+      ]
+    },
+    "srv_172": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-172-mcp-server"
+      ]
+    },
+    "srv_173": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-173-mcp-server"
+      ]
+    },
+    "srv_174": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-174-mcp-server"
+      ]
+    },
+    "srv_175": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-175-mcp-server"
+      ]
+    },
+    "srv_176": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-176-mcp-server"
+      ]
+    },
+    "srv_177": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-177-mcp-server"
+      ]
+    },
+    "srv_178": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-178-mcp-server"
+      ]
+    },
+    "srv_179": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-179-mcp-server"
+      ]
+    },
+    "srv_180": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-180-mcp-server"
+      ]
+    },
+    "srv_181": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-181-mcp-server"
+      ]
+    },
+    "srv_182": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-182-mcp-server"
+      ]
+    },
+    "srv_183": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-183-mcp-server"
+      ]
+    },
+    "srv_184": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-184-mcp-server"
+      ]
+    },
+    "srv_185": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-185-mcp-server"
+      ]
+    },
+    "srv_186": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-186-mcp-server"
+      ]
+    },
+    "srv_187": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-187-mcp-server"
+      ]
+    },
+    "srv_188": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-188-mcp-server"
+      ]
+    },
+    "srv_189": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-189-mcp-server"
+      ]
+    },
+    "srv_190": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-190-mcp-server"
+      ]
+    },
+    "srv_191": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-191-mcp-server"
+      ]
+    },
+    "srv_192": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-192-mcp-server"
+      ]
+    },
+    "srv_193": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-193-mcp-server"
+      ]
+    },
+    "srv_194": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-194-mcp-server"
+      ]
+    },
+    "srv_195": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-195-mcp-server"
+      ]
+    },
+    "srv_196": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-196-mcp-server"
+      ]
+    },
+    "srv_197": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-197-mcp-server"
+      ]
+    },
+    "srv_198": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-198-mcp-server"
+      ]
+    },
+    "srv_199": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-199-mcp-server"
+      ]
+    },
+    "srv_200": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-200-mcp-server"
+      ]
+    },
+    "srv_201": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-201-mcp-server"
+      ]
+    },
+    "srv_202": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-202-mcp-server"
+      ]
+    },
+    "srv_203": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-203-mcp-server"
+      ]
+    },
+    "srv_204": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-204-mcp-server"
+      ]
+    },
+    "srv_205": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-205-mcp-server"
+      ]
+    },
+    "srv_206": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-206-mcp-server"
+      ]
+    },
+    "srv_207": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-207-mcp-server"
+      ]
+    },
+    "srv_208": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-208-mcp-server"
+      ]
+    },
+    "srv_209": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-209-mcp-server"
+      ]
+    },
+    "srv_210": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-210-mcp-server"
+      ]
+    },
+    "srv_211": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-211-mcp-server"
+      ]
+    },
+    "srv_212": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-212-mcp-server"
+      ]
+    },
+    "srv_213": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-213-mcp-server"
+      ]
+    },
+    "srv_214": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-214-mcp-server"
+      ]
+    },
+    "srv_215": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-215-mcp-server"
+      ]
+    },
+    "srv_216": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-216-mcp-server"
+      ]
+    },
+    "srv_217": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-217-mcp-server"
+      ]
+    },
+    "srv_218": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-218-mcp-server"
+      ]
+    },
+    "srv_219": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-219-mcp-server"
+      ]
+    },
+    "srv_220": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-220-mcp-server"
+      ]
+    },
+    "srv_221": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-221-mcp-server"
+      ]
+    },
+    "srv_222": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-222-mcp-server"
+      ]
+    },
+    "srv_223": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-223-mcp-server"
+      ]
+    },
+    "srv_224": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-224-mcp-server"
+      ]
+    },
+    "srv_225": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-225-mcp-server"
+      ]
+    },
+    "srv_226": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-226-mcp-server"
+      ]
+    },
+    "srv_227": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-227-mcp-server"
+      ]
+    },
+    "srv_228": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-228-mcp-server"
+      ]
+    },
+    "srv_229": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-229-mcp-server"
+      ]
+    },
+    "srv_230": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-230-mcp-server"
+      ]
+    },
+    "srv_231": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-231-mcp-server"
+      ]
+    },
+    "srv_232": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-232-mcp-server"
+      ]
+    },
+    "srv_233": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-233-mcp-server"
+      ]
+    },
+    "srv_234": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-234-mcp-server"
+      ]
+    },
+    "srv_235": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-235-mcp-server"
+      ]
+    },
+    "srv_236": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-236-mcp-server"
+      ]
+    },
+    "srv_237": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-237-mcp-server"
+      ]
+    },
+    "srv_238": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-238-mcp-server"
+      ]
+    },
+    "srv_239": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-239-mcp-server"
+      ]
+    },
+    "srv_240": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-240-mcp-server"
+      ]
+    },
+    "srv_241": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-241-mcp-server"
+      ]
+    },
+    "srv_242": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-242-mcp-server"
+      ]
+    },
+    "srv_243": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-243-mcp-server"
+      ]
+    },
+    "srv_244": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-244-mcp-server"
+      ]
+    },
+    "srv_245": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-245-mcp-server"
+      ]
+    },
+    "srv_246": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-246-mcp-server"
+      ]
+    },
+    "srv_247": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-247-mcp-server"
+      ]
+    },
+    "srv_248": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-248-mcp-server"
+      ]
+    },
+    "srv_249": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-249-mcp-server"
+      ]
+    },
+    "srv_250": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-250-mcp-server"
+      ]
+    },
+    "srv_251": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-251-mcp-server"
+      ]
+    },
+    "srv_252": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-252-mcp-server"
+      ]
+    },
+    "srv_253": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-253-mcp-server"
+      ]
+    },
+    "srv_254": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-254-mcp-server"
+      ]
+    },
+    "srv_255": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-255-mcp-server"
+      ]
+    },
+    "srv_256": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-256-mcp-server"
+      ]
+    },
+    "srv_257": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-257-mcp-server"
+      ]
+    },
+    "srv_258": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-258-mcp-server"
+      ]
+    },
+    "srv_259": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-259-mcp-server"
+      ]
+    },
+    "srv_260": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-260-mcp-server"
+      ]
+    },
+    "srv_261": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-261-mcp-server"
+      ]
+    },
+    "srv_262": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-262-mcp-server"
+      ]
+    },
+    "srv_263": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-263-mcp-server"
+      ]
+    },
+    "srv_264": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-264-mcp-server"
+      ]
+    },
+    "srv_265": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-265-mcp-server"
+      ]
+    },
+    "srv_266": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-266-mcp-server"
+      ]
+    },
+    "srv_267": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-267-mcp-server"
+      ]
+    },
+    "srv_268": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-268-mcp-server"
+      ]
+    },
+    "srv_269": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-269-mcp-server"
+      ]
+    },
+    "srv_270": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-270-mcp-server"
+      ]
+    },
+    "srv_271": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-271-mcp-server"
+      ]
+    },
+    "srv_272": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-272-mcp-server"
+      ]
+    },
+    "srv_273": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-273-mcp-server"
+      ]
+    },
+    "srv_274": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-274-mcp-server"
+      ]
+    },
+    "srv_275": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-275-mcp-server"
+      ]
+    },
+    "srv_276": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-276-mcp-server"
+      ]
+    },
+    "srv_277": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-277-mcp-server"
+      ]
+    },
+    "srv_278": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-278-mcp-server"
+      ]
+    },
+    "srv_279": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-279-mcp-server"
+      ]
+    },
+    "srv_280": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-280-mcp-server"
+      ]
+    },
+    "srv_281": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-281-mcp-server"
+      ]
+    },
+    "srv_282": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-282-mcp-server"
+      ]
+    },
+    "srv_283": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-283-mcp-server"
+      ]
+    },
+    "srv_284": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-284-mcp-server"
+      ]
+    },
+    "srv_285": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-285-mcp-server"
+      ]
+    },
+    "srv_286": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-286-mcp-server"
+      ]
+    },
+    "srv_287": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-287-mcp-server"
+      ]
+    },
+    "srv_288": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-288-mcp-server"
+      ]
+    },
+    "srv_289": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-289-mcp-server"
+      ]
+    },
+    "srv_290": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-290-mcp-server"
+      ]
+    },
+    "srv_291": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-291-mcp-server"
+      ]
+    },
+    "srv_292": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-292-mcp-server"
+      ]
+    },
+    "srv_293": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-293-mcp-server"
+      ]
+    },
+    "srv_294": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-294-mcp-server"
+      ]
+    },
+    "srv_295": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-295-mcp-server"
+      ]
+    },
+    "srv_296": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-296-mcp-server"
+      ]
+    },
+    "srv_297": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-297-mcp-server"
+      ]
+    },
+    "srv_298": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-298-mcp-server"
+      ]
+    },
+    "srv_299": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-299-mcp-server"
+      ]
+    },
+    "srv_300": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-300-mcp-server"
+      ]
+    },
+    "srv_301": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-301-mcp-server"
+      ]
+    },
+    "srv_302": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-302-mcp-server"
+      ]
+    },
+    "srv_303": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-303-mcp-server"
+      ]
+    },
+    "srv_304": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-304-mcp-server"
+      ]
+    },
+    "srv_305": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-305-mcp-server"
+      ]
+    },
+    "srv_306": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-306-mcp-server"
+      ]
+    },
+    "srv_307": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-307-mcp-server"
+      ]
+    },
+    "srv_308": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-308-mcp-server"
+      ]
+    },
+    "srv_309": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-309-mcp-server"
+      ]
+    },
+    "srv_310": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-310-mcp-server"
+      ]
+    },
+    "srv_311": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-311-mcp-server"
+      ]
+    },
+    "srv_312": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-312-mcp-server"
+      ]
+    },
+    "srv_313": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-313-mcp-server"
+      ]
+    },
+    "srv_314": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-314-mcp-server"
+      ]
+    },
+    "srv_315": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-315-mcp-server"
+      ]
+    },
+    "srv_316": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-316-mcp-server"
+      ]
+    },
+    "srv_317": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-317-mcp-server"
+      ]
+    },
+    "srv_318": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-318-mcp-server"
+      ]
+    },
+    "srv_319": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-319-mcp-server"
+      ]
+    },
+    "srv_320": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-320-mcp-server"
+      ]
+    },
+    "srv_321": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-321-mcp-server"
+      ]
+    },
+    "srv_322": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-322-mcp-server"
+      ]
+    },
+    "srv_323": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-323-mcp-server"
+      ]
+    },
+    "srv_324": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-324-mcp-server"
+      ]
+    },
+    "srv_325": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-325-mcp-server"
+      ]
+    },
+    "srv_326": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-326-mcp-server"
+      ]
+    },
+    "srv_327": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-327-mcp-server"
+      ]
+    },
+    "srv_328": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-328-mcp-server"
+      ]
+    },
+    "srv_329": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-329-mcp-server"
+      ]
+    },
+    "srv_330": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-330-mcp-server"
+      ]
+    },
+    "srv_331": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-331-mcp-server"
+      ]
+    },
+    "srv_332": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-332-mcp-server"
+      ]
+    },
+    "srv_333": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-333-mcp-server"
+      ]
+    },
+    "srv_334": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-334-mcp-server"
+      ]
+    },
+    "srv_335": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-335-mcp-server"
+      ]
+    },
+    "srv_336": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-336-mcp-server"
+      ]
+    },
+    "srv_337": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-337-mcp-server"
+      ]
+    },
+    "srv_338": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-338-mcp-server"
+      ]
+    },
+    "srv_339": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-339-mcp-server"
+      ]
+    },
+    "srv_340": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-340-mcp-server"
+      ]
+    },
+    "srv_341": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-341-mcp-server"
+      ]
+    },
+    "srv_342": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-342-mcp-server"
+      ]
+    },
+    "srv_343": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-343-mcp-server"
+      ]
+    },
+    "srv_344": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-344-mcp-server"
+      ]
+    },
+    "srv_345": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-345-mcp-server"
+      ]
+    },
+    "srv_346": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-346-mcp-server"
+      ]
+    },
+    "srv_347": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-347-mcp-server"
+      ]
+    },
+    "srv_348": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-348-mcp-server"
+      ]
+    },
+    "srv_349": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-349-mcp-server"
+      ]
+    },
+    "srv_350": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-350-mcp-server"
+      ]
+    },
+    "srv_351": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-351-mcp-server"
+      ]
+    },
+    "srv_352": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-352-mcp-server"
+      ]
+    },
+    "srv_353": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-353-mcp-server"
+      ]
+    },
+    "srv_354": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-354-mcp-server"
+      ]
+    },
+    "srv_355": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-355-mcp-server"
+      ]
+    },
+    "srv_356": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-356-mcp-server"
+      ]
+    },
+    "srv_357": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-357-mcp-server"
+      ]
+    },
+    "srv_358": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-358-mcp-server"
+      ]
+    },
+    "srv_359": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-359-mcp-server"
+      ]
+    },
+    "srv_360": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-360-mcp-server"
+      ]
+    },
+    "srv_361": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-361-mcp-server"
+      ]
+    },
+    "srv_362": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-362-mcp-server"
+      ]
+    },
+    "srv_363": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-363-mcp-server"
+      ]
+    },
+    "srv_364": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-364-mcp-server"
+      ]
+    },
+    "srv_365": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-365-mcp-server"
+      ]
+    },
+    "srv_366": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-366-mcp-server"
+      ]
+    },
+    "srv_367": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-367-mcp-server"
+      ]
+    },
+    "srv_368": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-368-mcp-server"
+      ]
+    },
+    "srv_369": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-369-mcp-server"
+      ]
+    },
+    "srv_370": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-370-mcp-server"
+      ]
+    },
+    "srv_371": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-371-mcp-server"
+      ]
+    },
+    "srv_372": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-372-mcp-server"
+      ]
+    },
+    "srv_373": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-373-mcp-server"
+      ]
+    },
+    "srv_374": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-374-mcp-server"
+      ]
+    },
+    "srv_375": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-375-mcp-server"
+      ]
+    },
+    "srv_376": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-376-mcp-server"
+      ]
+    },
+    "srv_377": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-377-mcp-server"
+      ]
+    },
+    "srv_378": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-378-mcp-server"
+      ]
+    },
+    "srv_379": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-379-mcp-server"
+      ]
+    },
+    "srv_380": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-380-mcp-server"
+      ]
+    },
+    "srv_381": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-381-mcp-server"
+      ]
+    },
+    "srv_382": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-382-mcp-server"
+      ]
+    },
+    "srv_383": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-383-mcp-server"
+      ]
+    },
+    "srv_384": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-384-mcp-server"
+      ]
+    },
+    "srv_385": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-385-mcp-server"
+      ]
+    },
+    "srv_386": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-386-mcp-server"
+      ]
+    },
+    "srv_387": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-387-mcp-server"
+      ]
+    },
+    "srv_388": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-388-mcp-server"
+      ]
+    },
+    "srv_389": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-389-mcp-server"
+      ]
+    },
+    "srv_390": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-390-mcp-server"
+      ]
+    },
+    "srv_391": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-391-mcp-server"
+      ]
+    },
+    "srv_392": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-392-mcp-server"
+      ]
+    },
+    "srv_393": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-393-mcp-server"
+      ]
+    },
+    "srv_394": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-394-mcp-server"
+      ]
+    },
+    "srv_395": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-395-mcp-server"
+      ]
+    },
+    "srv_396": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-396-mcp-server"
+      ]
+    },
+    "srv_397": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-397-mcp-server"
+      ]
+    },
+    "srv_398": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-398-mcp-server"
+      ]
+    },
+    "srv_399": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-399-mcp-server"
+      ]
+    },
+    "srv_400": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-400-mcp-server"
+      ]
+    },
+    "srv_401": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-401-mcp-server"
+      ]
+    },
+    "srv_402": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-402-mcp-server"
+      ]
+    },
+    "srv_403": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-403-mcp-server"
+      ]
+    },
+    "srv_404": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-404-mcp-server"
+      ]
+    },
+    "srv_405": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-405-mcp-server"
+      ]
+    },
+    "srv_406": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-406-mcp-server"
+      ]
+    },
+    "srv_407": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-407-mcp-server"
+      ]
+    },
+    "srv_408": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-408-mcp-server"
+      ]
+    },
+    "srv_409": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-409-mcp-server"
+      ]
+    },
+    "srv_410": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-410-mcp-server"
+      ]
+    },
+    "srv_411": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-411-mcp-server"
+      ]
+    },
+    "srv_412": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-412-mcp-server"
+      ]
+    },
+    "srv_413": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-413-mcp-server"
+      ]
+    },
+    "srv_414": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-414-mcp-server"
+      ]
+    },
+    "srv_415": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-415-mcp-server"
+      ]
+    },
+    "srv_416": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-416-mcp-server"
+      ]
+    },
+    "srv_417": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-417-mcp-server"
+      ]
+    },
+    "srv_418": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-418-mcp-server"
+      ]
+    },
+    "srv_419": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-419-mcp-server"
+      ]
+    },
+    "srv_420": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-420-mcp-server"
+      ]
+    },
+    "srv_421": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-421-mcp-server"
+      ]
+    },
+    "srv_422": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-422-mcp-server"
+      ]
+    },
+    "srv_423": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-423-mcp-server"
+      ]
+    },
+    "srv_424": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-424-mcp-server"
+      ]
+    },
+    "srv_425": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-425-mcp-server"
+      ]
+    },
+    "srv_426": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-426-mcp-server"
+      ]
+    },
+    "srv_427": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-427-mcp-server"
+      ]
+    },
+    "srv_428": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-428-mcp-server"
+      ]
+    },
+    "srv_429": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-429-mcp-server"
+      ]
+    },
+    "srv_430": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-430-mcp-server"
+      ]
+    },
+    "srv_431": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-431-mcp-server"
+      ]
+    },
+    "srv_432": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-432-mcp-server"
+      ]
+    },
+    "srv_433": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-433-mcp-server"
+      ]
+    },
+    "srv_434": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-434-mcp-server"
+      ]
+    },
+    "srv_435": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-435-mcp-server"
+      ]
+    },
+    "srv_436": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-436-mcp-server"
+      ]
+    },
+    "srv_437": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-437-mcp-server"
+      ]
+    },
+    "srv_438": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-438-mcp-server"
+      ]
+    },
+    "srv_439": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-439-mcp-server"
+      ]
+    },
+    "srv_440": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-440-mcp-server"
+      ]
+    },
+    "srv_441": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-441-mcp-server"
+      ]
+    },
+    "srv_442": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-442-mcp-server"
+      ]
+    },
+    "srv_443": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-443-mcp-server"
+      ]
+    },
+    "srv_444": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-444-mcp-server"
+      ]
+    },
+    "srv_445": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-445-mcp-server"
+      ]
+    },
+    "srv_446": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-446-mcp-server"
+      ]
+    },
+    "srv_447": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-447-mcp-server"
+      ]
+    },
+    "srv_448": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-448-mcp-server"
+      ]
+    },
+    "srv_449": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-449-mcp-server"
+      ]
+    },
+    "srv_450": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-450-mcp-server"
+      ]
+    },
+    "srv_451": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-451-mcp-server"
+      ]
+    },
+    "srv_452": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-452-mcp-server"
+      ]
+    },
+    "srv_453": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-453-mcp-server"
+      ]
+    },
+    "srv_454": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-454-mcp-server"
+      ]
+    },
+    "srv_455": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-455-mcp-server"
+      ]
+    },
+    "srv_456": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-456-mcp-server"
+      ]
+    },
+    "srv_457": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-457-mcp-server"
+      ]
+    },
+    "srv_458": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-458-mcp-server"
+      ]
+    },
+    "srv_459": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-459-mcp-server"
+      ]
+    },
+    "srv_460": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-460-mcp-server"
+      ]
+    },
+    "srv_461": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-461-mcp-server"
+      ]
+    },
+    "srv_462": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-462-mcp-server"
+      ]
+    },
+    "srv_463": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-463-mcp-server"
+      ]
+    },
+    "srv_464": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-464-mcp-server"
+      ]
+    },
+    "srv_465": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-465-mcp-server"
+      ]
+    },
+    "srv_466": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-466-mcp-server"
+      ]
+    },
+    "srv_467": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-467-mcp-server"
+      ]
+    },
+    "srv_468": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-468-mcp-server"
+      ]
+    },
+    "srv_469": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-469-mcp-server"
+      ]
+    },
+    "srv_470": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-470-mcp-server"
+      ]
+    },
+    "srv_471": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-471-mcp-server"
+      ]
+    },
+    "srv_472": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-472-mcp-server"
+      ]
+    },
+    "srv_473": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-473-mcp-server"
+      ]
+    },
+    "srv_474": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-474-mcp-server"
+      ]
+    },
+    "srv_475": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-475-mcp-server"
+      ]
+    },
+    "srv_476": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-476-mcp-server"
+      ]
+    },
+    "srv_477": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-477-mcp-server"
+      ]
+    },
+    "srv_478": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-478-mcp-server"
+      ]
+    },
+    "srv_479": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-479-mcp-server"
+      ]
+    },
+    "srv_480": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-480-mcp-server"
+      ]
+    },
+    "srv_481": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-481-mcp-server"
+      ]
+    },
+    "srv_482": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-482-mcp-server"
+      ]
+    },
+    "srv_483": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-483-mcp-server"
+      ]
+    },
+    "srv_484": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-484-mcp-server"
+      ]
+    },
+    "srv_485": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-485-mcp-server"
+      ]
+    },
+    "srv_486": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-486-mcp-server"
+      ]
+    },
+    "srv_487": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-487-mcp-server"
+      ]
+    },
+    "srv_488": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-488-mcp-server"
+      ]
+    },
+    "srv_489": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-489-mcp-server"
+      ]
+    },
+    "srv_490": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-490-mcp-server"
+      ]
+    },
+    "srv_491": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-491-mcp-server"
+      ]
+    },
+    "srv_492": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-492-mcp-server"
+      ]
+    },
+    "srv_493": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-493-mcp-server"
+      ]
+    },
+    "srv_494": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-494-mcp-server"
+      ]
+    },
+    "srv_495": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-495-mcp-server"
+      ]
+    },
+    "srv_496": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-496-mcp-server"
+      ]
+    },
+    "srv_497": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-497-mcp-server"
+      ]
+    },
+    "srv_498": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-498-mcp-server"
+      ]
+    },
+    "srv_499": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "srv-499-mcp-server"
+      ]
+    }
+  }
+}

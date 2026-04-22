@@ -1,0 +1,7 @@
+version: 1
+assets:
+  hooks:
+    - id: obsolete
+      source: { type: file, path: ./hooks/old.sh }
+    - id: keep
+      source: { type: file, path: ./hooks/new.sh }

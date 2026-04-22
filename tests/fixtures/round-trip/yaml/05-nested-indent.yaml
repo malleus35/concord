@@ -1,0 +1,14 @@
+version: 1
+assets:
+  plugins:
+    - id: deep
+      source:
+        type: claude-plugin
+        marketplace: anthropics
+        name: example-plugin
+      capability_matrix:
+        claude-code:
+          skills: { status: supported }
+          subagents: { status: supported }
+        codex:
+          skills: { status: detected-not-executed, reason: FeatureFlagDisabled }

@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    // obsolete 를 삭제해야 함 — 인접 주석 보존 검증
+    "obsolete": { "command": "old-tool" },
+    "keep": { "command": "new-tool" }
+  }
+}

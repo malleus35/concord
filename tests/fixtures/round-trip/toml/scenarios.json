@@ -1,0 +1,110 @@
+{
+  "scenarios": [
+    {
+      "fixture": "01-add-entry.toml",
+      "description": "신규 MCP entry 추가 — 기존 주석/구조 유지",
+      "edits": [
+        {
+          "op": "set",
+          "path": ["mcp_servers", "slack"],
+          "value": { "command": "node", "args": ["slack.js"] }
+        }
+      ]
+    },
+    {
+      "fixture": "02-modify-value.toml",
+      "description": "entry value 만 수정 — 인접 주석/구조 유지",
+      "edits": [
+        {
+          "op": "set",
+          "path": ["mcp_servers", "airtable", "args"],
+          "value": ["-y", "airtable-mcp-server@0.2.0"]
+        }
+      ]
+    },
+    {
+      "fixture": "03-delete-entry.toml",
+      "description": "entry 삭제 — 인접 주석/comma 보존",
+      "edits": [
+        { "op": "delete", "path": ["mcp_servers", "obsolete"] }
+      ]
+    },
+    {
+      "fixture": "04-array-of-tables.toml",
+      "description": "array-of-tables 순서 보존 — 중간 요소 값 변경",
+      "edits": [
+        {
+          "op": "set",
+          "path": ["skills", "config", 1, "priority"],
+          "value": 20
+        }
+      ]
+    },
+    {
+      "fixture": "05-inline-table.toml",
+      "description": "inline table 유지 — standard table 로 변환되지 않아야 함",
+      "edits": [
+        {
+          "op": "set",
+          "path": ["mcp_servers", "airtable", "args"],
+          "value": ["-y", "airtable@1.0.0"]
+        }
+      ]
+    },
+    {
+      "fixture": "06-multiline-array.toml",
+      "description": "multi-line array formatting 유지",
+      "edits": [
+        {
+          "op": "set",
+          "path": ["mcp_servers", "bigtool", "args"],
+          "value": ["-y", "--verbose", "bigtool-mcp-server", "--flag-one", "--flag-two", "--flag-three"]
+        }
+      ]
+    },
+    {
+      "fixture": "07-crlf.toml",
+      "description": "CRLF 개행 유지",
+      "edits": [
+        {
+          "op": "set",
+          "path": ["mcp_servers", "tool", "args"],
+          "value": ["-y", "crlf-tool@0.2.0"]
+        }
+      ]
+    },
+    {
+      "fixture": "08-bom.toml",
+      "description": "UTF-8 BOM 유지",
+      "edits": [
+        {
+          "op": "set",
+          "path": ["features", "codex_hooks"],
+          "value": false
+        }
+      ]
+    },
+    {
+      "fixture": "09-large.toml",
+      "description": "대용량 (>100KB) 편집 성능",
+      "edits": [
+        {
+          "op": "set",
+          "path": ["mcp_servers", "srv_1000", "command"],
+          "value": "node"
+        }
+      ]
+    },
+    {
+      "fixture": "10-marker-block.toml",
+      "description": "marker 블록 내부만 수정, 외부 (user-manual / other-manual) bit-exact 보존",
+      "edits": [
+        {
+          "op": "set",
+          "path": ["mcp_servers", "airtable", "args"],
+          "value": ["-y", "airtable-mcp-server@2.0.0"]
+        }
+      ]
+    }
+  ]
+}

@@ -1,8 +1,8 @@
 # Concord — TODO
 
-현재 단계: **Plan 1 Foundation 완료 (Task 28/28, 100%)** (2026-04-22)
-이전: 결정 A/B/C/D/E FINAL (2026-04-21) → Design spec 작성 (2026-04-21) → 3-subagent review 수정 (2026-04-22) → Plan 1 작성 (2026-04-22) → 실행 완료 (2026-04-22)
-다음: **Plan 2 Sync Engine** (Config round-trip + Fetcher + Installer + Format Transform)
+현재 단계: **Plan 2A Round-trip POC 완료 (Task 18/18, 100%)** (2026-04-22)
+이전: 결정 A/B/C/D/E FINAL (2026-04-21) → Design spec 작성 (2026-04-21) → Plan 1 완료 (2026-04-22) → Plan 2A Round-trip POC 완료 (2026-04-22)
+다음: **Plan 2B Sync Engine** (Config round-trip + Fetcher + Installer + Format Transform)
 
 ## 🟢 Plan 1 완료 Snapshot (2026-04-22)
 
@@ -20,6 +20,18 @@ concord validate ./concord.yaml    # 3-pass validation (Reserved + allowlist + Z
 concord lint ./concord.yaml        # pre-validation only (fast)
 concord list --lock ./concord.lock # dry-run lock reader
 ```
+
+## 🟢 Plan 2A 완료 Snapshot (2026-04-22)
+
+- **Branch**: `feat/concord-plan-2a-round-trip-poc` → main 에 merge 완료
+- **Tests green**: **246 / 246 + 1 skipped** (37 files)
+- **Tasks**: 18/18 완료
+- **Tag**: `concord-plan-2a-round-trip-poc`
+- **선정 library**:
+  - TOML: `@decimalturn/toml-patch @ 1.1.1` (loser: `@shopify/toml-patch`, `@ltd/j-toml`)
+  - JSONC: `jsonc-morph @ 0.3.3` (loser: `jsonc-parser`)
+  - YAML: `yaml @ 2.8.3` (eemeli) — Plan 1 에서 이미 확정
+  - Symlink: `symlink-dir @ 10.0.1` — macOS 5/5 PASS / Windows DEFERRED
 
 ---
 
@@ -129,9 +141,9 @@ concord list --lock ./concord.lock # dry-run lock reader
 ## 🔜 남은 결정 (Pending Decisions)
 
 ### 결정 B — FINAL 완료 (2026-04-19). 구현 시 남은 POC 항목 (`STEP-B/05-open-questions.md`):
-- [ ] POC-1: TOML 3도구 벤치마크 (`@shopify/toml-patch` / `@decimalturn/toml-patch` / `@ltd/j-toml`) — 1개 선택
-- [ ] POC-2: `jsonc-morph` vs `jsonc-parser` 실용성 비교 (Node.js 안정성·성능)
-- [ ] POC-3: Format-preserving YAML 편집 라이브러리 선정 (eemeli/yaml 유력)
+- [x] POC-1: TOML 3도구 벤치마크 → **`@decimalturn/toml-patch @ 1.1.1` 선정** (2026-04-22, Plan 2A Task 7~8)
+- [x] POC-2: `jsonc-morph` vs `jsonc-parser` → **`jsonc-morph @ 0.3.3` 선정** (2026-04-22, Plan 2A Task 12)
+- [x] POC-3: Format-preserving YAML → **`yaml @ 2.8.3` (eemeli) 확정** (2026-04-22, Plan 2A Task 13~14)
 - [x] POC-4: `~/.claude.json` 실제 포맷 확인 → **순수 JSON 확정, `json-key-owned` 방식 채택** (2026-04-19, `STEP-B/05-open-questions.md`)
 
 ### 결정 C — Plugin 자산 타입의 source 모델 **[β3 재구조 확정 2026-04-20]** → FINAL 문서: `STEP-C/03-plugin-source-model.md`
@@ -201,9 +213,9 @@ concord list --lock ./concord.lock # dry-run lock reader
 ### Phase 1 POC (구현 전 병목 검증)
 
 **결정 B 구현 시 POC**:
-- [ ] POC-1: TOML 3도구 벤치마크 (`@shopify/toml-patch` / `@decimalturn/toml-patch` / `@ltd/j-toml`) — 1개 선택
-- [ ] POC-2: `jsonc-morph` vs `jsonc-parser` 실용성 비교 (Node.js 안정성·성능)
-- [ ] POC-3: Format-preserving YAML 편집 라이브러리 선정 (eemeli/yaml 유력)
+- [x] POC-1: TOML 3도구 벤치마크 → **`@decimalturn/toml-patch @ 1.1.1` 선정** (2026-04-22)
+- [x] POC-2: `jsonc-morph` vs `jsonc-parser` → **`jsonc-morph @ 0.3.3` 선정** (2026-04-22)
+- [x] POC-3: Format-preserving YAML → **`yaml @ 2.8.3` (eemeli) 확정** (2026-04-22)
 - [x] POC-4: `~/.claude.json` 실제 포맷 확인 → **순수 JSON 확정, `json-key-owned` 방식 채택** (2026-04-19)
 
 **결정 C 구현 시 POC**:
@@ -213,7 +225,7 @@ concord list --lock ./concord.lock # dry-run lock reader
 - [ ] POC-8: `concord cleanup` 에서 `extraneous` 탐지 시 jsonc-morph round-trip 외부 추가 항목 preserve 검증
 
 **결정 D 구현 시 POC**:
-- [ ] POC-9: `symlink-dir` Windows junction/hardlink fallback 실측
+- [x] POC-9: `symlink-dir` macOS 5/5 PASS → **`symlink-dir @ 10.0.1` 선정** (2026-04-22, Plan 2A Task 15~16) / Windows DEFERRED (GitHub Actions CI matrix)
 - [ ] POC-10: `concord doctor` preflight 5 체크 (Git Bash, Codex 버전, Developer Mode, AV exclusion, OneDrive) 정확성
 - [ ] POC-11: Drift 4 상태 판정 로직 (source/target/divergent/env-drift) 엣지케이스
 
@@ -229,8 +241,11 @@ concord list --lock ./concord.lock # dry-run lock reader
 - [x] 4-plan 분할: Plan 1 Foundation / Plan 2 Sync Engine / Plan 3 Secret+Diagnostics / Plan 4 CLI 통합
 - [x] `subagent-driven-development` 스킬로 Plan 1 실행 (Task 1~28 완료)
 - [x] Plan 1 → main merge
-- [ ] **Plan 2 Sync Engine 작성·실행** (다음 단계)
-  - Config round-trip (JSONC jsonc-morph / TOML POC-1 / 순수 JSON json-key-owned)
+- [x] **Plan 2A Round-trip POC 완료** (2026-04-22, 18 tasks, 246 tests)
+  - TOML: `@decimalturn/toml-patch @ 1.1.1` / JSONC: `jsonc-morph @ 0.3.3` / YAML: `yaml @ 2.8.3` / Symlink: `symlink-dir @ 10.0.1` (macOS)
+  - Branch: `feat/concord-plan-2a-round-trip-poc` → main merge / Tag: `concord-plan-2a-round-trip-poc`
+- [ ] **Plan 2B Sync Engine 작성·실행** (다음 단계)
+  - Config round-trip (JSONC jsonc-morph / TOML @decimalturn/toml-patch / 순수 JSON json-key-owned)
   - Fetcher 6종 (GitFetcher / FileFetcher / HttpFetcher / NpmFetcher / ExternalFetcher / AdoptedFetcher)
   - Symlink/copy installer + format transformer (D-1~D-15)
   - 제공 산출물: `concord sync` 실동작

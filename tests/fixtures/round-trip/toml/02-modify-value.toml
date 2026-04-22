@@ -1,0 +1,6 @@
+[mcp_servers.airtable]
+command = "npx"
+args = ["-y", "airtable-mcp-server@0.1.0"]  # version pin
+
+[mcp_servers.other]
+command = "node"

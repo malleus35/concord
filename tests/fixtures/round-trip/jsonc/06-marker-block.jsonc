@@ -1,0 +1,19 @@
+{
+  "mcpServers": {
+    "user-manual": {
+      // User added this manually
+      "command": "node",
+      "args": ["user.js"]
+    },
+    // >>>> concord-managed:mcp_servers:airtable  (hash:abcd1234)
+    "airtable": {
+      "command": "npx",
+      "args": ["-y", "airtable-mcp-server"]
+    },
+    // <<<< concord-managed:mcp_servers:airtable
+    "other-manual": {
+      "command": "bash",
+      "args": ["other.sh"]
+    }
+  }
+}

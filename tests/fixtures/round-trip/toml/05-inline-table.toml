@@ -1,0 +1,5 @@
+# Inline tables should not be converted to standard tables
+
+[mcp_servers]
+airtable = { command = "npx", args = ["-y", "airtable"] }
+slack = { command = "node", args = ["slack.js"] }

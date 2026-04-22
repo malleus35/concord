@@ -1,0 +1,8 @@
+# Keep this comment
+
+[mcp_servers.obsolete]
+# Will be deleted
+command = "old-tool"
+
+[mcp_servers.keep]
+command = "new-tool"

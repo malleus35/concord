@@ -1,0 +1,19 @@
+# User settings — bedrock
+
+[features]
+codex_hooks = true
+
+[mcp_servers.user-manual]
+# User added this
+command = "npx"
+args = ["-y", "user-tool"]
+
+# >>>> concord-managed:mcp_servers:airtable  (hash:abcd1234)
+[mcp_servers.airtable]
+command = "npx"
+args = ["-y", "airtable-mcp-server"]
+# <<<< concord-managed:mcp_servers:airtable
+
+# User keeps this section too
+[mcp_servers.other-manual]
+command = "node"

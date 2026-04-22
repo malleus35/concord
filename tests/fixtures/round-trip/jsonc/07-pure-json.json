@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "airtable": {
+      "command": "npx",
+      "args": ["-y", "airtable-mcp-server"]
+    }
+  },
+  "projects": {
+    "/home/user/repo": {
+      "lastAccessed": "2026-04-01"
+    }
+  }
+}
