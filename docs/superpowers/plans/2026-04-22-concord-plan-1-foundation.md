@@ -3034,7 +3034,7 @@ export const LockNodeSchema = z.object({
   dependencies: z.array(z.string()).optional(),
   min_engine: z.string().optional(),
 
-  installed_at: z.string().datetime(),
+  installed_at: z.iso.datetime(),  // Zod 4: top-level iso namespace (z.string().datetime() deprecated)
   install_path: z.string(),
 });
 export type LockNode = z.infer<typeof LockNodeSchema>;
