@@ -1,0 +1,32 @@
+{
+  "lockfile_version": 1,
+  "generated_at": "2026-04-22T10:00:00Z",
+  "generated_by": "concord@0.1.0",
+  "scope": "project",
+  "roots": ["claude-code:skills:commit-msg"],
+  "nodes": {
+    "claude-code:skills:commit-msg": {
+      "id": "claude-code:skills:commit-msg",
+      "type": "skills",
+      "provider": "claude-code",
+      "source_digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "content_digest": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "catalog_digest": "sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+      "resolved_source": { "type": "file", "path": "/abs/commit-msg" },
+      "declared": { "id": "claude-code:skills:commit-msg", "source": { "type": "file", "path": "./skills/commit-msg" } },
+      "install_mode": "copy",
+      "install_reason": "WindowsDefault",
+      "shell_compatibility": "na",
+      "drift_status": "none",
+      "raw_hash": "sha256:dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+      "normalized_hash": "sha256:eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+      "installed_at": "2026-04-22T10:00:00Z",
+      "install_path": "/home/alice/.claude/skills/commit-msg"
+    }
+  },
+  "capability_matrix": {
+    "claude-code": {
+      "skills": { "status": "supported", "count": 1, "drift_status": "none" }
+    }
+  }
+}
