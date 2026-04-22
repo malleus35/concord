@@ -1,0 +1,7 @@
+# CRLF test
+[features]
+codex_hooks = true
+
+[mcp_servers.tool]
+command = "npx"
+args = ["-y", "crlf-tool"]

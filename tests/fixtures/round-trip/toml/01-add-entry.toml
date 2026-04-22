@@ -1,0 +1,10 @@
+# Codex config — sample
+# Line comment at top
+
+[features]
+codex_hooks = true  # inline comment
+
+[mcp_servers.airtable]
+# Existing server
+command = "npx"
+args = ["-y", "airtable-mcp-server"]

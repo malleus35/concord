@@ -1,0 +1,8001 @@
+# Large TOML fixture — >100KB
+
+[mcp_servers.srv_0]
+command = "npx"
+args = ["-y", "srv-0"]
+
+[mcp_servers.srv_1]
+command = "npx"
+args = ["-y", "srv-1"]
+
+[mcp_servers.srv_2]
+command = "npx"
+args = ["-y", "srv-2"]
+
+[mcp_servers.srv_3]
+command = "npx"
+args = ["-y", "srv-3"]
+
+[mcp_servers.srv_4]
+command = "npx"
+args = ["-y", "srv-4"]
+
+[mcp_servers.srv_5]
+command = "npx"
+args = ["-y", "srv-5"]
+
+[mcp_servers.srv_6]
+command = "npx"
+args = ["-y", "srv-6"]
+
+[mcp_servers.srv_7]
+command = "npx"
+args = ["-y", "srv-7"]
+
+[mcp_servers.srv_8]
+command = "npx"
+args = ["-y", "srv-8"]
+
+[mcp_servers.srv_9]
+command = "npx"
+args = ["-y", "srv-9"]
+
+[mcp_servers.srv_10]
+command = "npx"
+args = ["-y", "srv-10"]
+
+[mcp_servers.srv_11]
+command = "npx"
+args = ["-y", "srv-11"]
+
+[mcp_servers.srv_12]
+command = "npx"
+args = ["-y", "srv-12"]
+
+[mcp_servers.srv_13]
+command = "npx"
+args = ["-y", "srv-13"]
+
+[mcp_servers.srv_14]
+command = "npx"
+args = ["-y", "srv-14"]
+
+[mcp_servers.srv_15]
+command = "npx"
+args = ["-y", "srv-15"]
+
+[mcp_servers.srv_16]
+command = "npx"
+args = ["-y", "srv-16"]
+
+[mcp_servers.srv_17]
+command = "npx"
+args = ["-y", "srv-17"]
+
+[mcp_servers.srv_18]
+command = "npx"
+args = ["-y", "srv-18"]
+
+[mcp_servers.srv_19]
+command = "npx"
+args = ["-y", "srv-19"]
+
+[mcp_servers.srv_20]
+command = "npx"
+args = ["-y", "srv-20"]
+
+[mcp_servers.srv_21]
+command = "npx"
+args = ["-y", "srv-21"]
+
+[mcp_servers.srv_22]
+command = "npx"
+args = ["-y", "srv-22"]
+
+[mcp_servers.srv_23]
+command = "npx"
+args = ["-y", "srv-23"]
+
+[mcp_servers.srv_24]
+command = "npx"
+args = ["-y", "srv-24"]
+
+[mcp_servers.srv_25]
+command = "npx"
+args = ["-y", "srv-25"]
+
+[mcp_servers.srv_26]
+command = "npx"
+args = ["-y", "srv-26"]
+
+[mcp_servers.srv_27]
+command = "npx"
+args = ["-y", "srv-27"]
+
+[mcp_servers.srv_28]
+command = "npx"
+args = ["-y", "srv-28"]
+
+[mcp_servers.srv_29]
+command = "npx"
+args = ["-y", "srv-29"]
+
+[mcp_servers.srv_30]
+command = "npx"
+args = ["-y", "srv-30"]
+
+[mcp_servers.srv_31]
+command = "npx"
+args = ["-y", "srv-31"]
+
+[mcp_servers.srv_32]
+command = "npx"
+args = ["-y", "srv-32"]
+
+[mcp_servers.srv_33]
+command = "npx"
+args = ["-y", "srv-33"]
+
+[mcp_servers.srv_34]
+command = "npx"
+args = ["-y", "srv-34"]
+
+[mcp_servers.srv_35]
+command = "npx"
+args = ["-y", "srv-35"]
+
+[mcp_servers.srv_36]
+command = "npx"
+args = ["-y", "srv-36"]
+
+[mcp_servers.srv_37]
+command = "npx"
+args = ["-y", "srv-37"]
+
+[mcp_servers.srv_38]
+command = "npx"
+args = ["-y", "srv-38"]
+
+[mcp_servers.srv_39]
+command = "npx"
+args = ["-y", "srv-39"]
+
+[mcp_servers.srv_40]
+command = "npx"
+args = ["-y", "srv-40"]
+
+[mcp_servers.srv_41]
+command = "npx"
+args = ["-y", "srv-41"]
+
+[mcp_servers.srv_42]
+command = "npx"
+args = ["-y", "srv-42"]
+
+[mcp_servers.srv_43]
+command = "npx"
+args = ["-y", "srv-43"]
+
+[mcp_servers.srv_44]
+command = "npx"
+args = ["-y", "srv-44"]
+
+[mcp_servers.srv_45]
+command = "npx"
+args = ["-y", "srv-45"]
+
+[mcp_servers.srv_46]
+command = "npx"
+args = ["-y", "srv-46"]
+
+[mcp_servers.srv_47]
+command = "npx"
+args = ["-y", "srv-47"]
+
+[mcp_servers.srv_48]
+command = "npx"
+args = ["-y", "srv-48"]
+
+[mcp_servers.srv_49]
+command = "npx"
+args = ["-y", "srv-49"]
+
+[mcp_servers.srv_50]
+command = "npx"
+args = ["-y", "srv-50"]
+
+[mcp_servers.srv_51]
+command = "npx"
+args = ["-y", "srv-51"]
+
+[mcp_servers.srv_52]
+command = "npx"
+args = ["-y", "srv-52"]
+
+[mcp_servers.srv_53]
+command = "npx"
+args = ["-y", "srv-53"]
+
+[mcp_servers.srv_54]
+command = "npx"
+args = ["-y", "srv-54"]
+
+[mcp_servers.srv_55]
+command = "npx"
+args = ["-y", "srv-55"]
+
+[mcp_servers.srv_56]
+command = "npx"
+args = ["-y", "srv-56"]
+
+[mcp_servers.srv_57]
+command = "npx"
+args = ["-y", "srv-57"]
+
+[mcp_servers.srv_58]
+command = "npx"
+args = ["-y", "srv-58"]
+
+[mcp_servers.srv_59]
+command = "npx"
+args = ["-y", "srv-59"]
+
+[mcp_servers.srv_60]
+command = "npx"
+args = ["-y", "srv-60"]
+
+[mcp_servers.srv_61]
+command = "npx"
+args = ["-y", "srv-61"]
+
+[mcp_servers.srv_62]
+command = "npx"
+args = ["-y", "srv-62"]
+
+[mcp_servers.srv_63]
+command = "npx"
+args = ["-y", "srv-63"]
+
+[mcp_servers.srv_64]
+command = "npx"
+args = ["-y", "srv-64"]
+
+[mcp_servers.srv_65]
+command = "npx"
+args = ["-y", "srv-65"]
+
+[mcp_servers.srv_66]
+command = "npx"
+args = ["-y", "srv-66"]
+
+[mcp_servers.srv_67]
+command = "npx"
+args = ["-y", "srv-67"]
+
+[mcp_servers.srv_68]
+command = "npx"
+args = ["-y", "srv-68"]
+
+[mcp_servers.srv_69]
+command = "npx"
+args = ["-y", "srv-69"]
+
+[mcp_servers.srv_70]
+command = "npx"
+args = ["-y", "srv-70"]
+
+[mcp_servers.srv_71]
+command = "npx"
+args = ["-y", "srv-71"]
+
+[mcp_servers.srv_72]
+command = "npx"
+args = ["-y", "srv-72"]
+
+[mcp_servers.srv_73]
+command = "npx"
+args = ["-y", "srv-73"]
+
+[mcp_servers.srv_74]
+command = "npx"
+args = ["-y", "srv-74"]
+
+[mcp_servers.srv_75]
+command = "npx"
+args = ["-y", "srv-75"]
+
+[mcp_servers.srv_76]
+command = "npx"
+args = ["-y", "srv-76"]
+
+[mcp_servers.srv_77]
+command = "npx"
+args = ["-y", "srv-77"]
+
+[mcp_servers.srv_78]
+command = "npx"
+args = ["-y", "srv-78"]
+
+[mcp_servers.srv_79]
+command = "npx"
+args = ["-y", "srv-79"]
+
+[mcp_servers.srv_80]
+command = "npx"
+args = ["-y", "srv-80"]
+
+[mcp_servers.srv_81]
+command = "npx"
+args = ["-y", "srv-81"]
+
+[mcp_servers.srv_82]
+command = "npx"
+args = ["-y", "srv-82"]
+
+[mcp_servers.srv_83]
+command = "npx"
+args = ["-y", "srv-83"]
+
+[mcp_servers.srv_84]
+command = "npx"
+args = ["-y", "srv-84"]
+
+[mcp_servers.srv_85]
+command = "npx"
+args = ["-y", "srv-85"]
+
+[mcp_servers.srv_86]
+command = "npx"
+args = ["-y", "srv-86"]
+
+[mcp_servers.srv_87]
+command = "npx"
+args = ["-y", "srv-87"]
+
+[mcp_servers.srv_88]
+command = "npx"
+args = ["-y", "srv-88"]
+
+[mcp_servers.srv_89]
+command = "npx"
+args = ["-y", "srv-89"]
+
+[mcp_servers.srv_90]
+command = "npx"
+args = ["-y", "srv-90"]
+
+[mcp_servers.srv_91]
+command = "npx"
+args = ["-y", "srv-91"]
+
+[mcp_servers.srv_92]
+command = "npx"
+args = ["-y", "srv-92"]
+
+[mcp_servers.srv_93]
+command = "npx"
+args = ["-y", "srv-93"]
+
+[mcp_servers.srv_94]
+command = "npx"
+args = ["-y", "srv-94"]
+
+[mcp_servers.srv_95]
+command = "npx"
+args = ["-y", "srv-95"]
+
+[mcp_servers.srv_96]
+command = "npx"
+args = ["-y", "srv-96"]
+
+[mcp_servers.srv_97]
+command = "npx"
+args = ["-y", "srv-97"]
+
+[mcp_servers.srv_98]
+command = "npx"
+args = ["-y", "srv-98"]
+
+[mcp_servers.srv_99]
+command = "npx"
+args = ["-y", "srv-99"]
+
+[mcp_servers.srv_100]
+command = "npx"
+args = ["-y", "srv-100"]
+
+[mcp_servers.srv_101]
+command = "npx"
+args = ["-y", "srv-101"]
+
+[mcp_servers.srv_102]
+command = "npx"
+args = ["-y", "srv-102"]
+
+[mcp_servers.srv_103]
+command = "npx"
+args = ["-y", "srv-103"]
+
+[mcp_servers.srv_104]
+command = "npx"
+args = ["-y", "srv-104"]
+
+[mcp_servers.srv_105]
+command = "npx"
+args = ["-y", "srv-105"]
+
+[mcp_servers.srv_106]
+command = "npx"
+args = ["-y", "srv-106"]
+
+[mcp_servers.srv_107]
+command = "npx"
+args = ["-y", "srv-107"]
+
+[mcp_servers.srv_108]
+command = "npx"
+args = ["-y", "srv-108"]
+
+[mcp_servers.srv_109]
+command = "npx"
+args = ["-y", "srv-109"]
+
+[mcp_servers.srv_110]
+command = "npx"
+args = ["-y", "srv-110"]
+
+[mcp_servers.srv_111]
+command = "npx"
+args = ["-y", "srv-111"]
+
+[mcp_servers.srv_112]
+command = "npx"
+args = ["-y", "srv-112"]
+
+[mcp_servers.srv_113]
+command = "npx"
+args = ["-y", "srv-113"]
+
+[mcp_servers.srv_114]
+command = "npx"
+args = ["-y", "srv-114"]
+
+[mcp_servers.srv_115]
+command = "npx"
+args = ["-y", "srv-115"]
+
+[mcp_servers.srv_116]
+command = "npx"
+args = ["-y", "srv-116"]
+
+[mcp_servers.srv_117]
+command = "npx"
+args = ["-y", "srv-117"]
+
+[mcp_servers.srv_118]
+command = "npx"
+args = ["-y", "srv-118"]
+
+[mcp_servers.srv_119]
+command = "npx"
+args = ["-y", "srv-119"]
+
+[mcp_servers.srv_120]
+command = "npx"
+args = ["-y", "srv-120"]
+
+[mcp_servers.srv_121]
+command = "npx"
+args = ["-y", "srv-121"]
+
+[mcp_servers.srv_122]
+command = "npx"
+args = ["-y", "srv-122"]
+
+[mcp_servers.srv_123]
+command = "npx"
+args = ["-y", "srv-123"]
+
+[mcp_servers.srv_124]
+command = "npx"
+args = ["-y", "srv-124"]
+
+[mcp_servers.srv_125]
+command = "npx"
+args = ["-y", "srv-125"]
+
+[mcp_servers.srv_126]
+command = "npx"
+args = ["-y", "srv-126"]
+
+[mcp_servers.srv_127]
+command = "npx"
+args = ["-y", "srv-127"]
+
+[mcp_servers.srv_128]
+command = "npx"
+args = ["-y", "srv-128"]
+
+[mcp_servers.srv_129]
+command = "npx"
+args = ["-y", "srv-129"]
+
+[mcp_servers.srv_130]
+command = "npx"
+args = ["-y", "srv-130"]
+
+[mcp_servers.srv_131]
+command = "npx"
+args = ["-y", "srv-131"]
+
+[mcp_servers.srv_132]
+command = "npx"
+args = ["-y", "srv-132"]
+
+[mcp_servers.srv_133]
+command = "npx"
+args = ["-y", "srv-133"]
+
+[mcp_servers.srv_134]
+command = "npx"
+args = ["-y", "srv-134"]
+
+[mcp_servers.srv_135]
+command = "npx"
+args = ["-y", "srv-135"]
+
+[mcp_servers.srv_136]
+command = "npx"
+args = ["-y", "srv-136"]
+
+[mcp_servers.srv_137]
+command = "npx"
+args = ["-y", "srv-137"]
+
+[mcp_servers.srv_138]
+command = "npx"
+args = ["-y", "srv-138"]
+
+[mcp_servers.srv_139]
+command = "npx"
+args = ["-y", "srv-139"]
+
+[mcp_servers.srv_140]
+command = "npx"
+args = ["-y", "srv-140"]
+
+[mcp_servers.srv_141]
+command = "npx"
+args = ["-y", "srv-141"]
+
+[mcp_servers.srv_142]
+command = "npx"
+args = ["-y", "srv-142"]
+
+[mcp_servers.srv_143]
+command = "npx"
+args = ["-y", "srv-143"]
+
+[mcp_servers.srv_144]
+command = "npx"
+args = ["-y", "srv-144"]
+
+[mcp_servers.srv_145]
+command = "npx"
+args = ["-y", "srv-145"]
+
+[mcp_servers.srv_146]
+command = "npx"
+args = ["-y", "srv-146"]
+
+[mcp_servers.srv_147]
+command = "npx"
+args = ["-y", "srv-147"]
+
+[mcp_servers.srv_148]
+command = "npx"
+args = ["-y", "srv-148"]
+
+[mcp_servers.srv_149]
+command = "npx"
+args = ["-y", "srv-149"]
+
+[mcp_servers.srv_150]
+command = "npx"
+args = ["-y", "srv-150"]
+
+[mcp_servers.srv_151]
+command = "npx"
+args = ["-y", "srv-151"]
+
+[mcp_servers.srv_152]
+command = "npx"
+args = ["-y", "srv-152"]
+
+[mcp_servers.srv_153]
+command = "npx"
+args = ["-y", "srv-153"]
+
+[mcp_servers.srv_154]
+command = "npx"
+args = ["-y", "srv-154"]
+
+[mcp_servers.srv_155]
+command = "npx"
+args = ["-y", "srv-155"]
+
+[mcp_servers.srv_156]
+command = "npx"
+args = ["-y", "srv-156"]
+
+[mcp_servers.srv_157]
+command = "npx"
+args = ["-y", "srv-157"]
+
+[mcp_servers.srv_158]
+command = "npx"
+args = ["-y", "srv-158"]
+
+[mcp_servers.srv_159]
+command = "npx"
+args = ["-y", "srv-159"]
+
+[mcp_servers.srv_160]
+command = "npx"
+args = ["-y", "srv-160"]
+
+[mcp_servers.srv_161]
+command = "npx"
+args = ["-y", "srv-161"]
+
+[mcp_servers.srv_162]
+command = "npx"
+args = ["-y", "srv-162"]
+
+[mcp_servers.srv_163]
+command = "npx"
+args = ["-y", "srv-163"]
+
+[mcp_servers.srv_164]
+command = "npx"
+args = ["-y", "srv-164"]
+
+[mcp_servers.srv_165]
+command = "npx"
+args = ["-y", "srv-165"]
+
+[mcp_servers.srv_166]
+command = "npx"
+args = ["-y", "srv-166"]
+
+[mcp_servers.srv_167]
+command = "npx"
+args = ["-y", "srv-167"]
+
+[mcp_servers.srv_168]
+command = "npx"
+args = ["-y", "srv-168"]
+
+[mcp_servers.srv_169]
+command = "npx"
+args = ["-y", "srv-169"]
+
+[mcp_servers.srv_170]
+command = "npx"
+args = ["-y", "srv-170"]
+
+[mcp_servers.srv_171]
+command = "npx"
+args = ["-y", "srv-171"]
+
+[mcp_servers.srv_172]
+command = "npx"
+args = ["-y", "srv-172"]
+
+[mcp_servers.srv_173]
+command = "npx"
+args = ["-y", "srv-173"]
+
+[mcp_servers.srv_174]
+command = "npx"
+args = ["-y", "srv-174"]
+
+[mcp_servers.srv_175]
+command = "npx"
+args = ["-y", "srv-175"]
+
+[mcp_servers.srv_176]
+command = "npx"
+args = ["-y", "srv-176"]
+
+[mcp_servers.srv_177]
+command = "npx"
+args = ["-y", "srv-177"]
+
+[mcp_servers.srv_178]
+command = "npx"
+args = ["-y", "srv-178"]
+
+[mcp_servers.srv_179]
+command = "npx"
+args = ["-y", "srv-179"]
+
+[mcp_servers.srv_180]
+command = "npx"
+args = ["-y", "srv-180"]
+
+[mcp_servers.srv_181]
+command = "npx"
+args = ["-y", "srv-181"]
+
+[mcp_servers.srv_182]
+command = "npx"
+args = ["-y", "srv-182"]
+
+[mcp_servers.srv_183]
+command = "npx"
+args = ["-y", "srv-183"]
+
+[mcp_servers.srv_184]
+command = "npx"
+args = ["-y", "srv-184"]
+
+[mcp_servers.srv_185]
+command = "npx"
+args = ["-y", "srv-185"]
+
+[mcp_servers.srv_186]
+command = "npx"
+args = ["-y", "srv-186"]
+
+[mcp_servers.srv_187]
+command = "npx"
+args = ["-y", "srv-187"]
+
+[mcp_servers.srv_188]
+command = "npx"
+args = ["-y", "srv-188"]
+
+[mcp_servers.srv_189]
+command = "npx"
+args = ["-y", "srv-189"]
+
+[mcp_servers.srv_190]
+command = "npx"
+args = ["-y", "srv-190"]
+
+[mcp_servers.srv_191]
+command = "npx"
+args = ["-y", "srv-191"]
+
+[mcp_servers.srv_192]
+command = "npx"
+args = ["-y", "srv-192"]
+
+[mcp_servers.srv_193]
+command = "npx"
+args = ["-y", "srv-193"]
+
+[mcp_servers.srv_194]
+command = "npx"
+args = ["-y", "srv-194"]
+
+[mcp_servers.srv_195]
+command = "npx"
+args = ["-y", "srv-195"]
+
+[mcp_servers.srv_196]
+command = "npx"
+args = ["-y", "srv-196"]
+
+[mcp_servers.srv_197]
+command = "npx"
+args = ["-y", "srv-197"]
+
+[mcp_servers.srv_198]
+command = "npx"
+args = ["-y", "srv-198"]
+
+[mcp_servers.srv_199]
+command = "npx"
+args = ["-y", "srv-199"]
+
+[mcp_servers.srv_200]
+command = "npx"
+args = ["-y", "srv-200"]
+
+[mcp_servers.srv_201]
+command = "npx"
+args = ["-y", "srv-201"]
+
+[mcp_servers.srv_202]
+command = "npx"
+args = ["-y", "srv-202"]
+
+[mcp_servers.srv_203]
+command = "npx"
+args = ["-y", "srv-203"]
+
+[mcp_servers.srv_204]
+command = "npx"
+args = ["-y", "srv-204"]
+
+[mcp_servers.srv_205]
+command = "npx"
+args = ["-y", "srv-205"]
+
+[mcp_servers.srv_206]
+command = "npx"
+args = ["-y", "srv-206"]
+
+[mcp_servers.srv_207]
+command = "npx"
+args = ["-y", "srv-207"]
+
+[mcp_servers.srv_208]
+command = "npx"
+args = ["-y", "srv-208"]
+
+[mcp_servers.srv_209]
+command = "npx"
+args = ["-y", "srv-209"]
+
+[mcp_servers.srv_210]
+command = "npx"
+args = ["-y", "srv-210"]
+
+[mcp_servers.srv_211]
+command = "npx"
+args = ["-y", "srv-211"]
+
+[mcp_servers.srv_212]
+command = "npx"
+args = ["-y", "srv-212"]
+
+[mcp_servers.srv_213]
+command = "npx"
+args = ["-y", "srv-213"]
+
+[mcp_servers.srv_214]
+command = "npx"
+args = ["-y", "srv-214"]
+
+[mcp_servers.srv_215]
+command = "npx"
+args = ["-y", "srv-215"]
+
+[mcp_servers.srv_216]
+command = "npx"
+args = ["-y", "srv-216"]
+
+[mcp_servers.srv_217]
+command = "npx"
+args = ["-y", "srv-217"]
+
+[mcp_servers.srv_218]
+command = "npx"
+args = ["-y", "srv-218"]
+
+[mcp_servers.srv_219]
+command = "npx"
+args = ["-y", "srv-219"]
+
+[mcp_servers.srv_220]
+command = "npx"
+args = ["-y", "srv-220"]
+
+[mcp_servers.srv_221]
+command = "npx"
+args = ["-y", "srv-221"]
+
+[mcp_servers.srv_222]
+command = "npx"
+args = ["-y", "srv-222"]
+
+[mcp_servers.srv_223]
+command = "npx"
+args = ["-y", "srv-223"]
+
+[mcp_servers.srv_224]
+command = "npx"
+args = ["-y", "srv-224"]
+
+[mcp_servers.srv_225]
+command = "npx"
+args = ["-y", "srv-225"]
+
+[mcp_servers.srv_226]
+command = "npx"
+args = ["-y", "srv-226"]
+
+[mcp_servers.srv_227]
+command = "npx"
+args = ["-y", "srv-227"]
+
+[mcp_servers.srv_228]
+command = "npx"
+args = ["-y", "srv-228"]
+
+[mcp_servers.srv_229]
+command = "npx"
+args = ["-y", "srv-229"]
+
+[mcp_servers.srv_230]
+command = "npx"
+args = ["-y", "srv-230"]
+
+[mcp_servers.srv_231]
+command = "npx"
+args = ["-y", "srv-231"]
+
+[mcp_servers.srv_232]
+command = "npx"
+args = ["-y", "srv-232"]
+
+[mcp_servers.srv_233]
+command = "npx"
+args = ["-y", "srv-233"]
+
+[mcp_servers.srv_234]
+command = "npx"
+args = ["-y", "srv-234"]
+
+[mcp_servers.srv_235]
+command = "npx"
+args = ["-y", "srv-235"]
+
+[mcp_servers.srv_236]
+command = "npx"
+args = ["-y", "srv-236"]
+
+[mcp_servers.srv_237]
+command = "npx"
+args = ["-y", "srv-237"]
+
+[mcp_servers.srv_238]
+command = "npx"
+args = ["-y", "srv-238"]
+
+[mcp_servers.srv_239]
+command = "npx"
+args = ["-y", "srv-239"]
+
+[mcp_servers.srv_240]
+command = "npx"
+args = ["-y", "srv-240"]
+
+[mcp_servers.srv_241]
+command = "npx"
+args = ["-y", "srv-241"]
+
+[mcp_servers.srv_242]
+command = "npx"
+args = ["-y", "srv-242"]
+
+[mcp_servers.srv_243]
+command = "npx"
+args = ["-y", "srv-243"]
+
+[mcp_servers.srv_244]
+command = "npx"
+args = ["-y", "srv-244"]
+
+[mcp_servers.srv_245]
+command = "npx"
+args = ["-y", "srv-245"]
+
+[mcp_servers.srv_246]
+command = "npx"
+args = ["-y", "srv-246"]
+
+[mcp_servers.srv_247]
+command = "npx"
+args = ["-y", "srv-247"]
+
+[mcp_servers.srv_248]
+command = "npx"
+args = ["-y", "srv-248"]
+
+[mcp_servers.srv_249]
+command = "npx"
+args = ["-y", "srv-249"]
+
+[mcp_servers.srv_250]
+command = "npx"
+args = ["-y", "srv-250"]
+
+[mcp_servers.srv_251]
+command = "npx"
+args = ["-y", "srv-251"]
+
+[mcp_servers.srv_252]
+command = "npx"
+args = ["-y", "srv-252"]
+
+[mcp_servers.srv_253]
+command = "npx"
+args = ["-y", "srv-253"]
+
+[mcp_servers.srv_254]
+command = "npx"
+args = ["-y", "srv-254"]
+
+[mcp_servers.srv_255]
+command = "npx"
+args = ["-y", "srv-255"]
+
+[mcp_servers.srv_256]
+command = "npx"
+args = ["-y", "srv-256"]
+
+[mcp_servers.srv_257]
+command = "npx"
+args = ["-y", "srv-257"]
+
+[mcp_servers.srv_258]
+command = "npx"
+args = ["-y", "srv-258"]
+
+[mcp_servers.srv_259]
+command = "npx"
+args = ["-y", "srv-259"]
+
+[mcp_servers.srv_260]
+command = "npx"
+args = ["-y", "srv-260"]
+
+[mcp_servers.srv_261]
+command = "npx"
+args = ["-y", "srv-261"]
+
+[mcp_servers.srv_262]
+command = "npx"
+args = ["-y", "srv-262"]
+
+[mcp_servers.srv_263]
+command = "npx"
+args = ["-y", "srv-263"]
+
+[mcp_servers.srv_264]
+command = "npx"
+args = ["-y", "srv-264"]
+
+[mcp_servers.srv_265]
+command = "npx"
+args = ["-y", "srv-265"]
+
+[mcp_servers.srv_266]
+command = "npx"
+args = ["-y", "srv-266"]
+
+[mcp_servers.srv_267]
+command = "npx"
+args = ["-y", "srv-267"]
+
+[mcp_servers.srv_268]
+command = "npx"
+args = ["-y", "srv-268"]
+
+[mcp_servers.srv_269]
+command = "npx"
+args = ["-y", "srv-269"]
+
+[mcp_servers.srv_270]
+command = "npx"
+args = ["-y", "srv-270"]
+
+[mcp_servers.srv_271]
+command = "npx"
+args = ["-y", "srv-271"]
+
+[mcp_servers.srv_272]
+command = "npx"
+args = ["-y", "srv-272"]
+
+[mcp_servers.srv_273]
+command = "npx"
+args = ["-y", "srv-273"]
+
+[mcp_servers.srv_274]
+command = "npx"
+args = ["-y", "srv-274"]
+
+[mcp_servers.srv_275]
+command = "npx"
+args = ["-y", "srv-275"]
+
+[mcp_servers.srv_276]
+command = "npx"
+args = ["-y", "srv-276"]
+
+[mcp_servers.srv_277]
+command = "npx"
+args = ["-y", "srv-277"]
+
+[mcp_servers.srv_278]
+command = "npx"
+args = ["-y", "srv-278"]
+
+[mcp_servers.srv_279]
+command = "npx"
+args = ["-y", "srv-279"]
+
+[mcp_servers.srv_280]
+command = "npx"
+args = ["-y", "srv-280"]
+
+[mcp_servers.srv_281]
+command = "npx"
+args = ["-y", "srv-281"]
+
+[mcp_servers.srv_282]
+command = "npx"
+args = ["-y", "srv-282"]
+
+[mcp_servers.srv_283]
+command = "npx"
+args = ["-y", "srv-283"]
+
+[mcp_servers.srv_284]
+command = "npx"
+args = ["-y", "srv-284"]
+
+[mcp_servers.srv_285]
+command = "npx"
+args = ["-y", "srv-285"]
+
+[mcp_servers.srv_286]
+command = "npx"
+args = ["-y", "srv-286"]
+
+[mcp_servers.srv_287]
+command = "npx"
+args = ["-y", "srv-287"]
+
+[mcp_servers.srv_288]
+command = "npx"
+args = ["-y", "srv-288"]
+
+[mcp_servers.srv_289]
+command = "npx"
+args = ["-y", "srv-289"]
+
+[mcp_servers.srv_290]
+command = "npx"
+args = ["-y", "srv-290"]
+
+[mcp_servers.srv_291]
+command = "npx"
+args = ["-y", "srv-291"]
+
+[mcp_servers.srv_292]
+command = "npx"
+args = ["-y", "srv-292"]
+
+[mcp_servers.srv_293]
+command = "npx"
+args = ["-y", "srv-293"]
+
+[mcp_servers.srv_294]
+command = "npx"
+args = ["-y", "srv-294"]
+
+[mcp_servers.srv_295]
+command = "npx"
+args = ["-y", "srv-295"]
+
+[mcp_servers.srv_296]
+command = "npx"
+args = ["-y", "srv-296"]
+
+[mcp_servers.srv_297]
+command = "npx"
+args = ["-y", "srv-297"]
+
+[mcp_servers.srv_298]
+command = "npx"
+args = ["-y", "srv-298"]
+
+[mcp_servers.srv_299]
+command = "npx"
+args = ["-y", "srv-299"]
+
+[mcp_servers.srv_300]
+command = "npx"
+args = ["-y", "srv-300"]
+
+[mcp_servers.srv_301]
+command = "npx"
+args = ["-y", "srv-301"]
+
+[mcp_servers.srv_302]
+command = "npx"
+args = ["-y", "srv-302"]
+
+[mcp_servers.srv_303]
+command = "npx"
+args = ["-y", "srv-303"]
+
+[mcp_servers.srv_304]
+command = "npx"
+args = ["-y", "srv-304"]
+
+[mcp_servers.srv_305]
+command = "npx"
+args = ["-y", "srv-305"]
+
+[mcp_servers.srv_306]
+command = "npx"
+args = ["-y", "srv-306"]
+
+[mcp_servers.srv_307]
+command = "npx"
+args = ["-y", "srv-307"]
+
+[mcp_servers.srv_308]
+command = "npx"
+args = ["-y", "srv-308"]
+
+[mcp_servers.srv_309]
+command = "npx"
+args = ["-y", "srv-309"]
+
+[mcp_servers.srv_310]
+command = "npx"
+args = ["-y", "srv-310"]
+
+[mcp_servers.srv_311]
+command = "npx"
+args = ["-y", "srv-311"]
+
+[mcp_servers.srv_312]
+command = "npx"
+args = ["-y", "srv-312"]
+
+[mcp_servers.srv_313]
+command = "npx"
+args = ["-y", "srv-313"]
+
+[mcp_servers.srv_314]
+command = "npx"
+args = ["-y", "srv-314"]
+
+[mcp_servers.srv_315]
+command = "npx"
+args = ["-y", "srv-315"]
+
+[mcp_servers.srv_316]
+command = "npx"
+args = ["-y", "srv-316"]
+
+[mcp_servers.srv_317]
+command = "npx"
+args = ["-y", "srv-317"]
+
+[mcp_servers.srv_318]
+command = "npx"
+args = ["-y", "srv-318"]
+
+[mcp_servers.srv_319]
+command = "npx"
+args = ["-y", "srv-319"]
+
+[mcp_servers.srv_320]
+command = "npx"
+args = ["-y", "srv-320"]
+
+[mcp_servers.srv_321]
+command = "npx"
+args = ["-y", "srv-321"]
+
+[mcp_servers.srv_322]
+command = "npx"
+args = ["-y", "srv-322"]
+
+[mcp_servers.srv_323]
+command = "npx"
+args = ["-y", "srv-323"]
+
+[mcp_servers.srv_324]
+command = "npx"
+args = ["-y", "srv-324"]
+
+[mcp_servers.srv_325]
+command = "npx"
+args = ["-y", "srv-325"]
+
+[mcp_servers.srv_326]
+command = "npx"
+args = ["-y", "srv-326"]
+
+[mcp_servers.srv_327]
+command = "npx"
+args = ["-y", "srv-327"]
+
+[mcp_servers.srv_328]
+command = "npx"
+args = ["-y", "srv-328"]
+
+[mcp_servers.srv_329]
+command = "npx"
+args = ["-y", "srv-329"]
+
+[mcp_servers.srv_330]
+command = "npx"
+args = ["-y", "srv-330"]
+
+[mcp_servers.srv_331]
+command = "npx"
+args = ["-y", "srv-331"]
+
+[mcp_servers.srv_332]
+command = "npx"
+args = ["-y", "srv-332"]
+
+[mcp_servers.srv_333]
+command = "npx"
+args = ["-y", "srv-333"]
+
+[mcp_servers.srv_334]
+command = "npx"
+args = ["-y", "srv-334"]
+
+[mcp_servers.srv_335]
+command = "npx"
+args = ["-y", "srv-335"]
+
+[mcp_servers.srv_336]
+command = "npx"
+args = ["-y", "srv-336"]
+
+[mcp_servers.srv_337]
+command = "npx"
+args = ["-y", "srv-337"]
+
+[mcp_servers.srv_338]
+command = "npx"
+args = ["-y", "srv-338"]
+
+[mcp_servers.srv_339]
+command = "npx"
+args = ["-y", "srv-339"]
+
+[mcp_servers.srv_340]
+command = "npx"
+args = ["-y", "srv-340"]
+
+[mcp_servers.srv_341]
+command = "npx"
+args = ["-y", "srv-341"]
+
+[mcp_servers.srv_342]
+command = "npx"
+args = ["-y", "srv-342"]
+
+[mcp_servers.srv_343]
+command = "npx"
+args = ["-y", "srv-343"]
+
+[mcp_servers.srv_344]
+command = "npx"
+args = ["-y", "srv-344"]
+
+[mcp_servers.srv_345]
+command = "npx"
+args = ["-y", "srv-345"]
+
+[mcp_servers.srv_346]
+command = "npx"
+args = ["-y", "srv-346"]
+
+[mcp_servers.srv_347]
+command = "npx"
+args = ["-y", "srv-347"]
+
+[mcp_servers.srv_348]
+command = "npx"
+args = ["-y", "srv-348"]
+
+[mcp_servers.srv_349]
+command = "npx"
+args = ["-y", "srv-349"]
+
+[mcp_servers.srv_350]
+command = "npx"
+args = ["-y", "srv-350"]
+
+[mcp_servers.srv_351]
+command = "npx"
+args = ["-y", "srv-351"]
+
+[mcp_servers.srv_352]
+command = "npx"
+args = ["-y", "srv-352"]
+
+[mcp_servers.srv_353]
+command = "npx"
+args = ["-y", "srv-353"]
+
+[mcp_servers.srv_354]
+command = "npx"
+args = ["-y", "srv-354"]
+
+[mcp_servers.srv_355]
+command = "npx"
+args = ["-y", "srv-355"]
+
+[mcp_servers.srv_356]
+command = "npx"
+args = ["-y", "srv-356"]
+
+[mcp_servers.srv_357]
+command = "npx"
+args = ["-y", "srv-357"]
+
+[mcp_servers.srv_358]
+command = "npx"
+args = ["-y", "srv-358"]
+
+[mcp_servers.srv_359]
+command = "npx"
+args = ["-y", "srv-359"]
+
+[mcp_servers.srv_360]
+command = "npx"
+args = ["-y", "srv-360"]
+
+[mcp_servers.srv_361]
+command = "npx"
+args = ["-y", "srv-361"]
+
+[mcp_servers.srv_362]
+command = "npx"
+args = ["-y", "srv-362"]
+
+[mcp_servers.srv_363]
+command = "npx"
+args = ["-y", "srv-363"]
+
+[mcp_servers.srv_364]
+command = "npx"
+args = ["-y", "srv-364"]
+
+[mcp_servers.srv_365]
+command = "npx"
+args = ["-y", "srv-365"]
+
+[mcp_servers.srv_366]
+command = "npx"
+args = ["-y", "srv-366"]
+
+[mcp_servers.srv_367]
+command = "npx"
+args = ["-y", "srv-367"]
+
+[mcp_servers.srv_368]
+command = "npx"
+args = ["-y", "srv-368"]
+
+[mcp_servers.srv_369]
+command = "npx"
+args = ["-y", "srv-369"]
+
+[mcp_servers.srv_370]
+command = "npx"
+args = ["-y", "srv-370"]
+
+[mcp_servers.srv_371]
+command = "npx"
+args = ["-y", "srv-371"]
+
+[mcp_servers.srv_372]
+command = "npx"
+args = ["-y", "srv-372"]
+
+[mcp_servers.srv_373]
+command = "npx"
+args = ["-y", "srv-373"]
+
+[mcp_servers.srv_374]
+command = "npx"
+args = ["-y", "srv-374"]
+
+[mcp_servers.srv_375]
+command = "npx"
+args = ["-y", "srv-375"]
+
+[mcp_servers.srv_376]
+command = "npx"
+args = ["-y", "srv-376"]
+
+[mcp_servers.srv_377]
+command = "npx"
+args = ["-y", "srv-377"]
+
+[mcp_servers.srv_378]
+command = "npx"
+args = ["-y", "srv-378"]
+
+[mcp_servers.srv_379]
+command = "npx"
+args = ["-y", "srv-379"]
+
+[mcp_servers.srv_380]
+command = "npx"
+args = ["-y", "srv-380"]
+
+[mcp_servers.srv_381]
+command = "npx"
+args = ["-y", "srv-381"]
+
+[mcp_servers.srv_382]
+command = "npx"
+args = ["-y", "srv-382"]
+
+[mcp_servers.srv_383]
+command = "npx"
+args = ["-y", "srv-383"]
+
+[mcp_servers.srv_384]
+command = "npx"
+args = ["-y", "srv-384"]
+
+[mcp_servers.srv_385]
+command = "npx"
+args = ["-y", "srv-385"]
+
+[mcp_servers.srv_386]
+command = "npx"
+args = ["-y", "srv-386"]
+
+[mcp_servers.srv_387]
+command = "npx"
+args = ["-y", "srv-387"]
+
+[mcp_servers.srv_388]
+command = "npx"
+args = ["-y", "srv-388"]
+
+[mcp_servers.srv_389]
+command = "npx"
+args = ["-y", "srv-389"]
+
+[mcp_servers.srv_390]
+command = "npx"
+args = ["-y", "srv-390"]
+
+[mcp_servers.srv_391]
+command = "npx"
+args = ["-y", "srv-391"]
+
+[mcp_servers.srv_392]
+command = "npx"
+args = ["-y", "srv-392"]
+
+[mcp_servers.srv_393]
+command = "npx"
+args = ["-y", "srv-393"]
+
+[mcp_servers.srv_394]
+command = "npx"
+args = ["-y", "srv-394"]
+
+[mcp_servers.srv_395]
+command = "npx"
+args = ["-y", "srv-395"]
+
+[mcp_servers.srv_396]
+command = "npx"
+args = ["-y", "srv-396"]
+
+[mcp_servers.srv_397]
+command = "npx"
+args = ["-y", "srv-397"]
+
+[mcp_servers.srv_398]
+command = "npx"
+args = ["-y", "srv-398"]
+
+[mcp_servers.srv_399]
+command = "npx"
+args = ["-y", "srv-399"]
+
+[mcp_servers.srv_400]
+command = "npx"
+args = ["-y", "srv-400"]
+
+[mcp_servers.srv_401]
+command = "npx"
+args = ["-y", "srv-401"]
+
+[mcp_servers.srv_402]
+command = "npx"
+args = ["-y", "srv-402"]
+
+[mcp_servers.srv_403]
+command = "npx"
+args = ["-y", "srv-403"]
+
+[mcp_servers.srv_404]
+command = "npx"
+args = ["-y", "srv-404"]
+
+[mcp_servers.srv_405]
+command = "npx"
+args = ["-y", "srv-405"]
+
+[mcp_servers.srv_406]
+command = "npx"
+args = ["-y", "srv-406"]
+
+[mcp_servers.srv_407]
+command = "npx"
+args = ["-y", "srv-407"]
+
+[mcp_servers.srv_408]
+command = "npx"
+args = ["-y", "srv-408"]
+
+[mcp_servers.srv_409]
+command = "npx"
+args = ["-y", "srv-409"]
+
+[mcp_servers.srv_410]
+command = "npx"
+args = ["-y", "srv-410"]
+
+[mcp_servers.srv_411]
+command = "npx"
+args = ["-y", "srv-411"]
+
+[mcp_servers.srv_412]
+command = "npx"
+args = ["-y", "srv-412"]
+
+[mcp_servers.srv_413]
+command = "npx"
+args = ["-y", "srv-413"]
+
+[mcp_servers.srv_414]
+command = "npx"
+args = ["-y", "srv-414"]
+
+[mcp_servers.srv_415]
+command = "npx"
+args = ["-y", "srv-415"]
+
+[mcp_servers.srv_416]
+command = "npx"
+args = ["-y", "srv-416"]
+
+[mcp_servers.srv_417]
+command = "npx"
+args = ["-y", "srv-417"]
+
+[mcp_servers.srv_418]
+command = "npx"
+args = ["-y", "srv-418"]
+
+[mcp_servers.srv_419]
+command = "npx"
+args = ["-y", "srv-419"]
+
+[mcp_servers.srv_420]
+command = "npx"
+args = ["-y", "srv-420"]
+
+[mcp_servers.srv_421]
+command = "npx"
+args = ["-y", "srv-421"]
+
+[mcp_servers.srv_422]
+command = "npx"
+args = ["-y", "srv-422"]
+
+[mcp_servers.srv_423]
+command = "npx"
+args = ["-y", "srv-423"]
+
+[mcp_servers.srv_424]
+command = "npx"
+args = ["-y", "srv-424"]
+
+[mcp_servers.srv_425]
+command = "npx"
+args = ["-y", "srv-425"]
+
+[mcp_servers.srv_426]
+command = "npx"
+args = ["-y", "srv-426"]
+
+[mcp_servers.srv_427]
+command = "npx"
+args = ["-y", "srv-427"]
+
+[mcp_servers.srv_428]
+command = "npx"
+args = ["-y", "srv-428"]
+
+[mcp_servers.srv_429]
+command = "npx"
+args = ["-y", "srv-429"]
+
+[mcp_servers.srv_430]
+command = "npx"
+args = ["-y", "srv-430"]
+
+[mcp_servers.srv_431]
+command = "npx"
+args = ["-y", "srv-431"]
+
+[mcp_servers.srv_432]
+command = "npx"
+args = ["-y", "srv-432"]
+
+[mcp_servers.srv_433]
+command = "npx"
+args = ["-y", "srv-433"]
+
+[mcp_servers.srv_434]
+command = "npx"
+args = ["-y", "srv-434"]
+
+[mcp_servers.srv_435]
+command = "npx"
+args = ["-y", "srv-435"]
+
+[mcp_servers.srv_436]
+command = "npx"
+args = ["-y", "srv-436"]
+
+[mcp_servers.srv_437]
+command = "npx"
+args = ["-y", "srv-437"]
+
+[mcp_servers.srv_438]
+command = "npx"
+args = ["-y", "srv-438"]
+
+[mcp_servers.srv_439]
+command = "npx"
+args = ["-y", "srv-439"]
+
+[mcp_servers.srv_440]
+command = "npx"
+args = ["-y", "srv-440"]
+
+[mcp_servers.srv_441]
+command = "npx"
+args = ["-y", "srv-441"]
+
+[mcp_servers.srv_442]
+command = "npx"
+args = ["-y", "srv-442"]
+
+[mcp_servers.srv_443]
+command = "npx"
+args = ["-y", "srv-443"]
+
+[mcp_servers.srv_444]
+command = "npx"
+args = ["-y", "srv-444"]
+
+[mcp_servers.srv_445]
+command = "npx"
+args = ["-y", "srv-445"]
+
+[mcp_servers.srv_446]
+command = "npx"
+args = ["-y", "srv-446"]
+
+[mcp_servers.srv_447]
+command = "npx"
+args = ["-y", "srv-447"]
+
+[mcp_servers.srv_448]
+command = "npx"
+args = ["-y", "srv-448"]
+
+[mcp_servers.srv_449]
+command = "npx"
+args = ["-y", "srv-449"]
+
+[mcp_servers.srv_450]
+command = "npx"
+args = ["-y", "srv-450"]
+
+[mcp_servers.srv_451]
+command = "npx"
+args = ["-y", "srv-451"]
+
+[mcp_servers.srv_452]
+command = "npx"
+args = ["-y", "srv-452"]
+
+[mcp_servers.srv_453]
+command = "npx"
+args = ["-y", "srv-453"]
+
+[mcp_servers.srv_454]
+command = "npx"
+args = ["-y", "srv-454"]
+
+[mcp_servers.srv_455]
+command = "npx"
+args = ["-y", "srv-455"]
+
+[mcp_servers.srv_456]
+command = "npx"
+args = ["-y", "srv-456"]
+
+[mcp_servers.srv_457]
+command = "npx"
+args = ["-y", "srv-457"]
+
+[mcp_servers.srv_458]
+command = "npx"
+args = ["-y", "srv-458"]
+
+[mcp_servers.srv_459]
+command = "npx"
+args = ["-y", "srv-459"]
+
+[mcp_servers.srv_460]
+command = "npx"
+args = ["-y", "srv-460"]
+
+[mcp_servers.srv_461]
+command = "npx"
+args = ["-y", "srv-461"]
+
+[mcp_servers.srv_462]
+command = "npx"
+args = ["-y", "srv-462"]
+
+[mcp_servers.srv_463]
+command = "npx"
+args = ["-y", "srv-463"]
+
+[mcp_servers.srv_464]
+command = "npx"
+args = ["-y", "srv-464"]
+
+[mcp_servers.srv_465]
+command = "npx"
+args = ["-y", "srv-465"]
+
+[mcp_servers.srv_466]
+command = "npx"
+args = ["-y", "srv-466"]
+
+[mcp_servers.srv_467]
+command = "npx"
+args = ["-y", "srv-467"]
+
+[mcp_servers.srv_468]
+command = "npx"
+args = ["-y", "srv-468"]
+
+[mcp_servers.srv_469]
+command = "npx"
+args = ["-y", "srv-469"]
+
+[mcp_servers.srv_470]
+command = "npx"
+args = ["-y", "srv-470"]
+
+[mcp_servers.srv_471]
+command = "npx"
+args = ["-y", "srv-471"]
+
+[mcp_servers.srv_472]
+command = "npx"
+args = ["-y", "srv-472"]
+
+[mcp_servers.srv_473]
+command = "npx"
+args = ["-y", "srv-473"]
+
+[mcp_servers.srv_474]
+command = "npx"
+args = ["-y", "srv-474"]
+
+[mcp_servers.srv_475]
+command = "npx"
+args = ["-y", "srv-475"]
+
+[mcp_servers.srv_476]
+command = "npx"
+args = ["-y", "srv-476"]
+
+[mcp_servers.srv_477]
+command = "npx"
+args = ["-y", "srv-477"]
+
+[mcp_servers.srv_478]
+command = "npx"
+args = ["-y", "srv-478"]
+
+[mcp_servers.srv_479]
+command = "npx"
+args = ["-y", "srv-479"]
+
+[mcp_servers.srv_480]
+command = "npx"
+args = ["-y", "srv-480"]
+
+[mcp_servers.srv_481]
+command = "npx"
+args = ["-y", "srv-481"]
+
+[mcp_servers.srv_482]
+command = "npx"
+args = ["-y", "srv-482"]
+
+[mcp_servers.srv_483]
+command = "npx"
+args = ["-y", "srv-483"]
+
+[mcp_servers.srv_484]
+command = "npx"
+args = ["-y", "srv-484"]
+
+[mcp_servers.srv_485]
+command = "npx"
+args = ["-y", "srv-485"]
+
+[mcp_servers.srv_486]
+command = "npx"
+args = ["-y", "srv-486"]
+
+[mcp_servers.srv_487]
+command = "npx"
+args = ["-y", "srv-487"]
+
+[mcp_servers.srv_488]
+command = "npx"
+args = ["-y", "srv-488"]
+
+[mcp_servers.srv_489]
+command = "npx"
+args = ["-y", "srv-489"]
+
+[mcp_servers.srv_490]
+command = "npx"
+args = ["-y", "srv-490"]
+
+[mcp_servers.srv_491]
+command = "npx"
+args = ["-y", "srv-491"]
+
+[mcp_servers.srv_492]
+command = "npx"
+args = ["-y", "srv-492"]
+
+[mcp_servers.srv_493]
+command = "npx"
+args = ["-y", "srv-493"]
+
+[mcp_servers.srv_494]
+command = "npx"
+args = ["-y", "srv-494"]
+
+[mcp_servers.srv_495]
+command = "npx"
+args = ["-y", "srv-495"]
+
+[mcp_servers.srv_496]
+command = "npx"
+args = ["-y", "srv-496"]
+
+[mcp_servers.srv_497]
+command = "npx"
+args = ["-y", "srv-497"]
+
+[mcp_servers.srv_498]
+command = "npx"
+args = ["-y", "srv-498"]
+
+[mcp_servers.srv_499]
+command = "npx"
+args = ["-y", "srv-499"]
+
+[mcp_servers.srv_500]
+command = "npx"
+args = ["-y", "srv-500"]
+
+[mcp_servers.srv_501]
+command = "npx"
+args = ["-y", "srv-501"]
+
+[mcp_servers.srv_502]
+command = "npx"
+args = ["-y", "srv-502"]
+
+[mcp_servers.srv_503]
+command = "npx"
+args = ["-y", "srv-503"]
+
+[mcp_servers.srv_504]
+command = "npx"
+args = ["-y", "srv-504"]
+
+[mcp_servers.srv_505]
+command = "npx"
+args = ["-y", "srv-505"]
+
+[mcp_servers.srv_506]
+command = "npx"
+args = ["-y", "srv-506"]
+
+[mcp_servers.srv_507]
+command = "npx"
+args = ["-y", "srv-507"]
+
+[mcp_servers.srv_508]
+command = "npx"
+args = ["-y", "srv-508"]
+
+[mcp_servers.srv_509]
+command = "npx"
+args = ["-y", "srv-509"]
+
+[mcp_servers.srv_510]
+command = "npx"
+args = ["-y", "srv-510"]
+
+[mcp_servers.srv_511]
+command = "npx"
+args = ["-y", "srv-511"]
+
+[mcp_servers.srv_512]
+command = "npx"
+args = ["-y", "srv-512"]
+
+[mcp_servers.srv_513]
+command = "npx"
+args = ["-y", "srv-513"]
+
+[mcp_servers.srv_514]
+command = "npx"
+args = ["-y", "srv-514"]
+
+[mcp_servers.srv_515]
+command = "npx"
+args = ["-y", "srv-515"]
+
+[mcp_servers.srv_516]
+command = "npx"
+args = ["-y", "srv-516"]
+
+[mcp_servers.srv_517]
+command = "npx"
+args = ["-y", "srv-517"]
+
+[mcp_servers.srv_518]
+command = "npx"
+args = ["-y", "srv-518"]
+
+[mcp_servers.srv_519]
+command = "npx"
+args = ["-y", "srv-519"]
+
+[mcp_servers.srv_520]
+command = "npx"
+args = ["-y", "srv-520"]
+
+[mcp_servers.srv_521]
+command = "npx"
+args = ["-y", "srv-521"]
+
+[mcp_servers.srv_522]
+command = "npx"
+args = ["-y", "srv-522"]
+
+[mcp_servers.srv_523]
+command = "npx"
+args = ["-y", "srv-523"]
+
+[mcp_servers.srv_524]
+command = "npx"
+args = ["-y", "srv-524"]
+
+[mcp_servers.srv_525]
+command = "npx"
+args = ["-y", "srv-525"]
+
+[mcp_servers.srv_526]
+command = "npx"
+args = ["-y", "srv-526"]
+
+[mcp_servers.srv_527]
+command = "npx"
+args = ["-y", "srv-527"]
+
+[mcp_servers.srv_528]
+command = "npx"
+args = ["-y", "srv-528"]
+
+[mcp_servers.srv_529]
+command = "npx"
+args = ["-y", "srv-529"]
+
+[mcp_servers.srv_530]
+command = "npx"
+args = ["-y", "srv-530"]
+
+[mcp_servers.srv_531]
+command = "npx"
+args = ["-y", "srv-531"]
+
+[mcp_servers.srv_532]
+command = "npx"
+args = ["-y", "srv-532"]
+
+[mcp_servers.srv_533]
+command = "npx"
+args = ["-y", "srv-533"]
+
+[mcp_servers.srv_534]
+command = "npx"
+args = ["-y", "srv-534"]
+
+[mcp_servers.srv_535]
+command = "npx"
+args = ["-y", "srv-535"]
+
+[mcp_servers.srv_536]
+command = "npx"
+args = ["-y", "srv-536"]
+
+[mcp_servers.srv_537]
+command = "npx"
+args = ["-y", "srv-537"]
+
+[mcp_servers.srv_538]
+command = "npx"
+args = ["-y", "srv-538"]
+
+[mcp_servers.srv_539]
+command = "npx"
+args = ["-y", "srv-539"]
+
+[mcp_servers.srv_540]
+command = "npx"
+args = ["-y", "srv-540"]
+
+[mcp_servers.srv_541]
+command = "npx"
+args = ["-y", "srv-541"]
+
+[mcp_servers.srv_542]
+command = "npx"
+args = ["-y", "srv-542"]
+
+[mcp_servers.srv_543]
+command = "npx"
+args = ["-y", "srv-543"]
+
+[mcp_servers.srv_544]
+command = "npx"
+args = ["-y", "srv-544"]
+
+[mcp_servers.srv_545]
+command = "npx"
+args = ["-y", "srv-545"]
+
+[mcp_servers.srv_546]
+command = "npx"
+args = ["-y", "srv-546"]
+
+[mcp_servers.srv_547]
+command = "npx"
+args = ["-y", "srv-547"]
+
+[mcp_servers.srv_548]
+command = "npx"
+args = ["-y", "srv-548"]
+
+[mcp_servers.srv_549]
+command = "npx"
+args = ["-y", "srv-549"]
+
+[mcp_servers.srv_550]
+command = "npx"
+args = ["-y", "srv-550"]
+
+[mcp_servers.srv_551]
+command = "npx"
+args = ["-y", "srv-551"]
+
+[mcp_servers.srv_552]
+command = "npx"
+args = ["-y", "srv-552"]
+
+[mcp_servers.srv_553]
+command = "npx"
+args = ["-y", "srv-553"]
+
+[mcp_servers.srv_554]
+command = "npx"
+args = ["-y", "srv-554"]
+
+[mcp_servers.srv_555]
+command = "npx"
+args = ["-y", "srv-555"]
+
+[mcp_servers.srv_556]
+command = "npx"
+args = ["-y", "srv-556"]
+
+[mcp_servers.srv_557]
+command = "npx"
+args = ["-y", "srv-557"]
+
+[mcp_servers.srv_558]
+command = "npx"
+args = ["-y", "srv-558"]
+
+[mcp_servers.srv_559]
+command = "npx"
+args = ["-y", "srv-559"]
+
+[mcp_servers.srv_560]
+command = "npx"
+args = ["-y", "srv-560"]
+
+[mcp_servers.srv_561]
+command = "npx"
+args = ["-y", "srv-561"]
+
+[mcp_servers.srv_562]
+command = "npx"
+args = ["-y", "srv-562"]
+
+[mcp_servers.srv_563]
+command = "npx"
+args = ["-y", "srv-563"]
+
+[mcp_servers.srv_564]
+command = "npx"
+args = ["-y", "srv-564"]
+
+[mcp_servers.srv_565]
+command = "npx"
+args = ["-y", "srv-565"]
+
+[mcp_servers.srv_566]
+command = "npx"
+args = ["-y", "srv-566"]
+
+[mcp_servers.srv_567]
+command = "npx"
+args = ["-y", "srv-567"]
+
+[mcp_servers.srv_568]
+command = "npx"
+args = ["-y", "srv-568"]
+
+[mcp_servers.srv_569]
+command = "npx"
+args = ["-y", "srv-569"]
+
+[mcp_servers.srv_570]
+command = "npx"
+args = ["-y", "srv-570"]
+
+[mcp_servers.srv_571]
+command = "npx"
+args = ["-y", "srv-571"]
+
+[mcp_servers.srv_572]
+command = "npx"
+args = ["-y", "srv-572"]
+
+[mcp_servers.srv_573]
+command = "npx"
+args = ["-y", "srv-573"]
+
+[mcp_servers.srv_574]
+command = "npx"
+args = ["-y", "srv-574"]
+
+[mcp_servers.srv_575]
+command = "npx"
+args = ["-y", "srv-575"]
+
+[mcp_servers.srv_576]
+command = "npx"
+args = ["-y", "srv-576"]
+
+[mcp_servers.srv_577]
+command = "npx"
+args = ["-y", "srv-577"]
+
+[mcp_servers.srv_578]
+command = "npx"
+args = ["-y", "srv-578"]
+
+[mcp_servers.srv_579]
+command = "npx"
+args = ["-y", "srv-579"]
+
+[mcp_servers.srv_580]
+command = "npx"
+args = ["-y", "srv-580"]
+
+[mcp_servers.srv_581]
+command = "npx"
+args = ["-y", "srv-581"]
+
+[mcp_servers.srv_582]
+command = "npx"
+args = ["-y", "srv-582"]
+
+[mcp_servers.srv_583]
+command = "npx"
+args = ["-y", "srv-583"]
+
+[mcp_servers.srv_584]
+command = "npx"
+args = ["-y", "srv-584"]
+
+[mcp_servers.srv_585]
+command = "npx"
+args = ["-y", "srv-585"]
+
+[mcp_servers.srv_586]
+command = "npx"
+args = ["-y", "srv-586"]
+
+[mcp_servers.srv_587]
+command = "npx"
+args = ["-y", "srv-587"]
+
+[mcp_servers.srv_588]
+command = "npx"
+args = ["-y", "srv-588"]
+
+[mcp_servers.srv_589]
+command = "npx"
+args = ["-y", "srv-589"]
+
+[mcp_servers.srv_590]
+command = "npx"
+args = ["-y", "srv-590"]
+
+[mcp_servers.srv_591]
+command = "npx"
+args = ["-y", "srv-591"]
+
+[mcp_servers.srv_592]
+command = "npx"
+args = ["-y", "srv-592"]
+
+[mcp_servers.srv_593]
+command = "npx"
+args = ["-y", "srv-593"]
+
+[mcp_servers.srv_594]
+command = "npx"
+args = ["-y", "srv-594"]
+
+[mcp_servers.srv_595]
+command = "npx"
+args = ["-y", "srv-595"]
+
+[mcp_servers.srv_596]
+command = "npx"
+args = ["-y", "srv-596"]
+
+[mcp_servers.srv_597]
+command = "npx"
+args = ["-y", "srv-597"]
+
+[mcp_servers.srv_598]
+command = "npx"
+args = ["-y", "srv-598"]
+
+[mcp_servers.srv_599]
+command = "npx"
+args = ["-y", "srv-599"]
+
+[mcp_servers.srv_600]
+command = "npx"
+args = ["-y", "srv-600"]
+
+[mcp_servers.srv_601]
+command = "npx"
+args = ["-y", "srv-601"]
+
+[mcp_servers.srv_602]
+command = "npx"
+args = ["-y", "srv-602"]
+
+[mcp_servers.srv_603]
+command = "npx"
+args = ["-y", "srv-603"]
+
+[mcp_servers.srv_604]
+command = "npx"
+args = ["-y", "srv-604"]
+
+[mcp_servers.srv_605]
+command = "npx"
+args = ["-y", "srv-605"]
+
+[mcp_servers.srv_606]
+command = "npx"
+args = ["-y", "srv-606"]
+
+[mcp_servers.srv_607]
+command = "npx"
+args = ["-y", "srv-607"]
+
+[mcp_servers.srv_608]
+command = "npx"
+args = ["-y", "srv-608"]
+
+[mcp_servers.srv_609]
+command = "npx"
+args = ["-y", "srv-609"]
+
+[mcp_servers.srv_610]
+command = "npx"
+args = ["-y", "srv-610"]
+
+[mcp_servers.srv_611]
+command = "npx"
+args = ["-y", "srv-611"]
+
+[mcp_servers.srv_612]
+command = "npx"
+args = ["-y", "srv-612"]
+
+[mcp_servers.srv_613]
+command = "npx"
+args = ["-y", "srv-613"]
+
+[mcp_servers.srv_614]
+command = "npx"
+args = ["-y", "srv-614"]
+
+[mcp_servers.srv_615]
+command = "npx"
+args = ["-y", "srv-615"]
+
+[mcp_servers.srv_616]
+command = "npx"
+args = ["-y", "srv-616"]
+
+[mcp_servers.srv_617]
+command = "npx"
+args = ["-y", "srv-617"]
+
+[mcp_servers.srv_618]
+command = "npx"
+args = ["-y", "srv-618"]
+
+[mcp_servers.srv_619]
+command = "npx"
+args = ["-y", "srv-619"]
+
+[mcp_servers.srv_620]
+command = "npx"
+args = ["-y", "srv-620"]
+
+[mcp_servers.srv_621]
+command = "npx"
+args = ["-y", "srv-621"]
+
+[mcp_servers.srv_622]
+command = "npx"
+args = ["-y", "srv-622"]
+
+[mcp_servers.srv_623]
+command = "npx"
+args = ["-y", "srv-623"]
+
+[mcp_servers.srv_624]
+command = "npx"
+args = ["-y", "srv-624"]
+
+[mcp_servers.srv_625]
+command = "npx"
+args = ["-y", "srv-625"]
+
+[mcp_servers.srv_626]
+command = "npx"
+args = ["-y", "srv-626"]
+
+[mcp_servers.srv_627]
+command = "npx"
+args = ["-y", "srv-627"]
+
+[mcp_servers.srv_628]
+command = "npx"
+args = ["-y", "srv-628"]
+
+[mcp_servers.srv_629]
+command = "npx"
+args = ["-y", "srv-629"]
+
+[mcp_servers.srv_630]
+command = "npx"
+args = ["-y", "srv-630"]
+
+[mcp_servers.srv_631]
+command = "npx"
+args = ["-y", "srv-631"]
+
+[mcp_servers.srv_632]
+command = "npx"
+args = ["-y", "srv-632"]
+
+[mcp_servers.srv_633]
+command = "npx"
+args = ["-y", "srv-633"]
+
+[mcp_servers.srv_634]
+command = "npx"
+args = ["-y", "srv-634"]
+
+[mcp_servers.srv_635]
+command = "npx"
+args = ["-y", "srv-635"]
+
+[mcp_servers.srv_636]
+command = "npx"
+args = ["-y", "srv-636"]
+
+[mcp_servers.srv_637]
+command = "npx"
+args = ["-y", "srv-637"]
+
+[mcp_servers.srv_638]
+command = "npx"
+args = ["-y", "srv-638"]
+
+[mcp_servers.srv_639]
+command = "npx"
+args = ["-y", "srv-639"]
+
+[mcp_servers.srv_640]
+command = "npx"
+args = ["-y", "srv-640"]
+
+[mcp_servers.srv_641]
+command = "npx"
+args = ["-y", "srv-641"]
+
+[mcp_servers.srv_642]
+command = "npx"
+args = ["-y", "srv-642"]
+
+[mcp_servers.srv_643]
+command = "npx"
+args = ["-y", "srv-643"]
+
+[mcp_servers.srv_644]
+command = "npx"
+args = ["-y", "srv-644"]
+
+[mcp_servers.srv_645]
+command = "npx"
+args = ["-y", "srv-645"]
+
+[mcp_servers.srv_646]
+command = "npx"
+args = ["-y", "srv-646"]
+
+[mcp_servers.srv_647]
+command = "npx"
+args = ["-y", "srv-647"]
+
+[mcp_servers.srv_648]
+command = "npx"
+args = ["-y", "srv-648"]
+
+[mcp_servers.srv_649]
+command = "npx"
+args = ["-y", "srv-649"]
+
+[mcp_servers.srv_650]
+command = "npx"
+args = ["-y", "srv-650"]
+
+[mcp_servers.srv_651]
+command = "npx"
+args = ["-y", "srv-651"]
+
+[mcp_servers.srv_652]
+command = "npx"
+args = ["-y", "srv-652"]
+
+[mcp_servers.srv_653]
+command = "npx"
+args = ["-y", "srv-653"]
+
+[mcp_servers.srv_654]
+command = "npx"
+args = ["-y", "srv-654"]
+
+[mcp_servers.srv_655]
+command = "npx"
+args = ["-y", "srv-655"]
+
+[mcp_servers.srv_656]
+command = "npx"
+args = ["-y", "srv-656"]
+
+[mcp_servers.srv_657]
+command = "npx"
+args = ["-y", "srv-657"]
+
+[mcp_servers.srv_658]
+command = "npx"
+args = ["-y", "srv-658"]
+
+[mcp_servers.srv_659]
+command = "npx"
+args = ["-y", "srv-659"]
+
+[mcp_servers.srv_660]
+command = "npx"
+args = ["-y", "srv-660"]
+
+[mcp_servers.srv_661]
+command = "npx"
+args = ["-y", "srv-661"]
+
+[mcp_servers.srv_662]
+command = "npx"
+args = ["-y", "srv-662"]
+
+[mcp_servers.srv_663]
+command = "npx"
+args = ["-y", "srv-663"]
+
+[mcp_servers.srv_664]
+command = "npx"
+args = ["-y", "srv-664"]
+
+[mcp_servers.srv_665]
+command = "npx"
+args = ["-y", "srv-665"]
+
+[mcp_servers.srv_666]
+command = "npx"
+args = ["-y", "srv-666"]
+
+[mcp_servers.srv_667]
+command = "npx"
+args = ["-y", "srv-667"]
+
+[mcp_servers.srv_668]
+command = "npx"
+args = ["-y", "srv-668"]
+
+[mcp_servers.srv_669]
+command = "npx"
+args = ["-y", "srv-669"]
+
+[mcp_servers.srv_670]
+command = "npx"
+args = ["-y", "srv-670"]
+
+[mcp_servers.srv_671]
+command = "npx"
+args = ["-y", "srv-671"]
+
+[mcp_servers.srv_672]
+command = "npx"
+args = ["-y", "srv-672"]
+
+[mcp_servers.srv_673]
+command = "npx"
+args = ["-y", "srv-673"]
+
+[mcp_servers.srv_674]
+command = "npx"
+args = ["-y", "srv-674"]
+
+[mcp_servers.srv_675]
+command = "npx"
+args = ["-y", "srv-675"]
+
+[mcp_servers.srv_676]
+command = "npx"
+args = ["-y", "srv-676"]
+
+[mcp_servers.srv_677]
+command = "npx"
+args = ["-y", "srv-677"]
+
+[mcp_servers.srv_678]
+command = "npx"
+args = ["-y", "srv-678"]
+
+[mcp_servers.srv_679]
+command = "npx"
+args = ["-y", "srv-679"]
+
+[mcp_servers.srv_680]
+command = "npx"
+args = ["-y", "srv-680"]
+
+[mcp_servers.srv_681]
+command = "npx"
+args = ["-y", "srv-681"]
+
+[mcp_servers.srv_682]
+command = "npx"
+args = ["-y", "srv-682"]
+
+[mcp_servers.srv_683]
+command = "npx"
+args = ["-y", "srv-683"]
+
+[mcp_servers.srv_684]
+command = "npx"
+args = ["-y", "srv-684"]
+
+[mcp_servers.srv_685]
+command = "npx"
+args = ["-y", "srv-685"]
+
+[mcp_servers.srv_686]
+command = "npx"
+args = ["-y", "srv-686"]
+
+[mcp_servers.srv_687]
+command = "npx"
+args = ["-y", "srv-687"]
+
+[mcp_servers.srv_688]
+command = "npx"
+args = ["-y", "srv-688"]
+
+[mcp_servers.srv_689]
+command = "npx"
+args = ["-y", "srv-689"]
+
+[mcp_servers.srv_690]
+command = "npx"
+args = ["-y", "srv-690"]
+
+[mcp_servers.srv_691]
+command = "npx"
+args = ["-y", "srv-691"]
+
+[mcp_servers.srv_692]
+command = "npx"
+args = ["-y", "srv-692"]
+
+[mcp_servers.srv_693]
+command = "npx"
+args = ["-y", "srv-693"]
+
+[mcp_servers.srv_694]
+command = "npx"
+args = ["-y", "srv-694"]
+
+[mcp_servers.srv_695]
+command = "npx"
+args = ["-y", "srv-695"]
+
+[mcp_servers.srv_696]
+command = "npx"
+args = ["-y", "srv-696"]
+
+[mcp_servers.srv_697]
+command = "npx"
+args = ["-y", "srv-697"]
+
+[mcp_servers.srv_698]
+command = "npx"
+args = ["-y", "srv-698"]
+
+[mcp_servers.srv_699]
+command = "npx"
+args = ["-y", "srv-699"]
+
+[mcp_servers.srv_700]
+command = "npx"
+args = ["-y", "srv-700"]
+
+[mcp_servers.srv_701]
+command = "npx"
+args = ["-y", "srv-701"]
+
+[mcp_servers.srv_702]
+command = "npx"
+args = ["-y", "srv-702"]
+
+[mcp_servers.srv_703]
+command = "npx"
+args = ["-y", "srv-703"]
+
+[mcp_servers.srv_704]
+command = "npx"
+args = ["-y", "srv-704"]
+
+[mcp_servers.srv_705]
+command = "npx"
+args = ["-y", "srv-705"]
+
+[mcp_servers.srv_706]
+command = "npx"
+args = ["-y", "srv-706"]
+
+[mcp_servers.srv_707]
+command = "npx"
+args = ["-y", "srv-707"]
+
+[mcp_servers.srv_708]
+command = "npx"
+args = ["-y", "srv-708"]
+
+[mcp_servers.srv_709]
+command = "npx"
+args = ["-y", "srv-709"]
+
+[mcp_servers.srv_710]
+command = "npx"
+args = ["-y", "srv-710"]
+
+[mcp_servers.srv_711]
+command = "npx"
+args = ["-y", "srv-711"]
+
+[mcp_servers.srv_712]
+command = "npx"
+args = ["-y", "srv-712"]
+
+[mcp_servers.srv_713]
+command = "npx"
+args = ["-y", "srv-713"]
+
+[mcp_servers.srv_714]
+command = "npx"
+args = ["-y", "srv-714"]
+
+[mcp_servers.srv_715]
+command = "npx"
+args = ["-y", "srv-715"]
+
+[mcp_servers.srv_716]
+command = "npx"
+args = ["-y", "srv-716"]
+
+[mcp_servers.srv_717]
+command = "npx"
+args = ["-y", "srv-717"]
+
+[mcp_servers.srv_718]
+command = "npx"
+args = ["-y", "srv-718"]
+
+[mcp_servers.srv_719]
+command = "npx"
+args = ["-y", "srv-719"]
+
+[mcp_servers.srv_720]
+command = "npx"
+args = ["-y", "srv-720"]
+
+[mcp_servers.srv_721]
+command = "npx"
+args = ["-y", "srv-721"]
+
+[mcp_servers.srv_722]
+command = "npx"
+args = ["-y", "srv-722"]
+
+[mcp_servers.srv_723]
+command = "npx"
+args = ["-y", "srv-723"]
+
+[mcp_servers.srv_724]
+command = "npx"
+args = ["-y", "srv-724"]
+
+[mcp_servers.srv_725]
+command = "npx"
+args = ["-y", "srv-725"]
+
+[mcp_servers.srv_726]
+command = "npx"
+args = ["-y", "srv-726"]
+
+[mcp_servers.srv_727]
+command = "npx"
+args = ["-y", "srv-727"]
+
+[mcp_servers.srv_728]
+command = "npx"
+args = ["-y", "srv-728"]
+
+[mcp_servers.srv_729]
+command = "npx"
+args = ["-y", "srv-729"]
+
+[mcp_servers.srv_730]
+command = "npx"
+args = ["-y", "srv-730"]
+
+[mcp_servers.srv_731]
+command = "npx"
+args = ["-y", "srv-731"]
+
+[mcp_servers.srv_732]
+command = "npx"
+args = ["-y", "srv-732"]
+
+[mcp_servers.srv_733]
+command = "npx"
+args = ["-y", "srv-733"]
+
+[mcp_servers.srv_734]
+command = "npx"
+args = ["-y", "srv-734"]
+
+[mcp_servers.srv_735]
+command = "npx"
+args = ["-y", "srv-735"]
+
+[mcp_servers.srv_736]
+command = "npx"
+args = ["-y", "srv-736"]
+
+[mcp_servers.srv_737]
+command = "npx"
+args = ["-y", "srv-737"]
+
+[mcp_servers.srv_738]
+command = "npx"
+args = ["-y", "srv-738"]
+
+[mcp_servers.srv_739]
+command = "npx"
+args = ["-y", "srv-739"]
+
+[mcp_servers.srv_740]
+command = "npx"
+args = ["-y", "srv-740"]
+
+[mcp_servers.srv_741]
+command = "npx"
+args = ["-y", "srv-741"]
+
+[mcp_servers.srv_742]
+command = "npx"
+args = ["-y", "srv-742"]
+
+[mcp_servers.srv_743]
+command = "npx"
+args = ["-y", "srv-743"]
+
+[mcp_servers.srv_744]
+command = "npx"
+args = ["-y", "srv-744"]
+
+[mcp_servers.srv_745]
+command = "npx"
+args = ["-y", "srv-745"]
+
+[mcp_servers.srv_746]
+command = "npx"
+args = ["-y", "srv-746"]
+
+[mcp_servers.srv_747]
+command = "npx"
+args = ["-y", "srv-747"]
+
+[mcp_servers.srv_748]
+command = "npx"
+args = ["-y", "srv-748"]
+
+[mcp_servers.srv_749]
+command = "npx"
+args = ["-y", "srv-749"]
+
+[mcp_servers.srv_750]
+command = "npx"
+args = ["-y", "srv-750"]
+
+[mcp_servers.srv_751]
+command = "npx"
+args = ["-y", "srv-751"]
+
+[mcp_servers.srv_752]
+command = "npx"
+args = ["-y", "srv-752"]
+
+[mcp_servers.srv_753]
+command = "npx"
+args = ["-y", "srv-753"]
+
+[mcp_servers.srv_754]
+command = "npx"
+args = ["-y", "srv-754"]
+
+[mcp_servers.srv_755]
+command = "npx"
+args = ["-y", "srv-755"]
+
+[mcp_servers.srv_756]
+command = "npx"
+args = ["-y", "srv-756"]
+
+[mcp_servers.srv_757]
+command = "npx"
+args = ["-y", "srv-757"]
+
+[mcp_servers.srv_758]
+command = "npx"
+args = ["-y", "srv-758"]
+
+[mcp_servers.srv_759]
+command = "npx"
+args = ["-y", "srv-759"]
+
+[mcp_servers.srv_760]
+command = "npx"
+args = ["-y", "srv-760"]
+
+[mcp_servers.srv_761]
+command = "npx"
+args = ["-y", "srv-761"]
+
+[mcp_servers.srv_762]
+command = "npx"
+args = ["-y", "srv-762"]
+
+[mcp_servers.srv_763]
+command = "npx"
+args = ["-y", "srv-763"]
+
+[mcp_servers.srv_764]
+command = "npx"
+args = ["-y", "srv-764"]
+
+[mcp_servers.srv_765]
+command = "npx"
+args = ["-y", "srv-765"]
+
+[mcp_servers.srv_766]
+command = "npx"
+args = ["-y", "srv-766"]
+
+[mcp_servers.srv_767]
+command = "npx"
+args = ["-y", "srv-767"]
+
+[mcp_servers.srv_768]
+command = "npx"
+args = ["-y", "srv-768"]
+
+[mcp_servers.srv_769]
+command = "npx"
+args = ["-y", "srv-769"]
+
+[mcp_servers.srv_770]
+command = "npx"
+args = ["-y", "srv-770"]
+
+[mcp_servers.srv_771]
+command = "npx"
+args = ["-y", "srv-771"]
+
+[mcp_servers.srv_772]
+command = "npx"
+args = ["-y", "srv-772"]
+
+[mcp_servers.srv_773]
+command = "npx"
+args = ["-y", "srv-773"]
+
+[mcp_servers.srv_774]
+command = "npx"
+args = ["-y", "srv-774"]
+
+[mcp_servers.srv_775]
+command = "npx"
+args = ["-y", "srv-775"]
+
+[mcp_servers.srv_776]
+command = "npx"
+args = ["-y", "srv-776"]
+
+[mcp_servers.srv_777]
+command = "npx"
+args = ["-y", "srv-777"]
+
+[mcp_servers.srv_778]
+command = "npx"
+args = ["-y", "srv-778"]
+
+[mcp_servers.srv_779]
+command = "npx"
+args = ["-y", "srv-779"]
+
+[mcp_servers.srv_780]
+command = "npx"
+args = ["-y", "srv-780"]
+
+[mcp_servers.srv_781]
+command = "npx"
+args = ["-y", "srv-781"]
+
+[mcp_servers.srv_782]
+command = "npx"
+args = ["-y", "srv-782"]
+
+[mcp_servers.srv_783]
+command = "npx"
+args = ["-y", "srv-783"]
+
+[mcp_servers.srv_784]
+command = "npx"
+args = ["-y", "srv-784"]
+
+[mcp_servers.srv_785]
+command = "npx"
+args = ["-y", "srv-785"]
+
+[mcp_servers.srv_786]
+command = "npx"
+args = ["-y", "srv-786"]
+
+[mcp_servers.srv_787]
+command = "npx"
+args = ["-y", "srv-787"]
+
+[mcp_servers.srv_788]
+command = "npx"
+args = ["-y", "srv-788"]
+
+[mcp_servers.srv_789]
+command = "npx"
+args = ["-y", "srv-789"]
+
+[mcp_servers.srv_790]
+command = "npx"
+args = ["-y", "srv-790"]
+
+[mcp_servers.srv_791]
+command = "npx"
+args = ["-y", "srv-791"]
+
+[mcp_servers.srv_792]
+command = "npx"
+args = ["-y", "srv-792"]
+
+[mcp_servers.srv_793]
+command = "npx"
+args = ["-y", "srv-793"]
+
+[mcp_servers.srv_794]
+command = "npx"
+args = ["-y", "srv-794"]
+
+[mcp_servers.srv_795]
+command = "npx"
+args = ["-y", "srv-795"]
+
+[mcp_servers.srv_796]
+command = "npx"
+args = ["-y", "srv-796"]
+
+[mcp_servers.srv_797]
+command = "npx"
+args = ["-y", "srv-797"]
+
+[mcp_servers.srv_798]
+command = "npx"
+args = ["-y", "srv-798"]
+
+[mcp_servers.srv_799]
+command = "npx"
+args = ["-y", "srv-799"]
+
+[mcp_servers.srv_800]
+command = "npx"
+args = ["-y", "srv-800"]
+
+[mcp_servers.srv_801]
+command = "npx"
+args = ["-y", "srv-801"]
+
+[mcp_servers.srv_802]
+command = "npx"
+args = ["-y", "srv-802"]
+
+[mcp_servers.srv_803]
+command = "npx"
+args = ["-y", "srv-803"]
+
+[mcp_servers.srv_804]
+command = "npx"
+args = ["-y", "srv-804"]
+
+[mcp_servers.srv_805]
+command = "npx"
+args = ["-y", "srv-805"]
+
+[mcp_servers.srv_806]
+command = "npx"
+args = ["-y", "srv-806"]
+
+[mcp_servers.srv_807]
+command = "npx"
+args = ["-y", "srv-807"]
+
+[mcp_servers.srv_808]
+command = "npx"
+args = ["-y", "srv-808"]
+
+[mcp_servers.srv_809]
+command = "npx"
+args = ["-y", "srv-809"]
+
+[mcp_servers.srv_810]
+command = "npx"
+args = ["-y", "srv-810"]
+
+[mcp_servers.srv_811]
+command = "npx"
+args = ["-y", "srv-811"]
+
+[mcp_servers.srv_812]
+command = "npx"
+args = ["-y", "srv-812"]
+
+[mcp_servers.srv_813]
+command = "npx"
+args = ["-y", "srv-813"]
+
+[mcp_servers.srv_814]
+command = "npx"
+args = ["-y", "srv-814"]
+
+[mcp_servers.srv_815]
+command = "npx"
+args = ["-y", "srv-815"]
+
+[mcp_servers.srv_816]
+command = "npx"
+args = ["-y", "srv-816"]
+
+[mcp_servers.srv_817]
+command = "npx"
+args = ["-y", "srv-817"]
+
+[mcp_servers.srv_818]
+command = "npx"
+args = ["-y", "srv-818"]
+
+[mcp_servers.srv_819]
+command = "npx"
+args = ["-y", "srv-819"]
+
+[mcp_servers.srv_820]
+command = "npx"
+args = ["-y", "srv-820"]
+
+[mcp_servers.srv_821]
+command = "npx"
+args = ["-y", "srv-821"]
+
+[mcp_servers.srv_822]
+command = "npx"
+args = ["-y", "srv-822"]
+
+[mcp_servers.srv_823]
+command = "npx"
+args = ["-y", "srv-823"]
+
+[mcp_servers.srv_824]
+command = "npx"
+args = ["-y", "srv-824"]
+
+[mcp_servers.srv_825]
+command = "npx"
+args = ["-y", "srv-825"]
+
+[mcp_servers.srv_826]
+command = "npx"
+args = ["-y", "srv-826"]
+
+[mcp_servers.srv_827]
+command = "npx"
+args = ["-y", "srv-827"]
+
+[mcp_servers.srv_828]
+command = "npx"
+args = ["-y", "srv-828"]
+
+[mcp_servers.srv_829]
+command = "npx"
+args = ["-y", "srv-829"]
+
+[mcp_servers.srv_830]
+command = "npx"
+args = ["-y", "srv-830"]
+
+[mcp_servers.srv_831]
+command = "npx"
+args = ["-y", "srv-831"]
+
+[mcp_servers.srv_832]
+command = "npx"
+args = ["-y", "srv-832"]
+
+[mcp_servers.srv_833]
+command = "npx"
+args = ["-y", "srv-833"]
+
+[mcp_servers.srv_834]
+command = "npx"
+args = ["-y", "srv-834"]
+
+[mcp_servers.srv_835]
+command = "npx"
+args = ["-y", "srv-835"]
+
+[mcp_servers.srv_836]
+command = "npx"
+args = ["-y", "srv-836"]
+
+[mcp_servers.srv_837]
+command = "npx"
+args = ["-y", "srv-837"]
+
+[mcp_servers.srv_838]
+command = "npx"
+args = ["-y", "srv-838"]
+
+[mcp_servers.srv_839]
+command = "npx"
+args = ["-y", "srv-839"]
+
+[mcp_servers.srv_840]
+command = "npx"
+args = ["-y", "srv-840"]
+
+[mcp_servers.srv_841]
+command = "npx"
+args = ["-y", "srv-841"]
+
+[mcp_servers.srv_842]
+command = "npx"
+args = ["-y", "srv-842"]
+
+[mcp_servers.srv_843]
+command = "npx"
+args = ["-y", "srv-843"]
+
+[mcp_servers.srv_844]
+command = "npx"
+args = ["-y", "srv-844"]
+
+[mcp_servers.srv_845]
+command = "npx"
+args = ["-y", "srv-845"]
+
+[mcp_servers.srv_846]
+command = "npx"
+args = ["-y", "srv-846"]
+
+[mcp_servers.srv_847]
+command = "npx"
+args = ["-y", "srv-847"]
+
+[mcp_servers.srv_848]
+command = "npx"
+args = ["-y", "srv-848"]
+
+[mcp_servers.srv_849]
+command = "npx"
+args = ["-y", "srv-849"]
+
+[mcp_servers.srv_850]
+command = "npx"
+args = ["-y", "srv-850"]
+
+[mcp_servers.srv_851]
+command = "npx"
+args = ["-y", "srv-851"]
+
+[mcp_servers.srv_852]
+command = "npx"
+args = ["-y", "srv-852"]
+
+[mcp_servers.srv_853]
+command = "npx"
+args = ["-y", "srv-853"]
+
+[mcp_servers.srv_854]
+command = "npx"
+args = ["-y", "srv-854"]
+
+[mcp_servers.srv_855]
+command = "npx"
+args = ["-y", "srv-855"]
+
+[mcp_servers.srv_856]
+command = "npx"
+args = ["-y", "srv-856"]
+
+[mcp_servers.srv_857]
+command = "npx"
+args = ["-y", "srv-857"]
+
+[mcp_servers.srv_858]
+command = "npx"
+args = ["-y", "srv-858"]
+
+[mcp_servers.srv_859]
+command = "npx"
+args = ["-y", "srv-859"]
+
+[mcp_servers.srv_860]
+command = "npx"
+args = ["-y", "srv-860"]
+
+[mcp_servers.srv_861]
+command = "npx"
+args = ["-y", "srv-861"]
+
+[mcp_servers.srv_862]
+command = "npx"
+args = ["-y", "srv-862"]
+
+[mcp_servers.srv_863]
+command = "npx"
+args = ["-y", "srv-863"]
+
+[mcp_servers.srv_864]
+command = "npx"
+args = ["-y", "srv-864"]
+
+[mcp_servers.srv_865]
+command = "npx"
+args = ["-y", "srv-865"]
+
+[mcp_servers.srv_866]
+command = "npx"
+args = ["-y", "srv-866"]
+
+[mcp_servers.srv_867]
+command = "npx"
+args = ["-y", "srv-867"]
+
+[mcp_servers.srv_868]
+command = "npx"
+args = ["-y", "srv-868"]
+
+[mcp_servers.srv_869]
+command = "npx"
+args = ["-y", "srv-869"]
+
+[mcp_servers.srv_870]
+command = "npx"
+args = ["-y", "srv-870"]
+
+[mcp_servers.srv_871]
+command = "npx"
+args = ["-y", "srv-871"]
+
+[mcp_servers.srv_872]
+command = "npx"
+args = ["-y", "srv-872"]
+
+[mcp_servers.srv_873]
+command = "npx"
+args = ["-y", "srv-873"]
+
+[mcp_servers.srv_874]
+command = "npx"
+args = ["-y", "srv-874"]
+
+[mcp_servers.srv_875]
+command = "npx"
+args = ["-y", "srv-875"]
+
+[mcp_servers.srv_876]
+command = "npx"
+args = ["-y", "srv-876"]
+
+[mcp_servers.srv_877]
+command = "npx"
+args = ["-y", "srv-877"]
+
+[mcp_servers.srv_878]
+command = "npx"
+args = ["-y", "srv-878"]
+
+[mcp_servers.srv_879]
+command = "npx"
+args = ["-y", "srv-879"]
+
+[mcp_servers.srv_880]
+command = "npx"
+args = ["-y", "srv-880"]
+
+[mcp_servers.srv_881]
+command = "npx"
+args = ["-y", "srv-881"]
+
+[mcp_servers.srv_882]
+command = "npx"
+args = ["-y", "srv-882"]
+
+[mcp_servers.srv_883]
+command = "npx"
+args = ["-y", "srv-883"]
+
+[mcp_servers.srv_884]
+command = "npx"
+args = ["-y", "srv-884"]
+
+[mcp_servers.srv_885]
+command = "npx"
+args = ["-y", "srv-885"]
+
+[mcp_servers.srv_886]
+command = "npx"
+args = ["-y", "srv-886"]
+
+[mcp_servers.srv_887]
+command = "npx"
+args = ["-y", "srv-887"]
+
+[mcp_servers.srv_888]
+command = "npx"
+args = ["-y", "srv-888"]
+
+[mcp_servers.srv_889]
+command = "npx"
+args = ["-y", "srv-889"]
+
+[mcp_servers.srv_890]
+command = "npx"
+args = ["-y", "srv-890"]
+
+[mcp_servers.srv_891]
+command = "npx"
+args = ["-y", "srv-891"]
+
+[mcp_servers.srv_892]
+command = "npx"
+args = ["-y", "srv-892"]
+
+[mcp_servers.srv_893]
+command = "npx"
+args = ["-y", "srv-893"]
+
+[mcp_servers.srv_894]
+command = "npx"
+args = ["-y", "srv-894"]
+
+[mcp_servers.srv_895]
+command = "npx"
+args = ["-y", "srv-895"]
+
+[mcp_servers.srv_896]
+command = "npx"
+args = ["-y", "srv-896"]
+
+[mcp_servers.srv_897]
+command = "npx"
+args = ["-y", "srv-897"]
+
+[mcp_servers.srv_898]
+command = "npx"
+args = ["-y", "srv-898"]
+
+[mcp_servers.srv_899]
+command = "npx"
+args = ["-y", "srv-899"]
+
+[mcp_servers.srv_900]
+command = "npx"
+args = ["-y", "srv-900"]
+
+[mcp_servers.srv_901]
+command = "npx"
+args = ["-y", "srv-901"]
+
+[mcp_servers.srv_902]
+command = "npx"
+args = ["-y", "srv-902"]
+
+[mcp_servers.srv_903]
+command = "npx"
+args = ["-y", "srv-903"]
+
+[mcp_servers.srv_904]
+command = "npx"
+args = ["-y", "srv-904"]
+
+[mcp_servers.srv_905]
+command = "npx"
+args = ["-y", "srv-905"]
+
+[mcp_servers.srv_906]
+command = "npx"
+args = ["-y", "srv-906"]
+
+[mcp_servers.srv_907]
+command = "npx"
+args = ["-y", "srv-907"]
+
+[mcp_servers.srv_908]
+command = "npx"
+args = ["-y", "srv-908"]
+
+[mcp_servers.srv_909]
+command = "npx"
+args = ["-y", "srv-909"]
+
+[mcp_servers.srv_910]
+command = "npx"
+args = ["-y", "srv-910"]
+
+[mcp_servers.srv_911]
+command = "npx"
+args = ["-y", "srv-911"]
+
+[mcp_servers.srv_912]
+command = "npx"
+args = ["-y", "srv-912"]
+
+[mcp_servers.srv_913]
+command = "npx"
+args = ["-y", "srv-913"]
+
+[mcp_servers.srv_914]
+command = "npx"
+args = ["-y", "srv-914"]
+
+[mcp_servers.srv_915]
+command = "npx"
+args = ["-y", "srv-915"]
+
+[mcp_servers.srv_916]
+command = "npx"
+args = ["-y", "srv-916"]
+
+[mcp_servers.srv_917]
+command = "npx"
+args = ["-y", "srv-917"]
+
+[mcp_servers.srv_918]
+command = "npx"
+args = ["-y", "srv-918"]
+
+[mcp_servers.srv_919]
+command = "npx"
+args = ["-y", "srv-919"]
+
+[mcp_servers.srv_920]
+command = "npx"
+args = ["-y", "srv-920"]
+
+[mcp_servers.srv_921]
+command = "npx"
+args = ["-y", "srv-921"]
+
+[mcp_servers.srv_922]
+command = "npx"
+args = ["-y", "srv-922"]
+
+[mcp_servers.srv_923]
+command = "npx"
+args = ["-y", "srv-923"]
+
+[mcp_servers.srv_924]
+command = "npx"
+args = ["-y", "srv-924"]
+
+[mcp_servers.srv_925]
+command = "npx"
+args = ["-y", "srv-925"]
+
+[mcp_servers.srv_926]
+command = "npx"
+args = ["-y", "srv-926"]
+
+[mcp_servers.srv_927]
+command = "npx"
+args = ["-y", "srv-927"]
+
+[mcp_servers.srv_928]
+command = "npx"
+args = ["-y", "srv-928"]
+
+[mcp_servers.srv_929]
+command = "npx"
+args = ["-y", "srv-929"]
+
+[mcp_servers.srv_930]
+command = "npx"
+args = ["-y", "srv-930"]
+
+[mcp_servers.srv_931]
+command = "npx"
+args = ["-y", "srv-931"]
+
+[mcp_servers.srv_932]
+command = "npx"
+args = ["-y", "srv-932"]
+
+[mcp_servers.srv_933]
+command = "npx"
+args = ["-y", "srv-933"]
+
+[mcp_servers.srv_934]
+command = "npx"
+args = ["-y", "srv-934"]
+
+[mcp_servers.srv_935]
+command = "npx"
+args = ["-y", "srv-935"]
+
+[mcp_servers.srv_936]
+command = "npx"
+args = ["-y", "srv-936"]
+
+[mcp_servers.srv_937]
+command = "npx"
+args = ["-y", "srv-937"]
+
+[mcp_servers.srv_938]
+command = "npx"
+args = ["-y", "srv-938"]
+
+[mcp_servers.srv_939]
+command = "npx"
+args = ["-y", "srv-939"]
+
+[mcp_servers.srv_940]
+command = "npx"
+args = ["-y", "srv-940"]
+
+[mcp_servers.srv_941]
+command = "npx"
+args = ["-y", "srv-941"]
+
+[mcp_servers.srv_942]
+command = "npx"
+args = ["-y", "srv-942"]
+
+[mcp_servers.srv_943]
+command = "npx"
+args = ["-y", "srv-943"]
+
+[mcp_servers.srv_944]
+command = "npx"
+args = ["-y", "srv-944"]
+
+[mcp_servers.srv_945]
+command = "npx"
+args = ["-y", "srv-945"]
+
+[mcp_servers.srv_946]
+command = "npx"
+args = ["-y", "srv-946"]
+
+[mcp_servers.srv_947]
+command = "npx"
+args = ["-y", "srv-947"]
+
+[mcp_servers.srv_948]
+command = "npx"
+args = ["-y", "srv-948"]
+
+[mcp_servers.srv_949]
+command = "npx"
+args = ["-y", "srv-949"]
+
+[mcp_servers.srv_950]
+command = "npx"
+args = ["-y", "srv-950"]
+
+[mcp_servers.srv_951]
+command = "npx"
+args = ["-y", "srv-951"]
+
+[mcp_servers.srv_952]
+command = "npx"
+args = ["-y", "srv-952"]
+
+[mcp_servers.srv_953]
+command = "npx"
+args = ["-y", "srv-953"]
+
+[mcp_servers.srv_954]
+command = "npx"
+args = ["-y", "srv-954"]
+
+[mcp_servers.srv_955]
+command = "npx"
+args = ["-y", "srv-955"]
+
+[mcp_servers.srv_956]
+command = "npx"
+args = ["-y", "srv-956"]
+
+[mcp_servers.srv_957]
+command = "npx"
+args = ["-y", "srv-957"]
+
+[mcp_servers.srv_958]
+command = "npx"
+args = ["-y", "srv-958"]
+
+[mcp_servers.srv_959]
+command = "npx"
+args = ["-y", "srv-959"]
+
+[mcp_servers.srv_960]
+command = "npx"
+args = ["-y", "srv-960"]
+
+[mcp_servers.srv_961]
+command = "npx"
+args = ["-y", "srv-961"]
+
+[mcp_servers.srv_962]
+command = "npx"
+args = ["-y", "srv-962"]
+
+[mcp_servers.srv_963]
+command = "npx"
+args = ["-y", "srv-963"]
+
+[mcp_servers.srv_964]
+command = "npx"
+args = ["-y", "srv-964"]
+
+[mcp_servers.srv_965]
+command = "npx"
+args = ["-y", "srv-965"]
+
+[mcp_servers.srv_966]
+command = "npx"
+args = ["-y", "srv-966"]
+
+[mcp_servers.srv_967]
+command = "npx"
+args = ["-y", "srv-967"]
+
+[mcp_servers.srv_968]
+command = "npx"
+args = ["-y", "srv-968"]
+
+[mcp_servers.srv_969]
+command = "npx"
+args = ["-y", "srv-969"]
+
+[mcp_servers.srv_970]
+command = "npx"
+args = ["-y", "srv-970"]
+
+[mcp_servers.srv_971]
+command = "npx"
+args = ["-y", "srv-971"]
+
+[mcp_servers.srv_972]
+command = "npx"
+args = ["-y", "srv-972"]
+
+[mcp_servers.srv_973]
+command = "npx"
+args = ["-y", "srv-973"]
+
+[mcp_servers.srv_974]
+command = "npx"
+args = ["-y", "srv-974"]
+
+[mcp_servers.srv_975]
+command = "npx"
+args = ["-y", "srv-975"]
+
+[mcp_servers.srv_976]
+command = "npx"
+args = ["-y", "srv-976"]
+
+[mcp_servers.srv_977]
+command = "npx"
+args = ["-y", "srv-977"]
+
+[mcp_servers.srv_978]
+command = "npx"
+args = ["-y", "srv-978"]
+
+[mcp_servers.srv_979]
+command = "npx"
+args = ["-y", "srv-979"]
+
+[mcp_servers.srv_980]
+command = "npx"
+args = ["-y", "srv-980"]
+
+[mcp_servers.srv_981]
+command = "npx"
+args = ["-y", "srv-981"]
+
+[mcp_servers.srv_982]
+command = "npx"
+args = ["-y", "srv-982"]
+
+[mcp_servers.srv_983]
+command = "npx"
+args = ["-y", "srv-983"]
+
+[mcp_servers.srv_984]
+command = "npx"
+args = ["-y", "srv-984"]
+
+[mcp_servers.srv_985]
+command = "npx"
+args = ["-y", "srv-985"]
+
+[mcp_servers.srv_986]
+command = "npx"
+args = ["-y", "srv-986"]
+
+[mcp_servers.srv_987]
+command = "npx"
+args = ["-y", "srv-987"]
+
+[mcp_servers.srv_988]
+command = "npx"
+args = ["-y", "srv-988"]
+
+[mcp_servers.srv_989]
+command = "npx"
+args = ["-y", "srv-989"]
+
+[mcp_servers.srv_990]
+command = "npx"
+args = ["-y", "srv-990"]
+
+[mcp_servers.srv_991]
+command = "npx"
+args = ["-y", "srv-991"]
+
+[mcp_servers.srv_992]
+command = "npx"
+args = ["-y", "srv-992"]
+
+[mcp_servers.srv_993]
+command = "npx"
+args = ["-y", "srv-993"]
+
+[mcp_servers.srv_994]
+command = "npx"
+args = ["-y", "srv-994"]
+
+[mcp_servers.srv_995]
+command = "npx"
+args = ["-y", "srv-995"]
+
+[mcp_servers.srv_996]
+command = "npx"
+args = ["-y", "srv-996"]
+
+[mcp_servers.srv_997]
+command = "npx"
+args = ["-y", "srv-997"]
+
+[mcp_servers.srv_998]
+command = "npx"
+args = ["-y", "srv-998"]
+
+[mcp_servers.srv_999]
+command = "npx"
+args = ["-y", "srv-999"]
+
+[mcp_servers.srv_1000]
+command = "npx"
+args = ["-y", "srv-1000"]
+
+[mcp_servers.srv_1001]
+command = "npx"
+args = ["-y", "srv-1001"]
+
+[mcp_servers.srv_1002]
+command = "npx"
+args = ["-y", "srv-1002"]
+
+[mcp_servers.srv_1003]
+command = "npx"
+args = ["-y", "srv-1003"]
+
+[mcp_servers.srv_1004]
+command = "npx"
+args = ["-y", "srv-1004"]
+
+[mcp_servers.srv_1005]
+command = "npx"
+args = ["-y", "srv-1005"]
+
+[mcp_servers.srv_1006]
+command = "npx"
+args = ["-y", "srv-1006"]
+
+[mcp_servers.srv_1007]
+command = "npx"
+args = ["-y", "srv-1007"]
+
+[mcp_servers.srv_1008]
+command = "npx"
+args = ["-y", "srv-1008"]
+
+[mcp_servers.srv_1009]
+command = "npx"
+args = ["-y", "srv-1009"]
+
+[mcp_servers.srv_1010]
+command = "npx"
+args = ["-y", "srv-1010"]
+
+[mcp_servers.srv_1011]
+command = "npx"
+args = ["-y", "srv-1011"]
+
+[mcp_servers.srv_1012]
+command = "npx"
+args = ["-y", "srv-1012"]
+
+[mcp_servers.srv_1013]
+command = "npx"
+args = ["-y", "srv-1013"]
+
+[mcp_servers.srv_1014]
+command = "npx"
+args = ["-y", "srv-1014"]
+
+[mcp_servers.srv_1015]
+command = "npx"
+args = ["-y", "srv-1015"]
+
+[mcp_servers.srv_1016]
+command = "npx"
+args = ["-y", "srv-1016"]
+
+[mcp_servers.srv_1017]
+command = "npx"
+args = ["-y", "srv-1017"]
+
+[mcp_servers.srv_1018]
+command = "npx"
+args = ["-y", "srv-1018"]
+
+[mcp_servers.srv_1019]
+command = "npx"
+args = ["-y", "srv-1019"]
+
+[mcp_servers.srv_1020]
+command = "npx"
+args = ["-y", "srv-1020"]
+
+[mcp_servers.srv_1021]
+command = "npx"
+args = ["-y", "srv-1021"]
+
+[mcp_servers.srv_1022]
+command = "npx"
+args = ["-y", "srv-1022"]
+
+[mcp_servers.srv_1023]
+command = "npx"
+args = ["-y", "srv-1023"]
+
+[mcp_servers.srv_1024]
+command = "npx"
+args = ["-y", "srv-1024"]
+
+[mcp_servers.srv_1025]
+command = "npx"
+args = ["-y", "srv-1025"]
+
+[mcp_servers.srv_1026]
+command = "npx"
+args = ["-y", "srv-1026"]
+
+[mcp_servers.srv_1027]
+command = "npx"
+args = ["-y", "srv-1027"]
+
+[mcp_servers.srv_1028]
+command = "npx"
+args = ["-y", "srv-1028"]
+
+[mcp_servers.srv_1029]
+command = "npx"
+args = ["-y", "srv-1029"]
+
+[mcp_servers.srv_1030]
+command = "npx"
+args = ["-y", "srv-1030"]
+
+[mcp_servers.srv_1031]
+command = "npx"
+args = ["-y", "srv-1031"]
+
+[mcp_servers.srv_1032]
+command = "npx"
+args = ["-y", "srv-1032"]
+
+[mcp_servers.srv_1033]
+command = "npx"
+args = ["-y", "srv-1033"]
+
+[mcp_servers.srv_1034]
+command = "npx"
+args = ["-y", "srv-1034"]
+
+[mcp_servers.srv_1035]
+command = "npx"
+args = ["-y", "srv-1035"]
+
+[mcp_servers.srv_1036]
+command = "npx"
+args = ["-y", "srv-1036"]
+
+[mcp_servers.srv_1037]
+command = "npx"
+args = ["-y", "srv-1037"]
+
+[mcp_servers.srv_1038]
+command = "npx"
+args = ["-y", "srv-1038"]
+
+[mcp_servers.srv_1039]
+command = "npx"
+args = ["-y", "srv-1039"]
+
+[mcp_servers.srv_1040]
+command = "npx"
+args = ["-y", "srv-1040"]
+
+[mcp_servers.srv_1041]
+command = "npx"
+args = ["-y", "srv-1041"]
+
+[mcp_servers.srv_1042]
+command = "npx"
+args = ["-y", "srv-1042"]
+
+[mcp_servers.srv_1043]
+command = "npx"
+args = ["-y", "srv-1043"]
+
+[mcp_servers.srv_1044]
+command = "npx"
+args = ["-y", "srv-1044"]
+
+[mcp_servers.srv_1045]
+command = "npx"
+args = ["-y", "srv-1045"]
+
+[mcp_servers.srv_1046]
+command = "npx"
+args = ["-y", "srv-1046"]
+
+[mcp_servers.srv_1047]
+command = "npx"
+args = ["-y", "srv-1047"]
+
+[mcp_servers.srv_1048]
+command = "npx"
+args = ["-y", "srv-1048"]
+
+[mcp_servers.srv_1049]
+command = "npx"
+args = ["-y", "srv-1049"]
+
+[mcp_servers.srv_1050]
+command = "npx"
+args = ["-y", "srv-1050"]
+
+[mcp_servers.srv_1051]
+command = "npx"
+args = ["-y", "srv-1051"]
+
+[mcp_servers.srv_1052]
+command = "npx"
+args = ["-y", "srv-1052"]
+
+[mcp_servers.srv_1053]
+command = "npx"
+args = ["-y", "srv-1053"]
+
+[mcp_servers.srv_1054]
+command = "npx"
+args = ["-y", "srv-1054"]
+
+[mcp_servers.srv_1055]
+command = "npx"
+args = ["-y", "srv-1055"]
+
+[mcp_servers.srv_1056]
+command = "npx"
+args = ["-y", "srv-1056"]
+
+[mcp_servers.srv_1057]
+command = "npx"
+args = ["-y", "srv-1057"]
+
+[mcp_servers.srv_1058]
+command = "npx"
+args = ["-y", "srv-1058"]
+
+[mcp_servers.srv_1059]
+command = "npx"
+args = ["-y", "srv-1059"]
+
+[mcp_servers.srv_1060]
+command = "npx"
+args = ["-y", "srv-1060"]
+
+[mcp_servers.srv_1061]
+command = "npx"
+args = ["-y", "srv-1061"]
+
+[mcp_servers.srv_1062]
+command = "npx"
+args = ["-y", "srv-1062"]
+
+[mcp_servers.srv_1063]
+command = "npx"
+args = ["-y", "srv-1063"]
+
+[mcp_servers.srv_1064]
+command = "npx"
+args = ["-y", "srv-1064"]
+
+[mcp_servers.srv_1065]
+command = "npx"
+args = ["-y", "srv-1065"]
+
+[mcp_servers.srv_1066]
+command = "npx"
+args = ["-y", "srv-1066"]
+
+[mcp_servers.srv_1067]
+command = "npx"
+args = ["-y", "srv-1067"]
+
+[mcp_servers.srv_1068]
+command = "npx"
+args = ["-y", "srv-1068"]
+
+[mcp_servers.srv_1069]
+command = "npx"
+args = ["-y", "srv-1069"]
+
+[mcp_servers.srv_1070]
+command = "npx"
+args = ["-y", "srv-1070"]
+
+[mcp_servers.srv_1071]
+command = "npx"
+args = ["-y", "srv-1071"]
+
+[mcp_servers.srv_1072]
+command = "npx"
+args = ["-y", "srv-1072"]
+
+[mcp_servers.srv_1073]
+command = "npx"
+args = ["-y", "srv-1073"]
+
+[mcp_servers.srv_1074]
+command = "npx"
+args = ["-y", "srv-1074"]
+
+[mcp_servers.srv_1075]
+command = "npx"
+args = ["-y", "srv-1075"]
+
+[mcp_servers.srv_1076]
+command = "npx"
+args = ["-y", "srv-1076"]
+
+[mcp_servers.srv_1077]
+command = "npx"
+args = ["-y", "srv-1077"]
+
+[mcp_servers.srv_1078]
+command = "npx"
+args = ["-y", "srv-1078"]
+
+[mcp_servers.srv_1079]
+command = "npx"
+args = ["-y", "srv-1079"]
+
+[mcp_servers.srv_1080]
+command = "npx"
+args = ["-y", "srv-1080"]
+
+[mcp_servers.srv_1081]
+command = "npx"
+args = ["-y", "srv-1081"]
+
+[mcp_servers.srv_1082]
+command = "npx"
+args = ["-y", "srv-1082"]
+
+[mcp_servers.srv_1083]
+command = "npx"
+args = ["-y", "srv-1083"]
+
+[mcp_servers.srv_1084]
+command = "npx"
+args = ["-y", "srv-1084"]
+
+[mcp_servers.srv_1085]
+command = "npx"
+args = ["-y", "srv-1085"]
+
+[mcp_servers.srv_1086]
+command = "npx"
+args = ["-y", "srv-1086"]
+
+[mcp_servers.srv_1087]
+command = "npx"
+args = ["-y", "srv-1087"]
+
+[mcp_servers.srv_1088]
+command = "npx"
+args = ["-y", "srv-1088"]
+
+[mcp_servers.srv_1089]
+command = "npx"
+args = ["-y", "srv-1089"]
+
+[mcp_servers.srv_1090]
+command = "npx"
+args = ["-y", "srv-1090"]
+
+[mcp_servers.srv_1091]
+command = "npx"
+args = ["-y", "srv-1091"]
+
+[mcp_servers.srv_1092]
+command = "npx"
+args = ["-y", "srv-1092"]
+
+[mcp_servers.srv_1093]
+command = "npx"
+args = ["-y", "srv-1093"]
+
+[mcp_servers.srv_1094]
+command = "npx"
+args = ["-y", "srv-1094"]
+
+[mcp_servers.srv_1095]
+command = "npx"
+args = ["-y", "srv-1095"]
+
+[mcp_servers.srv_1096]
+command = "npx"
+args = ["-y", "srv-1096"]
+
+[mcp_servers.srv_1097]
+command = "npx"
+args = ["-y", "srv-1097"]
+
+[mcp_servers.srv_1098]
+command = "npx"
+args = ["-y", "srv-1098"]
+
+[mcp_servers.srv_1099]
+command = "npx"
+args = ["-y", "srv-1099"]
+
+[mcp_servers.srv_1100]
+command = "npx"
+args = ["-y", "srv-1100"]
+
+[mcp_servers.srv_1101]
+command = "npx"
+args = ["-y", "srv-1101"]
+
+[mcp_servers.srv_1102]
+command = "npx"
+args = ["-y", "srv-1102"]
+
+[mcp_servers.srv_1103]
+command = "npx"
+args = ["-y", "srv-1103"]
+
+[mcp_servers.srv_1104]
+command = "npx"
+args = ["-y", "srv-1104"]
+
+[mcp_servers.srv_1105]
+command = "npx"
+args = ["-y", "srv-1105"]
+
+[mcp_servers.srv_1106]
+command = "npx"
+args = ["-y", "srv-1106"]
+
+[mcp_servers.srv_1107]
+command = "npx"
+args = ["-y", "srv-1107"]
+
+[mcp_servers.srv_1108]
+command = "npx"
+args = ["-y", "srv-1108"]
+
+[mcp_servers.srv_1109]
+command = "npx"
+args = ["-y", "srv-1109"]
+
+[mcp_servers.srv_1110]
+command = "npx"
+args = ["-y", "srv-1110"]
+
+[mcp_servers.srv_1111]
+command = "npx"
+args = ["-y", "srv-1111"]
+
+[mcp_servers.srv_1112]
+command = "npx"
+args = ["-y", "srv-1112"]
+
+[mcp_servers.srv_1113]
+command = "npx"
+args = ["-y", "srv-1113"]
+
+[mcp_servers.srv_1114]
+command = "npx"
+args = ["-y", "srv-1114"]
+
+[mcp_servers.srv_1115]
+command = "npx"
+args = ["-y", "srv-1115"]
+
+[mcp_servers.srv_1116]
+command = "npx"
+args = ["-y", "srv-1116"]
+
+[mcp_servers.srv_1117]
+command = "npx"
+args = ["-y", "srv-1117"]
+
+[mcp_servers.srv_1118]
+command = "npx"
+args = ["-y", "srv-1118"]
+
+[mcp_servers.srv_1119]
+command = "npx"
+args = ["-y", "srv-1119"]
+
+[mcp_servers.srv_1120]
+command = "npx"
+args = ["-y", "srv-1120"]
+
+[mcp_servers.srv_1121]
+command = "npx"
+args = ["-y", "srv-1121"]
+
+[mcp_servers.srv_1122]
+command = "npx"
+args = ["-y", "srv-1122"]
+
+[mcp_servers.srv_1123]
+command = "npx"
+args = ["-y", "srv-1123"]
+
+[mcp_servers.srv_1124]
+command = "npx"
+args = ["-y", "srv-1124"]
+
+[mcp_servers.srv_1125]
+command = "npx"
+args = ["-y", "srv-1125"]
+
+[mcp_servers.srv_1126]
+command = "npx"
+args = ["-y", "srv-1126"]
+
+[mcp_servers.srv_1127]
+command = "npx"
+args = ["-y", "srv-1127"]
+
+[mcp_servers.srv_1128]
+command = "npx"
+args = ["-y", "srv-1128"]
+
+[mcp_servers.srv_1129]
+command = "npx"
+args = ["-y", "srv-1129"]
+
+[mcp_servers.srv_1130]
+command = "npx"
+args = ["-y", "srv-1130"]
+
+[mcp_servers.srv_1131]
+command = "npx"
+args = ["-y", "srv-1131"]
+
+[mcp_servers.srv_1132]
+command = "npx"
+args = ["-y", "srv-1132"]
+
+[mcp_servers.srv_1133]
+command = "npx"
+args = ["-y", "srv-1133"]
+
+[mcp_servers.srv_1134]
+command = "npx"
+args = ["-y", "srv-1134"]
+
+[mcp_servers.srv_1135]
+command = "npx"
+args = ["-y", "srv-1135"]
+
+[mcp_servers.srv_1136]
+command = "npx"
+args = ["-y", "srv-1136"]
+
+[mcp_servers.srv_1137]
+command = "npx"
+args = ["-y", "srv-1137"]
+
+[mcp_servers.srv_1138]
+command = "npx"
+args = ["-y", "srv-1138"]
+
+[mcp_servers.srv_1139]
+command = "npx"
+args = ["-y", "srv-1139"]
+
+[mcp_servers.srv_1140]
+command = "npx"
+args = ["-y", "srv-1140"]
+
+[mcp_servers.srv_1141]
+command = "npx"
+args = ["-y", "srv-1141"]
+
+[mcp_servers.srv_1142]
+command = "npx"
+args = ["-y", "srv-1142"]
+
+[mcp_servers.srv_1143]
+command = "npx"
+args = ["-y", "srv-1143"]
+
+[mcp_servers.srv_1144]
+command = "npx"
+args = ["-y", "srv-1144"]
+
+[mcp_servers.srv_1145]
+command = "npx"
+args = ["-y", "srv-1145"]
+
+[mcp_servers.srv_1146]
+command = "npx"
+args = ["-y", "srv-1146"]
+
+[mcp_servers.srv_1147]
+command = "npx"
+args = ["-y", "srv-1147"]
+
+[mcp_servers.srv_1148]
+command = "npx"
+args = ["-y", "srv-1148"]
+
+[mcp_servers.srv_1149]
+command = "npx"
+args = ["-y", "srv-1149"]
+
+[mcp_servers.srv_1150]
+command = "npx"
+args = ["-y", "srv-1150"]
+
+[mcp_servers.srv_1151]
+command = "npx"
+args = ["-y", "srv-1151"]
+
+[mcp_servers.srv_1152]
+command = "npx"
+args = ["-y", "srv-1152"]
+
+[mcp_servers.srv_1153]
+command = "npx"
+args = ["-y", "srv-1153"]
+
+[mcp_servers.srv_1154]
+command = "npx"
+args = ["-y", "srv-1154"]
+
+[mcp_servers.srv_1155]
+command = "npx"
+args = ["-y", "srv-1155"]
+
+[mcp_servers.srv_1156]
+command = "npx"
+args = ["-y", "srv-1156"]
+
+[mcp_servers.srv_1157]
+command = "npx"
+args = ["-y", "srv-1157"]
+
+[mcp_servers.srv_1158]
+command = "npx"
+args = ["-y", "srv-1158"]
+
+[mcp_servers.srv_1159]
+command = "npx"
+args = ["-y", "srv-1159"]
+
+[mcp_servers.srv_1160]
+command = "npx"
+args = ["-y", "srv-1160"]
+
+[mcp_servers.srv_1161]
+command = "npx"
+args = ["-y", "srv-1161"]
+
+[mcp_servers.srv_1162]
+command = "npx"
+args = ["-y", "srv-1162"]
+
+[mcp_servers.srv_1163]
+command = "npx"
+args = ["-y", "srv-1163"]
+
+[mcp_servers.srv_1164]
+command = "npx"
+args = ["-y", "srv-1164"]
+
+[mcp_servers.srv_1165]
+command = "npx"
+args = ["-y", "srv-1165"]
+
+[mcp_servers.srv_1166]
+command = "npx"
+args = ["-y", "srv-1166"]
+
+[mcp_servers.srv_1167]
+command = "npx"
+args = ["-y", "srv-1167"]
+
+[mcp_servers.srv_1168]
+command = "npx"
+args = ["-y", "srv-1168"]
+
+[mcp_servers.srv_1169]
+command = "npx"
+args = ["-y", "srv-1169"]
+
+[mcp_servers.srv_1170]
+command = "npx"
+args = ["-y", "srv-1170"]
+
+[mcp_servers.srv_1171]
+command = "npx"
+args = ["-y", "srv-1171"]
+
+[mcp_servers.srv_1172]
+command = "npx"
+args = ["-y", "srv-1172"]
+
+[mcp_servers.srv_1173]
+command = "npx"
+args = ["-y", "srv-1173"]
+
+[mcp_servers.srv_1174]
+command = "npx"
+args = ["-y", "srv-1174"]
+
+[mcp_servers.srv_1175]
+command = "npx"
+args = ["-y", "srv-1175"]
+
+[mcp_servers.srv_1176]
+command = "npx"
+args = ["-y", "srv-1176"]
+
+[mcp_servers.srv_1177]
+command = "npx"
+args = ["-y", "srv-1177"]
+
+[mcp_servers.srv_1178]
+command = "npx"
+args = ["-y", "srv-1178"]
+
+[mcp_servers.srv_1179]
+command = "npx"
+args = ["-y", "srv-1179"]
+
+[mcp_servers.srv_1180]
+command = "npx"
+args = ["-y", "srv-1180"]
+
+[mcp_servers.srv_1181]
+command = "npx"
+args = ["-y", "srv-1181"]
+
+[mcp_servers.srv_1182]
+command = "npx"
+args = ["-y", "srv-1182"]
+
+[mcp_servers.srv_1183]
+command = "npx"
+args = ["-y", "srv-1183"]
+
+[mcp_servers.srv_1184]
+command = "npx"
+args = ["-y", "srv-1184"]
+
+[mcp_servers.srv_1185]
+command = "npx"
+args = ["-y", "srv-1185"]
+
+[mcp_servers.srv_1186]
+command = "npx"
+args = ["-y", "srv-1186"]
+
+[mcp_servers.srv_1187]
+command = "npx"
+args = ["-y", "srv-1187"]
+
+[mcp_servers.srv_1188]
+command = "npx"
+args = ["-y", "srv-1188"]
+
+[mcp_servers.srv_1189]
+command = "npx"
+args = ["-y", "srv-1189"]
+
+[mcp_servers.srv_1190]
+command = "npx"
+args = ["-y", "srv-1190"]
+
+[mcp_servers.srv_1191]
+command = "npx"
+args = ["-y", "srv-1191"]
+
+[mcp_servers.srv_1192]
+command = "npx"
+args = ["-y", "srv-1192"]
+
+[mcp_servers.srv_1193]
+command = "npx"
+args = ["-y", "srv-1193"]
+
+[mcp_servers.srv_1194]
+command = "npx"
+args = ["-y", "srv-1194"]
+
+[mcp_servers.srv_1195]
+command = "npx"
+args = ["-y", "srv-1195"]
+
+[mcp_servers.srv_1196]
+command = "npx"
+args = ["-y", "srv-1196"]
+
+[mcp_servers.srv_1197]
+command = "npx"
+args = ["-y", "srv-1197"]
+
+[mcp_servers.srv_1198]
+command = "npx"
+args = ["-y", "srv-1198"]
+
+[mcp_servers.srv_1199]
+command = "npx"
+args = ["-y", "srv-1199"]
+
+[mcp_servers.srv_1200]
+command = "npx"
+args = ["-y", "srv-1200"]
+
+[mcp_servers.srv_1201]
+command = "npx"
+args = ["-y", "srv-1201"]
+
+[mcp_servers.srv_1202]
+command = "npx"
+args = ["-y", "srv-1202"]
+
+[mcp_servers.srv_1203]
+command = "npx"
+args = ["-y", "srv-1203"]
+
+[mcp_servers.srv_1204]
+command = "npx"
+args = ["-y", "srv-1204"]
+
+[mcp_servers.srv_1205]
+command = "npx"
+args = ["-y", "srv-1205"]
+
+[mcp_servers.srv_1206]
+command = "npx"
+args = ["-y", "srv-1206"]
+
+[mcp_servers.srv_1207]
+command = "npx"
+args = ["-y", "srv-1207"]
+
+[mcp_servers.srv_1208]
+command = "npx"
+args = ["-y", "srv-1208"]
+
+[mcp_servers.srv_1209]
+command = "npx"
+args = ["-y", "srv-1209"]
+
+[mcp_servers.srv_1210]
+command = "npx"
+args = ["-y", "srv-1210"]
+
+[mcp_servers.srv_1211]
+command = "npx"
+args = ["-y", "srv-1211"]
+
+[mcp_servers.srv_1212]
+command = "npx"
+args = ["-y", "srv-1212"]
+
+[mcp_servers.srv_1213]
+command = "npx"
+args = ["-y", "srv-1213"]
+
+[mcp_servers.srv_1214]
+command = "npx"
+args = ["-y", "srv-1214"]
+
+[mcp_servers.srv_1215]
+command = "npx"
+args = ["-y", "srv-1215"]
+
+[mcp_servers.srv_1216]
+command = "npx"
+args = ["-y", "srv-1216"]
+
+[mcp_servers.srv_1217]
+command = "npx"
+args = ["-y", "srv-1217"]
+
+[mcp_servers.srv_1218]
+command = "npx"
+args = ["-y", "srv-1218"]
+
+[mcp_servers.srv_1219]
+command = "npx"
+args = ["-y", "srv-1219"]
+
+[mcp_servers.srv_1220]
+command = "npx"
+args = ["-y", "srv-1220"]
+
+[mcp_servers.srv_1221]
+command = "npx"
+args = ["-y", "srv-1221"]
+
+[mcp_servers.srv_1222]
+command = "npx"
+args = ["-y", "srv-1222"]
+
+[mcp_servers.srv_1223]
+command = "npx"
+args = ["-y", "srv-1223"]
+
+[mcp_servers.srv_1224]
+command = "npx"
+args = ["-y", "srv-1224"]
+
+[mcp_servers.srv_1225]
+command = "npx"
+args = ["-y", "srv-1225"]
+
+[mcp_servers.srv_1226]
+command = "npx"
+args = ["-y", "srv-1226"]
+
+[mcp_servers.srv_1227]
+command = "npx"
+args = ["-y", "srv-1227"]
+
+[mcp_servers.srv_1228]
+command = "npx"
+args = ["-y", "srv-1228"]
+
+[mcp_servers.srv_1229]
+command = "npx"
+args = ["-y", "srv-1229"]
+
+[mcp_servers.srv_1230]
+command = "npx"
+args = ["-y", "srv-1230"]
+
+[mcp_servers.srv_1231]
+command = "npx"
+args = ["-y", "srv-1231"]
+
+[mcp_servers.srv_1232]
+command = "npx"
+args = ["-y", "srv-1232"]
+
+[mcp_servers.srv_1233]
+command = "npx"
+args = ["-y", "srv-1233"]
+
+[mcp_servers.srv_1234]
+command = "npx"
+args = ["-y", "srv-1234"]
+
+[mcp_servers.srv_1235]
+command = "npx"
+args = ["-y", "srv-1235"]
+
+[mcp_servers.srv_1236]
+command = "npx"
+args = ["-y", "srv-1236"]
+
+[mcp_servers.srv_1237]
+command = "npx"
+args = ["-y", "srv-1237"]
+
+[mcp_servers.srv_1238]
+command = "npx"
+args = ["-y", "srv-1238"]
+
+[mcp_servers.srv_1239]
+command = "npx"
+args = ["-y", "srv-1239"]
+
+[mcp_servers.srv_1240]
+command = "npx"
+args = ["-y", "srv-1240"]
+
+[mcp_servers.srv_1241]
+command = "npx"
+args = ["-y", "srv-1241"]
+
+[mcp_servers.srv_1242]
+command = "npx"
+args = ["-y", "srv-1242"]
+
+[mcp_servers.srv_1243]
+command = "npx"
+args = ["-y", "srv-1243"]
+
+[mcp_servers.srv_1244]
+command = "npx"
+args = ["-y", "srv-1244"]
+
+[mcp_servers.srv_1245]
+command = "npx"
+args = ["-y", "srv-1245"]
+
+[mcp_servers.srv_1246]
+command = "npx"
+args = ["-y", "srv-1246"]
+
+[mcp_servers.srv_1247]
+command = "npx"
+args = ["-y", "srv-1247"]
+
+[mcp_servers.srv_1248]
+command = "npx"
+args = ["-y", "srv-1248"]
+
+[mcp_servers.srv_1249]
+command = "npx"
+args = ["-y", "srv-1249"]
+
+[mcp_servers.srv_1250]
+command = "npx"
+args = ["-y", "srv-1250"]
+
+[mcp_servers.srv_1251]
+command = "npx"
+args = ["-y", "srv-1251"]
+
+[mcp_servers.srv_1252]
+command = "npx"
+args = ["-y", "srv-1252"]
+
+[mcp_servers.srv_1253]
+command = "npx"
+args = ["-y", "srv-1253"]
+
+[mcp_servers.srv_1254]
+command = "npx"
+args = ["-y", "srv-1254"]
+
+[mcp_servers.srv_1255]
+command = "npx"
+args = ["-y", "srv-1255"]
+
+[mcp_servers.srv_1256]
+command = "npx"
+args = ["-y", "srv-1256"]
+
+[mcp_servers.srv_1257]
+command = "npx"
+args = ["-y", "srv-1257"]
+
+[mcp_servers.srv_1258]
+command = "npx"
+args = ["-y", "srv-1258"]
+
+[mcp_servers.srv_1259]
+command = "npx"
+args = ["-y", "srv-1259"]
+
+[mcp_servers.srv_1260]
+command = "npx"
+args = ["-y", "srv-1260"]
+
+[mcp_servers.srv_1261]
+command = "npx"
+args = ["-y", "srv-1261"]
+
+[mcp_servers.srv_1262]
+command = "npx"
+args = ["-y", "srv-1262"]
+
+[mcp_servers.srv_1263]
+command = "npx"
+args = ["-y", "srv-1263"]
+
+[mcp_servers.srv_1264]
+command = "npx"
+args = ["-y", "srv-1264"]
+
+[mcp_servers.srv_1265]
+command = "npx"
+args = ["-y", "srv-1265"]
+
+[mcp_servers.srv_1266]
+command = "npx"
+args = ["-y", "srv-1266"]
+
+[mcp_servers.srv_1267]
+command = "npx"
+args = ["-y", "srv-1267"]
+
+[mcp_servers.srv_1268]
+command = "npx"
+args = ["-y", "srv-1268"]
+
+[mcp_servers.srv_1269]
+command = "npx"
+args = ["-y", "srv-1269"]
+
+[mcp_servers.srv_1270]
+command = "npx"
+args = ["-y", "srv-1270"]
+
+[mcp_servers.srv_1271]
+command = "npx"
+args = ["-y", "srv-1271"]
+
+[mcp_servers.srv_1272]
+command = "npx"
+args = ["-y", "srv-1272"]
+
+[mcp_servers.srv_1273]
+command = "npx"
+args = ["-y", "srv-1273"]
+
+[mcp_servers.srv_1274]
+command = "npx"
+args = ["-y", "srv-1274"]
+
+[mcp_servers.srv_1275]
+command = "npx"
+args = ["-y", "srv-1275"]
+
+[mcp_servers.srv_1276]
+command = "npx"
+args = ["-y", "srv-1276"]
+
+[mcp_servers.srv_1277]
+command = "npx"
+args = ["-y", "srv-1277"]
+
+[mcp_servers.srv_1278]
+command = "npx"
+args = ["-y", "srv-1278"]
+
+[mcp_servers.srv_1279]
+command = "npx"
+args = ["-y", "srv-1279"]
+
+[mcp_servers.srv_1280]
+command = "npx"
+args = ["-y", "srv-1280"]
+
+[mcp_servers.srv_1281]
+command = "npx"
+args = ["-y", "srv-1281"]
+
+[mcp_servers.srv_1282]
+command = "npx"
+args = ["-y", "srv-1282"]
+
+[mcp_servers.srv_1283]
+command = "npx"
+args = ["-y", "srv-1283"]
+
+[mcp_servers.srv_1284]
+command = "npx"
+args = ["-y", "srv-1284"]
+
+[mcp_servers.srv_1285]
+command = "npx"
+args = ["-y", "srv-1285"]
+
+[mcp_servers.srv_1286]
+command = "npx"
+args = ["-y", "srv-1286"]
+
+[mcp_servers.srv_1287]
+command = "npx"
+args = ["-y", "srv-1287"]
+
+[mcp_servers.srv_1288]
+command = "npx"
+args = ["-y", "srv-1288"]
+
+[mcp_servers.srv_1289]
+command = "npx"
+args = ["-y", "srv-1289"]
+
+[mcp_servers.srv_1290]
+command = "npx"
+args = ["-y", "srv-1290"]
+
+[mcp_servers.srv_1291]
+command = "npx"
+args = ["-y", "srv-1291"]
+
+[mcp_servers.srv_1292]
+command = "npx"
+args = ["-y", "srv-1292"]
+
+[mcp_servers.srv_1293]
+command = "npx"
+args = ["-y", "srv-1293"]
+
+[mcp_servers.srv_1294]
+command = "npx"
+args = ["-y", "srv-1294"]
+
+[mcp_servers.srv_1295]
+command = "npx"
+args = ["-y", "srv-1295"]
+
+[mcp_servers.srv_1296]
+command = "npx"
+args = ["-y", "srv-1296"]
+
+[mcp_servers.srv_1297]
+command = "npx"
+args = ["-y", "srv-1297"]
+
+[mcp_servers.srv_1298]
+command = "npx"
+args = ["-y", "srv-1298"]
+
+[mcp_servers.srv_1299]
+command = "npx"
+args = ["-y", "srv-1299"]
+
+[mcp_servers.srv_1300]
+command = "npx"
+args = ["-y", "srv-1300"]
+
+[mcp_servers.srv_1301]
+command = "npx"
+args = ["-y", "srv-1301"]
+
+[mcp_servers.srv_1302]
+command = "npx"
+args = ["-y", "srv-1302"]
+
+[mcp_servers.srv_1303]
+command = "npx"
+args = ["-y", "srv-1303"]
+
+[mcp_servers.srv_1304]
+command = "npx"
+args = ["-y", "srv-1304"]
+
+[mcp_servers.srv_1305]
+command = "npx"
+args = ["-y", "srv-1305"]
+
+[mcp_servers.srv_1306]
+command = "npx"
+args = ["-y", "srv-1306"]
+
+[mcp_servers.srv_1307]
+command = "npx"
+args = ["-y", "srv-1307"]
+
+[mcp_servers.srv_1308]
+command = "npx"
+args = ["-y", "srv-1308"]
+
+[mcp_servers.srv_1309]
+command = "npx"
+args = ["-y", "srv-1309"]
+
+[mcp_servers.srv_1310]
+command = "npx"
+args = ["-y", "srv-1310"]
+
+[mcp_servers.srv_1311]
+command = "npx"
+args = ["-y", "srv-1311"]
+
+[mcp_servers.srv_1312]
+command = "npx"
+args = ["-y", "srv-1312"]
+
+[mcp_servers.srv_1313]
+command = "npx"
+args = ["-y", "srv-1313"]
+
+[mcp_servers.srv_1314]
+command = "npx"
+args = ["-y", "srv-1314"]
+
+[mcp_servers.srv_1315]
+command = "npx"
+args = ["-y", "srv-1315"]
+
+[mcp_servers.srv_1316]
+command = "npx"
+args = ["-y", "srv-1316"]
+
+[mcp_servers.srv_1317]
+command = "npx"
+args = ["-y", "srv-1317"]
+
+[mcp_servers.srv_1318]
+command = "npx"
+args = ["-y", "srv-1318"]
+
+[mcp_servers.srv_1319]
+command = "npx"
+args = ["-y", "srv-1319"]
+
+[mcp_servers.srv_1320]
+command = "npx"
+args = ["-y", "srv-1320"]
+
+[mcp_servers.srv_1321]
+command = "npx"
+args = ["-y", "srv-1321"]
+
+[mcp_servers.srv_1322]
+command = "npx"
+args = ["-y", "srv-1322"]
+
+[mcp_servers.srv_1323]
+command = "npx"
+args = ["-y", "srv-1323"]
+
+[mcp_servers.srv_1324]
+command = "npx"
+args = ["-y", "srv-1324"]
+
+[mcp_servers.srv_1325]
+command = "npx"
+args = ["-y", "srv-1325"]
+
+[mcp_servers.srv_1326]
+command = "npx"
+args = ["-y", "srv-1326"]
+
+[mcp_servers.srv_1327]
+command = "npx"
+args = ["-y", "srv-1327"]
+
+[mcp_servers.srv_1328]
+command = "npx"
+args = ["-y", "srv-1328"]
+
+[mcp_servers.srv_1329]
+command = "npx"
+args = ["-y", "srv-1329"]
+
+[mcp_servers.srv_1330]
+command = "npx"
+args = ["-y", "srv-1330"]
+
+[mcp_servers.srv_1331]
+command = "npx"
+args = ["-y", "srv-1331"]
+
+[mcp_servers.srv_1332]
+command = "npx"
+args = ["-y", "srv-1332"]
+
+[mcp_servers.srv_1333]
+command = "npx"
+args = ["-y", "srv-1333"]
+
+[mcp_servers.srv_1334]
+command = "npx"
+args = ["-y", "srv-1334"]
+
+[mcp_servers.srv_1335]
+command = "npx"
+args = ["-y", "srv-1335"]
+
+[mcp_servers.srv_1336]
+command = "npx"
+args = ["-y", "srv-1336"]
+
+[mcp_servers.srv_1337]
+command = "npx"
+args = ["-y", "srv-1337"]
+
+[mcp_servers.srv_1338]
+command = "npx"
+args = ["-y", "srv-1338"]
+
+[mcp_servers.srv_1339]
+command = "npx"
+args = ["-y", "srv-1339"]
+
+[mcp_servers.srv_1340]
+command = "npx"
+args = ["-y", "srv-1340"]
+
+[mcp_servers.srv_1341]
+command = "npx"
+args = ["-y", "srv-1341"]
+
+[mcp_servers.srv_1342]
+command = "npx"
+args = ["-y", "srv-1342"]
+
+[mcp_servers.srv_1343]
+command = "npx"
+args = ["-y", "srv-1343"]
+
+[mcp_servers.srv_1344]
+command = "npx"
+args = ["-y", "srv-1344"]
+
+[mcp_servers.srv_1345]
+command = "npx"
+args = ["-y", "srv-1345"]
+
+[mcp_servers.srv_1346]
+command = "npx"
+args = ["-y", "srv-1346"]
+
+[mcp_servers.srv_1347]
+command = "npx"
+args = ["-y", "srv-1347"]
+
+[mcp_servers.srv_1348]
+command = "npx"
+args = ["-y", "srv-1348"]
+
+[mcp_servers.srv_1349]
+command = "npx"
+args = ["-y", "srv-1349"]
+
+[mcp_servers.srv_1350]
+command = "npx"
+args = ["-y", "srv-1350"]
+
+[mcp_servers.srv_1351]
+command = "npx"
+args = ["-y", "srv-1351"]
+
+[mcp_servers.srv_1352]
+command = "npx"
+args = ["-y", "srv-1352"]
+
+[mcp_servers.srv_1353]
+command = "npx"
+args = ["-y", "srv-1353"]
+
+[mcp_servers.srv_1354]
+command = "npx"
+args = ["-y", "srv-1354"]
+
+[mcp_servers.srv_1355]
+command = "npx"
+args = ["-y", "srv-1355"]
+
+[mcp_servers.srv_1356]
+command = "npx"
+args = ["-y", "srv-1356"]
+
+[mcp_servers.srv_1357]
+command = "npx"
+args = ["-y", "srv-1357"]
+
+[mcp_servers.srv_1358]
+command = "npx"
+args = ["-y", "srv-1358"]
+
+[mcp_servers.srv_1359]
+command = "npx"
+args = ["-y", "srv-1359"]
+
+[mcp_servers.srv_1360]
+command = "npx"
+args = ["-y", "srv-1360"]
+
+[mcp_servers.srv_1361]
+command = "npx"
+args = ["-y", "srv-1361"]
+
+[mcp_servers.srv_1362]
+command = "npx"
+args = ["-y", "srv-1362"]
+
+[mcp_servers.srv_1363]
+command = "npx"
+args = ["-y", "srv-1363"]
+
+[mcp_servers.srv_1364]
+command = "npx"
+args = ["-y", "srv-1364"]
+
+[mcp_servers.srv_1365]
+command = "npx"
+args = ["-y", "srv-1365"]
+
+[mcp_servers.srv_1366]
+command = "npx"
+args = ["-y", "srv-1366"]
+
+[mcp_servers.srv_1367]
+command = "npx"
+args = ["-y", "srv-1367"]
+
+[mcp_servers.srv_1368]
+command = "npx"
+args = ["-y", "srv-1368"]
+
+[mcp_servers.srv_1369]
+command = "npx"
+args = ["-y", "srv-1369"]
+
+[mcp_servers.srv_1370]
+command = "npx"
+args = ["-y", "srv-1370"]
+
+[mcp_servers.srv_1371]
+command = "npx"
+args = ["-y", "srv-1371"]
+
+[mcp_servers.srv_1372]
+command = "npx"
+args = ["-y", "srv-1372"]
+
+[mcp_servers.srv_1373]
+command = "npx"
+args = ["-y", "srv-1373"]
+
+[mcp_servers.srv_1374]
+command = "npx"
+args = ["-y", "srv-1374"]
+
+[mcp_servers.srv_1375]
+command = "npx"
+args = ["-y", "srv-1375"]
+
+[mcp_servers.srv_1376]
+command = "npx"
+args = ["-y", "srv-1376"]
+
+[mcp_servers.srv_1377]
+command = "npx"
+args = ["-y", "srv-1377"]
+
+[mcp_servers.srv_1378]
+command = "npx"
+args = ["-y", "srv-1378"]
+
+[mcp_servers.srv_1379]
+command = "npx"
+args = ["-y", "srv-1379"]
+
+[mcp_servers.srv_1380]
+command = "npx"
+args = ["-y", "srv-1380"]
+
+[mcp_servers.srv_1381]
+command = "npx"
+args = ["-y", "srv-1381"]
+
+[mcp_servers.srv_1382]
+command = "npx"
+args = ["-y", "srv-1382"]
+
+[mcp_servers.srv_1383]
+command = "npx"
+args = ["-y", "srv-1383"]
+
+[mcp_servers.srv_1384]
+command = "npx"
+args = ["-y", "srv-1384"]
+
+[mcp_servers.srv_1385]
+command = "npx"
+args = ["-y", "srv-1385"]
+
+[mcp_servers.srv_1386]
+command = "npx"
+args = ["-y", "srv-1386"]
+
+[mcp_servers.srv_1387]
+command = "npx"
+args = ["-y", "srv-1387"]
+
+[mcp_servers.srv_1388]
+command = "npx"
+args = ["-y", "srv-1388"]
+
+[mcp_servers.srv_1389]
+command = "npx"
+args = ["-y", "srv-1389"]
+
+[mcp_servers.srv_1390]
+command = "npx"
+args = ["-y", "srv-1390"]
+
+[mcp_servers.srv_1391]
+command = "npx"
+args = ["-y", "srv-1391"]
+
+[mcp_servers.srv_1392]
+command = "npx"
+args = ["-y", "srv-1392"]
+
+[mcp_servers.srv_1393]
+command = "npx"
+args = ["-y", "srv-1393"]
+
+[mcp_servers.srv_1394]
+command = "npx"
+args = ["-y", "srv-1394"]
+
+[mcp_servers.srv_1395]
+command = "npx"
+args = ["-y", "srv-1395"]
+
+[mcp_servers.srv_1396]
+command = "npx"
+args = ["-y", "srv-1396"]
+
+[mcp_servers.srv_1397]
+command = "npx"
+args = ["-y", "srv-1397"]
+
+[mcp_servers.srv_1398]
+command = "npx"
+args = ["-y", "srv-1398"]
+
+[mcp_servers.srv_1399]
+command = "npx"
+args = ["-y", "srv-1399"]
+
+[mcp_servers.srv_1400]
+command = "npx"
+args = ["-y", "srv-1400"]
+
+[mcp_servers.srv_1401]
+command = "npx"
+args = ["-y", "srv-1401"]
+
+[mcp_servers.srv_1402]
+command = "npx"
+args = ["-y", "srv-1402"]
+
+[mcp_servers.srv_1403]
+command = "npx"
+args = ["-y", "srv-1403"]
+
+[mcp_servers.srv_1404]
+command = "npx"
+args = ["-y", "srv-1404"]
+
+[mcp_servers.srv_1405]
+command = "npx"
+args = ["-y", "srv-1405"]
+
+[mcp_servers.srv_1406]
+command = "npx"
+args = ["-y", "srv-1406"]
+
+[mcp_servers.srv_1407]
+command = "npx"
+args = ["-y", "srv-1407"]
+
+[mcp_servers.srv_1408]
+command = "npx"
+args = ["-y", "srv-1408"]
+
+[mcp_servers.srv_1409]
+command = "npx"
+args = ["-y", "srv-1409"]
+
+[mcp_servers.srv_1410]
+command = "npx"
+args = ["-y", "srv-1410"]
+
+[mcp_servers.srv_1411]
+command = "npx"
+args = ["-y", "srv-1411"]
+
+[mcp_servers.srv_1412]
+command = "npx"
+args = ["-y", "srv-1412"]
+
+[mcp_servers.srv_1413]
+command = "npx"
+args = ["-y", "srv-1413"]
+
+[mcp_servers.srv_1414]
+command = "npx"
+args = ["-y", "srv-1414"]
+
+[mcp_servers.srv_1415]
+command = "npx"
+args = ["-y", "srv-1415"]
+
+[mcp_servers.srv_1416]
+command = "npx"
+args = ["-y", "srv-1416"]
+
+[mcp_servers.srv_1417]
+command = "npx"
+args = ["-y", "srv-1417"]
+
+[mcp_servers.srv_1418]
+command = "npx"
+args = ["-y", "srv-1418"]
+
+[mcp_servers.srv_1419]
+command = "npx"
+args = ["-y", "srv-1419"]
+
+[mcp_servers.srv_1420]
+command = "npx"
+args = ["-y", "srv-1420"]
+
+[mcp_servers.srv_1421]
+command = "npx"
+args = ["-y", "srv-1421"]
+
+[mcp_servers.srv_1422]
+command = "npx"
+args = ["-y", "srv-1422"]
+
+[mcp_servers.srv_1423]
+command = "npx"
+args = ["-y", "srv-1423"]
+
+[mcp_servers.srv_1424]
+command = "npx"
+args = ["-y", "srv-1424"]
+
+[mcp_servers.srv_1425]
+command = "npx"
+args = ["-y", "srv-1425"]
+
+[mcp_servers.srv_1426]
+command = "npx"
+args = ["-y", "srv-1426"]
+
+[mcp_servers.srv_1427]
+command = "npx"
+args = ["-y", "srv-1427"]
+
+[mcp_servers.srv_1428]
+command = "npx"
+args = ["-y", "srv-1428"]
+
+[mcp_servers.srv_1429]
+command = "npx"
+args = ["-y", "srv-1429"]
+
+[mcp_servers.srv_1430]
+command = "npx"
+args = ["-y", "srv-1430"]
+
+[mcp_servers.srv_1431]
+command = "npx"
+args = ["-y", "srv-1431"]
+
+[mcp_servers.srv_1432]
+command = "npx"
+args = ["-y", "srv-1432"]
+
+[mcp_servers.srv_1433]
+command = "npx"
+args = ["-y", "srv-1433"]
+
+[mcp_servers.srv_1434]
+command = "npx"
+args = ["-y", "srv-1434"]
+
+[mcp_servers.srv_1435]
+command = "npx"
+args = ["-y", "srv-1435"]
+
+[mcp_servers.srv_1436]
+command = "npx"
+args = ["-y", "srv-1436"]
+
+[mcp_servers.srv_1437]
+command = "npx"
+args = ["-y", "srv-1437"]
+
+[mcp_servers.srv_1438]
+command = "npx"
+args = ["-y", "srv-1438"]
+
+[mcp_servers.srv_1439]
+command = "npx"
+args = ["-y", "srv-1439"]
+
+[mcp_servers.srv_1440]
+command = "npx"
+args = ["-y", "srv-1440"]
+
+[mcp_servers.srv_1441]
+command = "npx"
+args = ["-y", "srv-1441"]
+
+[mcp_servers.srv_1442]
+command = "npx"
+args = ["-y", "srv-1442"]
+
+[mcp_servers.srv_1443]
+command = "npx"
+args = ["-y", "srv-1443"]
+
+[mcp_servers.srv_1444]
+command = "npx"
+args = ["-y", "srv-1444"]
+
+[mcp_servers.srv_1445]
+command = "npx"
+args = ["-y", "srv-1445"]
+
+[mcp_servers.srv_1446]
+command = "npx"
+args = ["-y", "srv-1446"]
+
+[mcp_servers.srv_1447]
+command = "npx"
+args = ["-y", "srv-1447"]
+
+[mcp_servers.srv_1448]
+command = "npx"
+args = ["-y", "srv-1448"]
+
+[mcp_servers.srv_1449]
+command = "npx"
+args = ["-y", "srv-1449"]
+
+[mcp_servers.srv_1450]
+command = "npx"
+args = ["-y", "srv-1450"]
+
+[mcp_servers.srv_1451]
+command = "npx"
+args = ["-y", "srv-1451"]
+
+[mcp_servers.srv_1452]
+command = "npx"
+args = ["-y", "srv-1452"]
+
+[mcp_servers.srv_1453]
+command = "npx"
+args = ["-y", "srv-1453"]
+
+[mcp_servers.srv_1454]
+command = "npx"
+args = ["-y", "srv-1454"]
+
+[mcp_servers.srv_1455]
+command = "npx"
+args = ["-y", "srv-1455"]
+
+[mcp_servers.srv_1456]
+command = "npx"
+args = ["-y", "srv-1456"]
+
+[mcp_servers.srv_1457]
+command = "npx"
+args = ["-y", "srv-1457"]
+
+[mcp_servers.srv_1458]
+command = "npx"
+args = ["-y", "srv-1458"]
+
+[mcp_servers.srv_1459]
+command = "npx"
+args = ["-y", "srv-1459"]
+
+[mcp_servers.srv_1460]
+command = "npx"
+args = ["-y", "srv-1460"]
+
+[mcp_servers.srv_1461]
+command = "npx"
+args = ["-y", "srv-1461"]
+
+[mcp_servers.srv_1462]
+command = "npx"
+args = ["-y", "srv-1462"]
+
+[mcp_servers.srv_1463]
+command = "npx"
+args = ["-y", "srv-1463"]
+
+[mcp_servers.srv_1464]
+command = "npx"
+args = ["-y", "srv-1464"]
+
+[mcp_servers.srv_1465]
+command = "npx"
+args = ["-y", "srv-1465"]
+
+[mcp_servers.srv_1466]
+command = "npx"
+args = ["-y", "srv-1466"]
+
+[mcp_servers.srv_1467]
+command = "npx"
+args = ["-y", "srv-1467"]
+
+[mcp_servers.srv_1468]
+command = "npx"
+args = ["-y", "srv-1468"]
+
+[mcp_servers.srv_1469]
+command = "npx"
+args = ["-y", "srv-1469"]
+
+[mcp_servers.srv_1470]
+command = "npx"
+args = ["-y", "srv-1470"]
+
+[mcp_servers.srv_1471]
+command = "npx"
+args = ["-y", "srv-1471"]
+
+[mcp_servers.srv_1472]
+command = "npx"
+args = ["-y", "srv-1472"]
+
+[mcp_servers.srv_1473]
+command = "npx"
+args = ["-y", "srv-1473"]
+
+[mcp_servers.srv_1474]
+command = "npx"
+args = ["-y", "srv-1474"]
+
+[mcp_servers.srv_1475]
+command = "npx"
+args = ["-y", "srv-1475"]
+
+[mcp_servers.srv_1476]
+command = "npx"
+args = ["-y", "srv-1476"]
+
+[mcp_servers.srv_1477]
+command = "npx"
+args = ["-y", "srv-1477"]
+
+[mcp_servers.srv_1478]
+command = "npx"
+args = ["-y", "srv-1478"]
+
+[mcp_servers.srv_1479]
+command = "npx"
+args = ["-y", "srv-1479"]
+
+[mcp_servers.srv_1480]
+command = "npx"
+args = ["-y", "srv-1480"]
+
+[mcp_servers.srv_1481]
+command = "npx"
+args = ["-y", "srv-1481"]
+
+[mcp_servers.srv_1482]
+command = "npx"
+args = ["-y", "srv-1482"]
+
+[mcp_servers.srv_1483]
+command = "npx"
+args = ["-y", "srv-1483"]
+
+[mcp_servers.srv_1484]
+command = "npx"
+args = ["-y", "srv-1484"]
+
+[mcp_servers.srv_1485]
+command = "npx"
+args = ["-y", "srv-1485"]
+
+[mcp_servers.srv_1486]
+command = "npx"
+args = ["-y", "srv-1486"]
+
+[mcp_servers.srv_1487]
+command = "npx"
+args = ["-y", "srv-1487"]
+
+[mcp_servers.srv_1488]
+command = "npx"
+args = ["-y", "srv-1488"]
+
+[mcp_servers.srv_1489]
+command = "npx"
+args = ["-y", "srv-1489"]
+
+[mcp_servers.srv_1490]
+command = "npx"
+args = ["-y", "srv-1490"]
+
+[mcp_servers.srv_1491]
+command = "npx"
+args = ["-y", "srv-1491"]
+
+[mcp_servers.srv_1492]
+command = "npx"
+args = ["-y", "srv-1492"]
+
+[mcp_servers.srv_1493]
+command = "npx"
+args = ["-y", "srv-1493"]
+
+[mcp_servers.srv_1494]
+command = "npx"
+args = ["-y", "srv-1494"]
+
+[mcp_servers.srv_1495]
+command = "npx"
+args = ["-y", "srv-1495"]
+
+[mcp_servers.srv_1496]
+command = "npx"
+args = ["-y", "srv-1496"]
+
+[mcp_servers.srv_1497]
+command = "npx"
+args = ["-y", "srv-1497"]
+
+[mcp_servers.srv_1498]
+command = "npx"
+args = ["-y", "srv-1498"]
+
+[mcp_servers.srv_1499]
+command = "npx"
+args = ["-y", "srv-1499"]
+
+[mcp_servers.srv_1500]
+command = "npx"
+args = ["-y", "srv-1500"]
+
+[mcp_servers.srv_1501]
+command = "npx"
+args = ["-y", "srv-1501"]
+
+[mcp_servers.srv_1502]
+command = "npx"
+args = ["-y", "srv-1502"]
+
+[mcp_servers.srv_1503]
+command = "npx"
+args = ["-y", "srv-1503"]
+
+[mcp_servers.srv_1504]
+command = "npx"
+args = ["-y", "srv-1504"]
+
+[mcp_servers.srv_1505]
+command = "npx"
+args = ["-y", "srv-1505"]
+
+[mcp_servers.srv_1506]
+command = "npx"
+args = ["-y", "srv-1506"]
+
+[mcp_servers.srv_1507]
+command = "npx"
+args = ["-y", "srv-1507"]
+
+[mcp_servers.srv_1508]
+command = "npx"
+args = ["-y", "srv-1508"]
+
+[mcp_servers.srv_1509]
+command = "npx"
+args = ["-y", "srv-1509"]
+
+[mcp_servers.srv_1510]
+command = "npx"
+args = ["-y", "srv-1510"]
+
+[mcp_servers.srv_1511]
+command = "npx"
+args = ["-y", "srv-1511"]
+
+[mcp_servers.srv_1512]
+command = "npx"
+args = ["-y", "srv-1512"]
+
+[mcp_servers.srv_1513]
+command = "npx"
+args = ["-y", "srv-1513"]
+
+[mcp_servers.srv_1514]
+command = "npx"
+args = ["-y", "srv-1514"]
+
+[mcp_servers.srv_1515]
+command = "npx"
+args = ["-y", "srv-1515"]
+
+[mcp_servers.srv_1516]
+command = "npx"
+args = ["-y", "srv-1516"]
+
+[mcp_servers.srv_1517]
+command = "npx"
+args = ["-y", "srv-1517"]
+
+[mcp_servers.srv_1518]
+command = "npx"
+args = ["-y", "srv-1518"]
+
+[mcp_servers.srv_1519]
+command = "npx"
+args = ["-y", "srv-1519"]
+
+[mcp_servers.srv_1520]
+command = "npx"
+args = ["-y", "srv-1520"]
+
+[mcp_servers.srv_1521]
+command = "npx"
+args = ["-y", "srv-1521"]
+
+[mcp_servers.srv_1522]
+command = "npx"
+args = ["-y", "srv-1522"]
+
+[mcp_servers.srv_1523]
+command = "npx"
+args = ["-y", "srv-1523"]
+
+[mcp_servers.srv_1524]
+command = "npx"
+args = ["-y", "srv-1524"]
+
+[mcp_servers.srv_1525]
+command = "npx"
+args = ["-y", "srv-1525"]
+
+[mcp_servers.srv_1526]
+command = "npx"
+args = ["-y", "srv-1526"]
+
+[mcp_servers.srv_1527]
+command = "npx"
+args = ["-y", "srv-1527"]
+
+[mcp_servers.srv_1528]
+command = "npx"
+args = ["-y", "srv-1528"]
+
+[mcp_servers.srv_1529]
+command = "npx"
+args = ["-y", "srv-1529"]
+
+[mcp_servers.srv_1530]
+command = "npx"
+args = ["-y", "srv-1530"]
+
+[mcp_servers.srv_1531]
+command = "npx"
+args = ["-y", "srv-1531"]
+
+[mcp_servers.srv_1532]
+command = "npx"
+args = ["-y", "srv-1532"]
+
+[mcp_servers.srv_1533]
+command = "npx"
+args = ["-y", "srv-1533"]
+
+[mcp_servers.srv_1534]
+command = "npx"
+args = ["-y", "srv-1534"]
+
+[mcp_servers.srv_1535]
+command = "npx"
+args = ["-y", "srv-1535"]
+
+[mcp_servers.srv_1536]
+command = "npx"
+args = ["-y", "srv-1536"]
+
+[mcp_servers.srv_1537]
+command = "npx"
+args = ["-y", "srv-1537"]
+
+[mcp_servers.srv_1538]
+command = "npx"
+args = ["-y", "srv-1538"]
+
+[mcp_servers.srv_1539]
+command = "npx"
+args = ["-y", "srv-1539"]
+
+[mcp_servers.srv_1540]
+command = "npx"
+args = ["-y", "srv-1540"]
+
+[mcp_servers.srv_1541]
+command = "npx"
+args = ["-y", "srv-1541"]
+
+[mcp_servers.srv_1542]
+command = "npx"
+args = ["-y", "srv-1542"]
+
+[mcp_servers.srv_1543]
+command = "npx"
+args = ["-y", "srv-1543"]
+
+[mcp_servers.srv_1544]
+command = "npx"
+args = ["-y", "srv-1544"]
+
+[mcp_servers.srv_1545]
+command = "npx"
+args = ["-y", "srv-1545"]
+
+[mcp_servers.srv_1546]
+command = "npx"
+args = ["-y", "srv-1546"]
+
+[mcp_servers.srv_1547]
+command = "npx"
+args = ["-y", "srv-1547"]
+
+[mcp_servers.srv_1548]
+command = "npx"
+args = ["-y", "srv-1548"]
+
+[mcp_servers.srv_1549]
+command = "npx"
+args = ["-y", "srv-1549"]
+
+[mcp_servers.srv_1550]
+command = "npx"
+args = ["-y", "srv-1550"]
+
+[mcp_servers.srv_1551]
+command = "npx"
+args = ["-y", "srv-1551"]
+
+[mcp_servers.srv_1552]
+command = "npx"
+args = ["-y", "srv-1552"]
+
+[mcp_servers.srv_1553]
+command = "npx"
+args = ["-y", "srv-1553"]
+
+[mcp_servers.srv_1554]
+command = "npx"
+args = ["-y", "srv-1554"]
+
+[mcp_servers.srv_1555]
+command = "npx"
+args = ["-y", "srv-1555"]
+
+[mcp_servers.srv_1556]
+command = "npx"
+args = ["-y", "srv-1556"]
+
+[mcp_servers.srv_1557]
+command = "npx"
+args = ["-y", "srv-1557"]
+
+[mcp_servers.srv_1558]
+command = "npx"
+args = ["-y", "srv-1558"]
+
+[mcp_servers.srv_1559]
+command = "npx"
+args = ["-y", "srv-1559"]
+
+[mcp_servers.srv_1560]
+command = "npx"
+args = ["-y", "srv-1560"]
+
+[mcp_servers.srv_1561]
+command = "npx"
+args = ["-y", "srv-1561"]
+
+[mcp_servers.srv_1562]
+command = "npx"
+args = ["-y", "srv-1562"]
+
+[mcp_servers.srv_1563]
+command = "npx"
+args = ["-y", "srv-1563"]
+
+[mcp_servers.srv_1564]
+command = "npx"
+args = ["-y", "srv-1564"]
+
+[mcp_servers.srv_1565]
+command = "npx"
+args = ["-y", "srv-1565"]
+
+[mcp_servers.srv_1566]
+command = "npx"
+args = ["-y", "srv-1566"]
+
+[mcp_servers.srv_1567]
+command = "npx"
+args = ["-y", "srv-1567"]
+
+[mcp_servers.srv_1568]
+command = "npx"
+args = ["-y", "srv-1568"]
+
+[mcp_servers.srv_1569]
+command = "npx"
+args = ["-y", "srv-1569"]
+
+[mcp_servers.srv_1570]
+command = "npx"
+args = ["-y", "srv-1570"]
+
+[mcp_servers.srv_1571]
+command = "npx"
+args = ["-y", "srv-1571"]
+
+[mcp_servers.srv_1572]
+command = "npx"
+args = ["-y", "srv-1572"]
+
+[mcp_servers.srv_1573]
+command = "npx"
+args = ["-y", "srv-1573"]
+
+[mcp_servers.srv_1574]
+command = "npx"
+args = ["-y", "srv-1574"]
+
+[mcp_servers.srv_1575]
+command = "npx"
+args = ["-y", "srv-1575"]
+
+[mcp_servers.srv_1576]
+command = "npx"
+args = ["-y", "srv-1576"]
+
+[mcp_servers.srv_1577]
+command = "npx"
+args = ["-y", "srv-1577"]
+
+[mcp_servers.srv_1578]
+command = "npx"
+args = ["-y", "srv-1578"]
+
+[mcp_servers.srv_1579]
+command = "npx"
+args = ["-y", "srv-1579"]
+
+[mcp_servers.srv_1580]
+command = "npx"
+args = ["-y", "srv-1580"]
+
+[mcp_servers.srv_1581]
+command = "npx"
+args = ["-y", "srv-1581"]
+
+[mcp_servers.srv_1582]
+command = "npx"
+args = ["-y", "srv-1582"]
+
+[mcp_servers.srv_1583]
+command = "npx"
+args = ["-y", "srv-1583"]
+
+[mcp_servers.srv_1584]
+command = "npx"
+args = ["-y", "srv-1584"]
+
+[mcp_servers.srv_1585]
+command = "npx"
+args = ["-y", "srv-1585"]
+
+[mcp_servers.srv_1586]
+command = "npx"
+args = ["-y", "srv-1586"]
+
+[mcp_servers.srv_1587]
+command = "npx"
+args = ["-y", "srv-1587"]
+
+[mcp_servers.srv_1588]
+command = "npx"
+args = ["-y", "srv-1588"]
+
+[mcp_servers.srv_1589]
+command = "npx"
+args = ["-y", "srv-1589"]
+
+[mcp_servers.srv_1590]
+command = "npx"
+args = ["-y", "srv-1590"]
+
+[mcp_servers.srv_1591]
+command = "npx"
+args = ["-y", "srv-1591"]
+
+[mcp_servers.srv_1592]
+command = "npx"
+args = ["-y", "srv-1592"]
+
+[mcp_servers.srv_1593]
+command = "npx"
+args = ["-y", "srv-1593"]
+
+[mcp_servers.srv_1594]
+command = "npx"
+args = ["-y", "srv-1594"]
+
+[mcp_servers.srv_1595]
+command = "npx"
+args = ["-y", "srv-1595"]
+
+[mcp_servers.srv_1596]
+command = "npx"
+args = ["-y", "srv-1596"]
+
+[mcp_servers.srv_1597]
+command = "npx"
+args = ["-y", "srv-1597"]
+
+[mcp_servers.srv_1598]
+command = "npx"
+args = ["-y", "srv-1598"]
+
+[mcp_servers.srv_1599]
+command = "npx"
+args = ["-y", "srv-1599"]
+
+[mcp_servers.srv_1600]
+command = "npx"
+args = ["-y", "srv-1600"]
+
+[mcp_servers.srv_1601]
+command = "npx"
+args = ["-y", "srv-1601"]
+
+[mcp_servers.srv_1602]
+command = "npx"
+args = ["-y", "srv-1602"]
+
+[mcp_servers.srv_1603]
+command = "npx"
+args = ["-y", "srv-1603"]
+
+[mcp_servers.srv_1604]
+command = "npx"
+args = ["-y", "srv-1604"]
+
+[mcp_servers.srv_1605]
+command = "npx"
+args = ["-y", "srv-1605"]
+
+[mcp_servers.srv_1606]
+command = "npx"
+args = ["-y", "srv-1606"]
+
+[mcp_servers.srv_1607]
+command = "npx"
+args = ["-y", "srv-1607"]
+
+[mcp_servers.srv_1608]
+command = "npx"
+args = ["-y", "srv-1608"]
+
+[mcp_servers.srv_1609]
+command = "npx"
+args = ["-y", "srv-1609"]
+
+[mcp_servers.srv_1610]
+command = "npx"
+args = ["-y", "srv-1610"]
+
+[mcp_servers.srv_1611]
+command = "npx"
+args = ["-y", "srv-1611"]
+
+[mcp_servers.srv_1612]
+command = "npx"
+args = ["-y", "srv-1612"]
+
+[mcp_servers.srv_1613]
+command = "npx"
+args = ["-y", "srv-1613"]
+
+[mcp_servers.srv_1614]
+command = "npx"
+args = ["-y", "srv-1614"]
+
+[mcp_servers.srv_1615]
+command = "npx"
+args = ["-y", "srv-1615"]
+
+[mcp_servers.srv_1616]
+command = "npx"
+args = ["-y", "srv-1616"]
+
+[mcp_servers.srv_1617]
+command = "npx"
+args = ["-y", "srv-1617"]
+
+[mcp_servers.srv_1618]
+command = "npx"
+args = ["-y", "srv-1618"]
+
+[mcp_servers.srv_1619]
+command = "npx"
+args = ["-y", "srv-1619"]
+
+[mcp_servers.srv_1620]
+command = "npx"
+args = ["-y", "srv-1620"]
+
+[mcp_servers.srv_1621]
+command = "npx"
+args = ["-y", "srv-1621"]
+
+[mcp_servers.srv_1622]
+command = "npx"
+args = ["-y", "srv-1622"]
+
+[mcp_servers.srv_1623]
+command = "npx"
+args = ["-y", "srv-1623"]
+
+[mcp_servers.srv_1624]
+command = "npx"
+args = ["-y", "srv-1624"]
+
+[mcp_servers.srv_1625]
+command = "npx"
+args = ["-y", "srv-1625"]
+
+[mcp_servers.srv_1626]
+command = "npx"
+args = ["-y", "srv-1626"]
+
+[mcp_servers.srv_1627]
+command = "npx"
+args = ["-y", "srv-1627"]
+
+[mcp_servers.srv_1628]
+command = "npx"
+args = ["-y", "srv-1628"]
+
+[mcp_servers.srv_1629]
+command = "npx"
+args = ["-y", "srv-1629"]
+
+[mcp_servers.srv_1630]
+command = "npx"
+args = ["-y", "srv-1630"]
+
+[mcp_servers.srv_1631]
+command = "npx"
+args = ["-y", "srv-1631"]
+
+[mcp_servers.srv_1632]
+command = "npx"
+args = ["-y", "srv-1632"]
+
+[mcp_servers.srv_1633]
+command = "npx"
+args = ["-y", "srv-1633"]
+
+[mcp_servers.srv_1634]
+command = "npx"
+args = ["-y", "srv-1634"]
+
+[mcp_servers.srv_1635]
+command = "npx"
+args = ["-y", "srv-1635"]
+
+[mcp_servers.srv_1636]
+command = "npx"
+args = ["-y", "srv-1636"]
+
+[mcp_servers.srv_1637]
+command = "npx"
+args = ["-y", "srv-1637"]
+
+[mcp_servers.srv_1638]
+command = "npx"
+args = ["-y", "srv-1638"]
+
+[mcp_servers.srv_1639]
+command = "npx"
+args = ["-y", "srv-1639"]
+
+[mcp_servers.srv_1640]
+command = "npx"
+args = ["-y", "srv-1640"]
+
+[mcp_servers.srv_1641]
+command = "npx"
+args = ["-y", "srv-1641"]
+
+[mcp_servers.srv_1642]
+command = "npx"
+args = ["-y", "srv-1642"]
+
+[mcp_servers.srv_1643]
+command = "npx"
+args = ["-y", "srv-1643"]
+
+[mcp_servers.srv_1644]
+command = "npx"
+args = ["-y", "srv-1644"]
+
+[mcp_servers.srv_1645]
+command = "npx"
+args = ["-y", "srv-1645"]
+
+[mcp_servers.srv_1646]
+command = "npx"
+args = ["-y", "srv-1646"]
+
+[mcp_servers.srv_1647]
+command = "npx"
+args = ["-y", "srv-1647"]
+
+[mcp_servers.srv_1648]
+command = "npx"
+args = ["-y", "srv-1648"]
+
+[mcp_servers.srv_1649]
+command = "npx"
+args = ["-y", "srv-1649"]
+
+[mcp_servers.srv_1650]
+command = "npx"
+args = ["-y", "srv-1650"]
+
+[mcp_servers.srv_1651]
+command = "npx"
+args = ["-y", "srv-1651"]
+
+[mcp_servers.srv_1652]
+command = "npx"
+args = ["-y", "srv-1652"]
+
+[mcp_servers.srv_1653]
+command = "npx"
+args = ["-y", "srv-1653"]
+
+[mcp_servers.srv_1654]
+command = "npx"
+args = ["-y", "srv-1654"]
+
+[mcp_servers.srv_1655]
+command = "npx"
+args = ["-y", "srv-1655"]
+
+[mcp_servers.srv_1656]
+command = "npx"
+args = ["-y", "srv-1656"]
+
+[mcp_servers.srv_1657]
+command = "npx"
+args = ["-y", "srv-1657"]
+
+[mcp_servers.srv_1658]
+command = "npx"
+args = ["-y", "srv-1658"]
+
+[mcp_servers.srv_1659]
+command = "npx"
+args = ["-y", "srv-1659"]
+
+[mcp_servers.srv_1660]
+command = "npx"
+args = ["-y", "srv-1660"]
+
+[mcp_servers.srv_1661]
+command = "npx"
+args = ["-y", "srv-1661"]
+
+[mcp_servers.srv_1662]
+command = "npx"
+args = ["-y", "srv-1662"]
+
+[mcp_servers.srv_1663]
+command = "npx"
+args = ["-y", "srv-1663"]
+
+[mcp_servers.srv_1664]
+command = "npx"
+args = ["-y", "srv-1664"]
+
+[mcp_servers.srv_1665]
+command = "npx"
+args = ["-y", "srv-1665"]
+
+[mcp_servers.srv_1666]
+command = "npx"
+args = ["-y", "srv-1666"]
+
+[mcp_servers.srv_1667]
+command = "npx"
+args = ["-y", "srv-1667"]
+
+[mcp_servers.srv_1668]
+command = "npx"
+args = ["-y", "srv-1668"]
+
+[mcp_servers.srv_1669]
+command = "npx"
+args = ["-y", "srv-1669"]
+
+[mcp_servers.srv_1670]
+command = "npx"
+args = ["-y", "srv-1670"]
+
+[mcp_servers.srv_1671]
+command = "npx"
+args = ["-y", "srv-1671"]
+
+[mcp_servers.srv_1672]
+command = "npx"
+args = ["-y", "srv-1672"]
+
+[mcp_servers.srv_1673]
+command = "npx"
+args = ["-y", "srv-1673"]
+
+[mcp_servers.srv_1674]
+command = "npx"
+args = ["-y", "srv-1674"]
+
+[mcp_servers.srv_1675]
+command = "npx"
+args = ["-y", "srv-1675"]
+
+[mcp_servers.srv_1676]
+command = "npx"
+args = ["-y", "srv-1676"]
+
+[mcp_servers.srv_1677]
+command = "npx"
+args = ["-y", "srv-1677"]
+
+[mcp_servers.srv_1678]
+command = "npx"
+args = ["-y", "srv-1678"]
+
+[mcp_servers.srv_1679]
+command = "npx"
+args = ["-y", "srv-1679"]
+
+[mcp_servers.srv_1680]
+command = "npx"
+args = ["-y", "srv-1680"]
+
+[mcp_servers.srv_1681]
+command = "npx"
+args = ["-y", "srv-1681"]
+
+[mcp_servers.srv_1682]
+command = "npx"
+args = ["-y", "srv-1682"]
+
+[mcp_servers.srv_1683]
+command = "npx"
+args = ["-y", "srv-1683"]
+
+[mcp_servers.srv_1684]
+command = "npx"
+args = ["-y", "srv-1684"]
+
+[mcp_servers.srv_1685]
+command = "npx"
+args = ["-y", "srv-1685"]
+
+[mcp_servers.srv_1686]
+command = "npx"
+args = ["-y", "srv-1686"]
+
+[mcp_servers.srv_1687]
+command = "npx"
+args = ["-y", "srv-1687"]
+
+[mcp_servers.srv_1688]
+command = "npx"
+args = ["-y", "srv-1688"]
+
+[mcp_servers.srv_1689]
+command = "npx"
+args = ["-y", "srv-1689"]
+
+[mcp_servers.srv_1690]
+command = "npx"
+args = ["-y", "srv-1690"]
+
+[mcp_servers.srv_1691]
+command = "npx"
+args = ["-y", "srv-1691"]
+
+[mcp_servers.srv_1692]
+command = "npx"
+args = ["-y", "srv-1692"]
+
+[mcp_servers.srv_1693]
+command = "npx"
+args = ["-y", "srv-1693"]
+
+[mcp_servers.srv_1694]
+command = "npx"
+args = ["-y", "srv-1694"]
+
+[mcp_servers.srv_1695]
+command = "npx"
+args = ["-y", "srv-1695"]
+
+[mcp_servers.srv_1696]
+command = "npx"
+args = ["-y", "srv-1696"]
+
+[mcp_servers.srv_1697]
+command = "npx"
+args = ["-y", "srv-1697"]
+
+[mcp_servers.srv_1698]
+command = "npx"
+args = ["-y", "srv-1698"]
+
+[mcp_servers.srv_1699]
+command = "npx"
+args = ["-y", "srv-1699"]
+
+[mcp_servers.srv_1700]
+command = "npx"
+args = ["-y", "srv-1700"]
+
+[mcp_servers.srv_1701]
+command = "npx"
+args = ["-y", "srv-1701"]
+
+[mcp_servers.srv_1702]
+command = "npx"
+args = ["-y", "srv-1702"]
+
+[mcp_servers.srv_1703]
+command = "npx"
+args = ["-y", "srv-1703"]
+
+[mcp_servers.srv_1704]
+command = "npx"
+args = ["-y", "srv-1704"]
+
+[mcp_servers.srv_1705]
+command = "npx"
+args = ["-y", "srv-1705"]
+
+[mcp_servers.srv_1706]
+command = "npx"
+args = ["-y", "srv-1706"]
+
+[mcp_servers.srv_1707]
+command = "npx"
+args = ["-y", "srv-1707"]
+
+[mcp_servers.srv_1708]
+command = "npx"
+args = ["-y", "srv-1708"]
+
+[mcp_servers.srv_1709]
+command = "npx"
+args = ["-y", "srv-1709"]
+
+[mcp_servers.srv_1710]
+command = "npx"
+args = ["-y", "srv-1710"]
+
+[mcp_servers.srv_1711]
+command = "npx"
+args = ["-y", "srv-1711"]
+
+[mcp_servers.srv_1712]
+command = "npx"
+args = ["-y", "srv-1712"]
+
+[mcp_servers.srv_1713]
+command = "npx"
+args = ["-y", "srv-1713"]
+
+[mcp_servers.srv_1714]
+command = "npx"
+args = ["-y", "srv-1714"]
+
+[mcp_servers.srv_1715]
+command = "npx"
+args = ["-y", "srv-1715"]
+
+[mcp_servers.srv_1716]
+command = "npx"
+args = ["-y", "srv-1716"]
+
+[mcp_servers.srv_1717]
+command = "npx"
+args = ["-y", "srv-1717"]
+
+[mcp_servers.srv_1718]
+command = "npx"
+args = ["-y", "srv-1718"]
+
+[mcp_servers.srv_1719]
+command = "npx"
+args = ["-y", "srv-1719"]
+
+[mcp_servers.srv_1720]
+command = "npx"
+args = ["-y", "srv-1720"]
+
+[mcp_servers.srv_1721]
+command = "npx"
+args = ["-y", "srv-1721"]
+
+[mcp_servers.srv_1722]
+command = "npx"
+args = ["-y", "srv-1722"]
+
+[mcp_servers.srv_1723]
+command = "npx"
+args = ["-y", "srv-1723"]
+
+[mcp_servers.srv_1724]
+command = "npx"
+args = ["-y", "srv-1724"]
+
+[mcp_servers.srv_1725]
+command = "npx"
+args = ["-y", "srv-1725"]
+
+[mcp_servers.srv_1726]
+command = "npx"
+args = ["-y", "srv-1726"]
+
+[mcp_servers.srv_1727]
+command = "npx"
+args = ["-y", "srv-1727"]
+
+[mcp_servers.srv_1728]
+command = "npx"
+args = ["-y", "srv-1728"]
+
+[mcp_servers.srv_1729]
+command = "npx"
+args = ["-y", "srv-1729"]
+
+[mcp_servers.srv_1730]
+command = "npx"
+args = ["-y", "srv-1730"]
+
+[mcp_servers.srv_1731]
+command = "npx"
+args = ["-y", "srv-1731"]
+
+[mcp_servers.srv_1732]
+command = "npx"
+args = ["-y", "srv-1732"]
+
+[mcp_servers.srv_1733]
+command = "npx"
+args = ["-y", "srv-1733"]
+
+[mcp_servers.srv_1734]
+command = "npx"
+args = ["-y", "srv-1734"]
+
+[mcp_servers.srv_1735]
+command = "npx"
+args = ["-y", "srv-1735"]
+
+[mcp_servers.srv_1736]
+command = "npx"
+args = ["-y", "srv-1736"]
+
+[mcp_servers.srv_1737]
+command = "npx"
+args = ["-y", "srv-1737"]
+
+[mcp_servers.srv_1738]
+command = "npx"
+args = ["-y", "srv-1738"]
+
+[mcp_servers.srv_1739]
+command = "npx"
+args = ["-y", "srv-1739"]
+
+[mcp_servers.srv_1740]
+command = "npx"
+args = ["-y", "srv-1740"]
+
+[mcp_servers.srv_1741]
+command = "npx"
+args = ["-y", "srv-1741"]
+
+[mcp_servers.srv_1742]
+command = "npx"
+args = ["-y", "srv-1742"]
+
+[mcp_servers.srv_1743]
+command = "npx"
+args = ["-y", "srv-1743"]
+
+[mcp_servers.srv_1744]
+command = "npx"
+args = ["-y", "srv-1744"]
+
+[mcp_servers.srv_1745]
+command = "npx"
+args = ["-y", "srv-1745"]
+
+[mcp_servers.srv_1746]
+command = "npx"
+args = ["-y", "srv-1746"]
+
+[mcp_servers.srv_1747]
+command = "npx"
+args = ["-y", "srv-1747"]
+
+[mcp_servers.srv_1748]
+command = "npx"
+args = ["-y", "srv-1748"]
+
+[mcp_servers.srv_1749]
+command = "npx"
+args = ["-y", "srv-1749"]
+
+[mcp_servers.srv_1750]
+command = "npx"
+args = ["-y", "srv-1750"]
+
+[mcp_servers.srv_1751]
+command = "npx"
+args = ["-y", "srv-1751"]
+
+[mcp_servers.srv_1752]
+command = "npx"
+args = ["-y", "srv-1752"]
+
+[mcp_servers.srv_1753]
+command = "npx"
+args = ["-y", "srv-1753"]
+
+[mcp_servers.srv_1754]
+command = "npx"
+args = ["-y", "srv-1754"]
+
+[mcp_servers.srv_1755]
+command = "npx"
+args = ["-y", "srv-1755"]
+
+[mcp_servers.srv_1756]
+command = "npx"
+args = ["-y", "srv-1756"]
+
+[mcp_servers.srv_1757]
+command = "npx"
+args = ["-y", "srv-1757"]
+
+[mcp_servers.srv_1758]
+command = "npx"
+args = ["-y", "srv-1758"]
+
+[mcp_servers.srv_1759]
+command = "npx"
+args = ["-y", "srv-1759"]
+
+[mcp_servers.srv_1760]
+command = "npx"
+args = ["-y", "srv-1760"]
+
+[mcp_servers.srv_1761]
+command = "npx"
+args = ["-y", "srv-1761"]
+
+[mcp_servers.srv_1762]
+command = "npx"
+args = ["-y", "srv-1762"]
+
+[mcp_servers.srv_1763]
+command = "npx"
+args = ["-y", "srv-1763"]
+
+[mcp_servers.srv_1764]
+command = "npx"
+args = ["-y", "srv-1764"]
+
+[mcp_servers.srv_1765]
+command = "npx"
+args = ["-y", "srv-1765"]
+
+[mcp_servers.srv_1766]
+command = "npx"
+args = ["-y", "srv-1766"]
+
+[mcp_servers.srv_1767]
+command = "npx"
+args = ["-y", "srv-1767"]
+
+[mcp_servers.srv_1768]
+command = "npx"
+args = ["-y", "srv-1768"]
+
+[mcp_servers.srv_1769]
+command = "npx"
+args = ["-y", "srv-1769"]
+
+[mcp_servers.srv_1770]
+command = "npx"
+args = ["-y", "srv-1770"]
+
+[mcp_servers.srv_1771]
+command = "npx"
+args = ["-y", "srv-1771"]
+
+[mcp_servers.srv_1772]
+command = "npx"
+args = ["-y", "srv-1772"]
+
+[mcp_servers.srv_1773]
+command = "npx"
+args = ["-y", "srv-1773"]
+
+[mcp_servers.srv_1774]
+command = "npx"
+args = ["-y", "srv-1774"]
+
+[mcp_servers.srv_1775]
+command = "npx"
+args = ["-y", "srv-1775"]
+
+[mcp_servers.srv_1776]
+command = "npx"
+args = ["-y", "srv-1776"]
+
+[mcp_servers.srv_1777]
+command = "npx"
+args = ["-y", "srv-1777"]
+
+[mcp_servers.srv_1778]
+command = "npx"
+args = ["-y", "srv-1778"]
+
+[mcp_servers.srv_1779]
+command = "npx"
+args = ["-y", "srv-1779"]
+
+[mcp_servers.srv_1780]
+command = "npx"
+args = ["-y", "srv-1780"]
+
+[mcp_servers.srv_1781]
+command = "npx"
+args = ["-y", "srv-1781"]
+
+[mcp_servers.srv_1782]
+command = "npx"
+args = ["-y", "srv-1782"]
+
+[mcp_servers.srv_1783]
+command = "npx"
+args = ["-y", "srv-1783"]
+
+[mcp_servers.srv_1784]
+command = "npx"
+args = ["-y", "srv-1784"]
+
+[mcp_servers.srv_1785]
+command = "npx"
+args = ["-y", "srv-1785"]
+
+[mcp_servers.srv_1786]
+command = "npx"
+args = ["-y", "srv-1786"]
+
+[mcp_servers.srv_1787]
+command = "npx"
+args = ["-y", "srv-1787"]
+
+[mcp_servers.srv_1788]
+command = "npx"
+args = ["-y", "srv-1788"]
+
+[mcp_servers.srv_1789]
+command = "npx"
+args = ["-y", "srv-1789"]
+
+[mcp_servers.srv_1790]
+command = "npx"
+args = ["-y", "srv-1790"]
+
+[mcp_servers.srv_1791]
+command = "npx"
+args = ["-y", "srv-1791"]
+
+[mcp_servers.srv_1792]
+command = "npx"
+args = ["-y", "srv-1792"]
+
+[mcp_servers.srv_1793]
+command = "npx"
+args = ["-y", "srv-1793"]
+
+[mcp_servers.srv_1794]
+command = "npx"
+args = ["-y", "srv-1794"]
+
+[mcp_servers.srv_1795]
+command = "npx"
+args = ["-y", "srv-1795"]
+
+[mcp_servers.srv_1796]
+command = "npx"
+args = ["-y", "srv-1796"]
+
+[mcp_servers.srv_1797]
+command = "npx"
+args = ["-y", "srv-1797"]
+
+[mcp_servers.srv_1798]
+command = "npx"
+args = ["-y", "srv-1798"]
+
+[mcp_servers.srv_1799]
+command = "npx"
+args = ["-y", "srv-1799"]
+
+[mcp_servers.srv_1800]
+command = "npx"
+args = ["-y", "srv-1800"]
+
+[mcp_servers.srv_1801]
+command = "npx"
+args = ["-y", "srv-1801"]
+
+[mcp_servers.srv_1802]
+command = "npx"
+args = ["-y", "srv-1802"]
+
+[mcp_servers.srv_1803]
+command = "npx"
+args = ["-y", "srv-1803"]
+
+[mcp_servers.srv_1804]
+command = "npx"
+args = ["-y", "srv-1804"]
+
+[mcp_servers.srv_1805]
+command = "npx"
+args = ["-y", "srv-1805"]
+
+[mcp_servers.srv_1806]
+command = "npx"
+args = ["-y", "srv-1806"]
+
+[mcp_servers.srv_1807]
+command = "npx"
+args = ["-y", "srv-1807"]
+
+[mcp_servers.srv_1808]
+command = "npx"
+args = ["-y", "srv-1808"]
+
+[mcp_servers.srv_1809]
+command = "npx"
+args = ["-y", "srv-1809"]
+
+[mcp_servers.srv_1810]
+command = "npx"
+args = ["-y", "srv-1810"]
+
+[mcp_servers.srv_1811]
+command = "npx"
+args = ["-y", "srv-1811"]
+
+[mcp_servers.srv_1812]
+command = "npx"
+args = ["-y", "srv-1812"]
+
+[mcp_servers.srv_1813]
+command = "npx"
+args = ["-y", "srv-1813"]
+
+[mcp_servers.srv_1814]
+command = "npx"
+args = ["-y", "srv-1814"]
+
+[mcp_servers.srv_1815]
+command = "npx"
+args = ["-y", "srv-1815"]
+
+[mcp_servers.srv_1816]
+command = "npx"
+args = ["-y", "srv-1816"]
+
+[mcp_servers.srv_1817]
+command = "npx"
+args = ["-y", "srv-1817"]
+
+[mcp_servers.srv_1818]
+command = "npx"
+args = ["-y", "srv-1818"]
+
+[mcp_servers.srv_1819]
+command = "npx"
+args = ["-y", "srv-1819"]
+
+[mcp_servers.srv_1820]
+command = "npx"
+args = ["-y", "srv-1820"]
+
+[mcp_servers.srv_1821]
+command = "npx"
+args = ["-y", "srv-1821"]
+
+[mcp_servers.srv_1822]
+command = "npx"
+args = ["-y", "srv-1822"]
+
+[mcp_servers.srv_1823]
+command = "npx"
+args = ["-y", "srv-1823"]
+
+[mcp_servers.srv_1824]
+command = "npx"
+args = ["-y", "srv-1824"]
+
+[mcp_servers.srv_1825]
+command = "npx"
+args = ["-y", "srv-1825"]
+
+[mcp_servers.srv_1826]
+command = "npx"
+args = ["-y", "srv-1826"]
+
+[mcp_servers.srv_1827]
+command = "npx"
+args = ["-y", "srv-1827"]
+
+[mcp_servers.srv_1828]
+command = "npx"
+args = ["-y", "srv-1828"]
+
+[mcp_servers.srv_1829]
+command = "npx"
+args = ["-y", "srv-1829"]
+
+[mcp_servers.srv_1830]
+command = "npx"
+args = ["-y", "srv-1830"]
+
+[mcp_servers.srv_1831]
+command = "npx"
+args = ["-y", "srv-1831"]
+
+[mcp_servers.srv_1832]
+command = "npx"
+args = ["-y", "srv-1832"]
+
+[mcp_servers.srv_1833]
+command = "npx"
+args = ["-y", "srv-1833"]
+
+[mcp_servers.srv_1834]
+command = "npx"
+args = ["-y", "srv-1834"]
+
+[mcp_servers.srv_1835]
+command = "npx"
+args = ["-y", "srv-1835"]
+
+[mcp_servers.srv_1836]
+command = "npx"
+args = ["-y", "srv-1836"]
+
+[mcp_servers.srv_1837]
+command = "npx"
+args = ["-y", "srv-1837"]
+
+[mcp_servers.srv_1838]
+command = "npx"
+args = ["-y", "srv-1838"]
+
+[mcp_servers.srv_1839]
+command = "npx"
+args = ["-y", "srv-1839"]
+
+[mcp_servers.srv_1840]
+command = "npx"
+args = ["-y", "srv-1840"]
+
+[mcp_servers.srv_1841]
+command = "npx"
+args = ["-y", "srv-1841"]
+
+[mcp_servers.srv_1842]
+command = "npx"
+args = ["-y", "srv-1842"]
+
+[mcp_servers.srv_1843]
+command = "npx"
+args = ["-y", "srv-1843"]
+
+[mcp_servers.srv_1844]
+command = "npx"
+args = ["-y", "srv-1844"]
+
+[mcp_servers.srv_1845]
+command = "npx"
+args = ["-y", "srv-1845"]
+
+[mcp_servers.srv_1846]
+command = "npx"
+args = ["-y", "srv-1846"]
+
+[mcp_servers.srv_1847]
+command = "npx"
+args = ["-y", "srv-1847"]
+
+[mcp_servers.srv_1848]
+command = "npx"
+args = ["-y", "srv-1848"]
+
+[mcp_servers.srv_1849]
+command = "npx"
+args = ["-y", "srv-1849"]
+
+[mcp_servers.srv_1850]
+command = "npx"
+args = ["-y", "srv-1850"]
+
+[mcp_servers.srv_1851]
+command = "npx"
+args = ["-y", "srv-1851"]
+
+[mcp_servers.srv_1852]
+command = "npx"
+args = ["-y", "srv-1852"]
+
+[mcp_servers.srv_1853]
+command = "npx"
+args = ["-y", "srv-1853"]
+
+[mcp_servers.srv_1854]
+command = "npx"
+args = ["-y", "srv-1854"]
+
+[mcp_servers.srv_1855]
+command = "npx"
+args = ["-y", "srv-1855"]
+
+[mcp_servers.srv_1856]
+command = "npx"
+args = ["-y", "srv-1856"]
+
+[mcp_servers.srv_1857]
+command = "npx"
+args = ["-y", "srv-1857"]
+
+[mcp_servers.srv_1858]
+command = "npx"
+args = ["-y", "srv-1858"]
+
+[mcp_servers.srv_1859]
+command = "npx"
+args = ["-y", "srv-1859"]
+
+[mcp_servers.srv_1860]
+command = "npx"
+args = ["-y", "srv-1860"]
+
+[mcp_servers.srv_1861]
+command = "npx"
+args = ["-y", "srv-1861"]
+
+[mcp_servers.srv_1862]
+command = "npx"
+args = ["-y", "srv-1862"]
+
+[mcp_servers.srv_1863]
+command = "npx"
+args = ["-y", "srv-1863"]
+
+[mcp_servers.srv_1864]
+command = "npx"
+args = ["-y", "srv-1864"]
+
+[mcp_servers.srv_1865]
+command = "npx"
+args = ["-y", "srv-1865"]
+
+[mcp_servers.srv_1866]
+command = "npx"
+args = ["-y", "srv-1866"]
+
+[mcp_servers.srv_1867]
+command = "npx"
+args = ["-y", "srv-1867"]
+
+[mcp_servers.srv_1868]
+command = "npx"
+args = ["-y", "srv-1868"]
+
+[mcp_servers.srv_1869]
+command = "npx"
+args = ["-y", "srv-1869"]
+
+[mcp_servers.srv_1870]
+command = "npx"
+args = ["-y", "srv-1870"]
+
+[mcp_servers.srv_1871]
+command = "npx"
+args = ["-y", "srv-1871"]
+
+[mcp_servers.srv_1872]
+command = "npx"
+args = ["-y", "srv-1872"]
+
+[mcp_servers.srv_1873]
+command = "npx"
+args = ["-y", "srv-1873"]
+
+[mcp_servers.srv_1874]
+command = "npx"
+args = ["-y", "srv-1874"]
+
+[mcp_servers.srv_1875]
+command = "npx"
+args = ["-y", "srv-1875"]
+
+[mcp_servers.srv_1876]
+command = "npx"
+args = ["-y", "srv-1876"]
+
+[mcp_servers.srv_1877]
+command = "npx"
+args = ["-y", "srv-1877"]
+
+[mcp_servers.srv_1878]
+command = "npx"
+args = ["-y", "srv-1878"]
+
+[mcp_servers.srv_1879]
+command = "npx"
+args = ["-y", "srv-1879"]
+
+[mcp_servers.srv_1880]
+command = "npx"
+args = ["-y", "srv-1880"]
+
+[mcp_servers.srv_1881]
+command = "npx"
+args = ["-y", "srv-1881"]
+
+[mcp_servers.srv_1882]
+command = "npx"
+args = ["-y", "srv-1882"]
+
+[mcp_servers.srv_1883]
+command = "npx"
+args = ["-y", "srv-1883"]
+
+[mcp_servers.srv_1884]
+command = "npx"
+args = ["-y", "srv-1884"]
+
+[mcp_servers.srv_1885]
+command = "npx"
+args = ["-y", "srv-1885"]
+
+[mcp_servers.srv_1886]
+command = "npx"
+args = ["-y", "srv-1886"]
+
+[mcp_servers.srv_1887]
+command = "npx"
+args = ["-y", "srv-1887"]
+
+[mcp_servers.srv_1888]
+command = "npx"
+args = ["-y", "srv-1888"]
+
+[mcp_servers.srv_1889]
+command = "npx"
+args = ["-y", "srv-1889"]
+
+[mcp_servers.srv_1890]
+command = "npx"
+args = ["-y", "srv-1890"]
+
+[mcp_servers.srv_1891]
+command = "npx"
+args = ["-y", "srv-1891"]
+
+[mcp_servers.srv_1892]
+command = "npx"
+args = ["-y", "srv-1892"]
+
+[mcp_servers.srv_1893]
+command = "npx"
+args = ["-y", "srv-1893"]
+
+[mcp_servers.srv_1894]
+command = "npx"
+args = ["-y", "srv-1894"]
+
+[mcp_servers.srv_1895]
+command = "npx"
+args = ["-y", "srv-1895"]
+
+[mcp_servers.srv_1896]
+command = "npx"
+args = ["-y", "srv-1896"]
+
+[mcp_servers.srv_1897]
+command = "npx"
+args = ["-y", "srv-1897"]
+
+[mcp_servers.srv_1898]
+command = "npx"
+args = ["-y", "srv-1898"]
+
+[mcp_servers.srv_1899]
+command = "npx"
+args = ["-y", "srv-1899"]
+
+[mcp_servers.srv_1900]
+command = "npx"
+args = ["-y", "srv-1900"]
+
+[mcp_servers.srv_1901]
+command = "npx"
+args = ["-y", "srv-1901"]
+
+[mcp_servers.srv_1902]
+command = "npx"
+args = ["-y", "srv-1902"]
+
+[mcp_servers.srv_1903]
+command = "npx"
+args = ["-y", "srv-1903"]
+
+[mcp_servers.srv_1904]
+command = "npx"
+args = ["-y", "srv-1904"]
+
+[mcp_servers.srv_1905]
+command = "npx"
+args = ["-y", "srv-1905"]
+
+[mcp_servers.srv_1906]
+command = "npx"
+args = ["-y", "srv-1906"]
+
+[mcp_servers.srv_1907]
+command = "npx"
+args = ["-y", "srv-1907"]
+
+[mcp_servers.srv_1908]
+command = "npx"
+args = ["-y", "srv-1908"]
+
+[mcp_servers.srv_1909]
+command = "npx"
+args = ["-y", "srv-1909"]
+
+[mcp_servers.srv_1910]
+command = "npx"
+args = ["-y", "srv-1910"]
+
+[mcp_servers.srv_1911]
+command = "npx"
+args = ["-y", "srv-1911"]
+
+[mcp_servers.srv_1912]
+command = "npx"
+args = ["-y", "srv-1912"]
+
+[mcp_servers.srv_1913]
+command = "npx"
+args = ["-y", "srv-1913"]
+
+[mcp_servers.srv_1914]
+command = "npx"
+args = ["-y", "srv-1914"]
+
+[mcp_servers.srv_1915]
+command = "npx"
+args = ["-y", "srv-1915"]
+
+[mcp_servers.srv_1916]
+command = "npx"
+args = ["-y", "srv-1916"]
+
+[mcp_servers.srv_1917]
+command = "npx"
+args = ["-y", "srv-1917"]
+
+[mcp_servers.srv_1918]
+command = "npx"
+args = ["-y", "srv-1918"]
+
+[mcp_servers.srv_1919]
+command = "npx"
+args = ["-y", "srv-1919"]
+
+[mcp_servers.srv_1920]
+command = "npx"
+args = ["-y", "srv-1920"]
+
+[mcp_servers.srv_1921]
+command = "npx"
+args = ["-y", "srv-1921"]
+
+[mcp_servers.srv_1922]
+command = "npx"
+args = ["-y", "srv-1922"]
+
+[mcp_servers.srv_1923]
+command = "npx"
+args = ["-y", "srv-1923"]
+
+[mcp_servers.srv_1924]
+command = "npx"
+args = ["-y", "srv-1924"]
+
+[mcp_servers.srv_1925]
+command = "npx"
+args = ["-y", "srv-1925"]
+
+[mcp_servers.srv_1926]
+command = "npx"
+args = ["-y", "srv-1926"]
+
+[mcp_servers.srv_1927]
+command = "npx"
+args = ["-y", "srv-1927"]
+
+[mcp_servers.srv_1928]
+command = "npx"
+args = ["-y", "srv-1928"]
+
+[mcp_servers.srv_1929]
+command = "npx"
+args = ["-y", "srv-1929"]
+
+[mcp_servers.srv_1930]
+command = "npx"
+args = ["-y", "srv-1930"]
+
+[mcp_servers.srv_1931]
+command = "npx"
+args = ["-y", "srv-1931"]
+
+[mcp_servers.srv_1932]
+command = "npx"
+args = ["-y", "srv-1932"]
+
+[mcp_servers.srv_1933]
+command = "npx"
+args = ["-y", "srv-1933"]
+
+[mcp_servers.srv_1934]
+command = "npx"
+args = ["-y", "srv-1934"]
+
+[mcp_servers.srv_1935]
+command = "npx"
+args = ["-y", "srv-1935"]
+
+[mcp_servers.srv_1936]
+command = "npx"
+args = ["-y", "srv-1936"]
+
+[mcp_servers.srv_1937]
+command = "npx"
+args = ["-y", "srv-1937"]
+
+[mcp_servers.srv_1938]
+command = "npx"
+args = ["-y", "srv-1938"]
+
+[mcp_servers.srv_1939]
+command = "npx"
+args = ["-y", "srv-1939"]
+
+[mcp_servers.srv_1940]
+command = "npx"
+args = ["-y", "srv-1940"]
+
+[mcp_servers.srv_1941]
+command = "npx"
+args = ["-y", "srv-1941"]
+
+[mcp_servers.srv_1942]
+command = "npx"
+args = ["-y", "srv-1942"]
+
+[mcp_servers.srv_1943]
+command = "npx"
+args = ["-y", "srv-1943"]
+
+[mcp_servers.srv_1944]
+command = "npx"
+args = ["-y", "srv-1944"]
+
+[mcp_servers.srv_1945]
+command = "npx"
+args = ["-y", "srv-1945"]
+
+[mcp_servers.srv_1946]
+command = "npx"
+args = ["-y", "srv-1946"]
+
+[mcp_servers.srv_1947]
+command = "npx"
+args = ["-y", "srv-1947"]
+
+[mcp_servers.srv_1948]
+command = "npx"
+args = ["-y", "srv-1948"]
+
+[mcp_servers.srv_1949]
+command = "npx"
+args = ["-y", "srv-1949"]
+
+[mcp_servers.srv_1950]
+command = "npx"
+args = ["-y", "srv-1950"]
+
+[mcp_servers.srv_1951]
+command = "npx"
+args = ["-y", "srv-1951"]
+
+[mcp_servers.srv_1952]
+command = "npx"
+args = ["-y", "srv-1952"]
+
+[mcp_servers.srv_1953]
+command = "npx"
+args = ["-y", "srv-1953"]
+
+[mcp_servers.srv_1954]
+command = "npx"
+args = ["-y", "srv-1954"]
+
+[mcp_servers.srv_1955]
+command = "npx"
+args = ["-y", "srv-1955"]
+
+[mcp_servers.srv_1956]
+command = "npx"
+args = ["-y", "srv-1956"]
+
+[mcp_servers.srv_1957]
+command = "npx"
+args = ["-y", "srv-1957"]
+
+[mcp_servers.srv_1958]
+command = "npx"
+args = ["-y", "srv-1958"]
+
+[mcp_servers.srv_1959]
+command = "npx"
+args = ["-y", "srv-1959"]
+
+[mcp_servers.srv_1960]
+command = "npx"
+args = ["-y", "srv-1960"]
+
+[mcp_servers.srv_1961]
+command = "npx"
+args = ["-y", "srv-1961"]
+
+[mcp_servers.srv_1962]
+command = "npx"
+args = ["-y", "srv-1962"]
+
+[mcp_servers.srv_1963]
+command = "npx"
+args = ["-y", "srv-1963"]
+
+[mcp_servers.srv_1964]
+command = "npx"
+args = ["-y", "srv-1964"]
+
+[mcp_servers.srv_1965]
+command = "npx"
+args = ["-y", "srv-1965"]
+
+[mcp_servers.srv_1966]
+command = "npx"
+args = ["-y", "srv-1966"]
+
+[mcp_servers.srv_1967]
+command = "npx"
+args = ["-y", "srv-1967"]
+
+[mcp_servers.srv_1968]
+command = "npx"
+args = ["-y", "srv-1968"]
+
+[mcp_servers.srv_1969]
+command = "npx"
+args = ["-y", "srv-1969"]
+
+[mcp_servers.srv_1970]
+command = "npx"
+args = ["-y", "srv-1970"]
+
+[mcp_servers.srv_1971]
+command = "npx"
+args = ["-y", "srv-1971"]
+
+[mcp_servers.srv_1972]
+command = "npx"
+args = ["-y", "srv-1972"]
+
+[mcp_servers.srv_1973]
+command = "npx"
+args = ["-y", "srv-1973"]
+
+[mcp_servers.srv_1974]
+command = "npx"
+args = ["-y", "srv-1974"]
+
+[mcp_servers.srv_1975]
+command = "npx"
+args = ["-y", "srv-1975"]
+
+[mcp_servers.srv_1976]
+command = "npx"
+args = ["-y", "srv-1976"]
+
+[mcp_servers.srv_1977]
+command = "npx"
+args = ["-y", "srv-1977"]
+
+[mcp_servers.srv_1978]
+command = "npx"
+args = ["-y", "srv-1978"]
+
+[mcp_servers.srv_1979]
+command = "npx"
+args = ["-y", "srv-1979"]
+
+[mcp_servers.srv_1980]
+command = "npx"
+args = ["-y", "srv-1980"]
+
+[mcp_servers.srv_1981]
+command = "npx"
+args = ["-y", "srv-1981"]
+
+[mcp_servers.srv_1982]
+command = "npx"
+args = ["-y", "srv-1982"]
+
+[mcp_servers.srv_1983]
+command = "npx"
+args = ["-y", "srv-1983"]
+
+[mcp_servers.srv_1984]
+command = "npx"
+args = ["-y", "srv-1984"]
+
+[mcp_servers.srv_1985]
+command = "npx"
+args = ["-y", "srv-1985"]
+
+[mcp_servers.srv_1986]
+command = "npx"
+args = ["-y", "srv-1986"]
+
+[mcp_servers.srv_1987]
+command = "npx"
+args = ["-y", "srv-1987"]
+
+[mcp_servers.srv_1988]
+command = "npx"
+args = ["-y", "srv-1988"]
+
+[mcp_servers.srv_1989]
+command = "npx"
+args = ["-y", "srv-1989"]
+
+[mcp_servers.srv_1990]
+command = "npx"
+args = ["-y", "srv-1990"]
+
+[mcp_servers.srv_1991]
+command = "npx"
+args = ["-y", "srv-1991"]
+
+[mcp_servers.srv_1992]
+command = "npx"
+args = ["-y", "srv-1992"]
+
+[mcp_servers.srv_1993]
+command = "npx"
+args = ["-y", "srv-1993"]
+
+[mcp_servers.srv_1994]
+command = "npx"
+args = ["-y", "srv-1994"]
+
+[mcp_servers.srv_1995]
+command = "npx"
+args = ["-y", "srv-1995"]
+
+[mcp_servers.srv_1996]
+command = "npx"
+args = ["-y", "srv-1996"]
+
+[mcp_servers.srv_1997]
+command = "npx"
+args = ["-y", "srv-1997"]
+
+[mcp_servers.srv_1998]
+command = "npx"
+args = ["-y", "srv-1998"]
+
+[mcp_servers.srv_1999]
+command = "npx"
+args = ["-y", "srv-1999"]

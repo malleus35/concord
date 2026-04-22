@@ -1,0 +1,10 @@
+[mcp_servers.bigtool]
+command = "npx"
+args = [
+  "-y",
+  "--verbose",
+  "bigtool-mcp-server",
+  "--flag-one",
+  "--flag-two",
+]
+env = ["PATH", "HOME"]

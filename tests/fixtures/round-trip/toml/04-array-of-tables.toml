@@ -1,0 +1,13 @@
+# Array-of-tables preservation test
+
+[[skills.config]]
+name = "skill-a"
+priority = 1
+
+[[skills.config]]
+name = "skill-b"
+priority = 2
+
+[[skills.config]]
+name = "skill-c"
+priority = 3

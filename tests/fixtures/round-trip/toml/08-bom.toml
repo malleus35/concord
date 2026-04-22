@@ -1,0 +1,3 @@
+﻿# BOM fixture
+[features]
+codex_hooks = true
