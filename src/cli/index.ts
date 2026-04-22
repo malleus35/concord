@@ -9,6 +9,7 @@ import { registerAdoptCommand } from "./commands/adopt.js";
 import { registerImportCommand } from "./commands/import.js";
 import { registerReplaceCommand } from "./commands/replace.js";
 import { registerUpdateCommand } from "./commands/update.js";
+import { registerWhyCommand } from "./commands/why.js";
 
 /**
  * Programmatic CLI entry (testable). Parses `argv` as user-supplied arguments
@@ -87,6 +88,10 @@ export async function runCli(argv: string[]): Promise<number> {
   });
 
   registerUpdateCommand(program, (code) => {
+    exitCode = code;
+  });
+
+  registerWhyCommand(program, (code) => {
     exitCode = code;
   });
 
