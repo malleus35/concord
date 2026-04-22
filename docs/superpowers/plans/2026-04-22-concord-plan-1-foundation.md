@@ -2627,9 +2627,15 @@ import type { AssetBase } from "./asset-base.js";
 
 /**
  * 3-pass validator (§4.8):
- *   1. pre-validation: Reserved identifier + interpolation allowlist + nested
+ *   1. pre-validation: Reserved identifier + interpolation allowlist + nested + **D-11 case-collision (raw)**
  *   2. Zod parse (ManifestSchema)
- *   3. post-validation: A1/A4 placement + D-11 case-insensitive
+ *   3. post-validation: A1/A4 placement
+ *
+ * 주의: D-11 case-collision 은 pre-validation 에 배치.
+ * AssetBaseSchema id regex 가 lowercase only (`[a-z0-9_-]`) 이므로
+ * 대문자 포함 id (예: `claude-code:hooks:Hook`) 는 Zod 파스 단계에서 이미 reject
+ * 됨 → post-validation 에 두면 case-collision 메시지가 관찰 불가.
+ * Raw manifest 에서 id 를 직접 수집하여 pre-validation 에서 검출.
  */
 export function validateManifest(raw: unknown): Manifest {
   if (typeof raw !== "object" || raw === null) {
