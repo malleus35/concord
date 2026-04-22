@@ -58,6 +58,10 @@ describe("checkNested (E-9 금지)", () => {
   it("rejects nested {env:X_{env:Y}}", () => {
     expect(() => checkNested("{env:X_{env:Y}}")).toThrow(InterpolationError);
   });
+
+  it("accepts sequential {env:A}{env:B} (not nested)", () => {
+    expect(() => checkNested("{env:A}{env:B}")).not.toThrow();
+  });
 });
 
 describe("checkPathTraversal (E-10)", () => {
@@ -91,5 +95,32 @@ describe("checkPathTraversal (E-10)", () => {
     expect(() =>
       checkPathTraversal("~/unrelated/path", projectRoot),
     ).toThrow(InterpolationError);
+  });
+
+  it("rejects absolute /etc/passwd", () => {
+    expect(() =>
+      checkPathTraversal("/etc/passwd", projectRoot),
+    ).toThrow(InterpolationError);
+  });
+
+  it("rejects prefix-confusion ~/.concord-evil/secret", () => {
+    // ~/.concord/ is allowed; ~/.concord-evil/ must NOT leak through startsWith
+    expect(() =>
+      checkPathTraversal("~/.concord-evil/secret", projectRoot),
+    ).toThrow(InterpolationError);
+  });
+});
+
+describe("InterpolationError.detail contract", () => {
+  it("propagates detail field in thrown error", () => {
+    try {
+      checkNested("{env:TOKEN_${env:X}}");
+      expect.fail("should have thrown");
+    } catch (e) {
+      expect(e).toBeInstanceOf(InterpolationError);
+      const err = e as InterpolationError;
+      expect(err.detail).toContain("{env:TOKEN_");
+      expect(err.message).toContain("nested");
+    }
   });
 });
