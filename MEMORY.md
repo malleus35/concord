@@ -1,23 +1,78 @@
 # Concord — Session Memory
 
 **Last updated**: 2026-04-22
-**Phase**: **Plan 3 Secret + Diagnostics 실행 완료 — 30/30 task, 518 tests, main 에 merge**
+**Phase**: **Plan 4 CLI Integration 실행 완료 — 27/27 task, 600 tests. Phase 1 CLI v1 기능 완성**
 
 ## 🟢 현재 Snapshot (2026-04-22)
 
-- **Branch**: main (Plan 1 + Plan 2A + Plan 2B + Plan 3 merged)
+- **Branch**: `feat/concord-plan-4-cli-integration` (main merge 예정)
 - **Primary contract**: `docs/superpowers/specs/2026-04-21-concord-design.md` (3878줄)
 - **Plan 1**: `docs/superpowers/plans/2026-04-22-concord-plan-1-foundation.md` (28 task, ✅ 완료)
 - **Plan 2A**: `docs/superpowers/plans/2026-04-22-concord-plan-2a-round-trip-poc.md` (18 task, ✅ 완료)
-- **Plan 2B**: `docs/superpowers/plans/2026-04-22-concord-plan-2b-sync-engine.md` (30 task / 2008 줄, ✅ 완료)
-- **Plan 3**: `docs/superpowers/plans/2026-04-22-concord-plan-3-secret-diagnostics.md` (30 task / 3187 줄, ✅ **완료**)
+- **Plan 2B**: `docs/superpowers/plans/2026-04-22-concord-plan-2b-sync-engine.md` (30 task, ✅ 완료)
+- **Plan 3**: `docs/superpowers/plans/2026-04-22-concord-plan-3-secret-diagnostics.md` (30 task, ✅ 완료)
+- **Plan 4**: `docs/superpowers/plans/2026-04-22-concord-plan-4-cli-integration.md` (27 task / 3437 줄, ✅ **완료**)
+- **Plan 4 summary**: `docs/superpowers/poc/2026-04-22-plan-4-summary.md`
 - **Plan 3 summary**: `docs/superpowers/poc/2026-04-22-plan-3-summary.md`
 - **Plan 2B summary**: `docs/superpowers/poc/2026-04-22-plan-2b-summary.md`
 - **POC summary**: `docs/superpowers/poc/2026-04-22-round-trip-summary.md`
-- **4-plan 분할**: Plan 1 ✅ / Plan 2A ✅ / Plan 2B ✅ / Plan 3 ✅ / Plan 4 CLI 통합 (대기)
-- **Tests green**: **518 passed + 1 skipped (93 files) / typecheck clean / build emit**
-- **Tags**: `concord-plan-1-foundation`, `concord-plan-2a-round-trip-poc`, `concord-plan-2b-sync-engine`, `concord-plan-3-secret-diagnostics`
+- **5-plan 분할**: Plan 1 ✅ / Plan 2A ✅ / Plan 2B ✅ / Plan 3 ✅ / **Plan 4 ✅**
+- **Tests green**: **600 passed + 1 skipped (116 files) / typecheck clean / build emit**
+- **Tags**: `concord-plan-1-foundation`, `concord-plan-2a-round-trip-poc`, `concord-plan-2b-sync-engine`, `concord-plan-3-secret-diagnostics`, `concord-plan-4-cli-integration`
 - **JSON Schema artifacts**: `schemas/manifest.schema.json` + `schemas/lock.schema.json` (Zod 4 native)
+
+### Plan 4 산출물 (2026-04-22)
+
+- **CLI commands** (7 신규 + 1 subcommand): `init` / `detect` / `adopt` / `import` / `replace` / `update` / `why` + `secret debug`
+- **Guided bootstrap** in `concord sync` — §6.14 TTY prompt + `--yes` / `CONCORD_NONINTERACTIVE=1` bypass
+- **CLI utils** (`src/cli/util/`): `tty.ts` (isInteractive + promptYesNo) / `scope-paths.ts`
+- **Audit module** (`src/audit/log.ts`): append-only JSON-lines, E-17 forbidden-key guard
+- **Detect module** (`src/detect/`): types / agent-probe / cache
+- **Adopt module** (`src/adopt/`): scanner (scope-aware filesystem scan) / context (D-W1 context-aware default)
+- **Manifest-edit module** (`src/manifest-edit/`): insert-entry / merge-external / replace-whole
+- **POC sprint**: POC-10 (preflight) / POC-11 (drift 5-state) / POC-14 (target encoding) — 모두 PASS without source changes
+- **E2E test**: `init → detect → adopt → doctor` (§6.19 Solo) — `tests/integration/e2e-bootstrap-workflow.test.ts`
+
+### Plan 4 핵심 deviation (리뷰어 피드백 반영)
+
+| Task | Deviation | Reason | Commit |
+|---|---|---|---|
+| 5 | `wx` flag atomic create + `ConfigScope.safeParse` | TOCTOU window + DRY (plan은 `stat`+write + `as` cast) | `b7dc4d3` |
+| 6 | 버전 regex `\b(\d+\.\d+\.\d+)\b` → `(\d+\.\d+\.\d+)` | `v0.119.0` 같은 prefix 케이스 word boundary 실패 | `637fff6` |
+| 9 | `AdoptCandidate.assetType` → `"skills"\|"subagents"` (plan은 3개 포함) | Phase 1 scanner가 `instructions`를 emit하지 않음 | `d157fb5` |
+| 11 | `AssetType`을 `src/schema/types.ts`에서 re-import | DRY — 3번 재선언 방지 | `549fb37` |
+| 12 | manifest-exists 체크를 scan 전으로 이동 | Fail-fast UX (test 4) + insertEntry catch 좁힘 | `2847153` |
+| 14 | `--policy` allowlist 검증 추가 + typed `FetchSource` | 리뷰어 I-1/I-2 — invalid policy silent drop 방지 | `83c1bcd` |
+| 20 | `readLock` await 제거 (동기 함수) | TS `'await' has no effect` 경고 | `d11f410` |
+
+### Plan 4 실동작 CLI (Phase 1 v1)
+
+```bash
+# Plan 4 신규
+concord init --scope project|user|enterprise|local
+concord detect [--json]
+concord adopt [--scope <s>] [--yes|--write|--dry-run]
+concord import <file>|--url [--sha256 <h>] --target-scope <s> --policy skip|replace|alias [--yes|--dry-run]
+concord replace <file>|--url [--sha256 <h>] --target-scope <s> [--yes|--dry-run]
+concord update [<id>] [--json]
+concord why <id>
+concord secret debug --env <NAME> [-v]   # TTY only, audit-logged
+
+# 기존 명령
+concord sync [--yes]                     # guided bootstrap on first run
+concord validate <manifest>
+concord lint <manifest>
+concord list --lock <path>
+concord doctor [--json]
+concord cleanup [--yes|--dry-run]
+```
+
+### Plan 4 Follow-up tracked (Phase 2 or polish)
+
+- **`runCommand` timeout 없음** — `claude --version` 지연 시 `detect` 무한 블록 가능. Plan 3 `codex-version.ts` 도 동일 노출
+- **`src/io/lock-write.ts`** 의 callback+`new Promise` wrap → new Plan 4 코드의 promise-style default import 로 정렬 필요
+- **`insertEntry` null-valued key 엣지** — `skills: # todo` 형태에서 trailing comment 유실 (문서화됨)
+- **`adopt` multi-scope partial failure** — scope B 실패 시 scope A roll-back 없음 (JSDoc 기록)
 
 ### Plan 3 산출물 (2026-04-22)
 
@@ -468,17 +523,17 @@ POC-4 resolved: `~/.claude.json` 순수 JSON 확정 → `json-key-owned` 방식 
 
 ### 즉시 재개 지점
 
-**현재**: Plan 3 Secret + Diagnostics 완료 (30/30 task, 518 tests, main merged). 다음은 **Plan 4 CLI 통합**.
+**현재**: Plan 4 CLI Integration 완료 (27/27 task, 600 tests). **Phase 1 CLI v1 기능 완성.**
 
 다음 세션에서:
-1. `git status` / `git log --oneline -5` 로 main 상태 확인 (Plan 3 merged)
-2. `npx vitest run` 실행 → 518 passed + 1 skipped green 재확인
-3. **Plan 4 작성 착수**:
-   - 스킬: `superpowers:writing-plans`
-   - 범위: `init` / `detect` / `adopt` / `import` / `replace` / `update` / `why` commands
-   - 추가: Guided bootstrap UX (Terraform apply 패턴, TTY 분리)
-   - 추가: `{secret:X}` structured reference (Phase 2 backend routing)
-   - 재사용: Plan 1/2B/3 인프라 (schema / sync engine / secret engine / doctor / cleanup)
+1. `git status` / `git log --oneline -10` 로 main 상태 확인 (Plan 4 merged 여부 + 태그)
+2. `npx vitest run` 실행 → 600 passed + 1 skipped green 재확인
+3. **Phase 2 결정**:
+   - Cross-tool adapter (skills+MCP ~85-95%, subagents 50-65%, hooks 10-30%)
+   - `{secret:X}` structured reference backend routing (1Password/keychain/aws-ssm)
+   - Enterprise URL allowlist
+   - `concord add` / `remove` / `rollback` / `bootstrap` 명령 재평가
+   - Plan 4 follow-ups 정리: `runCommand` timeout / `lock-write.ts` 정렬 / `insertEntry` edge / `adopt` partial failure
 
 ### Implementation workflow (확립된 패턴)
 

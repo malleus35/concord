@@ -3,6 +3,14 @@ import { validateCommand } from "./commands/validate.js";
 import { registerSyncCommand } from "./commands/sync.js";
 import { registerDoctorCommand } from "./commands/doctor.js";
 import { registerCleanupCommand } from "./commands/cleanup.js";
+import { registerInitCommand } from "./commands/init.js";
+import { registerDetectCommand } from "./commands/detect.js";
+import { registerAdoptCommand } from "./commands/adopt.js";
+import { registerImportCommand } from "./commands/import.js";
+import { registerReplaceCommand } from "./commands/replace.js";
+import { registerUpdateCommand } from "./commands/update.js";
+import { registerWhyCommand } from "./commands/why.js";
+import { registerSecretDebugCommand } from "./commands/secret-debug.js";
 
 /**
  * Programmatic CLI entry (testable). Parses `argv` as user-supplied arguments
@@ -57,6 +65,38 @@ export async function runCli(argv: string[]): Promise<number> {
   });
 
   registerCleanupCommand(program, (code) => {
+    exitCode = code;
+  });
+
+  registerInitCommand(program, (code) => {
+    exitCode = code;
+  });
+
+  registerDetectCommand(program, (code) => {
+    exitCode = code;
+  });
+
+  registerAdoptCommand(program, (code) => {
+    exitCode = code;
+  });
+
+  registerImportCommand(program, (code) => {
+    exitCode = code;
+  });
+
+  registerReplaceCommand(program, (code) => {
+    exitCode = code;
+  });
+
+  registerUpdateCommand(program, (code) => {
+    exitCode = code;
+  });
+
+  registerWhyCommand(program, (code) => {
+    exitCode = code;
+  });
+
+  registerSecretDebugCommand(program, (code) => {
     exitCode = code;
   });
 
