@@ -26,10 +26,10 @@ skills:
     target_path: ${target}
     install: copy
 `);
-    await runCommand("npx", ["tsx", join(REPO, "src/index.ts"), "sync", "--manifest", manifest, "--lock", lock], { cwd: tmp });
+    await runCommand("npx", ["tsx", join(REPO, "src/index.ts"), "sync", "--manifest", manifest, "--lock", lock, "--yes"], { cwd: tmp });
     expect(await readFile(join(target, "SKILL.md"), "utf8")).toBe("# v1\n");
     await writeFile(join(src, "SKILL.md"), "# v2\n");
-    await runCommand("npx", ["tsx", join(REPO, "src/index.ts"), "sync", "--manifest", manifest, "--lock", lock], { cwd: tmp });
+    await runCommand("npx", ["tsx", join(REPO, "src/index.ts"), "sync", "--manifest", manifest, "--lock", lock, "--yes"], { cwd: tmp });
     expect(await readFile(join(target, "SKILL.md"), "utf8")).toBe("# v2\n");
   }, 60000);
 });

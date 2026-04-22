@@ -34,7 +34,7 @@ describe("E2E: secret interpolation", () => {
     const env = { ...process.env, SRC_FILE: srcFile };
     const res = await runCommand(
       "npx",
-      ["tsx", join(REPO, "src/index.ts"), "sync", "--manifest", manifest, "--lock", lock],
+      ["tsx", join(REPO, "src/index.ts"), "sync", "--manifest", manifest, "--lock", lock, "--yes"],
       { cwd: tmp, env },
     );
     expect(res.status).toBe(0);
@@ -63,7 +63,7 @@ describe("E2E: secret interpolation", () => {
     delete env.MISSING_VAR_XYZ_E2E;
     const res = await runCommand(
       "npx",
-      ["tsx", join(REPO, "src/index.ts"), "sync", "--manifest", manifest, "--lock", lock],
+      ["tsx", join(REPO, "src/index.ts"), "sync", "--manifest", manifest, "--lock", lock, "--yes"],
       { cwd: tmp, env },
     );
     // CLI likely returns 0 but emits error count in stdout/stderr.
