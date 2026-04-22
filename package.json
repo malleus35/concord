@@ -1,16 +1,19 @@
 {
-  "name": "concord",
+  "name": "@malleus35/concord",
   "version": "0.1.0",
-  "description": "Concord Phase 1 CLI for shared agent workflow sync across Claude Code, Codex, and OpenCode",
+  "description": "Sync AI harness assets (skills / subagents / hooks / MCP / instructions / plugins) across Claude Code, Codex, and OpenCode.",
   "type": "module",
   "bin": {
-    "concord": "./dist/src/index.js"
+    "concord": "dist/src/index.js"
   },
   "engines": {
     "node": ">=22.0.0"
   },
   "files": [
-    "dist"
+    "dist",
+    "schemas",
+    "README.md",
+    "LICENSE"
   ],
   "scripts": {
     "build": "tsc -p tsconfig.json",
@@ -21,17 +24,34 @@
     "poc:2": "tsx scripts/poc/poc-2-jsonc.ts",
     "poc:3": "tsx scripts/poc/poc-3-yaml.ts",
     "poc:9": "tsx scripts/poc/poc-9-symlink.ts",
-    "typecheck": "tsc -p tsconfig.json --noEmit"
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "prepublishOnly": "npm run typecheck && npm run test && npm run build"
   },
   "keywords": [
     "cli",
-    "typescript",
     "agents",
     "sync",
-    "yaml"
+    "claude-code",
+    "codex",
+    "opencode",
+    "skills",
+    "mcp",
+    "subagents",
+    "hooks"
   ],
-  "author": "",
+  "author": "malleus35 <malleus35@gmail.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/malleus35/concord.git"
+  },
+  "homepage": "https://github.com/malleus35/concord#readme",
+  "bugs": {
+    "url": "https://github.com/malleus35/concord/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "commander": "^14.0.3",
     "fs-extra": "^11.3.4",
