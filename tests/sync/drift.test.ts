@@ -12,52 +12,93 @@ describe("computeDriftStatus", () => {
       node: BASE_NODE,
       currentSourceDigest: "sha256-src-abc",
       currentTargetDigest: "sha256-tgt-xyz",
+      currentEnvDigest: "sha256-env-1",
+      lockEnvDigest: "sha256-env-1",
     };
     expect(computeDriftStatus(input)).toBe("none");
   });
 
-  it("source: source digest differs, target matches lock", () => {
-    const input: DriftInput = {
-      node: BASE_NODE,
-      currentSourceDigest: "sha256-src-CHANGED",
-      currentTargetDigest: "sha256-tgt-xyz",
-    };
-    expect(computeDriftStatus(input)).toBe("source");
+  it("source drift", () => {
+    expect(
+      computeDriftStatus({
+        node: BASE_NODE,
+        currentSourceDigest: "sha256-src-CHANGED",
+        currentTargetDigest: "sha256-tgt-xyz",
+        currentEnvDigest: "e",
+        lockEnvDigest: "e",
+      }),
+    ).toBe("source");
   });
 
-  it("target: source matches lock, target digest differs", () => {
-    const input: DriftInput = {
-      node: BASE_NODE,
-      currentSourceDigest: "sha256-src-abc",
-      currentTargetDigest: "sha256-tgt-CHANGED",
-    };
-    expect(computeDriftStatus(input)).toBe("target");
+  it("target drift", () => {
+    expect(
+      computeDriftStatus({
+        node: BASE_NODE,
+        currentSourceDigest: "sha256-src-abc",
+        currentTargetDigest: "sha256-tgt-CHANGED",
+        currentEnvDigest: "e",
+        lockEnvDigest: "e",
+      }),
+    ).toBe("target");
   });
 
-  it("divergent: both source and target differ from lock", () => {
-    const input: DriftInput = {
-      node: BASE_NODE,
-      currentSourceDigest: "sha256-src-CHANGED",
-      currentTargetDigest: "sha256-tgt-CHANGED",
-    };
-    expect(computeDriftStatus(input)).toBe("divergent");
+  it("divergent", () => {
+    expect(
+      computeDriftStatus({
+        node: BASE_NODE,
+        currentSourceDigest: "sha256-src-CHANGED",
+        currentTargetDigest: "sha256-tgt-CHANGED",
+        currentEnvDigest: "e",
+        lockEnvDigest: "e",
+      }),
+    ).toBe("divergent");
   });
 
-  it("divergent: currentTargetDigest is null + source also differs", () => {
-    const input: DriftInput = {
-      node: BASE_NODE,
-      currentSourceDigest: "sha256-src-CHANGED",
-      currentTargetDigest: null,
-    };
-    expect(computeDriftStatus(input)).toBe("divergent");
+  it("env drift: source+target match lock but env value changed", () => {
+    expect(
+      computeDriftStatus({
+        node: BASE_NODE,
+        currentSourceDigest: "sha256-src-abc",
+        currentTargetDigest: "sha256-tgt-xyz",
+        currentEnvDigest: "sha256-env-NEW",
+        lockEnvDigest: "sha256-env-OLD",
+      }),
+    ).toBe("env");
   });
 
-  it("target: currentTargetDigest is null but source matches lock", () => {
-    const input: DriftInput = {
-      node: BASE_NODE,
-      currentSourceDigest: "sha256-src-abc",
-      currentTargetDigest: null,
-    };
-    expect(computeDriftStatus(input)).toBe("target");
+  it("env drift precedence: source drift wins over env drift", () => {
+    expect(
+      computeDriftStatus({
+        node: BASE_NODE,
+        currentSourceDigest: "sha256-src-CHANGED",
+        currentTargetDigest: "sha256-tgt-xyz",
+        currentEnvDigest: "sha256-env-NEW",
+        lockEnvDigest: "sha256-env-OLD",
+      }),
+    ).toBe("source");
+  });
+
+  it("currentTargetDigest null + sources match → target", () => {
+    expect(
+      computeDriftStatus({
+        node: BASE_NODE,
+        currentSourceDigest: "sha256-src-abc",
+        currentTargetDigest: null,
+        currentEnvDigest: "e",
+        lockEnvDigest: "e",
+      }),
+    ).toBe("target");
+  });
+
+  it("lockEnvDigest undefined → skip env check", () => {
+    expect(
+      computeDriftStatus({
+        node: BASE_NODE,
+        currentSourceDigest: "sha256-src-abc",
+        currentTargetDigest: "sha256-tgt-xyz",
+        currentEnvDigest: "e",
+        // lockEnvDigest omitted → backward compat, no env-drift
+      }),
+    ).toBe("none");
   });
 });
