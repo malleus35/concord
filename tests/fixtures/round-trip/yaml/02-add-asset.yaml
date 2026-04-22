@@ -1,0 +1,5 @@
+version: 1
+assets:
+  skills:
+    - id: first-skill
+      source: { type: file, path: ./skills/first.md }

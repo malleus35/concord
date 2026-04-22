@@ -1,0 +1,8 @@
+version: 1
+assets:
+  skills:
+    - id: bumping-version
+      source:
+        type: git
+        url: https://github.com/org/repo
+        ref: v0.1.0  # version 변경 대상

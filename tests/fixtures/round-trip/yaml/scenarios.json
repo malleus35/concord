@@ -1,0 +1,46 @@
+{
+  "scenarios": [
+    {
+      "fixture": "01-comments.yaml",
+      "description": "주석 + 들여쓰기 유지 — 기존 asset value 수정",
+      "edits": [{ "op": "set", "path": ["assets", "mcp_servers", 0, "install"], "value": "symlink" }]
+    },
+    {
+      "fixture": "02-add-asset.yaml",
+      "description": "새 asset 추가",
+      "edits": [
+        {
+          "op": "set",
+          "path": ["assets", "skills", 1],
+          "value": { "id": "second-skill", "source": { "type": "file", "path": "./skills/second.md" } }
+        }
+      ]
+    },
+    {
+      "fixture": "03-modify-value.yaml",
+      "description": "단일 value 변경 — 인접 주석 유지",
+      "edits": [{ "op": "set", "path": ["assets", "skills", 0, "source", "ref"], "value": "v0.2.0" }]
+    },
+    {
+      "fixture": "04-delete-asset.yaml",
+      "description": "asset 삭제 — keep 유지",
+      "edits": [{ "op": "delete", "path": ["assets", "hooks", 0] }]
+    },
+    {
+      "fixture": "05-nested-indent.yaml",
+      "description": "깊은 중첩 들여쓰기 보존",
+      "edits": [
+        {
+          "op": "set",
+          "path": ["assets", "plugins", 0, "capability_matrix", "codex", "subagents"],
+          "value": { "status": "na" }
+        }
+      ]
+    },
+    {
+      "fixture": "06-multiline-string.yaml",
+      "description": "multi-line string literal (|) 유지",
+      "edits": [{ "op": "set", "path": ["assets", "instructions", 0, "source", "path"], "value": "./AGENTS.md" }]
+    }
+  ]
+}
