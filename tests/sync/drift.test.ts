@@ -1,4 +1,5 @@
-import { computeDriftStatus, DriftInput } from "../../src/sync/drift";
+import { describe, it, expect } from "vitest";
+import { computeDriftStatus, type DriftInput } from "../../src/sync/drift.js";
 
 describe("computeDriftStatus", () => {
   const BASE_NODE = {
