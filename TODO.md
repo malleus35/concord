@@ -1,8 +1,8 @@
 # Concord — TODO
 
-현재 단계: **Plan 3 Secret + Diagnostics — 실행 완료** (2026-04-22)
-이전: 결정 A/B/C/D/E FINAL → Design spec → Plan 1 ✅ → Plan 2A ✅ → Plan 2B ✅ → **Plan 3 ✅ (30/30 task, 518 tests)**
-다음: **Plan 4 CLI 통합** (init/detect/adopt/import/replace/update/why + guided bootstrap)
+현재 단계: **Plan 4 CLI Integration — 실행 완료** (2026-04-22). Phase 1 CLI **v1 기능 완성**.
+이전: 결정 A/B/C/D/E FINAL → Design spec → Plan 1 ✅ → Plan 2A ✅ → Plan 2B ✅ → Plan 3 ✅ → **Plan 4 ✅ (27/27 task, 600 tests)**
+다음: v1 태그 & release. Phase 2 (cross-tool adapter / `{secret:X}` backends) 는 별도 단계.
 
 ## 🟢 Plan 1 완료 Snapshot (2026-04-22)
 
@@ -32,6 +32,58 @@ concord list --lock ./concord.lock # dry-run lock reader
   - JSONC: `jsonc-morph @ 0.3.3` (loser: `jsonc-parser`)
   - YAML: `yaml @ 2.8.3` (eemeli) — Plan 1 에서 이미 확정
   - Symlink: `symlink-dir @ 10.0.1` — macOS 5/5 PASS / Windows DEFERRED
+
+## 🟢 Plan 4 완료 Snapshot (2026-04-22)
+
+- **Branch**: `feat/concord-plan-4-cli-integration` → main 에 merge 예정
+- **Tests green**: **600 passed + 1 skipped (116 files)**
+- **Tasks**: 27 / 27 완료
+- **Tag**: `concord-plan-4-cli-integration`
+- **Plan 문서**: `docs/superpowers/plans/2026-04-22-concord-plan-4-cli-integration.md` (3437 줄)
+- **Summary**: `docs/superpowers/poc/2026-04-22-plan-4-summary.md`
+
+### 산출물
+- **CLI commands** (7 신규 + 1 subcommand): `init` / `detect` / `adopt` / `import` / `replace` / `update` / `why` + `secret debug`
+- **Guided bootstrap** in `concord sync` (§6.14 TTY prompt)
+- **Utils** (`src/cli/util/`): `tty` (isInteractive + promptYesNo) / `scope-paths`
+- **Audit log** (`src/audit/log.ts`): append-only with E-17 guard
+- **Detect module** (`src/detect/`): `types` / `agent-probe` / `cache`
+- **Adopt module** (`src/adopt/`): `scanner` (scope-aware) / `context` (D-W1)
+- **Manifest-edit module** (`src/manifest-edit/`): `insert-entry` / `merge-external` / `replace-whole`
+- **POC tests** (Task 21~23): POC-10 preflight / POC-11 drift 5-state / POC-14 target encoding
+
+### 실동작 CLI (Phase 1 전체)
+```bash
+# 새로 추가된 Plan 4 명령
+concord init --scope project|user|enterprise|local
+concord detect [--json]
+concord adopt [--scope <s>] [--yes|--write|--dry-run]
+concord import <file>|--url [--sha256 <h>] --target-scope <s> --policy skip|replace|alias [--yes|--dry-run]
+concord replace <file>|--url [--sha256 <h>] --target-scope <s> [--yes|--dry-run]
+concord update [<id>] [--json]
+concord why <id>
+concord secret debug --env <NAME> [-v]     # TTY only, audit-logged
+
+# 기존 (Plan 1/2B/3)
+concord sync [--yes]                        # guided bootstrap on first run
+concord validate <manifest>
+concord lint <manifest>
+concord list --lock <path>
+concord doctor [--json]
+concord cleanup [--yes|--dry-run]
+```
+
+### Plan 4 핵심 deviation
+
+| Task | Deviation | Commit |
+|---|---|---|
+| 5 | `wx` flag atomic + `ConfigScope.safeParse` (plan 은 `stat`+write + `as` cast) | `b7dc4d3` |
+| 6 | 버전 regex `\b…\b` → `(…)` (v prefix 대응) | `637fff6` |
+| 9 | `AdoptCandidate.assetType` → Phase 1 실범위 (`skills|subagents`) | `d157fb5` |
+| 11 | `AssetType` → `src/schema/types.ts` 에서 re-import (DRY) | `549fb37` |
+| 12 | manifest-exists 체크 scan 전 (fail-fast) + insertEntry catch 좁힘 | `2847153` |
+| 14 | `--policy` allowlist 검증 + typed `FetchSource` | `83c1bcd` |
+| 20 | `readLock` sync 호출 (await 제거) | `d11f410` |
 
 ## 🟢 Plan 3 완료 Snapshot (2026-04-22)
 
