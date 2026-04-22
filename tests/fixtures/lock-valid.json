@@ -26,7 +26,28 @@
   },
   "capability_matrix": {
     "claude-code": {
-      "skills": { "status": "supported", "count": 1, "drift_status": "none" }
+      "skills": { "status": "supported", "count": 1, "drift_status": "none" },
+      "subagents": { "status": "na", "reason": "AssetTypeNotApplicable" },
+      "hooks": { "status": "na", "reason": "AssetTypeNotApplicable" },
+      "mcp_servers": { "status": "na", "reason": "AssetTypeNotApplicable" },
+      "instructions": { "status": "na", "reason": "AssetTypeNotApplicable" },
+      "plugins": { "status": "na", "reason": "AssetTypeNotApplicable" }
+    },
+    "codex": {
+      "skills": { "status": "na", "reason": "ProviderNotInstalled" },
+      "subagents": { "status": "na", "reason": "ProviderNotInstalled" },
+      "hooks": { "status": "na", "reason": "ProviderNotInstalled" },
+      "mcp_servers": { "status": "na", "reason": "ProviderNotInstalled" },
+      "instructions": { "status": "na", "reason": "ProviderNotInstalled" },
+      "plugins": { "status": "na", "reason": "ProviderNotInstalled" }
+    },
+    "opencode": {
+      "skills": { "status": "na", "reason": "ProviderNotInstalled" },
+      "subagents": { "status": "na", "reason": "ProviderNotInstalled" },
+      "hooks": { "status": "na", "reason": "ProviderNotInstalled" },
+      "mcp_servers": { "status": "na", "reason": "ProviderNotInstalled" },
+      "instructions": { "status": "na", "reason": "ProviderNotInstalled" },
+      "plugins": { "status": "na", "reason": "ProviderNotInstalled" }
     }
   }
 }

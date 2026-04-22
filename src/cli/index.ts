@@ -33,6 +33,18 @@ export async function runCli(argv: string[]): Promise<number> {
       exitCode = await lintCommand(manifest);
     });
 
+  program
+    .command("list")
+    .description(
+      "List installed entries from concord.lock (dry-run only, Plan 1)",
+    )
+    .option("--lock <path>", "Path to lock file", "concord.lock")
+    .option("--dry-run", "Read-only listing (default in Plan 1)", true)
+    .action(async (opts: { lock: string }) => {
+      const { listCommand } = await import("./commands/list.js");
+      exitCode = await listCommand(opts.lock);
+    });
+
   await program.parseAsync(argv, { from: "user" });
   return exitCode;
 }
