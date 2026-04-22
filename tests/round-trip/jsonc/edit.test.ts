@@ -2,13 +2,11 @@ import { describe, it, expect } from "vitest";
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { createJsoncMorphEditor } from "../../../src/round-trip/jsonc/jsonc-morph.js";
-import { createJsoncParserEditor } from "../../../src/round-trip/jsonc/jsonc-parser.js";
 
 const FIXTURE_DIR = join(__dirname, "../../fixtures/round-trip/jsonc");
 
 const editors = [
   { name: "jsonc-morph", factory: createJsoncMorphEditor },
-  { name: "jsonc-parser", factory: createJsoncParserEditor },
 ];
 
 describe("POC-2 JSONC edit smoke", () => {

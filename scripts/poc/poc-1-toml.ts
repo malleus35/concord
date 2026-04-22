@@ -8,8 +8,6 @@ import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { performance } from "node:perf_hooks";
 import { createDecimalturnEditor } from "../../src/round-trip/toml/decimalturn.js";
-import { createShopifyEditor } from "../../src/round-trip/toml/shopify.js";
-import { createLtdJTomlEditor } from "../../src/round-trip/toml/ltd-j-toml.js";
 import { computeDiffRegions } from "../../src/round-trip/diff-regions.js";
 import type { Edit } from "../../src/round-trip/types.js";
 
@@ -24,8 +22,6 @@ const scenarios = JSON.parse(
 
 const libraries = [
   { name: "decimalturn", factory: createDecimalturnEditor },
-  { name: "shopify", factory: createShopifyEditor },
-  { name: "ltd-j-toml", factory: createLtdJTomlEditor },
 ];
 
 type Result = {

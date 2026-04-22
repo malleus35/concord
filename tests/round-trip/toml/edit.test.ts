@@ -2,19 +2,15 @@ import { describe, it, expect } from "vitest";
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { createDecimalturnEditor } from "../../../src/round-trip/toml/decimalturn.js";
-import { createShopifyEditor } from "../../../src/round-trip/toml/shopify.js";
-import { createLtdJTomlEditor } from "../../../src/round-trip/toml/ltd-j-toml.js";
 import { computeDiffRegions } from "../../../src/round-trip/diff-regions.js";
 
 const FIXTURE_DIR = join(__dirname, "../../fixtures/round-trip/toml");
 
 const editors = [
   { name: "decimalturn", factory: createDecimalturnEditor },
-  { name: "shopify", factory: createShopifyEditor },
-  { name: "ltd-j-toml", factory: createLtdJTomlEditor },
 ];
 
-describe("POC-1 TOML edit — minimal scenario smoke", () => {
+describe("POC-1 TOML edit — minimal scenario smoke (winner only)", () => {
   it.each(editors)(
     "$name: 01-add-entry 편집 시 modifiedBytes > originalBytes",
     async ({ name, factory }) => {

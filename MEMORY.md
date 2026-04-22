@@ -1,20 +1,29 @@
 # Concord — Session Memory
 
 **Last updated**: 2026-04-22
-**Phase**: **Plan 1 Foundation 완료 (Task 28/28, 100%)** → 다음 Plan 2 Sync Engine
+**Phase**: **Plan 2A Round-trip POC 완료 (Task 18/18, 100%)** → 다음 Plan 2B Sync Engine
 
 ## 🟢 현재 Snapshot (2026-04-22)
 
-- **Branch**: `feat/concord-plan-1-foundation` → main merged
+- **Branch**: `feat/concord-plan-2a-round-trip-poc` → main merged
 - **Primary contract**: `docs/superpowers/specs/2026-04-21-concord-design.md` (3878줄, 3-subagent review 반영)
-- **Execution plan**: `docs/superpowers/plans/2026-04-22-concord-plan-1-foundation.md` (28 task, 전부 완료)
-- **4-plan 분할**: Plan 1 Foundation ✅ / Plan 2 Sync Engine (다음) / Plan 3 Secret+Diagnostics / Plan 4 CLI 통합
-- **Tests green**: **169 / 169 (26 files, 740ms) / typecheck clean / build emit**
-- **Commits**: 44 on feature branch (implementation 28 + plan refinement 16)
-- **Tag**: `concord-plan-1-foundation`
+- **Plan 2A plan**: `docs/superpowers/plans/2026-04-22-concord-plan-2a-round-trip-poc.md` (18 task, 전부 완료)
+- **Plan 2B seed**: `docs/superpowers/plans/2026-04-22-concord-plan-2b-sync-engine.md`
+- **POC summary**: `docs/superpowers/poc/2026-04-22-round-trip-summary.md`
+- **4-plan 분할**: Plan 1 Foundation ✅ / Plan 2A POC ✅ / Plan 2B Sync Engine (다음) / Plan 3 Secret+Diagnostics / Plan 4 CLI 통합
+- **Tests green**: **246 passed + 1 skipped (37 files) / typecheck clean**
+- **Tag**: `concord-plan-2a-round-trip-poc` (이전: `concord-plan-1-foundation`)
 - **JSON Schema artifacts**: `schemas/manifest.schema.json` + `schemas/lock.schema.json` (Zod 4 native)
 
-### 실동작 CLI
+### POC 선정 결과 (Plan 2A)
+| POC | 주제 | Winner | Loser |
+|---|---|---|---|
+| POC-1 | TOML 편집 | `@decimalturn/toml-patch @ 1.1.1` | `@shopify/toml-patch`, `@ltd/j-toml` |
+| POC-2 | JSONC 편집 | `jsonc-morph @ 0.3.3` | `jsonc-parser` |
+| POC-3 | YAML write-back | `yaml @ 2.8.3` (eemeli) | Plan 1 확정, 변동 없음 |
+| POC-9 | symlink-dir | `symlink-dir @ 10.0.1` | 단독 후보 (macOS ✅ / Windows DEFERRED) |
+
+### 실동작 CLI (Plan 1, 변동 없음)
 ```bash
 concord validate <manifest>   # 3-pass (Reserved + allowlist + Zod + A1/D-11)
 concord lint <manifest>       # pre-validation only
@@ -382,16 +391,21 @@ POC-4 resolved: `~/.claude.json` 순수 JSON 확정 → `json-key-owned` 방식 
 
 ### 즉시 재개 지점
 
-**현재**: Plan 1 Foundation 완료 → **Plan 2 Sync Engine** 작성·실행 대기 중.
+**현재**: Plan 2A Round-trip POC 완료 → **Plan 2B Sync Engine** 작성·실행 대기 중.
 
 다음 세션에서:
-1. `git status` / `git log --oneline -5` 로 main 상태 확인 (last commit: Plan 1 merge)
-2. `npx vitest run` 실행 → 169/169 green 재확인 (main 에 이미 merged)
-3. **Plan 2 작성 착수** (`docs/superpowers/plans/YYYY-MM-DD-concord-plan-2-sync-engine.md`)
-   - 범위: Config round-trip + Fetcher 6종 + Symlink/copy installer + Format transformer (D-1~D-15)
+1. `git status` / `git log --oneline -5` 로 main 상태 확인 (last commit: Plan 2A merge)
+2. `npx vitest run` 실행 → 246 passed + 1 skipped green 재확인
+3. **Plan 2B 작성 착수** (`docs/superpowers/plans/2026-04-22-concord-plan-2b-sync-engine.md` seed skeleton 이미 존재)
+   - 범위: Config round-trip (POC winner 사용) + Fetcher 6종 + Symlink/copy installer + Format transformer (D-1~D-15)
    - 산출물: `concord sync` 실동작
    - 스킬: `superpowers:writing-plans` → `superpowers:subagent-driven-development`
-4. POC 우선순위: POC-1 (TOML 3도구 벤치마크), POC-2 (JSONC 비교), POC-9 (symlink-dir Windows fallback)
+4. POC winner 입력 확정:
+   - TOML: `@decimalturn/toml-patch @ 1.1.1` (`patch(source, path, value)`)
+   - JSONC: `jsonc-morph @ 0.3.3` (chained CST traversal)
+   - YAML: `yaml @ 2.8.3` (eemeli, `parseDocument + setIn/deleteIn + toString`)
+   - Symlink: `symlink-dir @ 10.0.1` (`createDirSymlink` + `atomicReplaceSymlink`)
+5. Windows CI: GitHub Actions `windows-latest` matrix 추가 (POC-9 gate)
 
 ### Implementation workflow (확립된 패턴)
 

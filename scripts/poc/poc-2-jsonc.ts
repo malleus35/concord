@@ -8,7 +8,6 @@ import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { performance } from "node:perf_hooks";
 import { createJsoncMorphEditor } from "../../src/round-trip/jsonc/jsonc-morph.js";
-import { createJsoncParserEditor } from "../../src/round-trip/jsonc/jsonc-parser.js";
 import { computeDiffRegions } from "../../src/round-trip/diff-regions.js";
 import type { Edit } from "../../src/round-trip/types.js";
 
@@ -19,7 +18,6 @@ const scenarios = JSON.parse(
 
 const libraries = [
   { name: "jsonc-morph", factory: createJsoncMorphEditor },
-  { name: "jsonc-parser", factory: createJsoncParserEditor },
 ];
 
 type Result = {
