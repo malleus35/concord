@@ -1,21 +1,29 @@
 # Concord — TODO
 
-현재 단계: **결정 A/B/C/D/E 모두 FINAL + 언어 스택 TypeScript/Node.js 확정** (2026-04-21)
-다음 단계: **디자인 문서** → 구현 계획
+현재 단계: **Plan 1 Foundation 구현 진행 중 (Task 7/28 완료, 25%)** (2026-04-22)
+이전: 결정 A/B/C/D/E FINAL (2026-04-21) → Design spec 작성 (2026-04-21) → 3-subagent review 수정 (2026-04-22) → Plan 1 작성 (2026-04-22) → 실행 시작
+
+## 🟢 Plan 1 실행 Snapshot (2026-04-22)
+
+- **Branch**: `feat/concord-plan-1-foundation` (main 의 baseline `2f3acf8` 위)
+- **Tests green**: 76 / 76 (6 files)
+- **Commits**: 14 (implementation 7 + plan refinement 7)
+- **Typecheck**: clean (`tsc -p tsconfig.json --noEmit`)
+- **완료 Task**: 1 ~ 7 (아래 상세)
 
 ---
 
 ## ✅ 완료 (Done)
 
-### 조사·분석
-- [x] 프로젝트 컨텍스트 탐색 (2026-04-18)
+### 조사·분석 (2026-04-18 ~ 2026-04-19)
+- [x] 프로젝트 컨텍스트 탐색
 - [x] 참고 도구 조사: skillshare, vercel-labs/skills, skills.sh, gstack, oh-my-openagent
-- [x] 14개 공식 문서 병렬 조사 (claude-code / codex / opencode × 6 자산 타입) (2026-04-19)
+- [x] 14개 공식 문서 병렬 조사 (claude-code / codex / opencode × 6 자산 타입)
 - [x] 자산 타입별 비교 문서 작성 → `new-plans/01-07.md`
 - [x] Codex rescue agent 독립 검토 (2회) → `new-plans/08-codex-review.md`
 - [x] Codex 피드백 기반 정정·액션 정리 → `new-plans/09-corrections-and-action-items.md`
 
-### 결정·구조
+### 결정·구조 (2026-04-19 ~ 2026-04-21)
 - [x] 사용자 시나리오 확정: B형(오픈 공유 템플릿) + C형(모노레포 프로젝트 고정)
 - [x] Manifest 4계층 구조 (user / enterprise / project / project-local)
 - [x] ~~자산 분류 4타입 (A 파일 / B 설정블록 / C 문서include / D 번들)~~ → **2026-04-20 β3 재구조로 폐기, 6 자산 타입 복원** (skills/subagents/hooks/mcp_servers/instructions/plugins)
@@ -23,9 +31,42 @@
 - [x] Provider별 network 경로 기본값 매트릭스
 - [x] **결정 A FINAL: Skills 배치 Option III-tightened + 5개 추가 조항 (A1~A5)** (2026-04-19 승인)
 
-### 산출물
+### 초기 산출물
 - [x] `new-plans/01-09.md` 9개 설계 문서
 - [x] `MEMORY.md` 재작성 (세션 연속성 보장용)
+
+### Design Spec (2026-04-21 ~ 2026-04-22) ★
+- [x] **`docs/superpowers/specs/2026-04-21-concord-design.md`** 작성 완료 (약 3878줄)
+  - §0 목적·범위 / §1 Π1~Π7 + RFC Defense / §2 Reserved Registry / §3 Asset Type + Source Model / §4 Manifest Schema / §5 Lock Schema / §6 CLI 11 / §7 State Machine / §8 Secret 보간 / §9 Windows Install / §10 Round-trip / §11 Discovery / §12 Open Issues / 부록 A/B/C
+- [x] **3-subagent 교차 리뷰** (codex-rescue + 2 웹서치) — 20건 수정 반영
+  - Π 정합성 / URL 상태 / 라이브러리 버전 / Zod API
+  - spec 부록 B Zod 3 → **Zod 4 채택 재평가** (2026-04-22, 기존 `package.json` 존중)
+
+### Plan 1 Foundation 작성 (2026-04-22) ★
+- [x] **`docs/superpowers/plans/2026-04-22-concord-plan-1-foundation.md`** (약 4200줄, 28 task)
+- [x] 4-plan 분할 결정 (A 경로): Plan 1 Foundation → Plan 2 Sync Engine → Plan 3 Secret+Diagnostics → Plan 4 CLI 통합
+- [x] git baseline commit (2f3acf8) + feature branch `feat/concord-plan-1-foundation`
+
+### Plan 1 Implementation — Task 1~7 완료 (2026-04-22, 진행 중) ★
+
+| # | Task | Commit | Tests | Review |
+|---|---|---|---|---|
+| 1 | Bootstrap (TS6 + Zod4 + Vitest4) | `3c214f3` + plan `d3c17b0` | — (config) | Approved |
+| 2 | Shared types + 4 enums | `fa4bd06` | 4 | Approved (inline) |
+| 3 | Discovery (`concord-home.ts`) | `29d5d71` + plan `cc1f791` | 3 | Approved (ESM vi.mock fix) |
+| 4 | Reserved Identifier Registry | `5052cb7` + fix `6fed548` + plan `5d3db5f` | 21 | Approved (multi-pipe + silent-pass fix) |
+| 5 | Interpolation Allowlist | `a18ff4f` + regression `6951773` | 30 | Approved + 4 regression guards |
+| 6 | Reason Enums | `1c86de9` | 8 | Approved (inline) |
+| 7 | Capability Matrix Schema | `3184c35` + plan `3ec092b` | 10 | DONE_WITH_CONCERNS (`.strict()` 추가) |
+
+**누적**: 76 tests green / 6 test files / typecheck clean / 14 commits
+
+### 누적 Review 발견 (Plan 에 반영됨)
+- Task 1: TS 6 + @types/node 25 → `"types": ["node"]` 필수 (TS2591 fix)
+- Task 3: Vitest 4 + ESM → `vi.spyOn(os.homedir)` 불가, `vi.mock + importActual + 가변 ref` 패턴 필수
+- Task 4: Multi-pipe regex `{env:X|int|bool}` 매칭 / `try/catch` silent-pass → `toThrow(pattern)` 로 교체
+- Task 5: Security regression guards (sequential / abs path / prefix confusion / error.detail)
+- Task 7: Zod 4 default strip → discriminated union 각 variant 에 `.strict()` 필요 (illegal state rejection 위해)
 
 ---
 
@@ -111,18 +152,12 @@
 - [x] 언어 스택 TypeScript/Node.js 확정 (2026-04-21)
 - [x] Reserved Identifier Registry 정비 (결정 C §A, E 추가 11 entries)
 
-### Phase 1 설계 문서화 (다음 단계)
+### Phase 1 설계 문서화 (완료 2026-04-22)
 
-- [ ] **디자인 문서 작성** → `docs/superpowers/specs/2026-04-21-concord-design.md`
-  - 5 결정 통합 specification (A/B/C/D/E)
-  - Π1~Π7 불변식 + Phase 1/2 책임 분할
-  - Manifest schema (Zod 정의, 6 자산 타입 + β3 α source type discriminated union)
-  - Lock schema (roots+nodes flat graph, 3중 digest, `capability_matrix` γ Hybrid, `install_mode`/`install_reason`/`shell_compatibility`/`drift_status` 4 상태)
-  - CLI 11 명령 spec (`init`/`detect`/`adopt`/`import`/`replace`/`sync`/`update`/`doctor`/`list`/`why`/`cleanup`)
-  - 보간 문법 19 사양 (E-1~E-19)
-  - Windows install contract 9 사양 (D-1~D-15)
-- [ ] 스펙 자체 리뷰 (placeholder / 모순 / 모호함 / 스코프 검증)
-- [ ] 사용자 스펙 리뷰 게이트 통과
+- [x] **디자인 문서 작성** → `docs/superpowers/specs/2026-04-21-concord-design.md` (3878줄)
+- [x] 스펙 자체 리뷰 (Π / Reserved / 11-component / ambiguous 동사 자동 통과)
+- [x] 3-subagent 교차 리뷰 + 20건 수정 반영
+- [x] (사용자 스펙 리뷰 게이트 생략 — 진행 중 gate 로 대체)
 
 ### Phase 1 POC (구현 전 병목 검증)
 
@@ -148,11 +183,17 @@
 - [ ] POC-13: 4 scope merge 순서 (enterprise/user/project/local) + 각 scope 보간 독립성 검증
 - [ ] POC-14: Target format (YAML/JSON/TOML) 안전 인코딩 골든 테스트 (multi-line PEM 등)
 
-### Phase 1 실구현 (구현 계획 후)
+### Phase 1 실구현 (진행 중 2026-04-22)
 
 **구현 전환 절차**:
-- [ ] `writing-plans` 스킬로 전환 → 구현 계획 작성 (TDD 단계별 분해)
-- [ ] TDD 로 각 컴포넌트 구현
+- [x] `writing-plans` 스킬로 전환 → Plan 1 Foundation (28 task) 작성
+- [x] 4-plan 분할: Plan 1 Foundation / Plan 2 Sync Engine / Plan 3 Secret+Diagnostics / Plan 4 CLI 통합
+- [x] `subagent-driven-development` 스킬로 Plan 1 실행 시작
+- [~] **Plan 1 Task 8~28 남음 (21 task)**
+  - 남은 Task: Source / AssetBase / 자산 6종 (skill/subagent/hook/mcp/instruction/plugin) / ManifestSchema top / yaml loader / validateManifest 3-pass / scope merge / LockNode / Lock / lock I/O / validateLock / CLI skeleton+3 명령 / integration golden / README
+- [ ] Plan 2 Sync Engine 작성·실행 (Config round-trip + Fetcher + Installer + Format Transform)
+- [ ] Plan 3 Secret + Diagnostics 작성·실행 (E-1~E-19 + doctor + cleanup + plugin introspection)
+- [ ] Plan 4 CLI 통합 (init/detect/adopt/import/replace/update/list/why + guided bootstrap + --json/TTY 분리)
 
 **실구현 스코프 (11 컴포넌트)**:
 1. [ ] **Manifest parser/validator** (yaml + zod)
@@ -252,10 +293,20 @@
 
 ## 참조 문서
 
-- `MEMORY.md` — 세션 연속성, 확정 결정, 열린 결정
-- **`new-plans/STEP-C/03-plugin-source-model.md` — 결정 C FINAL 방향 (β3 재구조, 섹션 1~6 확정)** ★
-- `new-plans/01-skills.md` — Skills 결정 (Option III-tightened)
+### ★ Primary (Phase 1 구현 기준)
+- **`docs/superpowers/specs/2026-04-21-concord-design.md`** — Design spec 3878줄 (SSoT)
+- **`docs/superpowers/plans/2026-04-22-concord-plan-1-foundation.md`** — Plan 1 Foundation 28 task (진행 중)
+- `MEMORY.md` — 세션 연속성, 확정 결정, 구현 상태
+
+### 5 FINAL 결정 문서
+- `new-plans/01-skills.md` — 결정 A Skills Option III-tightened + A1~A5
+- `new-plans/STEP-B/07-cli-and-bootstrap.md` — 결정 B CLI + scope
+- `new-plans/STEP-C/04-final-plan-v2.md` — 결정 C Π1~Π7 + Q1~Q5 + §A Reserved Registry
+- `new-plans/STEP-D/01-windows-install-contract.md` — 결정 D Windows Install + 언어 스택 (TS/Node)
+- `new-plans/STEP-E/01-secret-interpolation-contract.md` — 결정 E 보간 문법 19 사양 (E-1~E-19)
+
+### 조사·비교 (계보용)
 - `new-plans/02-subagents.md` ~ `06-plugins.md` — 자산 타입별 비교
-- `new-plans/07-overlap-matrix.md` — 종합 매트릭스 + manifest 스키마 초안
+- `new-plans/07-overlap-matrix.md` — 종합 매트릭스
 - `new-plans/08-codex-review.md` — Codex 2차 검토 결과
 - `new-plans/09-corrections-and-action-items.md` — Codex 피드백 기반 후속 액션
