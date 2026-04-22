@@ -1,8 +1,49 @@
 # Concord — TODO
 
-현재 단계: **Plan 4 CLI Integration — 실행 완료** (2026-04-22). Phase 1 CLI **v1 기능 완성**.
-이전: 결정 A/B/C/D/E FINAL → Design spec → Plan 1 ✅ → Plan 2A ✅ → Plan 2B ✅ → Plan 3 ✅ → **Plan 4 ✅ (27/27 task, 600 tests)**
-다음: v1 태그 & release. Phase 2 (cross-tool adapter / `{secret:X}` backends) 는 별도 단계.
+현재 단계: **v0.1.0 공개 release 완료** (2026-04-23). Phase 1 CLI 전체 배포 완료.
+이전: 결정 A/B/C/D/E FINAL → Design spec → Plan 1 ✅ → Plan 2A ✅ → Plan 2B ✅ → Plan 3 ✅ → Plan 4 ✅ → **v0.1.0 npm + GitHub release ✅**
+다음: 사용자 피드백 수집 + Phase 2 (cross-tool adapter / `{secret:X}` backends) 준비.
+
+## 🚀 v0.1.0 Release Snapshot (2026-04-23)
+
+- **npm package**: https://www.npmjs.com/package/@malleus35/concord (MIT, public)
+- **GitHub repo**: https://github.com/malleus35/concord (public)
+- **GitHub release**: https://github.com/malleus35/concord/releases/tag/v0.1.0
+- **Install**: `npm install -g @malleus35/concord`
+- **Tarball**: 69.2 kB packed / 295.6 kB unpacked / 211 files
+- **Git tag**: `v0.1.0` (+ plan tags 5개)
+- **Package 포함**: `dist/` + `schemas/` (manifest/lock JSON Schema) + README + LICENSE
+
+### Release 준비 변경 (commit `f22fa6c`)
+- package.json `name`: `concord` → `@malleus35/concord` (scoped; `concord` 는 이미 binaris 팀이 점유)
+- `"publishConfig": { "access": "public" }` 추가 (scoped package public 자동화)
+- `"prepublishOnly": "npm run typecheck && npm run test && npm run build"` — publish 전 검증 자동화
+- `repository` / `homepage` / `bugs` / 확장 `keywords` / `author` 메타 추가
+- `LICENSE` 파일 신설 (MIT 표준 텍스트)
+- `npm pkg fix` 적용: `"bin": { "concord": "dist/src/index.js" }` (앞 `./` 제거)
+- `"files"`: `["dist"]` → `["dist", "schemas", "README.md", "LICENSE"]`
+
+### Release 순서 (실제 실행 기록)
+1. 이름 가용성 확인 (`npm view concord` → 이미 사용 중)
+2. Scoped 네임 채택 (`@malleus35/concord`)
+3. `package.json` 재정비 + `LICENSE` 생성 + `npm pkg fix`
+4. `npm publish --dry-run` — 211 files, 0 warnings, 민감 파일 없음 확인
+5. 변경사항 commit (`f22fa6c`) + push origin main
+6. 2FA 설정 (웹에서 Google Authenticator 등록)
+7. 새 터미널에서 `npm publish` 실행 → 성공
+8. `git tag v0.1.0` + push
+9. GitHub repo **public** 전환 (`gh repo edit --visibility public`)
+10. `gh release create v0.1.0` — install 가이드 + Phase 2 follow-ups 포함
+
+### 업데이트 방법 (다음 release 용 기억)
+```bash
+npm version patch -m "chore: release v%s"    # 0.1.0 → 0.1.1
+git push origin main --tags
+npm publish                                   # prepublishOnly 자동 실행
+gh release create v0.1.1 --generate-notes
+```
+
+`prepublishOnly` 가 typecheck + test + build 를 돌리므로 release 안전장치 내장됨.
 
 ## 🟢 Plan 1 완료 Snapshot (2026-04-22)
 

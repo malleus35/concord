@@ -1,11 +1,57 @@
 # Concord — Session Memory
 
-**Last updated**: 2026-04-22
-**Phase**: **Plan 4 CLI Integration 실행 완료 — 27/27 task, 600 tests. Phase 1 CLI v1 기능 완성**
+**Last updated**: 2026-04-23
+**Phase**: **v0.1.0 공개 release 완료 — npm + GitHub (Phase 1 CLI 배포 완료)**
 
-## 🟢 현재 Snapshot (2026-04-22)
+## 🚀 v0.1.0 Release Snapshot (2026-04-23)
 
-- **Branch**: `feat/concord-plan-4-cli-integration` (main merge 예정)
+- **npm package**: https://www.npmjs.com/package/@malleus35/concord (scoped, public, MIT)
+- **GitHub repo**: https://github.com/malleus35/concord (public, 2026-04-22 에 private 로 생성 후 release 시 public 전환)
+- **GitHub release**: https://github.com/malleus35/concord/releases/tag/v0.1.0
+- **Git remote**: `origin` = `https://github.com/malleus35/concord.git`
+- **Install**: `npm install -g @malleus35/concord`
+- **Tarball**: 69.2 kB packed / 295.6 kB unpacked / 211 files
+- **Tags remote**: `v0.1.0` + `concord-plan-{1,2a,2b,3,4}-*` (총 6개)
+
+### 이름 선정 기록
+- 원래 `concord` 는 binaris 팀 점유 (v0.2.4, TypeScript interface 도구) — 직접 사용 불가
+- Scoped 네임 `@malleus35/concord` 채택: npm username 과 네임스페이스 일관성, 자동 점유, 향후 조직 이전 쉬움
+- CLI bin 이름은 여전히 `concord` (설치 시 `concord` 명령 사용)
+
+### 2FA 설정 기록
+- npm 은 publish 시 2FA 강제 (2022년 말부터 정책)
+- 사용자가 npmjs.com 웹에서 Google Authenticator 로 2FA 등록 (Authorization only 모드 권장)
+- publish 때 `--otp=<6-digit>` 으로 넣거나, Auth-only 모드면 OTP 없이 가능 (npm 이 scope 에 따라 강제할 수도)
+- Recovery code 반드시 1Password 등에 저장 (폰 분실 시 계정 복구용)
+
+### 초기 배포 configuration (`package.json` 변경 내역, commit `f22fa6c`)
+- `name`: `concord` → `@malleus35/concord`
+- `files`: `["dist"]` → `["dist", "schemas", "README.md", "LICENSE"]`
+- `bin.concord`: `./dist/src/index.js` → `dist/src/index.js` (`npm pkg fix` 가 선행 `./` 제거)
+- `publishConfig`: `{ "access": "public" }` — scoped 는 기본 private 이라 명시 필요
+- `prepublishOnly`: `npm run typecheck && npm run test && npm run build` — publish 전 안전장치
+- `repository` / `homepage` / `bugs` / `author` / `keywords` 확장
+- 신규 `LICENSE` 파일 (MIT 표준 텍스트)
+
+### Release 권장 워크플로 (다음 업데이트 시)
+```bash
+npm version patch -m "chore: release v%s"    # patch/minor/major
+git push origin main --tags
+npm publish                                   # prepublishOnly 자동 실행
+gh release create vX.Y.Z --generate-notes
+```
+
+`prepublishOnly` 스크립트가 typecheck + test + build 를 돌리므로 release 자체 안전장치 내장.
+
+### Release 시 하지 말아야 할 것 (learned)
+- `publishConfig.access` 없이 scoped package 배포 시도 → 기본 private 이라 `402 Payment Required` 발생 가능. 꼭 명시.
+- `./dist/src/index.js` bin path → npm 이 자동 교정 경고. 처음부터 `dist/src/index.js` 형태로.
+- LICENSE 파일 없이 `"license": "MIT"` 선언만 → npm 경고 + 법적 모호성. 반드시 파일 생성.
+- 첫 publish 에서 major version 바로 (1.0.0) → API 안정 commit 이 무거움. 초기엔 0.1.x 로 시작, 피드백 수집 후 1.0 선언 권장.
+
+## 🟢 Snapshot (2026-04-22)
+
+- **Branch**: `main` (Plan 1 ~ 4 모두 merged, v0.1.0 태그됨)
 - **Primary contract**: `docs/superpowers/specs/2026-04-21-concord-design.md` (3878줄)
 - **Plan 1**: `docs/superpowers/plans/2026-04-22-concord-plan-1-foundation.md` (28 task, ✅ 완료)
 - **Plan 2A**: `docs/superpowers/plans/2026-04-22-concord-plan-2a-round-trip-poc.md` (18 task, ✅ 완료)
@@ -523,17 +569,39 @@ POC-4 resolved: `~/.claude.json` 순수 JSON 확정 → `json-key-owned` 방식 
 
 ### 즉시 재개 지점
 
-**현재**: Plan 4 CLI Integration 완료 (27/27 task, 600 tests). **Phase 1 CLI v1 기능 완성.**
+**현재**: v0.1.0 release 완료 (npm + GitHub public). Phase 1 배포 끝.
 
 다음 세션에서:
-1. `git status` / `git log --oneline -10` 로 main 상태 확인 (Plan 4 merged 여부 + 태그)
-2. `npx vitest run` 실행 → 600 passed + 1 skipped green 재확인
-3. **Phase 2 결정**:
-   - Cross-tool adapter (skills+MCP ~85-95%, subagents 50-65%, hooks 10-30%)
-   - `{secret:X}` structured reference backend routing (1Password/keychain/aws-ssm)
-   - Enterprise URL allowlist
-   - `concord add` / `remove` / `rollback` / `bootstrap` 명령 재평가
-   - Plan 4 follow-ups 정리: `runCommand` timeout / `lock-write.ts` 정렬 / `insertEntry` edge / `adopt` partial failure
+1. `git status` / `git log --oneline -10` 로 main 상태 확인 (최근 commit = release prep)
+2. `git tag | grep "^v"` 로 현재 release 태그 확인 (v0.1.0)
+3. `npm view @malleus35/concord version` 으로 npm 최신 버전 확인
+4. **할 일 선택**:
+   - (a) 사용자 피드백 수집 단계 → README 에 GitHub issues 링크 홍보, 간단 예제 디렉토리 추가
+   - (b) **Phase 1.5 polish** — Plan 4 follow-ups 정리 (우선순위 순):
+     - `runCommand` timeout 추가 (모든 agent probe 에서 hang 방지)
+     - `src/io/lock-write.ts` promise-style 정렬 (v7 API 통일)
+     - `insertEntry` null-valued key 엣지 처리
+     - `adopt` multi-scope partial failure rollback
+     - patch version 올려 npm publish
+   - (c) **Phase 2 본격 기획**:
+     - Cross-tool adapter (skills+MCP ~85-95%, subagents 50-65%, hooks 10-30%)
+     - `{secret:X}` structured reference backend routing (1Password/keychain/aws-ssm)
+     - Enterprise URL allowlist
+     - `concord add` / `remove` / `rollback` / `bootstrap` 명령 재평가
+
+### Release 업데이트 루틴 (기억용)
+```bash
+# 1. 변경 작업 후
+npm version patch -m "chore: release v%s"
+git push origin main --tags
+npm publish                                   # prepublishOnly 자동 실행
+gh release create vX.Y.Z --generate-notes
+
+# 권장 bump 기준
+#   patch (0.1.0 → 0.1.1): 버그픽스, 내부 개선
+#   minor (0.1.x → 0.2.0): 신규 기능, backward compat 유지
+#   major (0.x.y → 1.0.0): API 안정 선언 / breaking changes
+```
 
 ### Implementation workflow (확립된 패턴)
 
