@@ -1260,7 +1260,8 @@ Expected: FAIL (schema/renderSymbol 없음).
 ```typescript
 import { AssetType, Provider } from "./types.js";
 
-/** §5.6.1 Q4 γ Hybrid — 4 status discriminated union. */
+/** §5.6.1 Q4 γ Hybrid — 4 status discriminated union.
+ *  각 variant 는 `.strict()` 로 unknown key 를 거부 — illegal state (예: supported + reason) 반영. */
 export const CapabilityCellSchema = z.discriminatedUnion("status", [
   z.object({
     status: z.literal("supported"),
@@ -1271,7 +1272,7 @@ export const CapabilityCellSchema = z.discriminatedUnion("status", [
     drift_status: z
       .enum(["none", "source", "target", "divergent", "env-drift"])
       .default("none"),
-  }),
+  }).strict(),
   z.object({
     status: z.literal("detected-not-executed"),
     count: z.number().int().min(0),
@@ -1283,16 +1284,16 @@ export const CapabilityCellSchema = z.discriminatedUnion("status", [
     drift_status: z
       .enum(["none", "source", "target", "divergent", "env-drift"])
       .default("none"),
-  }),
+  }).strict(),
   z.object({
     status: z.literal("na"),
     reason: z.enum(["ProviderNotInstalled", "AssetTypeNotApplicable"]),
-  }),
+  }).strict(),
   z.object({
     status: z.literal("failed"),
     reason: ReasonEnum,
     error_detail: z.string().optional(),
-  }),
+  }).strict(),
 ]);
 export type CapabilityCell = z.infer<typeof CapabilityCellSchema>;
 
