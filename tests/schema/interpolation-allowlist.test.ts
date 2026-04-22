@@ -28,6 +28,7 @@ describe("isAllowedField", () => {
     "source.repo",
     "source.ref",
     "source.version",
+    "source.path",
     "env.GITHUB_TOKEN",
     "env.API_KEY",
     "authHeader",

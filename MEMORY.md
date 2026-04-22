@@ -1,22 +1,46 @@
 # Concord — Session Memory
 
 **Last updated**: 2026-04-22
-**Phase**: **Plan 3 Secret + Diagnostics — plan 작성 완료 (30 task / 3187 줄), 실행 대기**
+**Phase**: **Plan 3 Secret + Diagnostics 실행 완료 — 30/30 task, 518 tests, main 에 merge**
 
 ## 🟢 현재 Snapshot (2026-04-22)
 
-- **Branch**: main (Plan 1 + Plan 2A + Plan 2B merged)
+- **Branch**: main (Plan 1 + Plan 2A + Plan 2B + Plan 3 merged)
 - **Primary contract**: `docs/superpowers/specs/2026-04-21-concord-design.md` (3878줄)
 - **Plan 1**: `docs/superpowers/plans/2026-04-22-concord-plan-1-foundation.md` (28 task, ✅ 완료)
 - **Plan 2A**: `docs/superpowers/plans/2026-04-22-concord-plan-2a-round-trip-poc.md` (18 task, ✅ 완료)
-- **Plan 2B**: `docs/superpowers/plans/2026-04-22-concord-plan-2b-sync-engine.md` (30 task / 2008 줄, ✅ **완료**)
-- **Plan 3**: `docs/superpowers/plans/2026-04-22-concord-plan-3-secret-diagnostics.md` (30 task / 3187 줄, **plan 작성 완료, 실행 대기**)
+- **Plan 2B**: `docs/superpowers/plans/2026-04-22-concord-plan-2b-sync-engine.md` (30 task / 2008 줄, ✅ 완료)
+- **Plan 3**: `docs/superpowers/plans/2026-04-22-concord-plan-3-secret-diagnostics.md` (30 task / 3187 줄, ✅ **완료**)
+- **Plan 3 summary**: `docs/superpowers/poc/2026-04-22-plan-3-summary.md`
 - **Plan 2B summary**: `docs/superpowers/poc/2026-04-22-plan-2b-summary.md`
 - **POC summary**: `docs/superpowers/poc/2026-04-22-round-trip-summary.md`
-- **4-plan 분할**: Plan 1 ✅ / Plan 2A ✅ / Plan 2B ✅ / Plan 3 (실행 대기) / Plan 4 CLI 통합 (대기)
-- **Tests green**: **408 passed + 1 skipped (68 files) / typecheck clean / build emit**
-- **Tags**: `concord-plan-1-foundation`, `concord-plan-2a-round-trip-poc`, `concord-plan-2b-sync-engine`
+- **4-plan 분할**: Plan 1 ✅ / Plan 2A ✅ / Plan 2B ✅ / Plan 3 ✅ / Plan 4 CLI 통합 (대기)
+- **Tests green**: **518 passed + 1 skipped (93 files) / typecheck clean / build emit**
+- **Tags**: `concord-plan-1-foundation`, `concord-plan-2a-round-trip-poc`, `concord-plan-2b-sync-engine`, `concord-plan-3-secret-diagnostics`
 - **JSON Schema artifacts**: `schemas/manifest.schema.json` + `schemas/lock.schema.json` (Zod 4 native)
+
+### Plan 3 산출물 (2026-04-22)
+
+- **Secret interpolation engine** (`src/secret/`): types / parser / env-resolver / file-resolver / render / provider-policy / encode / resolve-entry — E-1~E-19 전면 구현
+- **Plugin introspection** (`src/plugin/`): claude / codex / opencode / registry / capability — POC-5
+- **Preflight** (`src/sync/preflight/`): git-bash / codex-version (≥0.119) / platform-warnings
+- **Uninstall helper** (`src/install/uninstall.ts`): symlink-safe `fs.rm` wrapper
+- **`concord doctor`**: D-15 preflight aggregate + `--json` machine contract
+- **`concord cleanup`**: opt-in extraneous prune (`--yes` / `--dry-run` / default exit 1)
+- **Runner**: secret resolve 훅 + prune 실삭제 통합 (Plan 2B stub → 완전)
+- **Drift 5th state**: `env` 추가 (source drift precedence)
+
+### Plan 3 핵심 deviation
+
+| Task | Deviation | Commit |
+|---|---|---|
+| 2 | `currentEnvDigest` / `lockEnvDigest` 를 optional 로 선언 (plan 은 required) — 기존 integration sync-drift.test.ts backward compat 유지 | `aa86eda` |
+| 11 | Plan 1 `interpolation-allowlist.ts` 에 `source.path` 누락 → 별도 prerequisite commit 으로 확장 | `13a6ce6` |
+| 14 | Plan 3 `CapabilityMatrix` vs Plan 1 Zod schema 별개 유지 (향후 Plan 4 harmonize) | `5abb048` |
+
+### Plan 3 E-7 allowlist (확장 후)
+
+`source.{url,repo,ref,version,path}` / `env.[A-Z_][A-Z0-9_]*` / `authHeader` / `headers.[\w-]+`
 
 ### Plan 2B 산출물 (2026-04-22)
 
@@ -444,22 +468,17 @@ POC-4 resolved: `~/.claude.json` 순수 JSON 확정 → `json-key-owned` 방식 
 
 ### 즉시 재개 지점
 
-**현재**: Plan 3 plan 작성 완료 (30 task / 3187 줄, branch `feat/concord-plan-3-secret-diagnostics` 는 아직 미생성 — Task 1 에서 생성). **실행 대기 중**.
+**현재**: Plan 3 Secret + Diagnostics 완료 (30/30 task, 518 tests, main merged). 다음은 **Plan 4 CLI 통합**.
 
 다음 세션에서:
-1. `git status` / `git log --oneline -5` 로 main 상태 확인
-2. `npx vitest run` 실행 → 408 passed + 1 skipped green 재확인
-3. **Plan 3 실행 착수**:
-   - 스킬: `superpowers:subagent-driven-development`
-   - 30 task TaskCreate 등록 후 Task 1 (feature branch 생성 + baseline 검증) 부터 sequential dispatch
-   - Plan 1 / 2A / 2B 와 동일 패턴 (implementer + inline spec verify + plan sync on deviation)
-4. **Task 1 Step 1 에서 feature branch 생성**: `git checkout -b feat/concord-plan-3-secret-diagnostics`
-5. 주의 — Plan 3 특이사항:
-   - Plan 1 기존 헬퍼 재사용 많음 (`interpolation-allowlist.ts` / `reserved-identifier-registry.ts`) — 중복 구현 금지
-   - E-7 allowlist 는 string 필드 탐색 시 field path 기반 (e.g. `source.url`, `env.X`) — 배열 인덱스 제거 후 매칭
-   - E-17 invariant: 모든 error message 에 resolved value 금지 — 테스트에서 반드시 `expect(msg).not.toContain(secret)` 로 검증
-   - Runner 수정 시 기존 E2E 테스트 (sync-skill / sync-mcp / sync-drift) 깨지면 안 됨 — `opts.projectRoot`/`opts.env` optional 로 추가해 기본 동작 유지
-   - Security hook 여전히 유효: `runCommand` wrapper 사용, Bash heredoc 로 doc 작성
+1. `git status` / `git log --oneline -5` 로 main 상태 확인 (Plan 3 merged)
+2. `npx vitest run` 실행 → 518 passed + 1 skipped green 재확인
+3. **Plan 4 작성 착수**:
+   - 스킬: `superpowers:writing-plans`
+   - 범위: `init` / `detect` / `adopt` / `import` / `replace` / `update` / `why` commands
+   - 추가: Guided bootstrap UX (Terraform apply 패턴, TTY 분리)
+   - 추가: `{secret:X}` structured reference (Phase 2 backend routing)
+   - 재사용: Plan 1/2B/3 인프라 (schema / sync engine / secret engine / doctor / cleanup)
 
 ### Implementation workflow (확립된 패턴)
 

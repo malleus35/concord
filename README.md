@@ -2,7 +2,7 @@
 
 Sync AI harness assets (skills / subagents / hooks / MCP / instructions / plugins) across Claude Code, Codex, and OpenCode.
 
-**Status**: Phase 1 — Plan 1 Foundation + Plan 2A Round-trip POC + **Plan 2B Sync Engine** complete. Secret interpolation, doctor/cleanup, and `init/detect/adopt/import/replace/update/why` commands come in Plan 3/4.
+**Status**: Phase 1 — Plan 1 Foundation + Plan 2A Round-trip POC + Plan 2B Sync Engine + **Plan 3 Secret + Diagnostics** complete. `init/detect/adopt/import/replace/update/why` commands come in Plan 4.
 
 ## Install
 
@@ -27,6 +27,14 @@ concord lint ./concord.yaml
 
 # List entries from lock file (dry-run)
 concord list --lock ./concord.lock
+
+# Preflight diagnostics (Plan 3)
+concord doctor                         # TTY-friendly report
+concord doctor --json                  # machine-readable
+
+# Extraneous prune (Plan 3)
+concord cleanup --dry-run              # report only
+concord cleanup --yes                  # actually remove
 ```
 
 ## Subsystems (Plan 2B)
@@ -39,6 +47,15 @@ concord list --lock ./concord.lock
 - **Drift detection**: `none` / `source` / `target` / `divergent`
 - **Atomic rollback**: per-action log, reverse-order cleanup on failure
 - **3-platform CI matrix**: ubuntu / macos / windows (Node 22)
+
+## Subsystems (Plan 3)
+
+- **Secret interpolation** (`src/secret/`): `{env:X}` / `{file:X}` / `{env:X:-default}` / `{env:X?}` / `{{...}}` escape — E-1~E-19
+- **5th drift state `env`**: resolver re-evaluates against current env; source drift wins over env (E-2a)
+- **Plugin introspection** (`src/plugin/`): Claude `plugin.json` / Codex `.codex-plugin/plugin.json` / OpenCode `package.json#main + opencode` → capability matrix (POC-5)
+- **`concord doctor`**: Git Bash / Codex ≥0.119 / Developer Mode / AV / OneDrive preflight + `--json`
+- **`concord cleanup`**: opt-in extraneous prune (§6 model B Homebrew Bundle)
+- **Runner prune**: actual target deletion (Plan 2B stub → full)
 
 ## Design docs
 
@@ -57,6 +74,9 @@ concord list --lock ./concord.lock
 
 ### Plan 2B — Sync Engine
 - [Plan 2B summary](docs/superpowers/poc/2026-04-22-plan-2b-summary.md)
+
+### Plan 3 — Secret + Diagnostics
+- [Plan 3 summary](docs/superpowers/poc/2026-04-22-plan-3-summary.md)
 
 ## Requirements
 

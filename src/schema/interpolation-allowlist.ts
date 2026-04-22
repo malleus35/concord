@@ -19,7 +19,7 @@ export function containsInterpolation(value: string): boolean {
 
 /** §4.5 / E-7 allowlist. 허용 field path pattern. */
 const ALLOWED_PATTERNS: RegExp[] = [
-  /^source\.(url|repo|ref|version)$/,
+  /^source\.(url|repo|ref|version|path)$/,
   /^env\.[A-Z_][A-Z0-9_]*$/,
   /^authHeader$/,
   /^headers\.[\w-]+$/,

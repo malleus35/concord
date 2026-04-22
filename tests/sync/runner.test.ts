@@ -153,4 +153,75 @@ describe("runSync", () => {
     expect(events).toContainEqual({ kind: "install", status: "start" });
     expect(events).toContainEqual({ kind: "install", status: "done" });
   });
+
+  it("resolves {env:X} in entry.source.path before fetching (E-2 on-install eager)", async () => {
+    // Create a source file; point manifest at its dir via {env:SRC_FILE}
+    const srcFile = join(tmpDir, "eager-src.txt");
+    await writeFile(srcFile, "hi", "utf8");
+
+    const manifest = {
+      skills: [{
+        id: "skills:e",
+        provider: "claude-code",
+        asset_type: "skills",
+        source: { type: "file", path: "{env:SRC_FILE}" },
+        target_path: join(tmpDir, "out", "eager-src.txt"),
+        install: "copy",
+      }],
+    };
+    const lock = { nodes: {} };
+    const plan = computeSyncPlan(manifest, lock);
+    const result = await runSync(plan, {
+      fetchContext: { concordHome: join(tmpDir, "home"), cacheDir: join(tmpDir, "cache") },
+      projectRoot: tmpDir,
+      env: { SRC_FILE: srcFile },
+    });
+    expect(result.installed).toContain("skills:e");
+    expect(result.errors).toEqual([]);
+  });
+
+  it("prune actually removes target file (previously install-only)", async () => {
+    const tgt = join(tmpDir, "orphan");
+    await writeFile(tgt, "orphan content");
+    const lock = {
+      nodes: {
+        "skills:orphan": {
+          target_path: tgt,
+          source_digest: "x",
+          target_digest: "y",
+        },
+      },
+    };
+    const manifest = {}; // empty → prune orphan
+    const plan = computeSyncPlan(manifest, lock);
+    const result = await runSync(plan, {
+      fetchContext: { concordHome: join(tmpDir, "home"), cacheDir: join(tmpDir, "cache") },
+      projectRoot: tmpDir,
+      env: {},
+    });
+    expect(result.pruned).toContain("skills:orphan");
+    await expect(access(tgt)).rejects.toThrow();
+  });
+
+  it("propagates missing env var error (E-4 fail-closed)", async () => {
+    const manifest = {
+      skills: [{
+        id: "skills:m",
+        provider: "claude-code",
+        asset_type: "skills",
+        source: { type: "file", path: "{env:NO_SUCH_VAR_12345}" },
+        target_path: join(tmpDir, "out"),
+        install: "copy",
+      }],
+    };
+    const lock = { nodes: {} };
+    const plan = computeSyncPlan(manifest, lock);
+    const result = await runSync(plan, {
+      fetchContext: { concordHome: join(tmpDir, "home"), cacheDir: join(tmpDir, "cache") },
+      projectRoot: tmpDir,
+      env: {}, // NO_SUCH_VAR_12345 missing
+    });
+    expect(result.errors.length).toBe(1);
+    expect(result.errors[0]!.message).toMatch(/env-var-missing/);
+  });
 });
