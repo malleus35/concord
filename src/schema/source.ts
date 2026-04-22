@@ -14,7 +14,7 @@ export const SourceSchema = z.discriminatedUnion("type", [
   }),
   z.object({
     type: z.literal("http"),
-    url: z.string().url(),
+    url: z.url(),
     sha256: z.string().regex(/^[a-f0-9]{64}$/),
   }),
   z.object({

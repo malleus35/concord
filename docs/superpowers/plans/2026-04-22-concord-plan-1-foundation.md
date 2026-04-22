@@ -1472,7 +1472,7 @@ export const SourceSchema = z.discriminatedUnion("type", [
   }),
   z.object({
     type: z.literal("http"),
-    url: z.string().url(),
+    url: z.url(),  // Zod 4: top-level z.url() (z.string().url() 은 deprecated)
     sha256: z.string().regex(/^[a-f0-9]{64}$/),
   }),
   z.object({
