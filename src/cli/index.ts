@@ -1,5 +1,6 @@
 import { Command } from "commander";
 import { validateCommand } from "./commands/validate.js";
+import { registerSyncCommand } from "./commands/sync.js";
 
 /**
  * Programmatic CLI entry (testable). Parses `argv` as user-supplied arguments
@@ -44,6 +45,10 @@ export async function runCli(argv: string[]): Promise<number> {
       const { listCommand } = await import("./commands/list.js");
       exitCode = await listCommand(opts.lock);
     });
+
+  registerSyncCommand(program, (code) => {
+    exitCode = code;
+  });
 
   await program.parseAsync(argv, { from: "user" });
   return exitCode;

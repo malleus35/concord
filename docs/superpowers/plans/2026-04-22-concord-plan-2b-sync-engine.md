@@ -351,8 +351,8 @@ export async function runCommand(
   try {
     const { stdout, stderr } = await execFileAsync(command, args, options);
     return {
-      stdout: typeof stdout === "string" ? stdout : stdout.toString("utf8"),
-      stderr: typeof stderr === "string" ? stderr : stderr.toString("utf8"),
+      stdout: Buffer.isBuffer(stdout) ? stdout.toString("utf8") : String(stdout),
+      stderr: Buffer.isBuffer(stderr) ? stderr.toString("utf8") : String(stderr),
       status: 0,
     };
   } catch (err: any) {
@@ -399,7 +399,7 @@ describe("fetch/types", () => {
   it("Fetcher shape compiles", () => {
     const f: Fetcher = {
       supports: () => true,
-      async fetch() {
+      async fetch(): Promise<FetchResult> {
         return { localPath: "", kind: "file", sourceDigest: "", fetchedAt: "" };
       },
     };
@@ -1741,15 +1741,18 @@ Test (reverse order, non-pre-existing only) → Commit `feat(sync): rollback log
 // src/cli/commands/sync.ts
 import { Command } from "commander";
 import { resolve, join } from "node:path";
-import { loadYamlFile } from "../../io/yaml-loader.js";
+import { loadYaml } from "../../io/yaml-loader.js";
 import { readLock } from "../../io/lock-io.js";
 import { writeLockAtomic } from "../../io/lock-write.js";
 import { validateManifest } from "../../schema/validate-manifest.js";
 import { computeSyncPlan } from "../../sync/plan.js";
 import { runSync } from "../../sync/runner.js";
-import { resolveConcordHome } from "../../discovery/concord-home.js";
+import { findConcordHome } from "../../discovery/concord-home.js";
 
-export function registerSyncCommand(program: Command): void {
+export function registerSyncCommand(
+  program: Command,
+  setExitCode: (code: number) => void,
+): void {
   program
     .command("sync")
     .description("Apply manifest to provider targets")
@@ -1759,9 +1762,9 @@ export function registerSyncCommand(program: Command): void {
     .action(async (opts: { scope: string; manifest?: string; lock?: string }) => {
       const manifestPath = opts.manifest ? resolve(opts.manifest) : resolve("concord.yaml");
       const lockPath = opts.lock ? resolve(opts.lock) : resolve("concord.lock");
-      const concordHome = resolveConcordHome();
+      const concordHome = findConcordHome();
       const cacheDir = join(concordHome, "cache");
-      const manifestRaw = await loadYamlFile(manifestPath);
+      const manifestRaw = loadYaml(manifestPath);
       const manifest = validateManifest(manifestRaw);
       const currentLock = await readLock(lockPath).catch(() => ({ lockfile_version: 1, roots: [], nodes: {} } as any));
       const plan = computeSyncPlan(manifest as any, currentLock);
@@ -1773,14 +1776,15 @@ export function registerSyncCommand(program: Command): void {
       process.stderr.write(`done: installed=${result.installed.length} updated=${result.updated.length} pruned=${result.pruned.length} errors=${result.errors.length}\n`);
       if (result.errors.length > 0) {
         for (const e of result.errors) process.stderr.write(`ERROR ${e.nodeId}: ${e.message}\n`);
-        process.exit(1);
+        setExitCode(1);
+        return;
       }
       await writeLockAtomic(lockPath, currentLock);
     });
 }
 ```
 
-Modify `src/cli/index.ts`: add `import { registerSyncCommand } from "./commands/sync.js";` + `registerSyncCommand(program);`.
+Modify `src/cli/index.ts`: add `import { registerSyncCommand } from "./commands/sync.js";` + `registerSyncCommand(program, (code) => { exitCode = code; });` (closure-captured exit code, consistent with existing validate/lint/list pattern so `runCli` stays programmatically testable).
 
 Test (child-process smoke: skill sync full cycle) → Commit `feat(cli): concord sync command`.
 
