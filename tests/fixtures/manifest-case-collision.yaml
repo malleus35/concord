@@ -1,0 +1,9 @@
+hooks:
+  - id: claude-code:hooks:Hook
+    source: { type: external, description: "-" }
+    event: X
+    registration: { command: "x", hook_type: command }
+  - id: claude-code:hooks:hook
+    source: { type: external, description: "-" }
+    event: X
+    registration: { command: "x", hook_type: command }

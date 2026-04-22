@@ -1,4 +1,7 @@
 #!/usr/bin/env node
-// Concord CLI entrypoint. CLI dispatch 는 Task 22 에서 연결.
-console.error("concord: not ready (Task 22 pending)");
-process.exit(1);
+import { run } from "./cli/index.js";
+
+run(process.argv.slice(2)).catch((err) => {
+  console.error(err);
+  process.exit(1);
+});
