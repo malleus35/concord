@@ -2,11 +2,16 @@ import { resolveFetcher, createFetcherRegistry } from "../fetch/registry.js";
 import { createSymlinkInstaller } from "../install/symlink.js";
 import { createCopyInstaller } from "../install/copy.js";
 import { effectiveMode } from "../install/routing.js";
+import { resolveEntry } from "../secret/resolve-entry.js";
 import type { SyncAction, SyncPlan } from "./plan.js";
 import type { FetchContext } from "../fetch/types.js";
 
 export interface RunSyncOptions {
   fetchContext: FetchContext;
+  /** Project root for {file:X} traversal check (E-10). Default: process.cwd(). */
+  projectRoot?: string;
+  /** Env snapshot. Default: process.env. */
+  env?: Readonly<Record<string, string | undefined>>;
   onProgress?: (a: SyncAction, s: "start" | "done" | "skip" | "error", err?: Error) => void;
 }
 
@@ -24,7 +29,19 @@ export async function runSync(plan: SyncPlan, opts: RunSyncOptions): Promise<Run
     opts.onProgress?.(action, "start");
     try {
       if (action.kind === "install" || action.kind === "update") {
-        const entry = action.manifestEntry;
+        const rawEntry = action.manifestEntry as Record<string, unknown>;
+        // E-2 on-install eager: resolve allowed fields with current env
+        const provider = (rawEntry.provider as string | undefined) ?? "claude-code";
+        const assetType = (rawEntry.asset_type as string | undefined) ?? deriveAssetType(rawEntry);
+        const resolverCtx = {
+          projectRoot: opts.projectRoot ?? process.cwd(),
+          env: opts.env ?? (process.env as unknown as Readonly<Record<string, string | undefined>>),
+          provider: provider as "claude-code" | "codex" | "opencode",
+          assetType: assetType as "skills" | "subagents" | "hooks" | "mcp_servers" | "instructions" | "plugins",
+          fieldPath: `entry[${action.nodeId}]`,
+        };
+        const resolved = resolveEntry(rawEntry, resolverCtx);
+        const entry = resolved.entry as any;
         const fetcher = resolveFetcher(entry.source, fetchers);
         const fetched = await fetcher.fetch(entry.source, opts.fetchContext);
         const context = {
