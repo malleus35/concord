@@ -1,8 +1,8 @@
 # Concord — TODO
 
-현재 단계: **Plan 2A Round-trip POC 완료 (Task 18/18, 100%)** (2026-04-22)
-이전: 결정 A/B/C/D/E FINAL (2026-04-21) → Design spec 작성 (2026-04-21) → Plan 1 완료 (2026-04-22) → Plan 2A Round-trip POC 완료 (2026-04-22)
-다음: **Plan 2B Sync Engine** (Config round-trip + Fetcher + Installer + Format Transform)
+현재 단계: **Plan 2B Sync Engine — plan 문서 작성 완료, 실행 대기** (2026-04-22)
+이전: 결정 A/B/C/D/E FINAL (2026-04-21) → Design spec 작성 (2026-04-21) → Plan 1 완료 (2026-04-22) → Plan 2A Round-trip POC 완료 (2026-04-22) → **Plan 2B 작성 (2026-04-22, 30 task / 2001 줄)**
+다음: **Plan 2B 실행** (Task 1~30, `superpowers:subagent-driven-development`)
 
 ## 🟢 Plan 1 완료 Snapshot (2026-04-22)
 
@@ -32,6 +32,28 @@ concord list --lock ./concord.lock # dry-run lock reader
   - JSONC: `jsonc-morph @ 0.3.3` (loser: `jsonc-parser`)
   - YAML: `yaml @ 2.8.3` (eemeli) — Plan 1 에서 이미 확정
   - Symlink: `symlink-dir @ 10.0.1` — macOS 5/5 PASS / Windows DEFERRED
+
+## 🟡 Plan 2B 작성 완료 Snapshot (2026-04-22)
+
+- **Plan 문서**: `docs/superpowers/plans/2026-04-22-concord-plan-2b-sync-engine.md` (2001 줄, 30 task)
+- **상태**: **plan 작성 완료, 실행 대기** (feature branch 생성은 Task 1 Step 1 에서)
+- **Tasks (30)** — Phase 구성:
+  - **Phase A** Task 1~3: Windows CI matrix / marker block parser / `runCommand` execFile utility (security hook 대응)
+  - **Phase B** Task 4~10: Fetcher 공통 + 6 adapter (file/git/http/npm/external/adopted) + registry
+  - **Phase C** Task 11~15: ConfigWriter 공통 + 4 writer (JSONC/TOML/json-key-owned/YAML) + registry
+  - **Phase D** Task 16~17: Installer (symlink + copy + routing D-14)
+  - **Phase E** Task 18: MCP Windows `cmd /c npx` transformer + registry
+  - **Phase F** Task 19~22: lock atomic write / sync plan / drift 4 상태 / state machine
+  - **Phase G** Task 23~25: runSync orchestration + atomic rollback + `concord sync` CLI
+  - **Phase H** Task 26~30: E2E (skill / MCP / drift) + verification + README/TODO/MEMORY + tag + merge
+- **핵심 신규 결정**:
+  - `src/utils/exec-file.ts` (Task 3 신설) — Git/Npm/External fetcher 공통 사용. security hook 권장 패턴
+  - 3-platform CI matrix (Task 1) — POC-9 Windows 검증 자동화
+  - Plan 2A infrastructure 전체 재사용 (`src/round-trip/` types/preservation/diff-regions/winner wrappers)
+- **non-goals (Plan 3/4 로 이관)**:
+  - Secret 보간 (E-1~E-19) — Plan 3
+  - `concord doctor` / `concord cleanup` 완전체 — Plan 3
+  - `init/detect/adopt/import/replace/update/why` — Plan 4
 
 ---
 
@@ -244,11 +266,11 @@ concord list --lock ./concord.lock # dry-run lock reader
 - [x] **Plan 2A Round-trip POC 완료** (2026-04-22, 18 tasks, 246 tests)
   - TOML: `@decimalturn/toml-patch @ 1.1.1` / JSONC: `jsonc-morph @ 0.3.3` / YAML: `yaml @ 2.8.3` / Symlink: `symlink-dir @ 10.0.1` (macOS)
   - Branch: `feat/concord-plan-2a-round-trip-poc` → main merge / Tag: `concord-plan-2a-round-trip-poc`
-- [ ] **Plan 2B Sync Engine 작성·실행** (다음 단계)
-  - Config round-trip (JSONC jsonc-morph / TOML @decimalturn/toml-patch / 순수 JSON json-key-owned)
-  - Fetcher 6종 (GitFetcher / FileFetcher / HttpFetcher / NpmFetcher / ExternalFetcher / AdoptedFetcher)
-  - Symlink/copy installer + format transformer (D-1~D-15)
-  - 제공 산출물: `concord sync` 실동작
+- [~] **Plan 2B Sync Engine** — plan 작성 완료 (2026-04-22, 30 task / 2001 줄), 실행 대기
+  - 문서: `docs/superpowers/plans/2026-04-22-concord-plan-2b-sync-engine.md`
+  - Phase A~H (CI / Fetcher / Writer / Installer / Transformer / Lock+Sync / Orchestration / E2E)
+  - 산출물 예정: `concord sync` 실동작 + 3-platform CI matrix
+  - 다음: `superpowers:subagent-driven-development` 으로 Task 1 부터 dispatch
 - [ ] Plan 3 Secret + Diagnostics 작성·실행 (E-1~E-19 + doctor + cleanup + plugin introspection 완성)
 - [ ] Plan 4 CLI 통합 (init/detect/adopt/import/replace/update/why + guided bootstrap + --json/TTY 분리)
 
