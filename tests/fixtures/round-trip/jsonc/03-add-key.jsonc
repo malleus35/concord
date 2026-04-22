@@ -1,0 +1,7 @@
+// Settings
+{
+  "mcpServers": {
+    "existing": { "command": "npx" }
+    // new server 가 아래에 추가되어야 함
+  }
+}

@@ -1,0 +1,13 @@
+// Claude Code settings — sample
+{
+  /* Block comment at top of hooks */
+  "hooks": {
+    "user-prompt-submit": [
+      // Line comment inside array
+      "echo 'hook'"
+    ]
+  },
+  "permissions": {
+    "allow": ["read", "write"] // inline comment after array
+  }
+}
