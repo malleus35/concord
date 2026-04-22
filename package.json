@@ -17,6 +17,10 @@
     "dev": "tsx src/index.ts",
     "test": "vitest run",
     "test:watch": "vitest",
+    "poc:1": "tsx scripts/poc/poc-1-toml.ts",
+    "poc:2": "tsx scripts/poc/poc-2-jsonc.ts",
+    "poc:3": "tsx scripts/poc/poc-3-yaml.ts",
+    "poc:9": "tsx scripts/poc/poc-9-symlink.ts",
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
   "keywords": [

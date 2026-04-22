@@ -11,3 +11,7 @@ concord.local.lock
 
 # legacy plans directory at repo root (superseded by docs/superpowers/plans/)
 /plans/
+
+# POC benchmark outputs (temporary, regenerable)
+benchmark-*.json
+benchmark-*.err
