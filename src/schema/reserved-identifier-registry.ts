@@ -72,9 +72,9 @@ const RESERVED_INTERPOLATION_PATTERNS: Array<{
       phase2Replacement: "Phase 2 secretRef: structured field",
     },
   },
-  // E-12 Type coercion
+  // E-12 Type coercion — 첫 pipe 뒤가 int/bool/float 중 하나면 reserved (multi-pipe 포함)
   {
-    pattern: /\{env:[^}|]+\|(int|bool|float)\}/,
+    pattern: /\{env:[^}|]+\|(int|bool|float)(?:\||\})/,
     match: {
       kind: "type-coercion",
       reason: "Phase 2 type coercion suffix",
