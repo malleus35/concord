@@ -11,7 +11,7 @@ describe("fetch/types", () => {
   it("Fetcher shape compiles", () => {
     const f: Fetcher = {
       supports: () => true,
-      async fetch() {
+      async fetch(): Promise<FetchResult> {
         return { localPath: "", kind: "file", sourceDigest: "", fetchedAt: "" };
       },
     };
