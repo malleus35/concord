@@ -1,6 +1,7 @@
 import { Command } from "commander";
 import { validateCommand } from "./commands/validate.js";
 import { registerSyncCommand } from "./commands/sync.js";
+import { registerDoctorCommand } from "./commands/doctor.js";
 
 /**
  * Programmatic CLI entry (testable). Parses `argv` as user-supplied arguments
@@ -47,6 +48,10 @@ export async function runCli(argv: string[]): Promise<number> {
     });
 
   registerSyncCommand(program, (code) => {
+    exitCode = code;
+  });
+
+  registerDoctorCommand(program, (code) => {
     exitCode = code;
   });
 
