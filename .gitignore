@@ -1,0 +1,13 @@
+node_modules/
+dist/
+coverage/
+*.log
+.DS_Store
+
+# concord private
+.concord/
+concord.local.yaml
+concord.local.lock
+
+# legacy plans directory at repo root (superseded by docs/superpowers/plans/)
+/plans/
