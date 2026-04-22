@@ -1,15 +1,25 @@
 # Concord — TODO
 
-현재 단계: **Plan 1 Foundation 구현 진행 중 (Task 7/28 완료, 25%)** (2026-04-22)
-이전: 결정 A/B/C/D/E FINAL (2026-04-21) → Design spec 작성 (2026-04-21) → 3-subagent review 수정 (2026-04-22) → Plan 1 작성 (2026-04-22) → 실행 시작
+현재 단계: **Plan 1 Foundation 완료 (Task 28/28, 100%)** (2026-04-22)
+이전: 결정 A/B/C/D/E FINAL (2026-04-21) → Design spec 작성 (2026-04-21) → 3-subagent review 수정 (2026-04-22) → Plan 1 작성 (2026-04-22) → 실행 완료 (2026-04-22)
+다음: **Plan 2 Sync Engine** (Config round-trip + Fetcher + Installer + Format Transform)
 
-## 🟢 Plan 1 실행 Snapshot (2026-04-22)
+## 🟢 Plan 1 완료 Snapshot (2026-04-22)
 
-- **Branch**: `feat/concord-plan-1-foundation` (main 의 baseline `2f3acf8` 위)
-- **Tests green**: 76 / 76 (6 files)
-- **Commits**: 14 (implementation 7 + plan refinement 7)
+- **Branch**: `feat/concord-plan-1-foundation` → main 에 merge 완료
+- **Tests green**: **169 / 169** (26 files, 740ms)
+- **Commits**: 44 (implementation 28 + plan refinement 16)
 - **Typecheck**: clean (`tsc -p tsconfig.json --noEmit`)
-- **완료 Task**: 1 ~ 7 (아래 상세)
+- **Build**: `dist/src/{cli,discovery,io,schema,index}` 전체 emit
+- **Tag**: `concord-plan-1-foundation`
+- **JSON Schema artifacts**: `schemas/manifest.schema.json` (32.9KB) + `schemas/lock.schema.json` (20KB) — Zod 4 native `z.toJSONSchema()` 생성
+
+### 실동작 CLI
+```bash
+concord validate ./concord.yaml    # 3-pass validation (Reserved + allowlist + Zod + A1/D-11)
+concord lint ./concord.yaml        # pre-validation only (fast)
+concord list --lock ./concord.lock # dry-run lock reader
+```
 
 ---
 
@@ -47,26 +57,55 @@
 - [x] 4-plan 분할 결정 (A 경로): Plan 1 Foundation → Plan 2 Sync Engine → Plan 3 Secret+Diagnostics → Plan 4 CLI 통합
 - [x] git baseline commit (2f3acf8) + feature branch `feat/concord-plan-1-foundation`
 
-### Plan 1 Implementation — Task 1~7 완료 (2026-04-22, 진행 중) ★
+### Plan 1 Implementation — Task 1~28 완료 (2026-04-22) ★
 
-| # | Task | Commit | Tests | Review |
-|---|---|---|---|---|
-| 1 | Bootstrap (TS6 + Zod4 + Vitest4) | `3c214f3` + plan `d3c17b0` | — (config) | Approved |
-| 2 | Shared types + 4 enums | `fa4bd06` | 4 | Approved (inline) |
-| 3 | Discovery (`concord-home.ts`) | `29d5d71` + plan `cc1f791` | 3 | Approved (ESM vi.mock fix) |
-| 4 | Reserved Identifier Registry | `5052cb7` + fix `6fed548` + plan `5d3db5f` | 21 | Approved (multi-pipe + silent-pass fix) |
-| 5 | Interpolation Allowlist | `a18ff4f` + regression `6951773` | 30 | Approved + 4 regression guards |
-| 6 | Reason Enums | `1c86de9` | 8 | Approved (inline) |
-| 7 | Capability Matrix Schema | `3184c35` + plan `3ec092b` | 10 | DONE_WITH_CONCERNS (`.strict()` 추가) |
+| # | Task | Commit | Tests |
+|---|---|---|---|
+| 1 | Bootstrap (TS6 + Zod4 + Vitest4 + package/tsconfig/vitest) | `3c214f3` + `d3c17b0` | — |
+| 2 | Shared types + 4 enums | `fa4bd06` | 4 |
+| 3 | Discovery (`concord-home.ts`) | `29d5d71` + `cc1f791` | 3 |
+| 4 | Reserved Identifier Registry (§2, 15 entries) | `5052cb7` + `6fed548` + `5d3db5f` | 21 |
+| 5 | Interpolation Allowlist + regression | `a18ff4f` + `6951773` | 30 |
+| 6 | Reason Enums (22 + 11) | `1c86de9` | 8 |
+| 7 | CapabilityMatrixSchema + renderer | `3184c35` + `3ec092b` | 10 |
+| 8 | SourceSchema + PluginSourceSchema | `eb06384` + `f3cf081` | 9 |
+| 9 | AssetBaseSchema + install field | `9b50666` + `ee4ab81` | 6 |
+| 10 | SkillAssetSchema + A1/A4 post-validator | `6eb5f94` + `f99cce1` | 5 |
+| 11 | SubagentAssetSchema | `043945b` | 3 |
+| 12 | HookAssetSchema (2-asset split) | `7617b81` | 4 |
+| 13 | McpServerAssetSchema (+ id regex underscore) | `940c119` + `30d228d` | 4 |
+| 14 | InstructionAssetSchema | `d31c274` | 7 |
+| 15 | PluginAssetSchema (β3 α) | `da00c30` | 4 |
+| 16 | ManifestSchema + concord_version semver | `c952394` | 8 |
+| 17 | YAML loader (eemeli) | `7299c08` | 3 |
+| 18 | validateManifest 3-pass + D-11 | `c72ee79` + `b757c29` | 7 |
+| 19 | 4-scope precedence merge | `499f3a3` | 3 |
+| 20 | LockNodeSchema (3중 digest) | `bc90a75` + `ad87586` | 5 |
+| 21 | LockSchema + symlink drift refine | `9bd17cb` | 8 |
+| 22 | Lock read I/O | `e9bc1d4` | 2 |
+| 23 | validateLock + I1/I5/I6 | `e7a41c4` | 5 |
+| 24 | CLI skeleton + `concord validate` | `4190766` | 3 |
+| 25 | `concord lint` | `cbce515` | 3 |
+| 26 | `concord list --dry-run` | `7dd0eac` | 2 |
+| 27 | Integration POC-13 golden | `66479be` | 2 |
+| 28 | README + POC log + schemas + tag | `0f01ff0` | — |
 
-**누적**: 76 tests green / 6 test files / typecheck clean / 14 commits
+**누적**: **169 tests green / 26 test files / typecheck clean / 44 commits + tag**
 
-### 누적 Review 발견 (Plan 에 반영됨)
-- Task 1: TS 6 + @types/node 25 → `"types": ["node"]` 필수 (TS2591 fix)
-- Task 3: Vitest 4 + ESM → `vi.spyOn(os.homedir)` 불가, `vi.mock + importActual + 가변 ref` 패턴 필수
-- Task 4: Multi-pipe regex `{env:X|int|bool}` 매칭 / `try/catch` silent-pass → `toThrow(pattern)` 로 교체
-- Task 5: Security regression guards (sequential / abs path / prefix confusion / error.detail)
-- Task 7: Zod 4 default strip → discriminated union 각 variant 에 `.strict()` 필요 (illegal state rejection 위해)
+### 누적 Review 발견 (Plan 에 전부 반영됨)
+- **TS 6 + @types/node 25** → `"types": ["node"]` 필수 (TS2591 fix)
+- **Vitest 4 + ESM** → `vi.spyOn(os.homedir)` 불가, `vi.mock + importActual + 가변 ref` 패턴
+- **Zod 4 API migration**:
+  - `.url()` → `z.url()`
+  - `.datetime()` → `z.iso.datetime()`
+  - `.passthrough()` → `.loose()`
+  - Discriminated union variants `.strict()` 필수 (illegal state rejection)
+  - `z.record(enum, V)` Zod 4 exhaustive — 모든 enum key 필수
+- **Multi-pipe regex** `{env:X|int|bool}` 매칭
+- **Silent-pass test** → `expect(fn).toThrow(pattern)` 패턴 교체
+- **id regex** underscore 허용 (`mcp_servers`)
+- **D-11 case-collision** lowercase-only id regex 때문에 pre-validation 으로 이동
+- **Security regression guards** (sequential / abs path / prefix confusion / error.detail)
 
 ---
 
@@ -183,17 +222,20 @@
 - [ ] POC-13: 4 scope merge 순서 (enterprise/user/project/local) + 각 scope 보간 독립성 검증
 - [ ] POC-14: Target format (YAML/JSON/TOML) 안전 인코딩 골든 테스트 (multi-line PEM 등)
 
-### Phase 1 실구현 (진행 중 2026-04-22)
+### Phase 1 실구현
 
 **구현 전환 절차**:
 - [x] `writing-plans` 스킬로 전환 → Plan 1 Foundation (28 task) 작성
 - [x] 4-plan 분할: Plan 1 Foundation / Plan 2 Sync Engine / Plan 3 Secret+Diagnostics / Plan 4 CLI 통합
-- [x] `subagent-driven-development` 스킬로 Plan 1 실행 시작
-- [~] **Plan 1 Task 8~28 남음 (21 task)**
-  - 남은 Task: Source / AssetBase / 자산 6종 (skill/subagent/hook/mcp/instruction/plugin) / ManifestSchema top / yaml loader / validateManifest 3-pass / scope merge / LockNode / Lock / lock I/O / validateLock / CLI skeleton+3 명령 / integration golden / README
-- [ ] Plan 2 Sync Engine 작성·실행 (Config round-trip + Fetcher + Installer + Format Transform)
-- [ ] Plan 3 Secret + Diagnostics 작성·실행 (E-1~E-19 + doctor + cleanup + plugin introspection)
-- [ ] Plan 4 CLI 통합 (init/detect/adopt/import/replace/update/list/why + guided bootstrap + --json/TTY 분리)
+- [x] `subagent-driven-development` 스킬로 Plan 1 실행 (Task 1~28 완료)
+- [x] Plan 1 → main merge
+- [ ] **Plan 2 Sync Engine 작성·실행** (다음 단계)
+  - Config round-trip (JSONC jsonc-morph / TOML POC-1 / 순수 JSON json-key-owned)
+  - Fetcher 6종 (GitFetcher / FileFetcher / HttpFetcher / NpmFetcher / ExternalFetcher / AdoptedFetcher)
+  - Symlink/copy installer + format transformer (D-1~D-15)
+  - 제공 산출물: `concord sync` 실동작
+- [ ] Plan 3 Secret + Diagnostics 작성·실행 (E-1~E-19 + doctor + cleanup + plugin introspection 완성)
+- [ ] Plan 4 CLI 통합 (init/detect/adopt/import/replace/update/why + guided bootstrap + --json/TTY 분리)
 
 **실구현 스코프 (11 컴포넌트)**:
 1. [ ] **Manifest parser/validator** (yaml + zod)

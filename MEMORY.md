@@ -1,47 +1,60 @@
 # Concord — Session Memory
 
 **Last updated**: 2026-04-22
-**Phase**: **Plan 1 Foundation 구현 진행 중 (Task 7/28 완료, 25%)**
+**Phase**: **Plan 1 Foundation 완료 (Task 28/28, 100%)** → 다음 Plan 2 Sync Engine
 
 ## 🟢 현재 Snapshot (2026-04-22)
 
-- **Branch**: `feat/concord-plan-1-foundation` (main 의 baseline `2f3acf8` 위)
+- **Branch**: `feat/concord-plan-1-foundation` → main merged
 - **Primary contract**: `docs/superpowers/specs/2026-04-21-concord-design.md` (3878줄, 3-subagent review 반영)
-- **Execution plan**: `docs/superpowers/plans/2026-04-22-concord-plan-1-foundation.md` (28 task)
-- **4-plan 분할**: Plan 1 Foundation / Plan 2 Sync Engine / Plan 3 Secret+Diagnostics / Plan 4 CLI 통합
-- **Tests green**: 76 / 76 (6 files) / typecheck clean
-- **Commits**: 14 on feature branch (implementation 7 + plan refinement 7)
+- **Execution plan**: `docs/superpowers/plans/2026-04-22-concord-plan-1-foundation.md` (28 task, 전부 완료)
+- **4-plan 분할**: Plan 1 Foundation ✅ / Plan 2 Sync Engine (다음) / Plan 3 Secret+Diagnostics / Plan 4 CLI 통합
+- **Tests green**: **169 / 169 (26 files, 740ms) / typecheck clean / build emit**
+- **Commits**: 44 on feature branch (implementation 28 + plan refinement 16)
+- **Tag**: `concord-plan-1-foundation`
+- **JSON Schema artifacts**: `schemas/manifest.schema.json` + `schemas/lock.schema.json` (Zod 4 native)
 
-### 완료 Task (Plan 1)
-| # | Task | Commit | Tests |
-|---|---|---|---|
-| 1 | Bootstrap (TS6 + Zod4 + Vitest4) | `3c214f3` + plan `d3c17b0` | config |
-| 2 | Shared types + 4 enums | `fa4bd06` | 4 |
-| 3 | Discovery `concord-home.ts` | `29d5d71` + plan `cc1f791` | 3 |
-| 4 | Reserved Identifier Registry | `5052cb7` + fix `6fed548` + plan `5d3db5f` | 21 |
-| 5 | Interpolation Allowlist | `a18ff4f` + regression `6951773` | 30 |
-| 6 | Reason Enums | `1c86de9` | 8 |
-| 7 | Capability Matrix Schema | `3184c35` + plan `3ec092b` | 10 |
+### 실동작 CLI
+```bash
+concord validate <manifest>   # 3-pass (Reserved + allowlist + Zod + A1/D-11)
+concord lint <manifest>       # pre-validation only
+concord list --lock <path>    # dry-run reader
+```
 
-### 남은 Task (Plan 1)
-Task 8 Source → Task 28 README. Task 10~15 자산 schema 6종 / Task 18 validateManifest 3-pass / Task 21 Lock symlink refine / Task 24~26 CLI 3 명령 (validate/lint/list).
+### 완료 Task (Plan 1, 28/28)
 
-### Zod 4 채택 (2026-04-22 재평가)
+**Foundation** (1~7): Bootstrap / Types / Discovery / Reserved Registry / Interpolation Allowlist / Reason Enums / Capability Matrix
+**Source + Assets** (8~15): Source + PluginSource / AssetBase / 6 asset schemas (skill/subagent/hook/mcp/instruction/plugin)
+**Manifest + Validators** (16~19): ManifestSchema+concord_version / YAML loader / validateManifest 3-pass / 4-scope merge
+**Lock family** (20~23): LockNode (3중 digest) / LockSchema + symlink refine / Lock read I/O / validateLock + I1/I5/I6
+**CLI** (24~26): validate / lint / list --dry-run
+**Wrap-up** (27~28): POC-13 golden test / README + POC log + schemas + tag
+
+### Zod 4 채택 (2026-04-22 재평가, Plan 1 전반에 적용 완료)
 - spec 부록 B 업데이트: Zod 3 고정 → **Zod 4 채택** (기존 `package.json` 존중)
-- `zod-to-json-schema` 제거 → Zod 4 native `z.toJSONSchema()`
-- `.passthrough()` 는 Zod 4 에서도 작동하되 `.loose()` / `z.looseObject({...})` 권장
-- `z.discriminatedUnion("field", [...])` 현재 유지 → 향후 `z.switch` migration 예정
-- **`.strict()` 필수 for discriminated union variants** (default strip 방지, illegal state rejection)
+- `zod-to-json-schema` 제거 → Zod 4 native `z.toJSONSchema()` (artifacts 생성 확인)
+- `.passthrough()` → `.loose()` (deprecated)
+- `z.string().url()` → `z.url()` (top-level)
+- `z.string().datetime()` → `z.iso.datetime()` (top-level iso namespace)
+- `z.discriminatedUnion("field", [...])` 유지 → 향후 `z.switch` migration 예정
+- **`.strict()` 필수** for discriminated union variants (default strip 방지, illegal state rejection)
+- **`z.record(enum, V)` exhaustive** — enum 의 모든 key 가 present 해야 parse 통과 (Task 21/23/26 에서 full 3×6 capability_matrix 필요)
 
-### 누적 Review 발견 패턴 (Plan 에 반영됨)
-| Task | 이슈 | 해결 |
-|---|---|---|
-| 1 | TS 6 + @types/node 25 → TS2591 | `"types": ["node"]` 명시 |
-| 3 | Vitest 4 + ESM → `vi.spyOn(os.homedir)` 불가 | `vi.mock + importActual + 가변 ref` |
-| 4 | Multi-pipe regex `{env:X\|int\|bool}` 누락 | `(?:\||\})` regex 추가 |
-| 4 | `try/catch` silent pass | `toThrow(pattern)` 패턴 |
-| 5 | Security regression 가드 부재 | 4 tests 추가 (sequential / abs / prefix / detail) |
-| 7 | Zod 4 default strip | 각 variant 에 `.strict()` |
+### 누적 Review 발견 패턴 (Plan 에 전부 반영됨)
+| 이슈 | 해결 |
+|---|---|
+| TS 6 + @types/node 25 → TS2591 | `"types": ["node"]` 명시 |
+| Vitest 4 + ESM `vi.spyOn(os.homedir)` 불가 | `vi.mock + importActual + 가변 ref` |
+| Zod 4 `.url()` / `.datetime()` deprecated | `z.url()` / `z.iso.datetime()` top-level |
+| Zod 4 `.passthrough()` deprecated | `.loose()` |
+| Zod 4 discriminated union default strip | 각 variant `.strict()` (illegal state rejection) |
+| Zod 4 `z.record(enum, V)` exhaustive | Full matrix fixture (3 provider × 6 asset) |
+| Multi-pipe regex `{env:X\|int\|bool}` 누락 | `(?:\|\|\})` regex |
+| `try/catch` silent pass | `toThrow(pattern)` |
+| id regex `[a-z0-9-]` 에 underscore 부재 | `[a-z0-9_-]` (`mcp_servers` 지원) |
+| D-11 case-collision post-validation 무효 | Pre-validation (raw)로 이동 |
+| Plan 10 test regex vs impl message 순서 mismatch | Error message 재배열 (shared-agents ... claude-code) |
+| Security regression 가드 부재 | 4 tests 추가 (sequential / abs / prefix / error.detail) |
 
 ### IDE Diagnostic (무해, 무시)
 - `tests/` 가 tsconfig `exclude` 에 있어 TS language server 가 test 파일 import 를 resolve 못함
@@ -369,13 +382,16 @@ POC-4 resolved: `~/.claude.json` 순수 JSON 확정 → `json-key-owned` 방식 
 
 ### 즉시 재개 지점
 
-**현재**: Plan 1 Task 7 완료 → Task 8 (Source + PluginSource discriminated union) 대기 중.
+**현재**: Plan 1 Foundation 완료 → **Plan 2 Sync Engine** 작성·실행 대기 중.
 
 다음 세션에서:
-1. `git status` / `git log --oneline -10` 로 branch 상태 확인
-2. `npx vitest run` 실행 → 76/76 green 재확인
-3. Plan `docs/superpowers/plans/2026-04-22-concord-plan-1-foundation.md` 에서 Task 8 section 확인
-4. `subagent-driven-development` skill 로 Task 8 부터 dispatch 이어가기
+1. `git status` / `git log --oneline -5` 로 main 상태 확인 (last commit: Plan 1 merge)
+2. `npx vitest run` 실행 → 169/169 green 재확인 (main 에 이미 merged)
+3. **Plan 2 작성 착수** (`docs/superpowers/plans/YYYY-MM-DD-concord-plan-2-sync-engine.md`)
+   - 범위: Config round-trip + Fetcher 6종 + Symlink/copy installer + Format transformer (D-1~D-15)
+   - 산출물: `concord sync` 실동작
+   - 스킬: `superpowers:writing-plans` → `superpowers:subagent-driven-development`
+4. POC 우선순위: POC-1 (TOML 3도구 벤치마크), POC-2 (JSONC 비교), POC-9 (symlink-dir Windows fallback)
 
 ### Implementation workflow (확립된 패턴)
 
