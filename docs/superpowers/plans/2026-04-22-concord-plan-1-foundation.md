@@ -155,19 +155,24 @@ npm install --save-dev @types/semver
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
     "outDir": "./dist",
-    "rootDir": "./src",
+    "rootDir": "./",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "declaration": true,
     "forceConsistentCasingInFileNames": true,
     "noUncheckedIndexedAccess": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "types": ["node"]
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist", "tests"]
 }
 ```
+
+**주의**:
+- `rootDir: "./"` + `include: ["src/**/*"]` 조합은 `src/index.ts` → `dist/src/index.js` 생성. 기존 `package.json` 의 `"bin": "./dist/src/index.js"` 와 정확히 일치.
+- `"types": ["node"]` 은 **TS 6 + @types/node 25** 조합에서 `process` / `Buffer` 같은 Node.js global 을 인식시키기 위해 필수. TS 6 가 auto-include 를 중단했으므로 명시해야 build 가 성공 (TS 공식 error TS2591 이 직접 권고).
 
 - [ ] **Step 3: Create `vitest.config.ts`**
 
