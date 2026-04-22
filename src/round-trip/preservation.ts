@@ -18,6 +18,11 @@ type Region = { startOffset: number; endOffset: number };
  * 반환해야 한다는 계약. 구체화를 위해 이 유틸은 **원본 기준 regions + 수정본 의 동일 offset 비교** 로 단순화.
  *
  * 길이 변경 대응: 변경 영역 중 가장 뒤쪽 region 의 length delta 를 tail 조정에 반영.
+ *
+ * **중요 제약 (Plan 2A 단순화 가정)**:
+ * - 복수 region 이 존재할 때, 각 region 의 **수정본 길이는 원본 길이와 동일해야 한다**.
+ * - 길이가 달라지는 region 이 복수인 경우 modCursor 누적이 틀어져 silent 오판.
+ * - Plan 2B 에서 marker 블록 단위로 재설계 예정.
  */
 export function verifyPreservation(
   original: string,
@@ -62,8 +67,12 @@ export function verifyPreservation(
 
   // 마지막 region 뒤의 tail 비교
   const tailOrig = original.slice(origCursor);
+  // DEAD VARIABLE — intentionally kept per Plan 2A literal. DO NOT USE:
+  // modifiedBytes 는 UTF-8 byte count, `.slice()` 는 UTF-16 code unit 인덱스 → 비ASCII 에서 틀림.
+  // 올바른 계산은 바로 아래 tailModSliced (char-count 기반).
   const tailMod = modified.slice(modifiedBytes - Buffer.byteLength(tailOrig, "utf8"));
-  // tail 길이 맞추기 (UTF-8 기준)
+  void tailMod; // noUnusedLocals 억제용
+  // tail 길이 맞추기 (char-count 기준)
   const tailModSliced = modified.slice(modified.length - tailOrig.length);
   if (tailOrig !== tailModSliced) {
     outsideDiff += countDiffBytes(tailOrig, tailModSliced);
