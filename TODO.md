@@ -1,8 +1,8 @@
 # Concord — TODO
 
-현재 단계: **Plan 2B Sync Engine 실행 완료** (2026-04-22)
-이전: 결정 A/B/C/D/E FINAL (2026-04-21) → Design spec (2026-04-21) → Plan 1 완료 → Plan 2A 완료 → Plan 2B 작성 → **Plan 2B 실행 완료 (30/30 task, 408 tests / 68 files)**
-다음: **Plan 3 Secret + Diagnostics** (E-1~E-19 보간 + doctor + cleanup + plugin introspection)
+현재 단계: **Plan 3 Secret + Diagnostics — plan 작성 완료, 실행 대기** (2026-04-22)
+이전: 결정 A/B/C/D/E FINAL → Design spec → Plan 1 ✅ → Plan 2A ✅ → Plan 2B ✅ → **Plan 3 작성 (2026-04-22, 30 task / 3187 줄)**
+다음: **Plan 3 실행** (Task 1~30, `superpowers:subagent-driven-development`)
 
 ## 🟢 Plan 1 완료 Snapshot (2026-04-22)
 
@@ -32,6 +32,30 @@ concord list --lock ./concord.lock # dry-run lock reader
   - JSONC: `jsonc-morph @ 0.3.3` (loser: `jsonc-parser`)
   - YAML: `yaml @ 2.8.3` (eemeli) — Plan 1 에서 이미 확정
   - Symlink: `symlink-dir @ 10.0.1` — macOS 5/5 PASS / Windows DEFERRED
+
+## 🟡 Plan 3 작성 완료 Snapshot (2026-04-22)
+
+- **Plan 문서**: `docs/superpowers/plans/2026-04-22-concord-plan-3-secret-diagnostics.md` (3187 줄, 30 task)
+- **상태**: **plan 작성 완료, 실행 대기** (feature branch 는 Task 1 에서 생성)
+- **범위 (30 task / 6 Phase)**:
+  - **Phase A** Task 1~2: Feature branch + drift 5th state `env-drift` (E-2a)
+  - **Phase B** Task 3~11: Secret engine (types / parser / env / file / render / provider-policy / encode / resolveEntry / runner 통합)
+  - **Phase C** Task 12~14: Plugin introspection (Claude / Codex / OpenCode plugin.json + capability)
+  - **Phase D** Task 15~18: Preflight (env-drift helper / Git Bash / Codex ≥0.119 / platform warnings)
+  - **Phase E** Task 19~22: CLI (`concord doctor` / uninstall helper / runner prune 실삭제 / `concord cleanup`)
+  - **Phase F** Task 23~30: E2E (secret/env-drift/doctor/cleanup/plugin) + verification + README/TODO/MEMORY + tag + merge
+- **핵심 재사용 (Plan 1/2B 인프라)**:
+  - `src/schema/interpolation-allowlist.ts` (containsInterpolation / isAllowedField / checkNested / checkPathTraversal)
+  - `src/schema/reserved-identifier-registry.ts` (E-6/E-11/E-12/E-15 patterns)
+  - `src/utils/exec-file.ts` (Codex version probe / Git Bash 감지)
+  - `src/sync/drift.ts` (4→5 상태 확장)
+  - `src/sync/runner.ts` (secret resolve 훅 + prune 실삭제 통합)
+  - `src/sync/rollback.ts` (cleanup 통합)
+- **Non-goals (Plan 4 이관)**:
+  - `init` / `detect` / `adopt` / `import` / `replace` / `update` / `why` commands
+  - Guided bootstrap UX
+  - E-16 4-scope merge (이미 validateManifest 에서 처리)
+  - `{secret:X}` structured reference (Phase 2)
 
 ## 🟢 Plan 2B 완료 Snapshot (2026-04-22)
 
