@@ -1,0 +1,9 @@
+# concord manifest (test fixture)
+concord_version: ">=0.1"
+skills:
+  # first entry
+  - id: claude-code:skills:commit-msg
+    source:
+      type: file
+      path: ./skills/commit-msg
+    install: auto  # auto default

@@ -1,7 +1,67 @@
 # Concord — Session Memory
 
-**Last updated**: 2026-04-21
-**Phase**: **Brainstorming 완료 — 결정 A/B/C/D/E 모두 FINAL + 언어 스택 TypeScript/Node.js 확정**. 다음: 디자인 문서 → 구현 계획
+**Last updated**: 2026-04-22
+**Phase**: **Plan 1 Foundation 완료 (Task 28/28, 100%)** → 다음 Plan 2 Sync Engine
+
+## 🟢 현재 Snapshot (2026-04-22)
+
+- **Branch**: `feat/concord-plan-1-foundation` → main merged
+- **Primary contract**: `docs/superpowers/specs/2026-04-21-concord-design.md` (3878줄, 3-subagent review 반영)
+- **Execution plan**: `docs/superpowers/plans/2026-04-22-concord-plan-1-foundation.md` (28 task, 전부 완료)
+- **4-plan 분할**: Plan 1 Foundation ✅ / Plan 2 Sync Engine (다음) / Plan 3 Secret+Diagnostics / Plan 4 CLI 통합
+- **Tests green**: **169 / 169 (26 files, 740ms) / typecheck clean / build emit**
+- **Commits**: 44 on feature branch (implementation 28 + plan refinement 16)
+- **Tag**: `concord-plan-1-foundation`
+- **JSON Schema artifacts**: `schemas/manifest.schema.json` + `schemas/lock.schema.json` (Zod 4 native)
+
+### 실동작 CLI
+```bash
+concord validate <manifest>   # 3-pass (Reserved + allowlist + Zod + A1/D-11)
+concord lint <manifest>       # pre-validation only
+concord list --lock <path>    # dry-run reader
+```
+
+### 완료 Task (Plan 1, 28/28)
+
+**Foundation** (1~7): Bootstrap / Types / Discovery / Reserved Registry / Interpolation Allowlist / Reason Enums / Capability Matrix
+**Source + Assets** (8~15): Source + PluginSource / AssetBase / 6 asset schemas (skill/subagent/hook/mcp/instruction/plugin)
+**Manifest + Validators** (16~19): ManifestSchema+concord_version / YAML loader / validateManifest 3-pass / 4-scope merge
+**Lock family** (20~23): LockNode (3중 digest) / LockSchema + symlink refine / Lock read I/O / validateLock + I1/I5/I6
+**CLI** (24~26): validate / lint / list --dry-run
+**Wrap-up** (27~28): POC-13 golden test / README + POC log + schemas + tag
+
+### Zod 4 채택 (2026-04-22 재평가, Plan 1 전반에 적용 완료)
+- spec 부록 B 업데이트: Zod 3 고정 → **Zod 4 채택** (기존 `package.json` 존중)
+- `zod-to-json-schema` 제거 → Zod 4 native `z.toJSONSchema()` (artifacts 생성 확인)
+- `.passthrough()` → `.loose()` (deprecated)
+- `z.string().url()` → `z.url()` (top-level)
+- `z.string().datetime()` → `z.iso.datetime()` (top-level iso namespace)
+- `z.discriminatedUnion("field", [...])` 유지 → 향후 `z.switch` migration 예정
+- **`.strict()` 필수** for discriminated union variants (default strip 방지, illegal state rejection)
+- **`z.record(enum, V)` exhaustive** — enum 의 모든 key 가 present 해야 parse 통과 (Task 21/23/26 에서 full 3×6 capability_matrix 필요)
+
+### 누적 Review 발견 패턴 (Plan 에 전부 반영됨)
+| 이슈 | 해결 |
+|---|---|
+| TS 6 + @types/node 25 → TS2591 | `"types": ["node"]` 명시 |
+| Vitest 4 + ESM `vi.spyOn(os.homedir)` 불가 | `vi.mock + importActual + 가변 ref` |
+| Zod 4 `.url()` / `.datetime()` deprecated | `z.url()` / `z.iso.datetime()` top-level |
+| Zod 4 `.passthrough()` deprecated | `.loose()` |
+| Zod 4 discriminated union default strip | 각 variant `.strict()` (illegal state rejection) |
+| Zod 4 `z.record(enum, V)` exhaustive | Full matrix fixture (3 provider × 6 asset) |
+| Multi-pipe regex `{env:X\|int\|bool}` 누락 | `(?:\|\|\})` regex |
+| `try/catch` silent pass | `toThrow(pattern)` |
+| id regex `[a-z0-9-]` 에 underscore 부재 | `[a-z0-9_-]` (`mcp_servers` 지원) |
+| D-11 case-collision post-validation 무효 | Pre-validation (raw)로 이동 |
+| Plan 10 test regex vs impl message 순서 mismatch | Error message 재배열 (shared-agents ... claude-code) |
+| Security regression 가드 부재 | 4 tests 추가 (sequential / abs / prefix / error.detail) |
+
+### IDE Diagnostic (무해, 무시)
+- `tests/` 가 tsconfig `exclude` 에 있어 TS language server 가 test 파일 import 를 resolve 못함
+- 실제 `vitest` + `tsc -p ...` 는 clean
+- 필요 시 별도 `tsconfig.test.json` 추가 (Plan 1 범위 밖)
+
+---
 
 ## Project Overview
 
@@ -318,32 +378,48 @@ POC-4 resolved: `~/.claude.json` 순수 JSON 확정 → `json-key-owned` 방식 
 
 ---
 
-## 📋 다음 세션 착수 가이드 (Brainstorming 종결 후)
+## 📋 다음 세션 착수 가이드
 
-### 즉시 가능한 작업
+### 즉시 재개 지점
 
-1. **디자인 문서 작성** → `docs/superpowers/specs/2026-04-21-concord-design.md`
-   - 입력: 5 FINAL 문서 (STEP-B~E + 결정 A `01-skills.md`)
-   - 구조: Π1~Π7 / Phase 1/2 경계 / Manifest Zod schema / Lock schema / CLI 11 명령 / 보간 19 사양 / Windows 9 사양
-   - 예상 분량: 2000~3000 줄
-2. **스펙 자체 리뷰** (placeholder / 모순 / 모호함 / 스코프)
-3. **사용자 리뷰 게이트 통과** 후 `writing-plans` 스킬 전환
+**현재**: Plan 1 Foundation 완료 → **Plan 2 Sync Engine** 작성·실행 대기 중.
 
-### Phase 1 POC 체크리스트 (14 항목, 순차 또는 병렬)
+다음 세션에서:
+1. `git status` / `git log --oneline -5` 로 main 상태 확인 (last commit: Plan 1 merge)
+2. `npx vitest run` 실행 → 169/169 green 재확인 (main 에 이미 merged)
+3. **Plan 2 작성 착수** (`docs/superpowers/plans/YYYY-MM-DD-concord-plan-2-sync-engine.md`)
+   - 범위: Config round-trip + Fetcher 6종 + Symlink/copy installer + Format transformer (D-1~D-15)
+   - 산출물: `concord sync` 실동작
+   - 스킬: `superpowers:writing-plans` → `superpowers:subagent-driven-development`
+4. POC 우선순위: POC-1 (TOML 3도구 벤치마크), POC-2 (JSONC 비교), POC-9 (symlink-dir Windows fallback)
 
-결정 B (4) + 결정 C (4) + 결정 D (3) + 결정 E (3) POC → `TODO.md` L52~80 참조
+### Implementation workflow (확립된 패턴)
 
-### 실구현 스코프 (11 컴포넌트)
+1. **Implementer dispatch** (general-purpose agent)
+   - Plan task 전문을 prompt 에 paste (subagent 는 plan 파일 직접 읽지 않음)
+   - Context: 현재 git state + 선행 task 완료 상태 + Zod 4 / Vitest 4 / TS 6 주의사항
+   - TDD 엄격: Step 1 test → Step 2 fail 확인 → Step 3 impl → Step 4 pass → Step 5 commit
+2. **Review 2-stage**:
+   - Spec compliance: plan 에 literal 일치 수준이면 inline verify, 복잡하면 subagent dispatch
+   - Code quality: 모든 task 에 `superpowers:code-reviewer` subagent dispatch
+3. **Deviation 처리**:
+   - Implementer 의 DONE_WITH_CONCERNS 는 plan 을 업데이트하여 일관성 유지
+   - 별도 commit (`docs(plan-1): ...`) 로 plan ↔ impl 동기화
+4. **Fix loop**: Review issue → 같은 방향으로 fix implementer dispatch → re-review
 
-Manifest parser / Lock I/O / Plugin introspection / Fetcher adapters / Config updaters / Secret 엔진 / Symlink installer / Format transformer / doctor / cleanup / CLI 11 명령
+### 남은 주요 단계
 
-### 핵심 참조 문서 순위
+#### Plan 1 Foundation 잔여 (Task 8~28)
+- **Schema 집중** (Task 8~16): Source / AssetBase / 자산 6종 / ManifestSchema top + concord_version + YAML loader
+- **Validator+merge** (Task 17~19): validateManifest 3-pass + 4-scope precedence merge
+- **Lock** (Task 20~23): LockNode 3중 digest / LockSchema symlink refine / Lock I/O / validateLock I1/I5/I6
+- **CLI** (Task 24~26): `validate` / `lint` / `list --dry-run`
+- **Integration + wrap-up** (Task 27~28): 4-scope merge golden test (POC-13) / README + POC log
 
-1. **Π1~Π7 불변식** → `STEP-C/04-final-plan-v2.md` §3
-2. **CLI 정책** → `STEP-B/07-cli-and-bootstrap.md`
-3. **Windows 구현** → `STEP-D/01-windows-install-contract.md`
-4. **보간 문법** → `STEP-E/01-secret-interpolation-contract.md`
-5. **Skills 배치** → `01-skills.md` (A1~A5)
+#### Plan 2~4 (차후)
+- Plan 2 Sync Engine: Config round-trip (JSONC/TOML/pure JSON) + Fetcher 6종 + Symlink installer + Format transform
+- Plan 3 Secret + Diagnostics: E-1~E-19 보간 엔진 + doctor + cleanup + plugin introspection 완성
+- Plan 4 CLI 통합: init/detect/adopt/import/replace/update/list/why + guided bootstrap
 
 ### 재검토 트리거 (모니터링)
 
@@ -351,10 +427,21 @@ Manifest parser / Lock I/O / Plugin introspection / Fetcher adapters / Config up
 - **Π 변경 RFC 게이트** (결정 C v2 §6.8) — 절차적 방어선
 - **POC-7** Codex `marketplace add` 공식 docs 업데이트 감시
 - **Issue #31005** Claude `.agents/skills/` 지원 여부
+- **Zod 4 `z.switch` GA** → `z.discriminatedUnion` 전면 migration 시점
 
-### 최우선 기술 리스크
+### 최우선 기술 리스크 (Plan 2 이후 다룸)
 
-1. **Config round-trip 편집** (결정 B, 기술 존망)
-2. **Plugin introspection 정확성** (결정 C capability_matrix 기반)
-3. **Windows install 5-10% 커버리지 공백** (결정 D — 라이브러리 스택으로 상쇄)
-4. **Secret 보간 target format 안전 인코딩** (결정 E-18)
+1. **Config round-trip 편집** (기술 존망) — Plan 2 / POC-1/POC-2
+2. **Plugin introspection 정확성** — Plan 3 / POC-5
+3. **Windows install 5-10% 커버리지 공백** — Plan 2 (부록 B 라이브러리 스택)
+4. **Secret 보간 target format 안전 인코딩** — Plan 3 / POC-14
+
+### 핵심 참조 문서 순위 (Plan 1 구현용)
+
+1. **Π1~Π7 불변식** → `docs/superpowers/specs/2026-04-21-concord-design.md` §1
+2. **Reserved Identifier Registry** → spec §2 (15 entries) — Task 4 완료
+3. **Manifest Schema** → spec §4 — Task 9~16 대상
+4. **Lock Schema** → spec §5 — Task 20~23 대상
+5. **§11 Discovery / 4-scope** → spec §11 — Task 3 완료, Task 19 scope merge 대기
+
+---

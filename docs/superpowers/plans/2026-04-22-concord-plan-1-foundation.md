@@ -13,7 +13,7 @@
 
 **Tech Stack:**
 - Node.js >=22 (Active LTS), TypeScript 6.x, Vitest 4.x
-- Zod 4.x (`z.discriminatedUnion` 은 유지하되 Zod 로드맵상 향후 `z.switch` 로 migration 예정. `.passthrough()` 는 Zod 4 에서도 작동하나 `.loose()` / `z.looseObject({...})` 로 전환 가능)
+- Zod 4.x (`z.discriminatedUnion` 은 유지하되 Zod 로드맵상 향후 `z.switch` 로 migration 예정. `.passthrough()` 는 Zod 4 에서 **deprecated** → `.loose()` 로 대체함. TS6 프로젝트 설정상 deprecation warning 이 surface 되지 않아도 일관성 위해 `.loose()` 채택)
 - `yaml` (eemeli) 2.x (format-preserving 읽기, POC-3 확정)
 - `semver` 7.x (concord_version constraint)
 - `commander` 14.x
@@ -155,19 +155,24 @@ npm install --save-dev @types/semver
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
     "outDir": "./dist",
-    "rootDir": "./src",
+    "rootDir": "./",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "declaration": true,
     "forceConsistentCasingInFileNames": true,
     "noUncheckedIndexedAccess": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "types": ["node"]
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist", "tests"]
 }
 ```
+
+**주의**:
+- `rootDir: "./"` + `include: ["src/**/*"]` 조합은 `src/index.ts` → `dist/src/index.js` 생성. 기존 `package.json` 의 `"bin": "./dist/src/index.js"` 와 정확히 일치.
+- `"types": ["node"]` 은 **TS 6 + @types/node 25** 조합에서 `process` / `Buffer` 같은 Node.js global 을 인식시키기 위해 필수. TS 6 가 auto-include 를 중단했으므로 명시해야 build 가 성공 (TS 공식 error TS2591 이 직접 권고).
 
 - [ ] **Step 3: Create `vitest.config.ts`**
 
@@ -344,22 +349,30 @@ git commit -m "feat(schema): shared enums ConfigScope / AssetType / Provider + S
 
 - [ ] **Step 1: Write failing test `tests/discovery/concord-home.test.ts`**
 
+**주의**: `os.homedir()` 를 `vi.spyOn` 으로 mock 해 개발 머신에 실재하는 `~/.concord/` 에 의해 test 가 shadow 되지 않도록 한다. 각 test 마다 **tmp home** 을 사용 (`.concord/` 미생성 상태에서 discovery step 탐색).
+
 ```typescript
-import { describe, expect, it, beforeEach, afterEach } from "vitest";
+import { describe, expect, it, beforeEach, afterEach, vi } from "vitest";
 import * as os from "node:os";
 import * as path from "node:path";
 import * as fs from "node:fs";
 import { findConcordHome } from "../../src/discovery/concord-home.js";
 
 const savedEnv = { ...process.env };
+let tmpHome: string;
 
 beforeEach(() => {
   delete process.env.CONCORD_HOME;
   delete process.env.XDG_CONFIG_HOME;
   delete process.env.APPDATA;
+  // fake home without pre-existing .concord/
+  tmpHome = fs.mkdtempSync(path.join(os.tmpdir(), "concord-test-home-"));
+  vi.spyOn(os, "homedir").mockReturnValue(tmpHome);
 });
 
 afterEach(() => {
+  vi.restoreAllMocks();
+  fs.rmSync(tmpHome, { recursive: true, force: true });
   process.env = { ...savedEnv };
 });
 
@@ -369,12 +382,12 @@ describe("findConcordHome", () => {
     expect(findConcordHome()).toBe("/tmp/my-concord-override");
   });
 
-  it("falls back to default ~/.concord when no env var and no existing config", () => {
-    const expected = path.join(os.homedir(), ".concord");
-    expect(findConcordHome()).toBe(expected);
+  it("falls back to default <home>/.concord when no env var and no existing config", () => {
+    expect(findConcordHome()).toBe(path.join(tmpHome, ".concord"));
   });
 
   it("prefers existing $XDG_CONFIG_HOME/concord over ~/.config/concord", () => {
+    // tmpHome/.concord is intentionally absent — so step 2 fall-through to step 3
     const tmp = fs.mkdtempSync(path.join(os.tmpdir(), "concord-xdg-"));
     process.env.XDG_CONFIG_HOME = tmp;
     fs.mkdirSync(path.join(tmp, "concord"), { recursive: true });
@@ -490,7 +503,14 @@ describe("Reserved E-6 secret backends", () => {
 });
 
 describe("Reserved E-12 type coercion", () => {
-  it.each(["{env:FOO|int}", "{env:FOO|bool}", "{env:FOO|float}"])(
+  it.each([
+    "{env:FOO|int}",
+    "{env:FOO|bool}",
+    "{env:FOO|float}",
+    // multi-pipe: reserved suffix 가 첫 pipe 에 오면 reject (Π7: Phase 2 upgrade 시 깨지지 않게)
+    "{env:FOO|int|bool}",
+    "{env:FOO|bool|custom}",
+  ])(
     "rejects %s",
     (expr) => {
       expect(() =>
@@ -498,6 +518,17 @@ describe("Reserved E-12 type coercion", () => {
       ).toThrow(ReservedIdentifierError);
     },
   );
+
+  it("allows benign non-reserved pipe suffix", () => {
+    // 첫 pipe 가 int/bool/float 가 아니면 passthrough (Phase 1 미예약)
+    expect(() =>
+      checkReserved("{env:FOO|custom_tag}", {
+        file: "t.yaml",
+        line: 1,
+        col: 1,
+      }),
+    ).not.toThrow();
+  });
 });
 
 describe("Reserved E-15 binary encoding", () => {
@@ -554,15 +585,13 @@ describe("Generic unknown passthrough", () => {
 
 describe("Error message template (§2.3)", () => {
   it("includes location + suggestion", () => {
-    try {
+    // `toThrow(pattern)` 으로 확실히 throw 요구 + message 매칭 — silent pass 방지
+    const run = () =>
       checkReserved("include", { file: "x.yaml", line: 7, col: 3 });
-    } catch (e) {
-      expect(e).toBeInstanceOf(ReservedIdentifierError);
-      const err = e as ReservedIdentifierError;
-      expect(err.message).toContain("include");
-      expect(err.message).toContain("x.yaml:7:3");
-      expect(err.message).toContain("reserved");
-    }
+    expect(run).toThrow(ReservedIdentifierError);
+    expect(run).toThrow(/include/);
+    expect(run).toThrow(/x\.yaml:7:3/);
+    expect(run).toThrow(/reserved/);
   });
 });
 ```
@@ -647,9 +676,9 @@ const RESERVED_INTERPOLATION_PATTERNS: Array<{
       phase2Replacement: "Phase 2 secretRef: structured field",
     },
   },
-  // E-12 Type coercion
+  // E-12 Type coercion — 첫 pipe 뒤가 int/bool/float 중 하나면 reserved (multi-pipe 포함)
   {
-    pattern: /\{env:[^}|]+\|(int|bool|float)\}/,
+    pattern: /\{env:[^}|]+\|(int|bool|float)(?:\||\})/,
     match: {
       kind: "type-coercion",
       reason: "Phase 2 type coercion suffix",
@@ -1231,7 +1260,8 @@ Expected: FAIL (schema/renderSymbol 없음).
 ```typescript
 import { AssetType, Provider } from "./types.js";
 
-/** §5.6.1 Q4 γ Hybrid — 4 status discriminated union. */
+/** §5.6.1 Q4 γ Hybrid — 4 status discriminated union.
+ *  각 variant 는 `.strict()` 로 unknown key 를 거부 — illegal state (예: supported + reason) 반영. */
 export const CapabilityCellSchema = z.discriminatedUnion("status", [
   z.object({
     status: z.literal("supported"),
@@ -1242,7 +1272,7 @@ export const CapabilityCellSchema = z.discriminatedUnion("status", [
     drift_status: z
       .enum(["none", "source", "target", "divergent", "env-drift"])
       .default("none"),
-  }),
+  }).strict(),
   z.object({
     status: z.literal("detected-not-executed"),
     count: z.number().int().min(0),
@@ -1254,16 +1284,16 @@ export const CapabilityCellSchema = z.discriminatedUnion("status", [
     drift_status: z
       .enum(["none", "source", "target", "divergent", "env-drift"])
       .default("none"),
-  }),
+  }).strict(),
   z.object({
     status: z.literal("na"),
     reason: z.enum(["ProviderNotInstalled", "AssetTypeNotApplicable"]),
-  }),
+  }).strict(),
   z.object({
     status: z.literal("failed"),
     reason: ReasonEnum,
     error_detail: z.string().optional(),
-  }),
+  }).strict(),
 ]);
 export type CapabilityCell = z.infer<typeof CapabilityCellSchema>;
 
@@ -1442,7 +1472,7 @@ export const SourceSchema = z.discriminatedUnion("type", [
   }),
   z.object({
     type: z.literal("http"),
-    url: z.string().url(),
+    url: z.url(),  // Zod 4: top-level z.url() (z.string().url() 은 deprecated)
     sha256: z.string().regex(/^[a-f0-9]{64}$/),
   }),
   z.object({
@@ -1568,7 +1598,9 @@ import { SourceSchema } from "./source.js";
 /** §4.3.1 AssetBaseSchema — 6 자산 타입의 공통 베이스. */
 export const AssetBaseSchema = z
   .object({
-    id: z.string().regex(/^[a-z0-9-]+(:[a-z0-9-]+){1,2}$/),
+    // id regex: `<provider>:<type>:<name>` 또는 `<type>:<name>`.
+    // underscore 허용 — `mcp_servers` 같은 asset type 이름 통과 필수 (Task 2 AssetType enum).
+    id: z.string().regex(/^[a-z0-9_-]+(:[a-z0-9_-]+){1,2}$/),
     source: SourceSchema,
     scope: z.enum(["enterprise", "user", "project", "local"]).optional(),
     target: z.enum(["shared-agents"]).optional(),
@@ -1576,7 +1608,7 @@ export const AssetBaseSchema = z
       .enum(["symlink", "hardlink", "copy", "auto"])
       .default("auto"),
   })
-  .passthrough();
+  .loose();  // Zod 4: passthrough 는 deprecated → .loose() 권장 (unknown keys 보존)
 
 export type AssetBase = z.infer<typeof AssetBaseSchema>;
 ```
@@ -1698,8 +1730,9 @@ export function checkSkillsPlacement(skills: AssetBase[]): void {
   for (const s of skills) {
     const provider = s.id.split(":")[0];
     if (provider === "claude-code" && s.target === "shared-agents") {
+      // Message 첫 줄: test regex /shared-agents.*claude-code/i 매칭을 위해 이 순서 유지
       throw new Error(
-        `claude-code skills cannot use target: shared-agents (A1/A4, issue #31005 OPEN)\n` +
+        `target: shared-agents is not allowed for claude-code skills (A1/A4, issue #31005 OPEN)\n` +
           `  id: ${s.id}\n` +
           `  remediation: Remove 'target: shared-agents' or use codex/opencode provider.`,
       );
@@ -2314,7 +2347,7 @@ export const ManifestSchema = z
     instructions: z.array(InstructionAssetSchema).optional().default([]),
     plugins: z.array(PluginAssetSchema).optional().default([]),
   })
-  .passthrough();
+  .loose();  // Zod 4: passthrough 는 deprecated → .loose() 권장 (unknown keys 보존)
 
 export type Manifest = z.infer<typeof ManifestSchema>;
 
@@ -2594,9 +2627,15 @@ import type { AssetBase } from "./asset-base.js";
 
 /**
  * 3-pass validator (§4.8):
- *   1. pre-validation: Reserved identifier + interpolation allowlist + nested
+ *   1. pre-validation: Reserved identifier + interpolation allowlist + nested + **D-11 case-collision (raw)**
  *   2. Zod parse (ManifestSchema)
- *   3. post-validation: A1/A4 placement + D-11 case-insensitive
+ *   3. post-validation: A1/A4 placement
+ *
+ * 주의: D-11 case-collision 은 pre-validation 에 배치.
+ * AssetBaseSchema id regex 가 lowercase only (`[a-z0-9_-]`) 이므로
+ * 대문자 포함 id (예: `claude-code:hooks:Hook`) 는 Zod 파스 단계에서 이미 reject
+ * 됨 → post-validation 에 두면 case-collision 메시지가 관찰 불가.
+ * Raw manifest 에서 id 를 직접 수집하여 pre-validation 에서 검출.
  */
 export function validateManifest(raw: unknown): Manifest {
   if (typeof raw !== "object" || raw === null) {
@@ -2995,7 +3034,7 @@ export const LockNodeSchema = z.object({
   dependencies: z.array(z.string()).optional(),
   min_engine: z.string().optional(),
 
-  installed_at: z.string().datetime(),
+  installed_at: z.iso.datetime(),  // Zod 4: top-level iso namespace (z.string().datetime() deprecated)
   install_path: z.string(),
 });
 export type LockNode = z.infer<typeof LockNodeSchema>;

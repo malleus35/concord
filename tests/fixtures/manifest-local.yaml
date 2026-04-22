@@ -1,0 +1,4 @@
+skills:
+  - id: claude-code:skills:shared
+    source: { type: file, path: ./shared-v3-local }
+    install: auto

@@ -1,0 +1,1243 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "concord_version": {
+      "type": "string",
+      "pattern": "^[\\^~>=<\\s\\d.*x|-]+$"
+    },
+    "skills": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9_-]+(:[a-z0-9_-]+){1,2}$"
+          },
+          "source": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "string",
+                    "const": "git"
+                  },
+                  "repo": {
+                    "type": "string"
+                  },
+                  "ref": {
+                    "type": "string"
+                  },
+                  "path": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "type",
+                  "repo",
+                  "ref"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "string",
+                    "const": "file"
+                  },
+                  "path": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "type",
+                  "path"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "string",
+                    "const": "http"
+                  },
+                  "url": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "sha256": {
+                    "type": "string",
+                    "pattern": "^[a-f0-9]{64}$"
+                  }
+                },
+                "required": [
+                  "type",
+                  "url",
+                  "sha256"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "string",
+                    "const": "npm"
+                  },
+                  "package": {
+                    "type": "string"
+                  },
+                  "version": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "type",
+                  "package",
+                  "version"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "string",
+                    "const": "external"
+                  },
+                  "description": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "type",
+                  "description"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "string",
+                    "const": "adopted"
+                  },
+                  "description": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "type",
+                  "description"
+                ],
+                "additionalProperties": false
+              }
+            ]
+          },
+          "scope": {
+            "type": "string",
+            "enum": [
+              "enterprise",
+              "user",
+              "project",
+              "local"
+            ]
+          },
+          "target": {
+            "type": "string",
+            "enum": [
+              "shared-agents"
+            ]
+          },
+          "install": {
+            "default": "auto",
+            "type": "string",
+            "enum": [
+              "symlink",
+              "hardlink",
+              "copy",
+              "auto"
+            ]
+          },
+          "type": {
+            "type": "string",
+            "const": "skills"
+          }
+        },
+        "required": [
+          "id",
+          "source",
+          "install"
+        ],
+        "additionalProperties": {}
+      }
+    },
+    "subagents": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9_-]+(:[a-z0-9_-]+){1,2}$"
+          },
+          "source": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "string",
+                    "const": "git"
+                  },
+                  "repo": {
+                    "type": "string"
+                  },
+                  "ref": {
+                    "type": "string"
+                  },
+                  "path": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "type",
+                  "repo",
+                  "ref"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "string",
+                    "const": "file"
+                  },
+                  "path": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "type",
+                  "path"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "string",
+                    "const": "http"
+                  },
+                  "url": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "sha256": {
+                    "type": "string",
+                    "pattern": "^[a-f0-9]{64}$"
+                  }
+                },
+                "required": [
+                  "type",
+                  "url",
+                  "sha256"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "string",
+                    "const": "npm"
+                  },
+                  "package": {
+                    "type": "string"
+                  },
+                  "version": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "type",
+                  "package",
+                  "version"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "string",
+                    "const": "external"
+                  },
+                  "description": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "type",
+                  "description"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "string",
+                    "const": "adopted"
+                  },
+                  "description": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "type",
+                  "description"
+                ],
+                "additionalProperties": false
+              }
+            ]
+          },
+          "scope": {
+            "type": "string",
+            "enum": [
+              "enterprise",
+              "user",
+              "project",
+              "local"
+            ]
+          },
+          "target": {
+            "type": "string",
+            "enum": [
+              "shared-agents"
+            ]
+          },
+          "install": {
+            "default": "auto",
+            "type": "string",
+            "enum": [
+              "symlink",
+              "hardlink",
+              "copy",
+              "auto"
+            ]
+          },
+          "type": {
+            "type": "string",
+            "const": "subagents"
+          },
+          "format": {
+            "type": "string",
+            "enum": [
+              "md-yaml",
+              "toml"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "source",
+          "install"
+        ],
+        "additionalProperties": {}
+      }
+    },
+    "hooks": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9_-]+(:[a-z0-9_-]+){1,2}$"
+          },
+          "source": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "string",
+                    "const": "git"
+                  },
+                  "repo": {
+                    "type": "string"
+                  },
+                  "ref": {
+                    "type": "string"
+                  },
+                  "path": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "type",
+                  "repo",
+                  "ref"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "string",
+                    "const": "file"
+                  },
+                  "path": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "type",
+                  "path"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "string",
+                    "const": "http"
+                  },
+                  "url": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "sha256": {
+                    "type": "string",
+                    "pattern": "^[a-f0-9]{64}$"
+                  }
+                },
+                "required": [
+                  "type",
+                  "url",
+                  "sha256"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "string",
+                    "const": "npm"
+                  },
+                  "package": {
+                    "type": "string"
+                  },
+                  "version": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "type",
+                  "package",
+                  "version"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "string",
+                    "const": "external"
+                  },
+                  "description": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "type",
+                  "description"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "string",
+                    "const": "adopted"
+                  },
+                  "description": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "type",
+                  "description"
+                ],
+                "additionalProperties": false
+              }
+            ]
+          },
+          "scope": {
+            "type": "string",
+            "enum": [
+              "enterprise",
+              "user",
+              "project",
+              "local"
+            ]
+          },
+          "target": {
+            "type": "string",
+            "enum": [
+              "shared-agents"
+            ]
+          },
+          "install": {
+            "default": "auto",
+            "type": "string",
+            "enum": [
+              "symlink",
+              "hardlink",
+              "copy",
+              "auto"
+            ]
+          },
+          "type": {
+            "type": "string",
+            "const": "hooks"
+          },
+          "event": {
+            "type": "string"
+          },
+          "registration": {
+            "type": "object",
+            "properties": {
+              "matcher": {
+                "type": "string"
+              },
+              "if_condition": {
+                "type": "string"
+              },
+              "command": {
+                "type": "string"
+              },
+              "hook_type": {
+                "type": "string",
+                "enum": [
+                  "command",
+                  "http",
+                  "prompt",
+                  "agent"
+                ]
+              }
+            },
+            "additionalProperties": false
+          },
+          "implementation": {
+            "type": "object",
+            "properties": {
+              "source": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "type": {
+                        "type": "string",
+                        "const": "git"
+                      },
+                      "repo": {
+                        "type": "string"
+                      },
+                      "ref": {
+                        "type": "string"
+                      },
+                      "path": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "type",
+                      "repo",
+                      "ref"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "type": {
+                        "type": "string",
+                        "const": "file"
+                      },
+                      "path": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "type",
+                      "path"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "type": {
+                        "type": "string",
+                        "const": "http"
+                      },
+                      "url": {
+                        "type": "string",
+                        "format": "uri"
+                      },
+                      "sha256": {
+                        "type": "string",
+                        "pattern": "^[a-f0-9]{64}$"
+                      }
+                    },
+                    "required": [
+                      "type",
+                      "url",
+                      "sha256"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "type": {
+                        "type": "string",
+                        "const": "npm"
+                      },
+                      "package": {
+                        "type": "string"
+                      },
+                      "version": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "type",
+                      "package",
+                      "version"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "type": {
+                        "type": "string",
+                        "const": "external"
+                      },
+                      "description": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "type",
+                      "description"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "type": {
+                        "type": "string",
+                        "const": "adopted"
+                      },
+                      "description": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "type",
+                      "description"
+                    ],
+                    "additionalProperties": false
+                  }
+                ]
+              },
+              "target_path": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "source",
+              "target_path"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "id",
+          "source",
+          "install",
+          "event"
+        ],
+        "additionalProperties": {}
+      }
+    },
+    "mcp_servers": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9_-]+(:[a-z0-9_-]+){1,2}$"
+          },
+          "source": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "string",
+                    "const": "git"
+                  },
+                  "repo": {
+                    "type": "string"
+                  },
+                  "ref": {
+                    "type": "string"
+                  },
+                  "path": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "type",
+                  "repo",
+                  "ref"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "string",
+                    "const": "file"
+                  },
+                  "path": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "type",
+                  "path"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "string",
+                    "const": "http"
+                  },
+                  "url": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "sha256": {
+                    "type": "string",
+                    "pattern": "^[a-f0-9]{64}$"
+                  }
+                },
+                "required": [
+                  "type",
+                  "url",
+                  "sha256"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "string",
+                    "const": "npm"
+                  },
+                  "package": {
+                    "type": "string"
+                  },
+                  "version": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "type",
+                  "package",
+                  "version"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "string",
+                    "const": "external"
+                  },
+                  "description": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "type",
+                  "description"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "string",
+                    "const": "adopted"
+                  },
+                  "description": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "type",
+                  "description"
+                ],
+                "additionalProperties": false
+              }
+            ]
+          },
+          "scope": {
+            "type": "string",
+            "enum": [
+              "enterprise",
+              "user",
+              "project",
+              "local"
+            ]
+          },
+          "target": {
+            "type": "string",
+            "enum": [
+              "shared-agents"
+            ]
+          },
+          "install": {
+            "default": "auto",
+            "type": "string",
+            "enum": [
+              "symlink",
+              "hardlink",
+              "copy",
+              "auto"
+            ]
+          },
+          "type": {
+            "type": "string",
+            "const": "mcp_servers"
+          },
+          "transport": {
+            "default": "stdio",
+            "type": "string",
+            "enum": [
+              "stdio",
+              "sse",
+              "http"
+            ]
+          },
+          "command": {
+            "type": "string"
+          },
+          "args": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "url": {
+            "type": "string"
+          },
+          "env": {
+            "type": "object",
+            "propertyNames": {
+              "type": "string"
+            },
+            "additionalProperties": {
+              "type": "string"
+            }
+          },
+          "headers": {
+            "type": "object",
+            "propertyNames": {
+              "type": "string"
+            },
+            "additionalProperties": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "id",
+          "source",
+          "install",
+          "transport"
+        ],
+        "additionalProperties": {}
+      }
+    },
+    "instructions": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9_-]+(:[a-z0-9_-]+){1,2}$"
+          },
+          "source": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "string",
+                    "const": "git"
+                  },
+                  "repo": {
+                    "type": "string"
+                  },
+                  "ref": {
+                    "type": "string"
+                  },
+                  "path": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "type",
+                  "repo",
+                  "ref"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "string",
+                    "const": "file"
+                  },
+                  "path": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "type",
+                  "path"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "string",
+                    "const": "http"
+                  },
+                  "url": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "sha256": {
+                    "type": "string",
+                    "pattern": "^[a-f0-9]{64}$"
+                  }
+                },
+                "required": [
+                  "type",
+                  "url",
+                  "sha256"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "string",
+                    "const": "npm"
+                  },
+                  "package": {
+                    "type": "string"
+                  },
+                  "version": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "type",
+                  "package",
+                  "version"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "string",
+                    "const": "external"
+                  },
+                  "description": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "type",
+                  "description"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "string",
+                    "const": "adopted"
+                  },
+                  "description": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "type",
+                  "description"
+                ],
+                "additionalProperties": false
+              }
+            ]
+          },
+          "scope": {
+            "type": "string",
+            "enum": [
+              "enterprise",
+              "user",
+              "project",
+              "local"
+            ]
+          },
+          "target": {
+            "type": "string",
+            "enum": [
+              "claude-md",
+              "agents-md",
+              "opencode-instructions"
+            ]
+          },
+          "install": {
+            "default": "auto",
+            "type": "string",
+            "enum": [
+              "symlink",
+              "hardlink",
+              "copy",
+              "auto"
+            ]
+          },
+          "type": {
+            "type": "string",
+            "const": "instructions"
+          },
+          "mode": {
+            "type": "string",
+            "enum": [
+              "file-include",
+              "layered-concat",
+              "array-entry"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "source",
+          "target",
+          "install"
+        ],
+        "additionalProperties": {}
+      }
+    },
+    "plugins": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9_-]+(:[a-z0-9_-]+){1,2}$"
+          },
+          "scope": {
+            "type": "string",
+            "enum": [
+              "enterprise",
+              "user",
+              "project",
+              "local"
+            ]
+          },
+          "target": {
+            "type": "string",
+            "enum": [
+              "shared-agents"
+            ]
+          },
+          "install": {
+            "default": "auto",
+            "type": "string",
+            "enum": [
+              "symlink",
+              "hardlink",
+              "copy",
+              "auto"
+            ]
+          },
+          "type": {
+            "type": "string",
+            "const": "plugins"
+          },
+          "source": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "string",
+                    "const": "claude-plugin"
+                  },
+                  "marketplace": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "version": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "type",
+                  "marketplace",
+                  "name",
+                  "version"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "string",
+                    "const": "codex-plugin"
+                  },
+                  "marketplace": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "version": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "type",
+                  "marketplace",
+                  "name",
+                  "version"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "string",
+                    "const": "opencode-plugin"
+                  },
+                  "package": {
+                    "type": "string"
+                  },
+                  "version": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "type",
+                  "package",
+                  "version"
+                ],
+                "additionalProperties": false
+              }
+            ]
+          },
+          "auto_install": {
+            "default": true,
+            "type": "boolean"
+          },
+          "enabled": {
+            "default": true,
+            "type": "boolean"
+          },
+          "purge_on_remove": {
+            "default": false,
+            "type": "boolean"
+          },
+          "dependencies": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "min_engine": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "install",
+          "source",
+          "auto_install",
+          "enabled",
+          "purge_on_remove"
+        ],
+        "additionalProperties": {}
+      }
+    }
+  },
+  "required": [
+    "skills",
+    "subagents",
+    "hooks",
+    "mcp_servers",
+    "instructions",
+    "plugins"
+  ],
+  "additionalProperties": {}
+}
