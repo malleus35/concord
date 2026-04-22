@@ -13,7 +13,7 @@
 
 **Tech Stack:**
 - Node.js >=22 (Active LTS), TypeScript 6.x, Vitest 4.x
-- Zod 4.x (`z.discriminatedUnion` 은 유지하되 Zod 로드맵상 향후 `z.switch` 로 migration 예정. `.passthrough()` 는 Zod 4 에서도 작동하나 `.loose()` / `z.looseObject({...})` 로 전환 가능)
+- Zod 4.x (`z.discriminatedUnion` 은 유지하되 Zod 로드맵상 향후 `z.switch` 로 migration 예정. `.passthrough()` 는 Zod 4 에서 **deprecated** → `.loose()` 로 대체함. TS6 프로젝트 설정상 deprecation warning 이 surface 되지 않아도 일관성 위해 `.loose()` 채택)
 - `yaml` (eemeli) 2.x (format-preserving 읽기, POC-3 확정)
 - `semver` 7.x (concord_version constraint)
 - `commander` 14.x
@@ -1606,7 +1606,7 @@ export const AssetBaseSchema = z
       .enum(["symlink", "hardlink", "copy", "auto"])
       .default("auto"),
   })
-  .passthrough();
+  .loose();  // Zod 4: passthrough 는 deprecated → .loose() 권장 (unknown keys 보존)
 
 export type AssetBase = z.infer<typeof AssetBaseSchema>;
 ```
@@ -2344,7 +2344,7 @@ export const ManifestSchema = z
     instructions: z.array(InstructionAssetSchema).optional().default([]),
     plugins: z.array(PluginAssetSchema).optional().default([]),
   })
-  .passthrough();
+  .loose();  // Zod 4: passthrough 는 deprecated → .loose() 권장 (unknown keys 보존)
 
 export type Manifest = z.infer<typeof ManifestSchema>;
 
