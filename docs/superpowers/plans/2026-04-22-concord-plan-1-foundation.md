@@ -503,7 +503,14 @@ describe("Reserved E-6 secret backends", () => {
 });
 
 describe("Reserved E-12 type coercion", () => {
-  it.each(["{env:FOO|int}", "{env:FOO|bool}", "{env:FOO|float}"])(
+  it.each([
+    "{env:FOO|int}",
+    "{env:FOO|bool}",
+    "{env:FOO|float}",
+    // multi-pipe: reserved suffix 가 첫 pipe 에 오면 reject (Π7: Phase 2 upgrade 시 깨지지 않게)
+    "{env:FOO|int|bool}",
+    "{env:FOO|bool|custom}",
+  ])(
     "rejects %s",
     (expr) => {
       expect(() =>
@@ -511,6 +518,17 @@ describe("Reserved E-12 type coercion", () => {
       ).toThrow(ReservedIdentifierError);
     },
   );
+
+  it("allows benign non-reserved pipe suffix", () => {
+    // 첫 pipe 가 int/bool/float 가 아니면 passthrough (Phase 1 미예약)
+    expect(() =>
+      checkReserved("{env:FOO|custom_tag}", {
+        file: "t.yaml",
+        line: 1,
+        col: 1,
+      }),
+    ).not.toThrow();
+  });
 });
 
 describe("Reserved E-15 binary encoding", () => {
@@ -567,15 +585,13 @@ describe("Generic unknown passthrough", () => {
 
 describe("Error message template (§2.3)", () => {
   it("includes location + suggestion", () => {
-    try {
+    // `toThrow(pattern)` 으로 확실히 throw 요구 + message 매칭 — silent pass 방지
+    const run = () =>
       checkReserved("include", { file: "x.yaml", line: 7, col: 3 });
-    } catch (e) {
-      expect(e).toBeInstanceOf(ReservedIdentifierError);
-      const err = e as ReservedIdentifierError;
-      expect(err.message).toContain("include");
-      expect(err.message).toContain("x.yaml:7:3");
-      expect(err.message).toContain("reserved");
-    }
+    expect(run).toThrow(ReservedIdentifierError);
+    expect(run).toThrow(/include/);
+    expect(run).toThrow(/x\.yaml:7:3/);
+    expect(run).toThrow(/reserved/);
   });
 });
 ```
@@ -660,9 +676,9 @@ const RESERVED_INTERPOLATION_PATTERNS: Array<{
       phase2Replacement: "Phase 2 secretRef: structured field",
     },
   },
-  // E-12 Type coercion
+  // E-12 Type coercion — 첫 pipe 뒤가 int/bool/float 중 하나면 reserved (multi-pipe 포함)
   {
-    pattern: /\{env:[^}|]+\|(int|bool|float)\}/,
+    pattern: /\{env:[^}|]+\|(int|bool|float)(?:\||\})/,
     match: {
       kind: "type-coercion",
       reason: "Phase 2 type coercion suffix",
