@@ -2,7 +2,7 @@
  * Config round-trip editor — spec §10 Config Round-Trip 편집 정책.
  *
  * 3 TOML + 2 JSONC + 1 YAML + 1 Symlink wrapper 가 이 타입들을 구현한다.
- * verifyPreservation(utilty) 은 preservation.ts 에 별도 구현.
+ * verifyPreservation(utility) 은 preservation.ts 에 별도 구현.
  */
 
 /** 단일 편집 연산. JSON Pointer 유사 path + op. */
