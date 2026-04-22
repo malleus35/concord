@@ -351,8 +351,8 @@ export async function runCommand(
   try {
     const { stdout, stderr } = await execFileAsync(command, args, options);
     return {
-      stdout: typeof stdout === "string" ? stdout : stdout.toString("utf8"),
-      stderr: typeof stderr === "string" ? stderr : stderr.toString("utf8"),
+      stdout: Buffer.isBuffer(stdout) ? stdout.toString("utf8") : String(stdout),
+      stderr: Buffer.isBuffer(stderr) ? stderr.toString("utf8") : String(stderr),
       status: 0,
     };
   } catch (err: any) {
